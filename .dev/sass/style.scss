@@ -1,0 +1,40 @@
+/*
+Theme Name: Ascension
+Theme URI: http://liftux.com
+Author: Lift
+Author URI: http://liftux.com
+Description: This is a child theme for Basis.
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ascension
+Domain Path: /languages/
+Tags:
+Template: basis
+
+This theme, like WordPress, is licensed under the GPL.
+
+*/
+
+@import "variables/variables";
+@import "mixins/functions";
+@import "mixins/global";
+@import "mixins/grid";
+@import "mixins/color-contrast";
+@import "partials/typography";
+@import "partials/forms";
+@import "partials/navigation";
+@import "partials/accessibility";
+@import "partials/alignments";
+@import "partials/clearings";
+@import "partials/widgets";
+@import "partials/content";
+@import "partials/infinite-scroll";
+@import "partials/media";
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/featured-content";
+@import "partials/genericons";
+@import "partials/social";
+@import "partials/jetpack";
