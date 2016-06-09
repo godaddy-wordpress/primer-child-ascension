@@ -4,7 +4,7 @@ Theme URI: http://liftux.com
 Author: Lift
 Author URI: http://liftux.com
 Description: This is a child theme for Basis.
-Version: 0.0.1
+Version: 0.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ascension
@@ -2925,10 +2925,14 @@ body.layout-one-column-narrow #content {
     padding: 8px;
     display: inline-block;
     font-size: 18px; }
+  .social-menu a:hover:before {
+    color: #fff; }
   .social-menu a:hover {
     background: #194F6E; }
 .social-menu a[href*="mailto:"]:before {
   content: '\f410'; }
+  .social-menu a[href*="mailto:"]:before:hover {
+    color: #21759b; }
 .social-menu a[href*="wordpress.org"]:before, .social-menu a[href*="wordpress.com"]:before {
   content: '\f205'; }
   .social-menu a[href*="wordpress.org"]:before:hover, .social-menu a[href*="wordpress.com"]:before:hover {
