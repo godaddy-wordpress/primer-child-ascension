@@ -4,9 +4,10 @@
 	padding: 50px 25px;
 	text-align: right;
 	@extend .row;
+	max-width: 1060px;
 
 	@media #{$medium-up} {
-		&.home {
+		&.home .hero-inner {
 			padding-left: 55%;
 		}
 	}

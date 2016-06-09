@@ -55,6 +55,7 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	background-color: $header-bg;
 	letter-spacing: -.01em;
 	padding: 10px 0;
+	@extend .row;
 
 	@media #{$medium-up} {
 		padding: 17px 0;
@@ -65,7 +66,8 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 }
 
 .site-header-wrapper {
-	@extend .row;
+	@extend .columns;
+	@extend .large-12;
 }
 
 .featured-content{
