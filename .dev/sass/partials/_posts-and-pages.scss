@@ -2,16 +2,13 @@
 
 .no-results,
 .not-found{
-	@include panel;
-
 	.page-header{
 		margin-bottom: 1em;
 	}
 }
 
 .hentry {
-	@include panel;
-
+	margin-bottom: 3em;
 	.attachment-basis-featured{
 		width: 100%;
 		height: auto;
@@ -42,6 +39,10 @@
 	margin: 1.5em 0;
 }
 
+.entry-content {
+	overflow: hidden;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -49,15 +50,21 @@
 
 .entry-title{
 	margin-bottom: .25em;
-	font-size: rem-calc(28);
+	font-size: $h2-font-size;
+	font-weight: lighter;
+	letter-spacing: -0.3px;
 
-	a{
-		color: $heading-font-color;
+	@media #{$medium-up} {
+		font-size: $h2-medium-font-size;
 	}
 
-	.single &{
-		font-weight: 300;
-		font-size: rem-calc(36);
+	@media #{$large-up} {
+	 font-size: $h2-large-font-size;
+	}
+
+	a {
+		color: $heading-font-color;
+		font-weight: lighter;
 	}
 }
 
@@ -70,11 +77,16 @@
 	color: $small-font-color;
 	font-family: $header-font-family;
 	font-size: rem-calc(14);
-	padding-top: 1em;
 	@include clearfix;
 
 	a{
 		color: $primary-color;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color-link-hover;
+		}
 	}
 
 	.entry-footer-right {
@@ -82,8 +94,12 @@
 	}
 
 	.cat-links,
-	.tags-links {
+	.tags-links,
+	.comments-link {
 		display: block;
+		font-size: rem-calc(11.75px);
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	}
 
 	.comments-link a {
@@ -93,16 +109,20 @@
 }
 
 .entry-meta {
-	border-bottom: 1px solid rgba(0,0,0,.1);
+	color: #757575;
 	line-height: 1.4em;
 	line-height: 1.4rem;
-	margin-bottom: 1em;
-	margin-bottom: 1rem;
-	padding-bottom: 1em;
-	padding-bottom: 1rem;
-	font-size: .9em;
+	font-size: rem-calc(11.75);
 	font-family: $sans-font-family;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	@extend .clearfix;
+
+	.posted-date,
+	.posted-author,
+	.comments-number {
+		margin-right: 20px;
+	}
 
 	i{
 		vertical-align: middle;
@@ -200,5 +220,24 @@ article.format-link {
 	.mejs-container {
 		width: 100%!important;
 		height: 100%!important;
+	}
+}
+section h2 {
+	font-size: 20px;
+	font-weight: lighter;
+	color: #757575;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media #{$medium-up} {
+		font-size: 24px;
+		padding-bottom: 11px;
+		border-bottom: 2px solid rgba(117,117,117,0.28);
+	}
+
+	@media #{$large-up} {
+	 font-size: 30px;
+	 padding-bottom: 18px
 	}
 }

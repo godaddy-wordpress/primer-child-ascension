@@ -235,6 +235,7 @@ $menu-sub-item-height: $menu-height*.75 !default;
 		@extend .columns;
 		margin-bottom: 1em;
 		margin-bottom: 1rem;
+		padding: 0;
 	}
 }
 

@@ -175,7 +175,14 @@ $align-class-breakpoints:
 
 // These will throw a deprecation warning if used within a media query.
 @mixin lead {
-	font-size: $paragraph-font-size + rem-calc(3.5);
+	font-size: rem-calc(15);
+	@media #{$medium-up} {
+		font-size: rem-calc(18);
+	}
+	@media #{$large-up} {
+		font-size: rem-calc(20);
+	}
+	font-weight: lighter;
 	line-height: 1.6;
 }
 
@@ -220,6 +227,7 @@ $align-class-breakpoints:
 			color: $anchor-font-color;
 			text-decoration: $anchor-text-decoration;
 			line-height: inherit;
+			font-weight: $anchor-font-weight;
 
 			&:hover,
 			&:focus {
@@ -240,6 +248,13 @@ $align-class-breakpoints:
 			line-height: $paragraph-line-height;
 			margin-bottom: $paragraph-margin-bottom;
 			text-rendering: $paragraph-text-rendering;
+
+			@media #{$medium-up} {
+				font-size: $paragraph-medium-font-size;
+			}
+			@media #{$large-up} {
+				font-size: $paragraph-large-font-size;
+			}
 
 			&.lead { @include lead; }
 
@@ -268,12 +283,30 @@ $align-class-breakpoints:
 			}
 		}
 
-		h1 { font-size: $h1-font-size - $h1-font-reduction; }
-		h2 { font-size: $h2-font-size - $h2-font-reduction; }
-		h3 { font-size: $h3-font-size - $h3-font-reduction; }
-		h4 { font-size: $h4-font-size - $h4-font-reduction; }
-		h5 { font-size: $h5-font-size - $h5-font-reduction; }
-		h6 { font-size: $h6-font-size - $h6-font-reduction; }
+		h1 { font-size: $h1-font-size; }
+		h2 {
+			font-size: $h2-font-size;
+			font-weight: $h2-font-weight;
+		}
+		h3 {
+			color: $h3-font-color;
+			font-size: $h3-font-size;
+		}
+		h4 {
+			color: $h4-font-color;
+			font-size: $h4-font-size;
+			font-weight: $h4-font-weight;
+			letter-spacing: $h4-letter-spacing;
+			text-transform: $h4-text-transform;
+		}
+		h5 {
+			color: $h5-font-color;
+			font-size: $h5-font-size;
+		}
+		h6 {
+			color: $h6-font-color;
+			font-size: $h6-font-size;
+		}
 
 		.subheader { @include subheader; }
 
@@ -296,6 +329,10 @@ $align-class-breakpoints:
 		b {
 			font-weight: $font-weight-bold;
 			line-height: inherit;
+		}
+
+		address {
+			margin-bottom: $paragraph-margin-bottom;
 		}
 
 		small {
@@ -416,7 +453,7 @@ $align-class-breakpoints:
 		acronym {
 			text-transform: uppercase;
 			font-size: 90%;
-			color: $body-font-color;
+			color: darken($primary-color, 25%);
 			border-bottom: $acronym-underline;
 			cursor: $cursor-help-value;
 		}
@@ -428,19 +465,20 @@ $align-class-breakpoints:
 		blockquote {
 			margin: 0 0 $paragraph-margin-bottom;
 			padding: $blockquote-padding;
-			border-#{$default-float}: $blockquote-border;
 			overflow: hidden;
 			font-family: $header-font-family;
 			font-style: italic;
 
 			cite {
 				display: block;
-				font-size: $blockquote-cite-font-size;
+				font-size: $blockquote-cite-font-size - rem-calc(2);
 				color: $blockquote-cite-font-color;
 				margin-top: .5em;
 				margin-top: .5rem;
-				font-size: 1.1em;
-				font-size: 1.1rem;
+				text-transform: $blockquote-cite-text-transform;
+				letter-spacing: $blockquote-cite-letter-spacing;
+				font-style: $blockquote-cite-font-style;
+				font-weight: $blockquote-cite-font-weight;
 
 				&:before {
 					content: "\2014 \0020";
@@ -456,19 +494,60 @@ $align-class-breakpoints:
 		blockquote p {
 			line-height: $paragraph-line-height;
 			color: $blockquote-font-color;
-			font-size: 1.4em;
-			font-size: 1.4rem;
+			font-size: rem-calc(18);
 			line-height: 1.4;
 		}
 
 		@media #{$medium-up} {
+			blockquote,
+			blockquote p {
+				font-size: rem-calc(22);
+			}
+			blockquote cite { font-size: $blockquote-cite-font-size; }
+			blockquote.aligncenter {
+				font-family: "Palatino", $header-font-family;
+				text-align: center;
+				width: 90%;
+				cite {
+					font-family: $header-font-family;
+				}
+			}
+			blockquote.alignleft,
+			blockquote.alignright {
+				width: 60%;
+			}
+			blockquote.alignleft {
+				text-align: left;
+			}
+			blockquote.alignright {
+				text-align: right;
+			}
+		}
+
+		@media #{$large-up} {
+			blockquote,
+			blockquote p {
+				font-size: rem-calc(24);
+			}
+		}
+
+		@media #{$medium-up} {
 			h1,h2,h3,h4,h5,h6 { line-height: $header-line-height; }
-			h1 { font-size: $h1-font-size; }
-			h2 { font-size: $h2-font-size; }
-			h3 { font-size: $h3-font-size; }
-			h4 { font-size: $h4-font-size; }
-			h5 { font-size: $h5-font-size; }
-			h6 { font-size: $h6-font-size; }
+			h1 { font-size: $h1-medium-font-size; }
+			h2 { font-size: $h2-medium-font-size; }
+			h3 { font-size: $h3-medium-font-size; }
+			h4 { font-size: $h4-medium-font-size; }
+			h5 { font-size: $h5-medium-font-size; }
+			h6 { font-size: $h6-medium-font-size; }
+		}
+
+		@media #{$large-up} {
+			h1 { font-size: $h1-large-font-size; }
+			h2 { font-size: $h2-large-font-size; }
+			h3 { font-size: $h3-large-font-size; }
+			h4 { font-size: $h4-large-font-size; }
+			h5 { font-size: $h5-large-font-size; }
+			h6 { font-size: $h6-large-font-size; }
 		}
 
 		// Only include these styles if you want them.

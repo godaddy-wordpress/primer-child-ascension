@@ -1,0 +1,69 @@
+.hero {
+	background: $secondary-color;
+	margin-bottom: 40px;
+	padding: 50px 25px;
+	text-align: right;
+	@extend .row;
+
+	@media #{$medium-up} {
+		&.home {
+			padding-left: 55%;
+		}
+	}
+
+	.hero-inner {
+		@extend .large-12;
+		@extend .columns;
+	}
+
+	h1 {
+		color: #fff;
+		font-size: rem-calc(28);
+		font-weight: lighter;
+		letter-spacing: -1.2px;
+		margin: 0;
+		text-align: right;
+		@media #{$medium-up} {
+			font-size: rem-calc(40);
+		}
+		@media #{$large-up} {
+			font-size: rem-calc(56);
+		}
+	}
+
+	blockquote,
+	p {
+		color: #fff;
+		font-size: rem-calc(17.58);
+		font-style: normal;
+		font-weight: lighter;
+		padding: 0;
+		@media #{$medium-up} {
+			font-size: rem-calc(32);
+		}
+		@media #{$large-up} {
+			font-size: rem-calc(42);
+		}
+	}
+
+	blockquote cite,
+	blockquote cite a {
+		color: $primary-color;
+		font-size: rem-calc(7.69);
+		@media #{$medium-up} {
+			font-size: rem-calc(12);
+		}
+		@media #{$large-up} {
+			font-size: rem-calc(13);
+		}
+	}
+
+	a.button.large {
+		background: #F99A00;
+		color: #FFFFFF;
+
+		&:hover {
+			background: lighten(#F99A00, 5%);
+		}
+	}
+}

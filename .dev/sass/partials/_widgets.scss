@@ -1,15 +1,5 @@
 $widget-bg: #fff !default;
 
-.widget {
-	margin: 0 0 1.5em;
-	padding: 20px;
-
-	&,p,ul,ol{
-		font-family: $widget-font-family;
-		font-size: $widget-font-size;
-	}
-}
-
 /* Make sure select elements fit in widgets */
 .widget select {
 	max-width: 100%;
@@ -29,34 +19,10 @@ $widget-bg: #fff !default;
 	@media screen and (max-width: 600px) {
 		padding-right: 0;
 	}
-
-	.search-field {
-		width: 100%;
-		background: #fff;
-		border-radius: 2px;
-		box-sizing: border-box;
-
-		&:focus {
-			background: #fff;
-		}
-	}
-
-	.search-submit {
-		display: none;
-	}
-}
-
-.widget-title {
-	font-family: $sans-font-family;
-	position: relative;
-	box-sizing: content-box;
-	font-weight: bold;
 }
 
 .widget {
-	background-color: $widget-bg;
-	padding: 2em;
-	padding: 2rem;
+	margin: 0 0 3em;
 
 	ul {
 		list-style: none;
@@ -67,17 +33,27 @@ $widget-bg: #fff !default;
 	li {
 		a {
 			display: block;
-			padding: .5em 0;
-			padding: .5rem 0;
-			border-bottom: 1px solid $body-bg;
-		}
-	}
+			padding: .813em 0;
+			padding: .813rem 0;
+			color: $secondary-color;
+			text-transform: $widget-text-transform;
+			font-size: 12px;
 
-	> ul:last-child > li:last-child > a,
-	> div > ul:last-child > li:last-child > a {
-		border-bottom: 0;
-		padding-bottom: 0;
+			&:hover {
+				color: darken($secondary-color, 20%);
+			}
+		}
+		border-bottom: 1px solid rgba(117,117,117,0.28);
 	}
+}
+
+.widget-title {
+	font-family: $sans-font-family;
+	position: relative;
+	box-sizing: content-box;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-transform: none;
 }
 
 /* Author Widget */
@@ -116,17 +92,12 @@ $widget-bg: #fff !default;
 
 .widget_recent_comments {
 	li {
-		padding: .5em 0;
-		padding: .5rem 0;
-		border-bottom: 1px solid $body-bg;
-
-		&:last-child {
-			border-bottom: 0;
-			padding-bottom: 0;
-		}
+		padding: .813em 0;
+		padding: .813rem 0;
+		font-size: rem-calc(12);
+		text-transform: uppercase;
 
 		a {
-			border: 0;
 			display: inline;
 		}
 	}
@@ -232,4 +203,31 @@ $widget-bg: #fff !default;
 			}
 		}
 	}
+}
+
+.widget_recent_entries {
+	li {
+		padding: .75em 0;
+		padding: .75rem 0;
+		border: 0;
+		a {
+			padding: 0;
+			color: $primary-color;
+			font-size: rem-calc(14);
+			text-transform: none;
+
+			&:hover {
+				color: darken($primary-color, 20%);
+			}
+		}
+	}
+	.post-date {
+		color: #757575;
+		font-size: rem-calc(11.75);
+		text-transform: uppercase;
+	}
+}
+
+.widget_text .widget-title, .widget_search .widget-title {
+	 margin-bottom: 1rem;
 }
