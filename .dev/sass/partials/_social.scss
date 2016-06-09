@@ -35,6 +35,10 @@
 			font-size: 18px;
 		}
 
+		&:hover:before {
+			color: #fff;
+		}
+
 		&:hover{
 			background: $secondary-color;
 		}
@@ -42,6 +46,9 @@
 
 	a[href*="mailto:"]:before {
 		content: '\f410';
+		&:hover{
+			color:   #21759b;
+		}
 	}
 	a[href*="wordpress.org"]:before,
 	a[href*="wordpress.com"]:before {
