@@ -84,6 +84,7 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 	background: $site-footer-info-background;
 	color: $site-footer-info-text-color;
 	line-height: 1.5;
+	display: none; // Temporary
 
 	a{
 		color: $site-footer-info-anchor-color;

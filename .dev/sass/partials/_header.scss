@@ -37,6 +37,7 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	padding: 40px 0 0;
 	background-color: $header-bg;
 	letter-spacing: -.01em;
+	display: none; // Temporary
 }
 
 .featured-content{

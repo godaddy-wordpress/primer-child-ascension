@@ -2227,7 +2227,8 @@ body.layout-one-column-narrow #content {
 .site-header {
   padding: 40px 0 0;
   background-color: #fff;
-  letter-spacing: -0.01em; }
+  letter-spacing: -0.01em;
+  display: none; }
 
 .featured-content .entry-header {
   background-size: cover; }
@@ -2376,7 +2377,8 @@ body.layout-one-column-narrow #content {
   padding: 20px 0;
   background: #fff;
   color: #222;
-  line-height: 1.5; }
+  line-height: 1.5;
+  display: none; }
   .site-info-wrapper a {
     color: #222; }
     .site-info-wrapper a:hover {
