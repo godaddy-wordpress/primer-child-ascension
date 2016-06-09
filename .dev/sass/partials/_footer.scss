@@ -103,6 +103,8 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 		text-align: center;
 		font-weight: bold;
 		text-transform: uppercase;
+		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
 
 		&:hover {
 			text-decoration: none;
@@ -111,6 +113,10 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 		&.large {
 			font-size: rem-calc(14);
 		}
+	}
+
+	p.button {
+		margin-bottom: 0;
 	}
 
 	.site-title-wrapper {
