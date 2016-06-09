@@ -119,6 +119,7 @@ textarea {
     border-right: 0;
     padding: 0 10px;
 		line-height: 31px;
+		height: 33px;
 		font-size: rem-calc(13);
 
 		&:focus {
@@ -130,6 +131,8 @@ textarea {
 		float: right;
 		width: 30%;
 		border-radius: 0 5px 5px 0;
-		padding: 8px 0;
+		padding: 0;
+		line-height: 31px;
+		height: 33px;
 	}
 }

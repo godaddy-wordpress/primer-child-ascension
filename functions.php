@@ -23,38 +23,48 @@ function basis_widgets_init() {
 		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer Left', 'basis' ),
+		'name'          => __( 'Footer 1', 'basis' ),
 		'id'            => 'footer-1',
-		'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer sidebar appears in the first column of the footer widget area.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer Center', 'basis' ),
+		'name'          => __( 'Footer 2', 'basis' ),
 		'id'            => 'footer-2',
-		'description'   => __( 'The footer center sidebar appears in the second column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer sidebar appears in the second column of the footer widget area.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer Right', 'basis' ),
+		'name'          => __( 'Footer 3', 'basis' ),
 		'id'            => 'footer-3',
-		'description'   => __( 'The footer right sidebar appears in the third column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer sidebar appears in the third column of the footer widget area.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 4', 'basis' ),
+		'id'            => 'footer-4',
+		'description'   => __( 'The footer sidebar appears in the fourth column of the footer widget area.', 'basis' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 
