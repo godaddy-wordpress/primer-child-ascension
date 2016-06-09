@@ -60,6 +60,7 @@ $menu-link-color: #194F6E;
 
 @media #{$medium-up} {
 	.main-navigation {
+		display: block;
 		clear: none;
 		float: right;
 		position: relative;
@@ -70,7 +71,6 @@ $menu-link-color: #194F6E;
 		margin-top: 12px;
 
 		ul {
-			display: block;
 			li {
 				border: none;
 				display: inline-block;
