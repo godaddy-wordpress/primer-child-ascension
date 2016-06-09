@@ -1,5 +1,10 @@
 <?php
 
+function basis_add_mobile_menu(){
+	get_template_part( 'templates/parts/mobile-menu' );
+}
+add_action( 'basis_header', 'basis_add_mobile_menu', 0 );
+
 function check_admin_things(){
   remove_action( 'basis_header_after', 'basis_add_primary_navigation', 20 );
 	add_action( 'basis_header', 'basis_add_primary_navigation', 20 );
