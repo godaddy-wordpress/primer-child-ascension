@@ -1,5 +1,37 @@
 <?php
 
+add_image_size( 'hero', 1060, 550, array( 'center', 'top' ) );
+
+$defaults = array(
+	'default-image'          => get_stylesheet_directory_uri() . '/assets/images/hero.png',
+	'width'                  => 1060,
+	'height'                 => 550,
+	'flex-height'            => true,
+	'flex-width'             => false,
+	'uploads'                => true,
+	'random-default'         => false,
+	'header-text'            => true,
+	'default-text-color'     => '',
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $defaults );
+
+function get_featured_image( $post_id ) {
+	if ( has_post_thumbnail() ) {
+		return get_the_post_thumbnail_url( $post_id, 'hero' );
+	} else {
+		return header_image();
+	}
+}
+
+function replace_navigation() {
+   wp_dequeue_script( 'basis-navigation' );
+	 wp_enqueue_script( 'basis-navigation-2', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
+}
+add_action( 'wp_print_scripts', 'replace_navigation', 100 );
+
 function basis_add_mobile_menu(){
 	get_template_part( 'templates/parts/mobile-menu' );
 }
@@ -70,6 +102,16 @@ function basis_widgets_init() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Hero', 'basis' ),
+		'id'            => 'hero',
+		'description'   => __( 'The hero appears in the hero widget area on the front page', 'basis' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
 	) );
 }
 

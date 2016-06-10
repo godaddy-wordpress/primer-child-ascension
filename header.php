@@ -39,6 +39,10 @@
 
 	<?php do_action( 'basis_header_after' ); ?>
 
-	<?php get_template_part( 'templates/parts/hero' ); ?>
+	<?php
+		if( ! is_404() ) {
+			get_template_part( 'templates/parts/hero' );
+		}
+	?>
 
 	<div id="content" class="site-content">

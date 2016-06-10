@@ -48,7 +48,7 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-title{
+.entry-title, .archive-title{
 	margin-bottom: .25em;
 	font-size: $h2-font-size;
 	font-weight: lighter;
@@ -222,7 +222,7 @@ article.format-link {
 		height: 100%!important;
 	}
 }
-section h2 {
+section > h2 {
 	font-size: 20px;
 	font-weight: lighter;
 	color: #757575;
@@ -240,4 +240,9 @@ section h2 {
 	 font-size: 30px;
 	 padding-bottom: 18px
 	}
+}
+
+section.error-404 {
+	text-align: center;
+	padding: 100px;
 }

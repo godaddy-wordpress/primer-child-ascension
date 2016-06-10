@@ -1,14 +1,18 @@
 .hero {
 	background: $secondary-color;
 	margin-bottom: 40px;
-	padding: 50px 25px;
+	padding: 8% 25px;
 	text-align: right;
 	@extend .row;
 	max-width: 1060px;
+	color: #fff;
 
 	@media #{$medium-up} {
 		&.home .hero-inner {
-			padding-left: 55%;
+			padding-left: 50%;
+		}
+		&.home {
+			padding: 70px 25px 140px;
 		}
 	}
 
@@ -62,6 +66,7 @@
 	a.button.large {
 		background: #F99A00;
 		color: #FFFFFF;
+		border: none;
 
 		&:hover {
 			background: lighten(#F99A00, 5%);

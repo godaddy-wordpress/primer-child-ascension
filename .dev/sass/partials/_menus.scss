@@ -9,13 +9,19 @@ $menu-link-color: #194F6E;
   left: 0;
   z-index: 999;
 	display: none;
+
+	&.toggled {
+		display: block;
+	}
+
 	ul {
+		border-bottom: 1px solid rgba(117,117,117,0.28);
 		list-style: none;
 		margin: 0;
 		padding: 0;
 
 		li {
-			border-top: 1px solid #979797;
+			border-top: 1px solid rgba(117,117,117,0.28);
 			a {
 				color: $menu-link-color;
 				display: block;
@@ -72,6 +78,7 @@ $menu-link-color: #194F6E;
 		display: block;
 
 		ul {
+			border: 0;
 			li {
 				border: none;
 				display: inline-block;
@@ -132,6 +139,7 @@ $menu-link-color: #194F6E;
 		@extend .columns;
 		margin-bottom: 1em;
 		margin-bottom: 1rem;
+		padding: 0;
 	}
 }
 

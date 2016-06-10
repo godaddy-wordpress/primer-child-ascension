@@ -25,6 +25,13 @@
 		width: 100%;
 	}
 
+	body.error404 & {
+		margin: 0;
+		padding: 0;
+		max-width: none;
+		width: 100%;
+	}
+
 	body.layout-two-column-reversed &{
 		@extend .large-push-4;
 	}

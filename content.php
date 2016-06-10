@@ -9,7 +9,13 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
+	<?php
+
+	if( ! is_single() ):
+		get_template_part( 'templates/parts/loop/post', 'thumbnail' );
+	endif;
+
+	?>
 
 	<?php get_template_part( 'templates/parts/loop/post', 'title' ); ?>
 

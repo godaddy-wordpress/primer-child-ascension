@@ -1,15 +1,7 @@
-<div class="hero<?php if( is_front_page() ): ?> home<?php endif; ?>">
+<div class="hero<?php if( is_front_page() ): ?> home<?php endif; ?>" style="background:url('<?php echo get_featured_image( get_the_ID() ); ?>') no-repeat top center; background-size: cover;">
 	<div class="hero-inner">
-		<?php if( is_front_page() ): ?>
-			<blockquote>
-			<p>“For the first time, I have
-					a plan for the future,
-					and I couldn’t be more
-					relieved and excited.”<br>
-			<cite>Christine, New York City</cite></p>
-			</blockquote>
-			<a class="button large" href="#">Plan your future</a>
-
+		<?php if( is_front_page() && is_active_sidebar( 'hero' ) ): ?>
+			<?php dynamic_sidebar( 'hero' ); ?>
 		<?php elseif( is_page() ): ?>
 			<?php get_template_part( 'templates/parts/loop/page-title' ); ?>
 		<?php elseif( is_search() ): ?>
