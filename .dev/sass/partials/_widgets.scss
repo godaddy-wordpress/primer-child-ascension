@@ -6,21 +6,6 @@ $widget-bg: #fff !default;
 }
 
 /* Search widget */
-.widget_search {
-	padding-right: 1.25em;
-	padding-right: 1.25rem;
-
-	#secondary &{
-		padding-top: 0;
-		padding-left: 0;
-		padding-bottom: 0;
-	}
-
-	@media screen and (max-width: 600px) {
-		padding-right: 0;
-	}
-}
-
 .widget {
 	margin: 0 0 3em;
 

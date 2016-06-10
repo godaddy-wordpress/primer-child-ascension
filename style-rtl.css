@@ -1583,17 +1583,6 @@ a {
   max-width: 100%; }
 
 /* Search widget */
-.widget_search {
-  padding-left: 1.25em;
-  padding-left: 1.25rem; }
-  #secondary .widget_search {
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0; }
-  @media screen and (max-width: 600px) {
-    .widget_search {
-      padding-left: 0; } }
-
 .widget {
   margin: 0 0 3em; }
   .widget ul {
