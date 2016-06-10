@@ -30,10 +30,13 @@ add_action( 'after_setup_theme', 'theme_prefix_setup' );
 function get_featured_image() {
 	$post_id = get_queried_object_id();
 	if ( has_post_thumbnail( $post_id ) ) {
-		return get_the_post_thumbnail_url( $post_id, 'hero' );
-	} else {
-		return header_image();
+		$image = get_the_post_thumbnail_url( $post_id, 'hero' );
+		if( getimagesize( $image ) ) {
+				return $image;
+		}
 	}
+
+	return header_image();
 }
 
 function basis_add_google_fonts() {
