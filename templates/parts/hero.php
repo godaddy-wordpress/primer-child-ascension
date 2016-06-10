@@ -1,4 +1,4 @@
-<div class="hero<?php if( is_front_page() ): ?> home<?php endif; ?>" style="background:url('<?php echo get_featured_image( get_the_ID() ); ?>') no-repeat top center; background-size: cover;">
+<div class="hero<?php if( is_front_page() ): ?> home<?php endif; ?>" style="background:url('<?php echo get_featured_image( ); ?>') no-repeat top center; background-size: cover;">
 	<div class="hero-inner">
 		<?php if( is_front_page() && is_active_sidebar( 'hero' ) ): ?>
 			<?php dynamic_sidebar( 'hero' ); ?>
