@@ -2389,7 +2389,8 @@ body.layout-one-column-narrow #content {
     .footer-widget-area a.button:hover, .footer-widget-area .social-menu a:hover, .social-menu .footer-widget-area a:hover {
       text-decoration: none; }
     .footer-widget-area a.button.large, .footer-widget-area .social-menu a.large, .social-menu .footer-widget-area a.large {
-      font-size: 0.875rem; }
+      font-size: 0.875rem;
+      padding: 12px; }
   .footer-widget-area p.button {
     margin-bottom: 0; }
   .footer-widget-area .site-title-wrapper {
