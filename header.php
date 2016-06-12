@@ -27,7 +27,7 @@
 
 	<?php do_action( 'basis_header_before' ); ?>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="<?php echo basis_full_width_control('site-header'); ?>" role="banner">
 
 		<div class="site-header-wrapper">
 

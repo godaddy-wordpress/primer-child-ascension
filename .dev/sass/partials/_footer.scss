@@ -27,7 +27,6 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 }
 
 .footer-widget-area {
-	padding: 20px 0;
 	@extend .row;
 
 	.footer-widget {
@@ -151,7 +150,7 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 
 
 .site-info-wrapper{
-	padding: 20px 0;
+	padding: 20px;
 	background: $site-footer-info-background;
 	color: $site-footer-info-text-color;
 	line-height: 1.5;

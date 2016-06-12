@@ -1,19 +1,26 @@
 .hero {
 	background: $secondary-color;
 	margin-bottom: 40px;
-	padding: 8% 25px;
-	text-align: right;
-	@extend .row;
 	max-width: 1060px;
-	color: #fff;
+	@extend .row;
+	.hero-wrapper {
+		padding: 8% 25px;
+		text-align: right;
+		color: #fff;
+	}
 
 	@media #{$medium-up} {
-		&.home .hero-inner {
+		.home .hero-inner {
 			padding-left: 50%;
+			padding-right: 0;
 		}
-		&.home {
+		.home {
 			padding: 70px 25px 140px;
 		}
+	}
+
+	.hero-wrapper {
+		@extend .row;
 	}
 
 	.hero-inner {

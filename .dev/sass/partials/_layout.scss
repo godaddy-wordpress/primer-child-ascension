@@ -1,3 +1,8 @@
+.no-max-width,
+.hero.no-max-width {
+	max-width: none;
+}
+
 #content{
 	@extend .row;
 	padding: 0 0 40px;
@@ -107,7 +112,7 @@
 
 .site-footer{
 	.site-footer-inner{
-		@extend .row;
+		//@extend .row;
 	}
 
 	.site-info{

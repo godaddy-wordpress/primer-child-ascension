@@ -4,7 +4,7 @@ Theme URI: http://liftux.com
 Author: Lift
 Author URI: http://liftux.com
 Description: This is a child theme for Basis.
-Version: 0.0.3
+Version: 0.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ascension
@@ -105,44 +105,44 @@ textarea {
 select {
   width: 100%; }
 
-.row, .navigation, #content, .site-branding-container, .site-footer .site-footer-inner, .site-header, .featured-content .entry-header .entry-header-row, .hero, .footer-widget-area, .featured-content .featured-content-inner {
+.row, .navigation, #content, .site-branding-container, .site-header, .featured-content .entry-header .entry-header-row, .hero, .hero .hero-wrapper, .footer-widget-area, .featured-content .featured-content-inner {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 68.75rem; }
-  .row:before, .navigation:before, #content:before, .site-branding-container:before, .site-footer .site-footer-inner:before, .site-header:before, .featured-content .entry-header .entry-header-row:before, .hero:before, .footer-widget-area:before, .featured-content .featured-content-inner:before, .row:after, .navigation:after, #content:after, .site-branding-container:after, .site-footer .site-footer-inner:after, .site-header:after, .featured-content .entry-header .entry-header-row:after, .hero:after, .footer-widget-area:after, .featured-content .featured-content-inner:after {
+  .row:before, .navigation:before, #content:before, .site-branding-container:before, .site-header:before, .featured-content .entry-header .entry-header-row:before, .hero:before, .hero .hero-wrapper:before, .footer-widget-area:before, .featured-content .featured-content-inner:before, .row:after, .navigation:after, #content:after, .site-branding-container:after, .site-header:after, .featured-content .entry-header .entry-header-row:after, .hero:after, .hero .hero-wrapper:after, .footer-widget-area:after, .featured-content .featured-content-inner:after {
     content: " ";
     display: table; }
-  .row:after, .navigation:after, #content:after, .site-branding-container:after, .site-footer .site-footer-inner:after, .site-header:after, .featured-content .entry-header .entry-header-row:after, .hero:after, .footer-widget-area:after, .featured-content .featured-content-inner:after {
+  .row:after, .navigation:after, #content:after, .site-branding-container:after, .site-header:after, .featured-content .entry-header .entry-header-row:after, .hero:after, .hero .hero-wrapper:after, .footer-widget-area:after, .featured-content .featured-content-inner:after {
     clear: both; }
-  .row.collapse > .column, .row.collapse > .collapse.navigation, .row.collapse > .collapse#content, .row.collapse > .collapse.site-branding-container, .row.collapse > .site-footer .collapse.site-footer-inner, .site-footer .row.collapse > .collapse.site-footer-inner, .row.collapse > .collapse.site-header, .row.collapse > .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row.collapse > .collapse.entry-header-row, .row.collapse > .collapse.hero, .row.collapse > .collapse.footer-widget-area, .row.collapse > .featured-content .collapse.featured-content-inner, .featured-content .row.collapse > .collapse.featured-content-inner, .row.collapse > .columns, .row.collapse > .collapse.navigation, .row.collapse > .collapse#content, .row.collapse > .collapse.site-branding-container, .row.collapse > .site-footer .collapse.site-footer-inner, .site-footer .row.collapse > .collapse.site-footer-inner, .row.collapse > .collapse.site-header, .row.collapse > .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row.collapse > .collapse.entry-header-row, .row.collapse > .collapse.hero, .row.collapse > .collapse.footer-widget-area, .row.collapse > .featured-content .collapse.featured-content-inner, .featured-content .row.collapse > .collapse.featured-content-inner, .row.collapse > .navigation .nav-links, .navigation .row.collapse > .nav-links, .row.collapse > #primary, .row.collapse > #secondary, .row.collapse > #tertiary, .row.collapse > .site-branding, .row.collapse > .site-footer .site-info, .site-footer .row.collapse > .site-info, .row.collapse > .site-header-wrapper, .row.collapse > .featured-content .entry-header .entry-header-column, .featured-content .entry-header .row.collapse > .entry-header-column, .row.collapse > .hero .hero-inner, .hero .row.collapse > .hero-inner, .row.collapse > .footer-widget-area .footer-widget, .footer-widget-area .row.collapse > .footer-widget, .row.collapse > .featured-content article, .featured-content .row.collapse > article {
+  .row.collapse > .column, .row.collapse > .collapse.navigation, .row.collapse > .collapse#content, .row.collapse > .collapse.site-branding-container, .row.collapse > .collapse.site-header, .row.collapse > .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row.collapse > .collapse.entry-header-row, .row.collapse > .collapse.hero, .row.collapse > .hero .collapse.hero-wrapper, .hero .row.collapse > .collapse.hero-wrapper, .row.collapse > .collapse.footer-widget-area, .row.collapse > .featured-content .collapse.featured-content-inner, .featured-content .row.collapse > .collapse.featured-content-inner, .row.collapse > .columns, .row.collapse > .collapse.navigation, .row.collapse > .collapse#content, .row.collapse > .collapse.site-branding-container, .row.collapse > .collapse.site-header, .row.collapse > .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row.collapse > .collapse.entry-header-row, .row.collapse > .collapse.hero, .row.collapse > .hero .collapse.hero-wrapper, .hero .row.collapse > .collapse.hero-wrapper, .row.collapse > .collapse.footer-widget-area, .row.collapse > .featured-content .collapse.featured-content-inner, .featured-content .row.collapse > .collapse.featured-content-inner, .row.collapse > .navigation .nav-links, .navigation .row.collapse > .nav-links, .row.collapse > #primary, .row.collapse > #secondary, .row.collapse > #tertiary, .row.collapse > .site-branding, .row.collapse > .site-footer .site-info, .site-footer .row.collapse > .site-info, .row.collapse > .site-header-wrapper, .row.collapse > .featured-content .entry-header .entry-header-column, .featured-content .entry-header .row.collapse > .entry-header-column, .row.collapse > .hero .hero-inner, .hero .row.collapse > .hero-inner, .row.collapse > .footer-widget-area .footer-widget, .footer-widget-area .row.collapse > .footer-widget, .row.collapse > .featured-content article, .featured-content .row.collapse > article {
     padding-right: 0;
     padding-left: 0; }
-  .row.collapse .row, .row.collapse .collapse.navigation, .row.collapse .collapse#content, .row.collapse .collapse.site-branding-container, .row.collapse .site-footer .collapse.site-footer-inner, .site-footer .row.collapse .collapse.site-footer-inner, .row.collapse .collapse.site-header, .row.collapse .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row.collapse .collapse.entry-header-row, .row.collapse .collapse.hero, .row.collapse .collapse.footer-widget-area, .row.collapse .featured-content .collapse.featured-content-inner, .featured-content .row.collapse .collapse.featured-content-inner, .row.collapse .navigation, .row.collapse #content, .row.collapse .site-branding-container, .row.collapse .site-footer .site-footer-inner, .site-footer .row.collapse .site-footer-inner, .row.collapse .site-header, .row.collapse .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row.collapse .entry-header-row, .row.collapse .hero, .row.collapse .footer-widget-area, .row.collapse .featured-content .featured-content-inner, .featured-content .row.collapse .featured-content-inner {
+  .row.collapse .row, .row.collapse .collapse.navigation, .row.collapse .collapse#content, .row.collapse .collapse.site-branding-container, .row.collapse .collapse.site-header, .row.collapse .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row.collapse .collapse.entry-header-row, .row.collapse .collapse.hero, .row.collapse .hero .collapse.hero-wrapper, .hero .row.collapse .collapse.hero-wrapper, .row.collapse .collapse.footer-widget-area, .row.collapse .featured-content .collapse.featured-content-inner, .featured-content .row.collapse .collapse.featured-content-inner, .row.collapse .navigation, .row.collapse #content, .row.collapse .site-branding-container, .row.collapse .site-header, .row.collapse .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row.collapse .entry-header-row, .row.collapse .hero, .row.collapse .hero .hero-wrapper, .hero .row.collapse .hero-wrapper, .row.collapse .footer-widget-area, .row.collapse .featured-content .featured-content-inner, .featured-content .row.collapse .featured-content-inner {
     margin-right: 0;
     margin-left: 0; }
-  .row .row, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner {
+  .row .row, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner {
     width: auto;
     margin-right: -1.25rem;
     margin-left: -1.25rem;
     margin-top: 0;
     margin-bottom: 0;
     max-width: none; }
-    .row .row:before, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation:before, .row #content:before, .row .site-branding-container:before, .row .site-footer .site-footer-inner:before, .site-footer .row .site-footer-inner:before, .row .site-header:before, .row .featured-content .entry-header .entry-header-row:before, .featured-content .entry-header .row .entry-header-row:before, .row .hero:before, .row .footer-widget-area:before, .row .featured-content .featured-content-inner:before, .featured-content .row .featured-content-inner:before, .row .row:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation:after, .row #content:after, .row .site-branding-container:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, .row .site-header:after, .row .featured-content .entry-header .entry-header-row:after, .featured-content .entry-header .row .entry-header-row:after, .row .hero:after, .row .footer-widget-area:after, .row .featured-content .featured-content-inner:after, .featured-content .row .featured-content-inner:after {
+    .row .row:before, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation:before, .row #content:before, .row .site-branding-container:before, .row .site-header:before, .row .featured-content .entry-header .entry-header-row:before, .featured-content .entry-header .row .entry-header-row:before, .row .hero:before, .row .hero .hero-wrapper:before, .hero .row .hero-wrapper:before, .row .footer-widget-area:before, .row .featured-content .featured-content-inner:before, .featured-content .row .featured-content-inner:before, .row .row:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation:after, .row #content:after, .row .site-branding-container:after, .row .site-header:after, .row .featured-content .entry-header .entry-header-row:after, .featured-content .entry-header .row .entry-header-row:after, .row .hero:after, .row .hero .hero-wrapper:after, .hero .row .hero-wrapper:after, .row .footer-widget-area:after, .row .featured-content .featured-content-inner:after, .featured-content .row .featured-content-inner:after {
       content: " ";
       display: table; }
-    .row .row:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation:after, .row #content:after, .row .site-branding-container:after, .row .site-footer .site-footer-inner:after, .site-footer .row .site-footer-inner:after, .row .site-header:after, .row .featured-content .entry-header .entry-header-row:after, .featured-content .entry-header .row .entry-header-row:after, .row .hero:after, .row .footer-widget-area:after, .row .featured-content .featured-content-inner:after, .featured-content .row .featured-content-inner:after {
+    .row .row:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .navigation:after, .row #content:after, .row .site-branding-container:after, .row .site-header:after, .row .featured-content .entry-header .entry-header-row:after, .featured-content .entry-header .row .entry-header-row:after, .row .hero:after, .row .hero .hero-wrapper:after, .hero .row .hero-wrapper:after, .row .footer-widget-area:after, .row .featured-content .featured-content-inner:after, .featured-content .row .featured-content-inner:after {
       clear: both; }
-    .row .row.collapse, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation, .row .collapse#content, .row .collapse.site-branding-container, .row .site-footer .collapse.site-footer-inner, .site-footer .row .collapse.site-footer-inner, .row .collapse.site-header, .row .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row .collapse.entry-header-row, .row .collapse.hero, .row .collapse.footer-widget-area, .row .featured-content .collapse.featured-content-inner, .featured-content .row .collapse.featured-content-inner {
+    .row .row.collapse, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation, .row .collapse#content, .row .collapse.site-branding-container, .row .collapse.site-header, .row .featured-content .entry-header .collapse.entry-header-row, .featured-content .entry-header .row .collapse.entry-header-row, .row .collapse.hero, .row .hero .collapse.hero-wrapper, .hero .row .collapse.hero-wrapper, .row .collapse.footer-widget-area, .row .featured-content .collapse.featured-content-inner, .featured-content .row .collapse.featured-content-inner {
       width: auto;
       margin: 0;
       max-width: none; }
-      .row .row.collapse:before, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation:before, .row .collapse#content:before, .row .collapse.site-branding-container:before, .row .site-footer .collapse.site-footer-inner:before, .site-footer .row .collapse.site-footer-inner:before, .row .collapse.site-header:before, .row .featured-content .entry-header .collapse.entry-header-row:before, .featured-content .entry-header .row .collapse.entry-header-row:before, .row .collapse.hero:before, .row .collapse.footer-widget-area:before, .row .featured-content .collapse.featured-content-inner:before, .featured-content .row .collapse.featured-content-inner:before, .row .row.collapse:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation:after, .row .collapse#content:after, .row .collapse.site-branding-container:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, .row .collapse.site-header:after, .row .featured-content .entry-header .collapse.entry-header-row:after, .featured-content .entry-header .row .collapse.entry-header-row:after, .row .collapse.hero:after, .row .collapse.footer-widget-area:after, .row .featured-content .collapse.featured-content-inner:after, .featured-content .row .collapse.featured-content-inner:after {
+      .row .row.collapse:before, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation:before, .row .collapse#content:before, .row .collapse.site-branding-container:before, .row .collapse.site-header:before, .row .featured-content .entry-header .collapse.entry-header-row:before, .featured-content .entry-header .row .collapse.entry-header-row:before, .row .collapse.hero:before, .row .hero .collapse.hero-wrapper:before, .hero .row .collapse.hero-wrapper:before, .row .collapse.footer-widget-area:before, .row .featured-content .collapse.featured-content-inner:before, .featured-content .row .collapse.featured-content-inner:before, .row .row.collapse:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation:after, .row .collapse#content:after, .row .collapse.site-branding-container:after, .row .collapse.site-header:after, .row .featured-content .entry-header .collapse.entry-header-row:after, .featured-content .entry-header .row .collapse.entry-header-row:after, .row .collapse.hero:after, .row .hero .collapse.hero-wrapper:after, .hero .row .collapse.hero-wrapper:after, .row .collapse.footer-widget-area:after, .row .featured-content .collapse.featured-content-inner:after, .featured-content .row .collapse.featured-content-inner:after {
         content: " ";
         display: table; }
-      .row .row.collapse:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-footer .site-footer-inner, .site-footer .row .site-footer-inner, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation:after, .row .collapse#content:after, .row .collapse.site-branding-container:after, .row .site-footer .collapse.site-footer-inner:after, .site-footer .row .collapse.site-footer-inner:after, .row .collapse.site-header:after, .row .featured-content .entry-header .collapse.entry-header-row:after, .featured-content .entry-header .row .collapse.entry-header-row:after, .row .collapse.hero:after, .row .collapse.footer-widget-area:after, .row .featured-content .collapse.featured-content-inner:after, .featured-content .row .collapse.featured-content-inner:after {
+      .row .row.collapse:after, .row .navigation, .row #content, .row .site-branding-container, .row .site-header, .row .featured-content .entry-header .entry-header-row, .featured-content .entry-header .row .entry-header-row, .row .hero, .row .hero .hero-wrapper, .hero .row .hero-wrapper, .row .footer-widget-area, .row .featured-content .featured-content-inner, .featured-content .row .featured-content-inner, .row .collapse.navigation:after, .row .collapse#content:after, .row .collapse.site-branding-container:after, .row .collapse.site-header:after, .row .featured-content .entry-header .collapse.entry-header-row:after, .featured-content .entry-header .row .collapse.entry-header-row:after, .row .collapse.hero:after, .row .hero .collapse.hero-wrapper:after, .hero .row .collapse.hero-wrapper:after, .row .collapse.footer-widget-area:after, .row .featured-content .collapse.featured-content-inner:after, .featured-content .row .collapse.featured-content-inner:after {
         clear: both; }
 
 .column, .columns, .navigation .nav-links, #primary, #secondary, #tertiary, .site-branding, .site-footer .site-info, .site-header-wrapper, .featured-content .entry-header .entry-header-column, .hero .hero-inner, .footer-widget-area .footer-widget, .featured-content article {
@@ -2139,6 +2139,9 @@ img[class*="wp-image-"] {
 embed, iframe, object {
   max-width: 100%; }
 
+.no-max-width, .hero.no-max-width {
+  max-width: none; }
+
 #content {
   padding: 0 0 40px; }
   body.layout-one-column-full #content {
@@ -2275,14 +2278,16 @@ body.layout-one-column-narrow #content {
 .hero {
   background: #194F6E;
   margin-bottom: 40px;
-  padding: 8% 25px;
-  text-align: left;
-  max-width: 1060px;
-  color: #fff; }
+  max-width: 1060px; }
+  .hero .hero-wrapper {
+    padding: 8% 25px;
+    text-align: left;
+    color: #fff; }
   @media only screen and (min-width:40.063em) {
-    .hero.home .hero-inner {
-      padding-right: 50%; }
-    .hero.home {
+    .hero .home .hero-inner {
+      padding-right: 50%;
+      padding-left: 0; }
+    .hero .home {
       padding: 70px 25px 140px; } }
   .hero h1 {
     color: #fff;
@@ -2336,83 +2341,81 @@ body.layout-one-column-narrow #content {
     .site-footer a:hover {
       text-decoration: underline; }
 
-.footer-widget-area {
-  padding: 20px 0; }
-  .footer-widget-area .footer-widget .widget {
-    color: #222;
-    margin-bottom: 2.25em;
-    margin-bottom: 2.25rem; }
-    .footer-widget-area .footer-widget .widget li {
-      border: none; }
-  .footer-widget-area .footer-widget .widget-title {
-    font-size: 0.8125rem;
-    text-transform: uppercase; }
-  .footer-widget-area .footer-widget .widget_calendar #calendar_wrap {
-    padding-left: 0; }
-  .footer-widget-area .footer-widget .widget_recent_comments li {
-    text-transform: none; }
-  .footer-widget-area .footer-widget a, .footer-widget-area .footer-widget .widget li a {
-    color: #194F6E;
-    font-size: 0.8125rem;
-    font-weight: normal;
-    text-transform: none; }
-    .footer-widget-area .footer-widget a:hover, .footer-widget-area .footer-widget .widget li a:hover {
-      text-decoration: underline; }
-  @media only screen and (min-width:40.063em) {
-    .footer-widget-area .footer-widget:first-child {
-      float: left; } }
-  .footer-widget-area .social-menu {
-    margin-bottom: 2.25em;
-    margin-bottom: 2.25rem; }
-    .footer-widget-area .social-menu ul {
-      margin-left: 0;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      .footer-widget-area .social-menu ul li {
-        margin: 0; }
-      @media only screen and (min-width:40.063em) and (max-width:64em) {
-        .footer-widget-area .social-menu ul {
-          display: inline-block; }
-          .footer-widget-area .social-menu ul li {
-            margin-left: 10px; } }
-    .footer-widget-area .social-menu a {
-      font-size: 0; }
-  .footer-widget-area a.button, .footer-widget-area .social-menu a, .social-menu .footer-widget-area a {
-    display: block;
-    text-align: center;
+.footer-widget-area .footer-widget .widget {
+  color: #222;
+  margin-bottom: 2.25em;
+  margin-bottom: 2.25rem; }
+  .footer-widget-area .footer-widget .widget li {
+    border: none; }
+.footer-widget-area .footer-widget .widget-title {
+  font-size: 0.8125rem;
+  text-transform: uppercase; }
+.footer-widget-area .footer-widget .widget_calendar #calendar_wrap {
+  padding-left: 0; }
+.footer-widget-area .footer-widget .widget_recent_comments li {
+  text-transform: none; }
+.footer-widget-area .footer-widget a, .footer-widget-area .footer-widget .widget li a {
+  color: #194F6E;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  text-transform: none; }
+  .footer-widget-area .footer-widget a:hover, .footer-widget-area .footer-widget .widget li a:hover {
+    text-decoration: underline; }
+@media only screen and (min-width:40.063em) {
+  .footer-widget-area .footer-widget:first-child {
+    float: left; } }
+.footer-widget-area .social-menu {
+  margin-bottom: 2.25em;
+  margin-bottom: 2.25rem; }
+  .footer-widget-area .social-menu ul {
+    margin-left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .footer-widget-area .social-menu ul li {
+      margin: 0; }
+    @media only screen and (min-width:40.063em) and (max-width:64em) {
+      .footer-widget-area .social-menu ul {
+        display: inline-block; }
+        .footer-widget-area .social-menu ul li {
+          margin-left: 10px; } }
+  .footer-widget-area .social-menu a {
+    font-size: 0; }
+.footer-widget-area a.button, .footer-widget-area .social-menu a, .social-menu .footer-widget-area a {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.25em;
+  margin-bottom: 1.25rem; }
+  .footer-widget-area a.button:hover, .footer-widget-area .social-menu a:hover, .social-menu .footer-widget-area a:hover {
+    text-decoration: none; }
+  .footer-widget-area a.button.large, .footer-widget-area .social-menu a.large, .social-menu .footer-widget-area a.large {
+    font-size: 0.875rem;
+    padding: 12px; }
+.footer-widget-area p.button {
+  margin-bottom: 0; }
+.footer-widget-area .site-title-wrapper {
+  margin-bottom: 25px; }
+.footer-widget-area .site-title-wrapper-inner {
+  padding: 0; }
+.footer-widget-area .site-title {
+  margin-bottom: 0; }
+  .footer-widget-area .site-title a {
     font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1.25em;
-    margin-bottom: 1.25rem; }
-    .footer-widget-area a.button:hover, .footer-widget-area .social-menu a:hover, .social-menu .footer-widget-area a:hover {
-      text-decoration: none; }
-    .footer-widget-area a.button.large, .footer-widget-area .social-menu a.large, .social-menu .footer-widget-area a.large {
-      font-size: 0.875rem;
-      padding: 12px; }
-  .footer-widget-area p.button {
-    margin-bottom: 0; }
-  .footer-widget-area .site-title-wrapper {
-    margin-bottom: 25px; }
-  .footer-widget-area .site-title-wrapper-inner {
-    padding: 0; }
-  .footer-widget-area .site-title {
-    margin-bottom: 0; }
-    .footer-widget-area .site-title a {
-      font-weight: bold;
-      font-size: 26px; }
-      .footer-widget-area .site-title a:hover {
-        text-decoration: none;
-        color: #144159; }
-  .footer-widget-area .site-description {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #757575;
-    font-size: 7.4px; }
+    font-size: 26px; }
+    .footer-widget-area .site-title a:hover {
+      text-decoration: none;
+      color: #144159; }
+.footer-widget-area .site-description {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #757575;
+  font-size: 7.4px; }
 
 .site-info-wrapper {
-  padding: 20px 0;
+  padding: 20px;
   background: #fff;
   color: #222;
   line-height: 1.5; }

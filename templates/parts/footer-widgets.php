@@ -8,7 +8,7 @@
 
 <?php if( is_active_sidebar( 'footer-1' ) && is_active_sidebar( 'footer-2' ) && is_active_sidebar( 'footer-3' ) && is_active_sidebar( 'footer-4' ) ): ?>
 
-<div class="footer-widget-area">
+<div class="<?php echo basis_full_width_control('footer-widget-area'); ?>">
 
 	<div class="footer-widget">
 		<?php get_template_part( 'templates/parts/site-title' ); ?>

@@ -1,6 +1,31 @@
 <?php
 
-function theme_prefix_setup() {
+function basis_full_width_customizer($wp_customize) {
+    $wp_customize->add_setting('full_width', array(
+        'default'        => 0,
+    ));
+
+    $wp_customize->add_control('full_width', array(
+        'label'   => 'Full Width Header / Footer',
+        'section' => 'layout',
+        'type'    => 'radio',
+				'choices'  => array(
+					0  => "Disabled",
+					1 => "Enabled",
+				),
+    ));
+}
+add_action('customize_register', 'basis_full_width_customizer');
+
+function basis_full_width_control( $classes ) {
+	$classes = explode( ' ', $classes );
+	if(get_theme_mod('full_width') == 1) {
+		$classes[] = 'no-max-width';
+	}
+	return implode( ' ', $classes );
+}
+
+function basis_theme_setup() {
 	add_theme_support( 'custom-logo', array(
 		'height'      => 100,
 		'width'       => 400,
@@ -25,9 +50,9 @@ function theme_prefix_setup() {
 	add_image_size( 'hero', 1060, 550, array( 'center', 'top' ) );
 
 }
-add_action( 'after_setup_theme', 'theme_prefix_setup' );
+add_action( 'after_setup_theme', 'basis_theme_setup' );
 
-function get_featured_image() {
+function basis_get_featured_image() {
 	$post_id = get_queried_object_id();
 	if ( has_post_thumbnail( $post_id ) ) {
 		$image = get_the_post_thumbnail_url( $post_id, 'hero' );
