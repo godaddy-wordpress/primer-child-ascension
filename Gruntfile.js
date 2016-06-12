@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 				]
 			},
 			options: {
-				//proxy: "localhost", // enter your local WP URL here
+				proxy: "godaddy.dev", // enter your local WP URL here
 				watchTask: true
 			}
 		    }

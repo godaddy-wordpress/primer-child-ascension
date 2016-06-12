@@ -19,6 +19,8 @@
 
 	<?php get_template_part( 'templates/parts/loop/post', 'title' ); ?>
 
+	<?php get_template_part( 'templates/parts/loop/post', 'meta' ); ?>
+
 	<?php
 
 	if( is_single() ):
