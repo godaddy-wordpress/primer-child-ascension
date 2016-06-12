@@ -1,5 +1,50 @@
 <?php
 
+function basis_add_google_fonts() {
+		if( empty(get_theme_mod('main_font'))) {
+			wp_enqueue_style( 'ascension-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600,600italic,800,300,300italic,400,400italic,700,700italic,800italic', false );
+		} else {
+			wp_enqueue_style( 'ascension-google-fonts', 'https://fonts.googleapis.com/css?family=' . str_replace( ' ', '+', get_theme_mod('main_font')) . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic', false );
+		}
+}
+add_action( 'wp_enqueue_scripts', 'basis_add_google_fonts' );
+
+function basis_add_body_class( $classes ) {
+	$main_font = get_theme_mod('main_font');
+	if( ! empty( $main_font ) ) {
+		$classes[] = 'font-' . strtolower( str_replace( ' ', '-', $main_font ) );
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'basis_add_body_class' );
+
+function basis_font_switcher($wp_customize) {
+    $wp_customize->add_setting('main_font', array(
+        'default'        => 'Open Sans',
+    ));
+
+    $wp_customize->add_control('main_font', array(
+        'label'   => 'Font',
+        'section' => 'title_tagline',
+        'type'    => 'select',
+				'choices'  => array(
+					'Open Sans' 					=> 'Open Sans',
+					'Source Sans Pro' 		=> 'Source Sans Pro',
+					'Roboto' 							=> 'Roboto',
+					'Lato'								=> 'Lato',
+					'Montserrat' 					=> 'Montserrat',
+				 	'Raleway' 						=> 'Raleway',
+					'PT Sans' 						=> 'PT Sans',
+					'Noto Sans' 					=> 'Noto Sans',
+					'Muli' 								=> 'Muli',
+					'Oxygen'							=> 'Oxygen',
+					'Source Serif Pro'		=> 'Source Serif Pro',
+					'PT Serif'						=> 'PT Serif'
+				),
+    ));
+}
+add_action('customize_register', 'basis_font_switcher');
+
 function basis_full_width_customizer($wp_customize) {
     $wp_customize->add_setting('full_width', array(
         'default'        => 0,
@@ -63,11 +108,6 @@ function basis_get_featured_image() {
 
 	return header_image();
 }
-
-function basis_add_google_fonts() {
-	wp_enqueue_style( 'ascension-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600,600italic,800,300,300italic,400,400italic,700,700italic,800italic', false );
-}
-add_action( 'wp_enqueue_scripts', 'basis_add_google_fonts' );
 
 function basis_replace_navigation() {
    wp_dequeue_script( 'basis-navigation' );

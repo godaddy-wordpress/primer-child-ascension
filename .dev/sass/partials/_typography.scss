@@ -389,7 +389,7 @@ $align-class-breakpoints:
 			margin-bottom: $list-margin-bottom;
 			list-style-position: $list-style-position;
 			font-family: $list-font-family;
-			
+
 			@media #{$medium-up} {
 				font-size: $paragraph-medium-font-size;
 			}
@@ -504,6 +504,12 @@ $align-class-breakpoints:
 			font-size: rem-calc(18);
 			line-height: 1.4;
 		}
+		blockquote.aligncenter {
+			font-family: "Palatino", $header-font-family;
+			cite {
+				font-family: $header-font-family;
+			}
+		}
 
 		@media #{$medium-up} {
 			blockquote,
@@ -512,12 +518,8 @@ $align-class-breakpoints:
 			}
 			blockquote cite { font-size: $blockquote-cite-font-size; }
 			blockquote.aligncenter {
-				font-family: "Palatino", $header-font-family;
 				text-align: center;
 				width: 90%;
-				cite {
-					font-family: $header-font-family;
-				}
 			}
 			blockquote.alignleft,
 			blockquote.alignright {

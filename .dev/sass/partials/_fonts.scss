@@ -1,0 +1,42 @@
+$colors:
+	"Source Sans Pro",
+	"Roboto",
+	"Lato",
+	"Montserrat",
+	"Raleway",
+	"PT Sans",
+	"Noto Sans",
+	"Muli",
+	"Oxygen",
+	"Source Serif Pro",
+	"PT Serif";
+
+@for $i from 1 through length($colors) {
+  .font-#{to-lower-case(str-replace(nth($colors, $i), " ", "-"))} {
+		&,
+		h1, h2, h3, h4, h5, h6,
+		blockquote,
+		blockquote.aligncenter,
+		blockquote.aligncenter cite,
+		button, a.button, .social-menu a, input, select, textarea,
+		label,
+		.main-navigation ul li a,
+		.widget-title,
+		.entry-footer,
+		.entry-meta,
+		.event-meta, .sermon-meta, .location-meta, .person-meta,
+		.post-format,
+		.more-link,
+		article.format-link,
+		.comment-list li .comment-author, .comment-list li .comment-metadata,
+		#respond,
+		.site-title,
+		.site-description,
+		.featured-content .entry-header .entry-title,
+		.featured-content .entry-header .read-more,
+		.featured-content .entry-title,
+		.featured-content .read-more {
+			font-family: nth($colors, $i), $fallback-fonts;
+		}
+	}
+}
