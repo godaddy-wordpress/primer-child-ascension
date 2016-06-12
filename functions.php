@@ -47,7 +47,7 @@ function basis_theme_setup() {
 		'admin-preview-callback' => '',
 	) );
 
-	add_image_size( 'hero', 1060, 550, array( 'center', 'top' ) );
+	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
 
 }
 add_action( 'after_setup_theme', 'basis_theme_setup' );
