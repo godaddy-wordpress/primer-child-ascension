@@ -39,10 +39,12 @@
 
 	<?php do_action( 'basis_header_after' ); ?>
 
-	<?php
-		if( ! is_404() && ! is_page_template( 'templates/page-builder-default-header.php' ) ) {
-			get_template_part( 'templates/parts/hero' );
-		}
-	?>
+		<div class="mobile-margin"></div>
+		
+		<?php
+			if( ! is_404() && ! is_page_template( 'templates/page-builder-default-header.php' ) ) {
+				get_template_part( 'templates/parts/hero' );
+			}
+		?>
 
-	<div id="content" class="site-content">
+		<div id="content" class="site-content">

@@ -27,8 +27,8 @@ function basis_full_width_control( $classes ) {
 
 function basis_theme_setup() {
 	add_theme_support( 'custom-logo', array(
-		'height'      => 100,
-		'width'       => 400,
+		'height'      => 62,
+		'width'       => 352,
 		'flex-width' => true,
 	) );
 

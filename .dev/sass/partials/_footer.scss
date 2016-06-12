@@ -5,10 +5,9 @@ $site-footer-anchor-color: contrast-color($site-footer-background, #222, #fff, 5
 $site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #fff, 50%) !default;
 
 $site-footer-info-background: #fff;
-$site-footer-info-text-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
-$site-footer-info-border-color: contrast-color($site-footer-info-background, darken($site-footer-info-background,15%), lighten($site-footer-info-background,15%), 50%) !default;
-$site-footer-info-anchor-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
-$site-footer-info-anchor-color-hover: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
+$site-footer-info-text-color: #757575;
+$site-footer-info-anchor-color: #757575;
+$site-footer-info-anchor-color-hover: #757575;
 
 .site-footer{
 	background-color: $site-footer-background;
@@ -28,6 +27,15 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 
 .footer-widget-area {
 	@extend .row;
+	margin-top: 45px;
+	@media #{$medium-up} {
+		margin-top: 80px;
+		margin-bottom: 45px;
+	}
+	@media #{$large-up} {
+		margin-top: 105px;
+		margin-bottom: 70px;
+	}
 
 	.footer-widget {
 		.widget{
@@ -43,6 +51,7 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 		.widget-title {
 			font-size: rem-calc(13);
 			text-transform: uppercase;
+			margin-bottom: 10px;
 		}
 
 		.widget_calendar #calendar_wrap {
@@ -63,6 +72,9 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+		.widget li a {
+			padding: 7px 0;
 		}
 	}
 
@@ -150,16 +162,24 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 
 
 .site-info-wrapper{
-	padding: 20px;
+	padding: 0 20px 20px;
+	@media #{$medium-up} {
+		padding-bottom: 40px;
+	}
+	@media #{$large-up} {
+		padding-bottom: 80px
+	}	
+
 	background: $site-footer-info-background;
 	color: $site-footer-info-text-color;
 	line-height: 1.5;
 
 	a{
 		color: $site-footer-info-anchor-color;
+		font-weight: normal;
 
 		&:hover{
-			color: $site-footer-info-anchor-color-hover;
+			text-decoration: none;
 		}
 	}
 
@@ -167,7 +187,7 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 	.site-info-text p {
 		text-align: center;
     font-size: 12px;
-    color: #757575;
+    color: $site-footer-info-text-color;
 	}
 	.site-info-text p {
 		margin-bottom: rem-calc(10);

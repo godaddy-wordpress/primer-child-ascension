@@ -37,6 +37,19 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	}
 }
 
+.site-header .custom-logo {
+	width: auto;
+	max-height: 40px;
+
+	@media #{$medium-up} {
+		max-height: 52px;
+	}
+
+	@media #{$large-up} {
+		max-height: 62px;
+	}
+}
+
 .site-description{
 	font-size: 6.7px;
 	letter-spacing: 0.68px;
@@ -55,10 +68,13 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	background-color: $header-bg;
 	letter-spacing: -.01em;
 	padding: 10px 0;
+	position: fixed;
+	z-index: 999;
 	@extend .row;
 
 	@media #{$medium-up} {
 		padding: 17px 0;
+		position: inherit;
 	}
 	@media #{$large-up} {
 		padding: 32px 0;

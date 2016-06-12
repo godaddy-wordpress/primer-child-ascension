@@ -5,7 +5,6 @@
 
 #content{
 	@extend .row;
-	padding: 0 0 40px;
 
 	body.layout-one-column-full & {
 		max-width: 100%;
@@ -16,6 +15,14 @@
 	body.page-template-page-builder &{
 		padding: 0;
 		max-width: none;
+	}
+
+	body.error404 & {
+		background: #f9f9f9;
+		margin: 0;
+		padding: 0;
+		max-width: none;
+		width: 100%;
 	}
 }
 
@@ -31,10 +38,8 @@
 	}
 
 	body.error404 & {
-		margin: 0;
-		padding: 0;
-		max-width: none;
-		width: 100%;
+		@extend .row;
+		float: none;
 	}
 
 	body.layout-two-column-reversed &{

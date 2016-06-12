@@ -12,7 +12,6 @@
 	@media #{$medium-up} {
 		.home .hero-inner {
 			padding-left: 50%;
-			padding-right: 0;
 		}
 		.home {
 			padding: 70px 25px 140px;
@@ -58,6 +57,13 @@
 		}
 	}
 
+	blockquote p {
+		margin-bottom: 0;
+		@media #{$medium-up} {
+			margin-bottom: 1.25rem;
+		}
+	}
+
 	blockquote cite,
 	blockquote cite a {
 		color: $primary-color;
@@ -74,6 +80,15 @@
 		background: #F99A00;
 		color: #FFFFFF;
 		border: none;
+		font-size: 0.6875rem;
+		letter-spacing: 0.083125rem;
+		padding: 8px 32px;
+
+		@media #{$medium-up} {
+			font-size: 0.875rem;
+	    letter-spacing: 0.0375rem;
+	    padding: 12px 55px;
+		}
 
 		&:hover {
 			background: lighten(#F99A00, 5%);

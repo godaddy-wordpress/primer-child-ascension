@@ -8,6 +8,9 @@ $widget-bg: #fff !default;
 /* Search widget */
 .widget {
 	margin: 0 0 3em;
+	&:last-child {
+		margin: 0;
+	}
 
 	ul {
 		list-style: none;

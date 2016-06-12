@@ -1,5 +1,14 @@
 $menu-link-color: #194F6E;
 
+.mobile-margin {
+	display: block;
+	width: 100%;
+	height: 76px;
+	@media #{$medium-up} {
+		display: none;
+	}
+}
+
 .main-navigation {
 	clear: both;
 	position: fixed;
@@ -52,15 +61,14 @@ $menu-link-color: #194F6E;
 .menu-toggle {
 	display: block;
 	float: left;
-	width: 65px;
-	padding: 10px;
 	cursor: pointer;
+	padding: 19px 10px;
 
 	div {
 		background: #979797;
-		height: 4px;
-		margin: 6px;
-		border-radius: 1px;
+    height: 3px;
+    width: 16px;
+    margin-bottom: 3px;
 	}
 }
 
