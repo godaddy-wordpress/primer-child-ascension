@@ -11,7 +11,7 @@
 		<div class="site-info-inner">
 
 			<div class="site-info-text">
-				<p>Copyright © <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All Rights Reserved.</p>
+				<p>Copyright &copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All Rights Reserved.</p>
 				<p>Built with <a href="https://www.godaddy.com/" target="_blank">GoDaddy</a></p>
 			</div><!-- .site-info-text -->
 
