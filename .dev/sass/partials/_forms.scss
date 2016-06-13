@@ -73,6 +73,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type=number],
 textarea {
 	color: $color-text-input;
 	background-color: $color-text-input-background;
@@ -80,22 +81,14 @@ textarea {
 	transform: 200ms background linear;
 	border-radius: 3px;
 	resize: none;
+	padding: .75em;
+	padding: .75rem;
 
 	&:focus {
 		color: $color-text-input-focus;
 		outline: none;
 		background-color: darken($color-text-input-background,1%);
 	}
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-	padding: .75em;
-	padding: .75rem;
 }
 
 label{

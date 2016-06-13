@@ -1377,22 +1377,20 @@ button::-moz-focus-inner, a.button::-moz-focus-inner, .social-menu a::-moz-focus
   border: 0;
   padding: 0; }
 
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type=number], textarea {
   color: #666;
   background-color: #f1f1f1;
   border: none;
   -webkit-transform: 200ms background linear;
           transform: 200ms background linear;
   border-radius: 3px;
-  resize: none; }
-  input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
+  resize: none;
+  padding: 0.75em;
+  padding: 0.75rem; }
+  input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type=number]:focus, textarea:focus {
     color: #111;
     outline: none;
     background-color: #eeeeee; }
-
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
-  padding: 0.75em;
-  padding: 0.75rem; }
 
 label {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -2003,7 +2001,7 @@ section.error-404 {
 
 .comment-form label .required {
   color: #cc0000; }
-.comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"] {
+.comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="url"], .comment-form input[type="number"] {
   width: 100%; }
 
 #respond {
