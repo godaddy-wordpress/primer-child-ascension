@@ -1035,7 +1035,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  font-weight: lighter; }
 
 h2 {
   font-size: 1.25rem;
@@ -1261,7 +1262,7 @@ blockquote.aligncenter {
 
 @media only screen and (min-width:64.063em) {
   h1 {
-    font-size: 3.5rem; }
+    font-size: 3.125rem; }
   h2 {
     font-size: 2rem; }
   h3 {

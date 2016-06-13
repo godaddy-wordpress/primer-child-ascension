@@ -183,7 +183,8 @@ $header-text-rendering: optimizeLegibility;
 // We use these to control header font sizes
 $h1-font-size: rem-calc(28);
 $h1-medium-font-size: rem-calc(40);
-$h1-large-font-size: rem-calc(56);
+$h1-large-font-size: rem-calc(50);
+$h1-font-weight: lighter;
 
 $h2-font-size: rem-calc(20);
 $h2-medium-font-size: rem-calc(26);
