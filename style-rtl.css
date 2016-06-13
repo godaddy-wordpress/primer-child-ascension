@@ -2464,7 +2464,8 @@ body.layout-one-column-narrow #content {
     margin-bottom: 1.25em;
     margin-bottom: 1.25rem; }
     .footer-widget-area a.button:hover, .footer-widget-area .social-menu a:hover, .social-menu .footer-widget-area a:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #fff; }
     .footer-widget-area a.button.large, .footer-widget-area .social-menu a.large, .social-menu .footer-widget-area a.large {
       font-size: 0.875rem;
       padding: 12px; }
