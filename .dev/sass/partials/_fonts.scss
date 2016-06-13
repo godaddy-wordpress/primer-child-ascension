@@ -1,4 +1,4 @@
-$colors:
+$fonts:
 	"Source Sans Pro",
 	"Roboto",
 	"Lato",
@@ -11,8 +11,8 @@ $colors:
 	"Source Serif Pro",
 	"PT Serif";
 
-@for $i from 1 through length($colors) {
-  .font-#{to-lower-case(str-replace(nth($colors, $i), " ", "-"))} {
+@for $i from 1 through length($fonts) {
+  .font-#{to-lower-case(str-replace(nth($fonts, $i), " ", "-"))} {
 		&,
 		h1, h2, h3, h4, h5, h6,
 		blockquote,
@@ -36,7 +36,7 @@ $colors:
 		.featured-content .entry-header .read-more,
 		.featured-content .entry-title,
 		.featured-content .read-more {
-			font-family: nth($colors, $i), $fallback-fonts;
+			font-family: nth($fonts, $i), $fallback-fonts;
 		}
 	}
 }

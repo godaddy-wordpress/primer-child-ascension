@@ -109,7 +109,7 @@
 }
 
 .entry-meta {
-	color: #757575;
+	color: $body-secondary-color;
 	line-height: 1.4em;
 	line-height: 1.4rem;
 	font-size: rem-calc(11.75);
@@ -225,7 +225,7 @@ article.format-link {
 section > h2 {
 	font-size: 20px;
 	font-weight: lighter;
-	color: #757575;
+	color: $body-secondary-color;
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
@@ -246,7 +246,7 @@ section.error-404 {
 	text-align: center;
 	padding: 50px;
 	p {
-		color: #212121;
+		color: $body-font-color;
 		font-weight: lighter;
 	}
 	@media #{$medium-up} {

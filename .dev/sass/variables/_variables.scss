@@ -22,6 +22,7 @@ $font-smoothing: subpixel-antialiased;
 // We use these as default colors throughout
 $primary-color: #39BAF3;
 $secondary-color: #194F6E;
+$hero-button-color: #F99A00;
 $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
@@ -100,6 +101,7 @@ $column-gutter: rem-calc(40);
 $body-bg: #fff;
 $heading-font-color: $secondary-color;
 $body-font-color: #212121;
+$body-secondary-color: #757575;
 $body-font-subtle-color: #aaa;
 $sans-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $serif-font-family: Merriweather, Georgia, "Times New Roman", serif;
@@ -192,12 +194,12 @@ $h2-font-weight: lighter;
 $h3-font-size: rem-calc(16);
 $h3-medium-font-size: rem-calc(20);
 $h3-large-font-size: rem-calc(20);
-$h3-font-color: #194F6E;
+$h3-font-color: $secondary-color;
 
 $h4-font-size: rem-calc(12);
 $h4-medium-font-size: rem-calc(12);
 $h4-large-font-size: rem-calc(12);
-$h4-font-color: #757575;
+$h4-font-color: $body-secondary-color;
 $h4-letter-spacing: 1px;
 $h4-font-weight: lighter;
 $h4-text-transform: uppercase;
@@ -205,12 +207,12 @@ $h4-text-transform: uppercase;
 $h5-font-size: rem-calc(12);
 $h5-medium-font-size: rem-calc(12);
 $h5-large-font-size: rem-calc(12);
-$h5-font-color: #757575;
+$h5-font-color: $body-secondary-color;
 
 $h6-font-size: rem-calc(12);
 $h6-medium-font-size: rem-calc(12);
 $h6-large-font-size: rem-calc(12);
-$h6-font-color: #757575;
+$h6-font-color: $body-secondary-color;
 
 // These control how subheaders are styled.
 $subheader-line-height: 1.4;

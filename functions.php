@@ -10,10 +10,17 @@ function basis_add_google_fonts() {
 add_action( 'wp_enqueue_scripts', 'basis_add_google_fonts' );
 
 function basis_add_body_class( $classes ) {
+
 	$main_font = get_theme_mod('main_font');
 	if( ! empty( $main_font ) ) {
 		$classes[] = 'font-' . strtolower( str_replace( ' ', '-', $main_font ) );
 	}
+
+	$color_scheme = get_theme_mod('color_scheme');
+	if( ! empty( $color_scheme ) && $color_scheme != 0 ) {
+		$classes[] = 'color-scheme-' . $color_scheme;
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'basis_add_body_class' );
@@ -44,6 +51,26 @@ function basis_font_switcher($wp_customize) {
     ));
 }
 add_action('customize_register', 'basis_font_switcher');
+
+function basis_color_scheme($wp_customize) {
+    $wp_customize->add_setting('color_scheme', array(
+        'default'        => 0,
+    ));
+
+    $wp_customize->add_control('color_scheme', array(
+        'label'   => 'Color Scheme',
+        'section' => 'title_tagline',
+        'type'    => 'select',
+				'choices'  => array(
+					0 	=> 'Default',
+					1 	=> 'Red',
+					2 	=> 'Green',
+					3 	=> 'Orange',
+					4 	=> 'Brown',
+				),
+    ));
+}
+add_action('customize_register', 'basis_color_scheme');
 
 function basis_full_width_customizer($wp_customize) {
     $wp_customize->add_setting('full_width', array(

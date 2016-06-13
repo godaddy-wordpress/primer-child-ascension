@@ -77,7 +77,7 @@
 	}
 
 	a.button.large {
-		background: #F99A00;
+		background: $hero-button-color;
 		color: #FFFFFF;
 		border: none;
 		font-size: 0.6875rem;
@@ -91,7 +91,7 @@
 		}
 
 		&:hover {
-			background: lighten(#F99A00, 5%);
+			background: lighten($hero-button-color, 5%);
 		}
 	}
 }

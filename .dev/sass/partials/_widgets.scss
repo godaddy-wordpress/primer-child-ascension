@@ -210,7 +210,7 @@ $widget-bg: #fff !default;
 		}
 	}
 	.post-date {
-		color: #757575;
+		color: $body-secondary-color;
 		font-size: rem-calc(11.75);
 		text-transform: uppercase;
 	}

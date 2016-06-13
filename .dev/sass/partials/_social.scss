@@ -1,5 +1,6 @@
 .social-menu {
 	@extend .cf;
+	font-family: 'Genericons';
 
 	ul {
 		list-style: none;
@@ -19,6 +20,7 @@
 		@extend .genericon;
 		@extend .genericon-link;
 		@extend .button;
+		font-family: 'Genericons';
 		font-size: 0;
 		text-indent: -9999em;
 		width: 35px;
@@ -33,6 +35,7 @@
 			padding: 8px;
 			display: inline-block;
 			font-size: 18px;
+			font-family: 'Genericons';
 		}
 
 		&:hover:before {
