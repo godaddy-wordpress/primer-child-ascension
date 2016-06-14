@@ -102,6 +102,22 @@ textarea {
 	width: 100%;
 }
 
+fieldset {
+	border: 1px solid rgba(117, 117, 117, 0.28);
+	padding: 25px;
+	margin-bottom: rem-calc(20);
+}
+
+legend {
+	color: $body-secondary-color;
+	font-size: rem-calc(16);
+	font-family: $sans-font-family;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0 15px;
+}
+
+
 .search-form {
 	.search-field {
 		width: 70%;
