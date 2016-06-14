@@ -26,66 +26,69 @@ function basis_add_body_class( $classes ) {
 add_filter( 'body_class', 'basis_add_body_class' );
 
 function basis_font_switcher($wp_customize) {
-    $wp_customize->add_setting('main_font', array(
-        'default'        => 'Open Sans',
-    ));
+	$wp_customize->add_setting('main_font', array(
+		'default'				=> 'Open Sans',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
 
-    $wp_customize->add_control('main_font', array(
-        'label'   => 'Font',
-        'section' => 'title_tagline',
-        'type'    => 'select',
-				'choices'  => array(
-					'Open Sans' 					=> 'Open Sans',
-					'Source Sans Pro' 		=> 'Source Sans Pro',
-					'Roboto' 							=> 'Roboto',
-					'Lato'								=> 'Lato',
-					'Montserrat' 					=> 'Montserrat',
-				 	'Raleway' 						=> 'Raleway',
-					'PT Sans' 						=> 'PT Sans',
-					'Noto Sans' 					=> 'Noto Sans',
-					'Muli' 								=> 'Muli',
-					'Oxygen'							=> 'Oxygen',
-					'Source Serif Pro'		=> 'Source Serif Pro',
-					'PT Serif'						=> 'PT Serif'
-				),
-    ));
+	$wp_customize->add_control('main_font', array(
+		'label'	 => 'Font',
+		'section' => 'title_tagline',
+		'type'		=> 'select',
+		'choices'	=> array(
+			'Open Sans' 					=> 'Open Sans',
+			'Source Sans Pro' 		=> 'Source Sans Pro',
+			'Roboto' 							=> 'Roboto',
+			'Lato'								=> 'Lato',
+			'Montserrat' 					=> 'Montserrat',
+		 	'Raleway' 						=> 'Raleway',
+			'PT Sans' 						=> 'PT Sans',
+			'Noto Sans' 					=> 'Noto Sans',
+			'Muli' 								=> 'Muli',
+			'Oxygen'							=> 'Oxygen',
+			'Source Serif Pro'		=> 'Source Serif Pro',
+			'PT Serif'						=> 'PT Serif'
+		),
+	));
 }
 add_action('customize_register', 'basis_font_switcher');
 
 function basis_color_scheme($wp_customize) {
-    $wp_customize->add_setting('color_scheme', array(
-        'default'        => 0,
-    ));
+	$wp_customize->add_setting('color_scheme', array(
+		'default'				=> 0,
+		'sanitize_callback' => 'sanitize_text_field'
+	));
 
-    $wp_customize->add_control('color_scheme', array(
-        'label'   => 'Color Scheme',
-        'section' => 'title_tagline',
-        'type'    => 'select',
-				'choices'  => array(
-					0 	=> 'Default',
-					1 	=> 'Red',
-					2 	=> 'Green',
-					3 	=> 'Orange',
-					4 	=> 'Brown',
-				),
-    ));
+	$wp_customize->add_control('color_scheme', array(
+		'label'	 => 'Color Scheme',
+		'section' => 'title_tagline',
+		'type'		=> 'select',
+		'choices'	=> array(
+			0 	=> 'Default',
+			1 	=> 'Red',
+			2 	=> 'Green',
+			3 	=> 'Orange',
+			4 	=> 'Brown',
+		),
+	));
 }
 add_action('customize_register', 'basis_color_scheme');
 
 function basis_full_width_customizer($wp_customize) {
-    $wp_customize->add_setting('full_width', array(
-        'default'        => 0,
-    ));
+	$wp_customize->add_setting('full_width', array(
+		'default'				=> 0,
+		'sanitize_callback' => 'sanitize_text_field'
+	));
 
-    $wp_customize->add_control('full_width', array(
-        'label'   => 'Full Width Header / Footer',
-        'section' => 'layout',
-        'type'    => 'radio',
-				'choices'  => array(
-					0  => "Disabled",
-					1 => "Enabled",
-				),
-    ));
+	$wp_customize->add_control('full_width', array(
+		'label'	 => 'Full Width Header / Footer',
+		'section' => 'layout',
+		'type'		=> 'radio',
+		'choices'	=> array(
+			0	=> "Disabled",
+			1 => "Enabled",
+		),
+	));
 }
 add_action('customize_register', 'basis_full_width_customizer');
 
