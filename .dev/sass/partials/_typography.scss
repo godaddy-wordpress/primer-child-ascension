@@ -249,13 +249,6 @@ $align-class-breakpoints:
 			margin-bottom: $paragraph-margin-bottom;
 			text-rendering: $paragraph-text-rendering;
 
-			@media #{$medium-up} {
-				font-size: $paragraph-medium-font-size;
-			}
-			@media #{$large-up} {
-				font-size: $paragraph-large-font-size;
-			}
-
 			&.lead { @include lead; }
 
 			& aside {
@@ -392,13 +385,6 @@ $align-class-breakpoints:
 			margin-bottom: $list-margin-bottom;
 			list-style-position: $list-style-position;
 			font-family: $list-font-family;
-
-			@media #{$medium-up} {
-				font-size: $paragraph-medium-font-size;
-			}
-			@media #{$large-up} {
-				font-size: $paragraph-large-font-size;
-			}
 		}
 
 		ul {

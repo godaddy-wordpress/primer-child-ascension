@@ -228,9 +228,7 @@ $small-font-color: scale-color($header-font-color, $lightness: 35%);
 // We use these to style paragraphs
 $paragraph-font-family: inherit;
 $paragraph-font-weight: $font-weight-normal;
-$paragraph-font-size: rem-calc(14);
-$paragraph-medium-font-size: rem-calc(15);
-$paragraph-large-font-size: rem-calc(16);
+$paragraph-font-size: rem-calc(16);
 $paragraph-line-height: 1.8;
 $paragraph-margin-bottom: rem-calc(20);
 $paragraph-aside-font-size: rem-calc(14);
