@@ -1,5 +1,21 @@
 <?php
 
+function count_footer_columns() {
+	$sidebars = array( 'footer-1', 'footer-2', 'footer-3', 'footer-4' );
+	$menu = 'social';
+	$count = 0;
+
+	foreach( $sidebars as $sidebar ) {
+		if( $sidebar == 'footer-4' && ( is_active_sidebar( $sidebar ) ||  has_nav_menu( $menu )) ){
+			$count++;
+		} elseif( is_active_sidebar( $sidebar ) ) {
+			$count++;
+		}
+	}
+
+	return $count;
+}
+
 function basis_add_google_fonts() {
 		if( empty(get_theme_mod('main_font'))) {
 			wp_enqueue_style( 'ascension-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600,600italic,800,300,300italic,400,400italic,700,700italic,800italic', false );

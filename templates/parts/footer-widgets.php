@@ -6,26 +6,28 @@
  */
 ?>
 
-<?php if( is_active_sidebar( 'footer-1' ) && is_active_sidebar( 'footer-2' ) && is_active_sidebar( 'footer-3' ) && is_active_sidebar( 'footer-4' ) ): ?>
+<?php if( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) || has_nav_menu( 'social' ) ): ?>
 
-<div class="<?php echo basis_full_width_control('footer-widget-area'); ?>">
+<div class="<?php echo basis_full_width_control('footer-widget-area'); ?> columns-<?php echo count_footer_columns(); ?>">
 
-	<div class="footer-widget">
-		<?php get_template_part( 'templates/parts/site-title' ); ?>
-		<?php if( is_active_sidebar( 'footer-4' ) ): ?>
-			<?php dynamic_sidebar( 'footer-4' ); ?>
-		<?php endif;?>
-		<?php if( has_nav_menu( 'social' ) ): ?>
-			<div class="social-menu">
-				<?php wp_nav_menu(
-					array(
-						'theme_location' => 'social',
-						'depth'          => 1,
-						'fallback_cb'    => false
-					) ); ?>
-			</div><!-- .social-menu -->
-		<?php endif; ?>
-	</div>
+	<?php if( is_active_sidebar( 'footer-4' ) || has_nav_menu( 'social' ) ): ?>
+		<div class="footer-widget primary-footer-widget">
+			<?php get_template_part( 'templates/parts/site-title' ); ?>
+			<?php if( is_active_sidebar( 'footer-4' ) ): ?>
+				<?php dynamic_sidebar( 'footer-4' ); ?>
+			<?php endif;?>
+			<?php if( has_nav_menu( 'social' ) ): ?>
+				<div class="social-menu">
+					<?php wp_nav_menu(
+						array(
+							'theme_location' => 'social',
+							'depth'          => 1,
+							'fallback_cb'    => false
+						) ); ?>
+				</div><!-- .social-menu -->
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
 
 	<?php if( is_active_sidebar( 'footer-1' ) ): ?>
 		<div class="footer-widget">

@@ -29,11 +29,9 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 	margin-top: 45px;
 	@media #{$medium-up} {
 		margin-top: 80px;
-		margin-bottom: 45px;
 	}
 	@media #{$large-up} {
 		margin-top: 105px;
-		margin-bottom: 70px;
 	}
 
 	.footer-widget {
@@ -77,12 +75,39 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		}
 	}
 
-	.footer-widget {
+	&.columns-1 .footer-widget {
+		@extend .large-12;
+		@extend .columns;
+	}
+
+	&.columns-2 .footer-widget {
+		@extend .large-6;
+		@extend .columns;
+
+		@media #{$medium-up} {
+			&.primary-footer-widget {
+				float: right;
+			}
+		}
+	}
+
+	&.columns-3 .footer-widget {
+		@extend .large-4;
+		@extend .columns;
+
+		@media #{$medium-up} {
+			&.primary-footer-widget {
+				float: right;
+			}
+		}
+	}
+
+	&.columns-4 .footer-widget {
 		@extend .large-3;
 		@extend .columns;
 
 		@media #{$medium-up} {
-			&:first-child {
+			&.primary-footer-widget {
 				float: right;
 			}
 		}
@@ -93,15 +118,11 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		margin-bottom: 2.25rem;
 		ul{
 			margin-right: 0;
-			display: flex;
-  		justify-content: space-between;
+			display: inline-block;
 			li {
-				margin:0;
-			}
-			@media #{$medium-only} {
-				display: inline-block;
-				li {
-					margin-right: 10px;
+				margin: 0 15px 0 0;
+				&:last-child {
+					margin: 0;
 				}
 			}
 		}
@@ -110,6 +131,7 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 
 	a.button {
 		display: block;
+		max-width: 235px;
 		text-align: center;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -163,12 +185,14 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 
 
 .site-info-wrapper{
-	padding: 0 20px 20px;
+	padding: 20px;
 	@media #{$medium-up} {
-		padding-bottom: 40px;
+		padding-top: 45px;
+		padding-bottom: 45px;
 	}
 	@media #{$large-up} {
-		padding-bottom: 80px
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 
 	color: $site-footer-info-text-color;
