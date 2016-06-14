@@ -58,7 +58,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 150%;
+  line-height: 1.8;
   cursor: default;
   -webkit-font-smoothing: antialiased; }
 
@@ -1001,7 +1001,7 @@ p {
   p.lead {
     font-size: 0.9375rem;
     font-weight: lighter;
-    line-height: 1.6; }
+    line-height: 1.8; }
     @media only screen and (min-width:40.063em) {
       p.lead {
         font-size: 1.125rem; } }

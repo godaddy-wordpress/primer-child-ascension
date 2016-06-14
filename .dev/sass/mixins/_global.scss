@@ -20,7 +20,7 @@ $namespace: false !default;
 $base-font-size: 100% !default;
 
 // $base-line-height is 24px while $base-font-size is 16px
-$base-line-height: 150% !default;
+$base-line-height: 1.8 !default;
 
 //
 // Global Foundation Mixins
@@ -383,7 +383,7 @@ $cursor-text-value: text !default;
 			font-family: $body-font-family;
 			font-weight: $body-font-weight;
 			font-style: $body-font-style;
-			line-height: $base-line-height; // Set to $base-line-height to take on browser default of 150%
+			line-height: $base-line-height; // Set to $base-line-height to take on browser default of 1.8
 			cursor: $cursor-default-value;
 			-webkit-font-smoothing: antialiased;
 		}

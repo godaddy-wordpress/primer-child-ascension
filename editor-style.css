@@ -157,7 +157,7 @@ p {
   p.lead {
     font-size: 0.9375rem;
     font-weight: lighter;
-    line-height: 1.6; }
+    line-height: 1.8; }
     @media only screen and (min-width:40.063em) {
       p.lead {
         font-size: 1.125rem; } }
