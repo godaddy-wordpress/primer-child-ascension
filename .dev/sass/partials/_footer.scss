@@ -151,9 +151,10 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 	}
 	.site-description {
 		letter-spacing: 1px;
+		line-height: 1.5;
 		text-transform: uppercase;
 		color: $body-secondary-color;
-		font-size: 7.4px;
+		font-size: 10px;
 	}
 
 }

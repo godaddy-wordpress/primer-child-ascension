@@ -2478,9 +2478,10 @@ body.layout-one-column-narrow #content {
         color: #144159; }
   .footer-widget-area .site-description {
     letter-spacing: 1px;
+    line-height: 1.5;
     text-transform: uppercase;
     color: #757575;
-    font-size: 7.4px; }
+    font-size: 10px; }
 
 .site-info-wrapper {
   padding: 0 20px 20px;
