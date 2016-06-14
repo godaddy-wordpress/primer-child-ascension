@@ -1777,15 +1777,15 @@ a {
 
 .entry-title, .archive-title {
   margin-bottom: 0.25em;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   font-weight: lighter;
   letter-spacing: -0.3px; }
   @media only screen and (min-width:40.063em) {
     .entry-title, .archive-title {
-      font-size: 1.625rem; } }
+      font-size: 2.03125rem; } }
   @media only screen and (min-width:64.063em) {
     .entry-title, .archive-title {
-      font-size: 2rem; } }
+      font-size: 2.5rem; } }
   .entry-title a, .archive-title a {
     color: #194F6E;
     font-weight: lighter; }

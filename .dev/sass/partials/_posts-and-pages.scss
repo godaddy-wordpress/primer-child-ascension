@@ -50,16 +50,16 @@
 
 .entry-title, .archive-title{
 	margin-bottom: .25em;
-	font-size: $h2-font-size;
+	font-size: rem-calc(25);
 	font-weight: lighter;
 	letter-spacing: -0.3px;
 
 	@media #{$medium-up} {
-		font-size: $h2-medium-font-size;
+		font-size: rem-calc(32.5);
 	}
 
 	@media #{$large-up} {
-	 font-size: $h2-large-font-size;
+	 font-size: rem-calc(40);
 	}
 
 	a {
