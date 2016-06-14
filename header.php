@@ -11,7 +11,6 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -40,7 +39,7 @@
 	<?php do_action( 'basis_header_after' ); ?>
 
 		<div class="mobile-margin"></div>
-		
+
 		<?php
 			if( ! is_404() && ! is_page_template( 'templates/page-builder-default-header.php' ) ) {
 				get_template_part( 'templates/parts/hero' );
