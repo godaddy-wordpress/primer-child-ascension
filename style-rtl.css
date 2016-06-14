@@ -1206,7 +1206,7 @@ blockquote, blockquote p {
   line-height: 1.8;
   color: #4A4A4A;
   font-size: 1.125rem;
-  line-height: 1.4; }
+  line-height: 1.8; }
 
 blockquote.aligncenter {
   font-family: "Palatino", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
@@ -1643,7 +1643,7 @@ a {
   margin-bottom: 0.5rem; }
 .widget_author p {
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 /* Recent Comments Widget */
 .widget_recent_comments li {
@@ -1812,8 +1812,7 @@ a {
 
 .entry-meta {
   color: #757575;
-  line-height: 1.4em;
-  line-height: 1.4rem;
+  line-height: 1.8;
   font-size: 0.734375rem;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -2080,7 +2079,7 @@ img[class*="wp-image-"] {
   padding: 0 0 1.5em;
   font-size: 0.9em;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: right;
   font-style: italic; }
 
@@ -2472,12 +2471,9 @@ body.layout-one-column-narrow #content {
     .footer-widget-area .site-title a {
       font-weight: bold;
       font-size: 26px; }
-      .footer-widget-area .site-title a:hover {
-        text-decoration: none;
-        color: #144159; }
   .footer-widget-area .site-description {
     letter-spacing: 1px;
-    line-height: 1.5;
+    line-height: 1.8;
     text-transform: uppercase;
     color: #757575;
     font-size: 10px; }
@@ -2485,7 +2481,7 @@ body.layout-one-column-narrow #content {
 .site-info-wrapper {
   padding: 20px;
   color: #757575;
-  line-height: 1.5; }
+  line-height: 1.8; }
   @media only screen and (min-width:40.063em) {
     .site-info-wrapper {
       padding-top: 45px;

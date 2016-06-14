@@ -110,8 +110,7 @@
 
 .entry-meta {
 	color: $body-secondary-color;
-	line-height: 1.4em;
-	line-height: 1.4rem;
+	line-height: $base-line-height;
 	font-size: rem-calc(11.75);
 	font-family: $sans-font-family;
 	text-transform: uppercase;

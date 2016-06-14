@@ -362,7 +362,7 @@ blockquote, blockquote p {
   line-height: 1.8;
   color: #4A4A4A;
   font-size: 1.125rem;
-  line-height: 1.4; }
+  line-height: 1.8; }
 
 blockquote.aligncenter {
   font-family: "Palatino", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
@@ -668,8 +668,7 @@ legend {
 
 .entry-meta {
   color: #757575;
-  line-height: 1.4em;
-  line-height: 1.4rem;
+  line-height: 1.8;
   font-size: 0.734375rem;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;

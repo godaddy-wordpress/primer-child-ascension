@@ -164,16 +164,11 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		a {
 			font-weight: bold;
 			font-size: 26px;
-
-			&:hover {
-				text-decoration: none;
-				color: darken($secondary-color, 5%);
-			}
 		}
 	}
 	.site-description {
 		letter-spacing: 1px;
-		line-height: 1.5;
+		line-height: $base-line-height;
 		text-transform: uppercase;
 		color: $body-secondary-color;
 		font-size: 10px;
@@ -196,7 +191,7 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 	}
 
 	color: $site-footer-info-text-color;
-	line-height: 1.5;
+	line-height: $base-line-height;
 
 	a{
 		color: $site-footer-info-anchor-color;

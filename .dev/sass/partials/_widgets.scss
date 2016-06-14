@@ -88,7 +88,7 @@ $widget-bg: #fff !default;
 
 	p {
 		font-size: rem-calc(16);
-		line-height: 1.5;
+		line-height: $base-line-height;
 	}
 }
 
