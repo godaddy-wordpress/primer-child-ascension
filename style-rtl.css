@@ -27,8 +27,8 @@ meta.foundation-mq-medium {
   width: 40.063em; }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.063em)/";
-  width: 64.063em; }
+  font-family: "/only screen and (min-width:61.063em)/";
+  width: 61.063em; }
 
 meta.foundation-mq-xlarge {
   font-family: "/only screen and (min-width:90.063em)/";
@@ -595,7 +595,7 @@ select {
     left: 91.6666666667%;
     right: auto; } }
 
-@media only screen and (min-width:64.063em) {
+@media only screen and (min-width:61.063em) {
   .large-push-0 {
     position: relative;
     right: 0%;
@@ -894,7 +894,7 @@ select {
   .small-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width:40.063em) and (max-width:64em) {
+@media only screen and (min-width:40.063em) and (max-width:61em) {
   .medium-only-text-left {
     text-align: right !important; }
   .medium-only-text-right {
@@ -914,7 +914,7 @@ select {
   .medium-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width:64.063em) and (max-width:90em) {
+@media only screen and (min-width:61.063em) and (max-width:90em) {
   .large-only-text-left {
     text-align: right !important; }
   .large-only-text-right {
@@ -924,7 +924,7 @@ select {
   .large-only-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width:64.063em) {
+@media only screen and (min-width:61.063em) {
   .large-text-left {
     text-align: right !important; }
   .large-text-right {
@@ -1005,7 +1005,7 @@ p {
     @media only screen and (min-width:40.063em) {
       p.lead {
         font-size: 1.125rem; } }
-    @media only screen and (min-width:64.063em) {
+    @media only screen and (min-width:61.063em) {
       p.lead {
         font-size: 1.25rem; } }
   p aside {
@@ -1228,7 +1228,7 @@ blockquote.aligncenter {
   blockquote.alignright {
     text-align: left; } }
 
-@media only screen and (min-width:64.063em) {
+@media only screen and (min-width:61.063em) {
   blockquote, blockquote p {
     font-size: 1.5rem; } }
 
@@ -1248,7 +1248,7 @@ blockquote.aligncenter {
   h6 {
     font-size: 0.75rem; } }
 
-@media only screen and (min-width:64.063em) {
+@media only screen and (min-width:61.063em) {
   h1 {
     font-size: 3.125rem; }
   h2 {
@@ -1523,7 +1523,7 @@ a {
   .menu-toggle {
     display: none; } }
 
-@media only screen and (min-width:64.063em) {
+@media only screen and (min-width:61.063em) {
   .main-navigation {
     margin-top: 19px; }
     .main-navigation ul li a {
@@ -1602,7 +1602,7 @@ a {
   margin: 0 0 3em; }
   .widget:last-child {
     margin: 0; }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .widget input[type="text"], .widget input[type="email"], .widget input[type="url"], .widget input[type="password"], .widget input[type="search"], .widget input[type="number"], .widget textarea, .widget select {
       width: 100%; }
     .widget input[type="search"].search-field {
@@ -1784,7 +1784,7 @@ a {
   @media only screen and (min-width:40.063em) {
     .entry-title, .archive-title {
       font-size: 2.03125rem; } }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .entry-title, .archive-title {
       font-size: 2.5rem; } }
   .entry-title a, .archive-title a {
@@ -1910,7 +1910,7 @@ section > h2 {
       font-size: 24px;
       padding-bottom: 11px;
       border-bottom: 2px solid rgba(117, 117, 117, 0.28); } }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     section > h2 {
       font-size: 30px;
       padding-bottom: 18px; } }
@@ -2236,7 +2236,7 @@ body.layout-one-column-narrow #content {
       font-size: 1.75rem;
       font-size: 1.75rem;
       letter-spacing: -1.8px; } }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .site-title {
       font-size: 2.375rem;
       font-size: 2.375rem;
@@ -2248,7 +2248,7 @@ body.layout-one-column-narrow #content {
   @media only screen and (min-width:40.063em) {
     .site-header .custom-logo {
       max-height: 52px; } }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .site-header .custom-logo {
       max-height: 62px; } }
 
@@ -2258,7 +2258,7 @@ body.layout-one-column-narrow #content {
   color: #545454;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .site-description {
       font-size: 0.6875rem;
       font-size: 0.6875rem;
@@ -2273,7 +2273,7 @@ body.layout-one-column-narrow #content {
     .site-header {
       padding: 17px 0;
       position: inherit; } }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .site-header {
       padding: 32px 0; } }
 
@@ -2351,7 +2351,7 @@ body.layout-one-column-narrow #content {
     @media only screen and (min-width:40.063em) {
       .hero h1 {
         font-size: 2.5rem; } }
-    @media only screen and (min-width:64.063em) {
+    @media only screen and (min-width:61.063em) {
       .hero h1 {
         font-size: 3.5rem; } }
   .hero blockquote, .hero p {
@@ -2363,7 +2363,7 @@ body.layout-one-column-narrow #content {
     @media only screen and (min-width:40.063em) {
       .hero blockquote, .hero p {
         font-size: 2rem; } }
-    @media only screen and (min-width:64.063em) {
+    @media only screen and (min-width:61.063em) {
       .hero blockquote, .hero p {
         font-size: 2.625rem; } }
   .hero blockquote p {
@@ -2377,7 +2377,7 @@ body.layout-one-column-narrow #content {
     @media only screen and (min-width:40.063em) {
       .hero blockquote cite, .hero blockquote cite a {
         font-size: 0.75rem; } }
-    @media only screen and (min-width:64.063em) {
+    @media only screen and (min-width:61.063em) {
       .hero blockquote cite, .hero blockquote cite a {
         font-size: 0.8125rem; } }
   .hero a.button.large, .hero .social-menu a.large, .social-menu .hero a.large {
@@ -2412,7 +2412,7 @@ body.layout-one-column-narrow #content {
     .footer-widget-area {
       margin-top: 80px;
       margin-bottom: 45px; } }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .footer-widget-area {
       margin-top: 105px;
       margin-bottom: 70px; } }
@@ -2453,7 +2453,7 @@ body.layout-one-column-narrow #content {
           justify-content: space-between; }
       .footer-widget-area .social-menu ul li {
         margin: 0; }
-      @media only screen and (min-width:40.063em) and (max-width:64em) {
+      @media only screen and (min-width:40.063em) and (max-width:61em) {
         .footer-widget-area .social-menu ul {
           display: inline-block; }
           .footer-widget-area .social-menu ul li {
@@ -2501,7 +2501,7 @@ body.layout-one-column-narrow #content {
   @media only screen and (min-width:40.063em) {
     .site-info-wrapper {
       padding-bottom: 40px; } }
-  @media only screen and (min-width:64.063em) {
+  @media only screen and (min-width:61.063em) {
     .site-info-wrapper {
       padding-bottom: 80px; } }
   .site-info-wrapper a {
