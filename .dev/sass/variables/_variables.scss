@@ -226,7 +226,7 @@ $small-font-size: 60%;
 $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-$paragraph-font-family: inherit;
+$paragraph-font-family: $sans-font-family;
 $paragraph-font-weight: $font-weight-normal;
 $paragraph-font-size: rem-calc(16);
 $paragraph-line-height: 1.8;
@@ -267,7 +267,7 @@ $list-font-size: $paragraph-font-size;
 $list-line-height: $paragraph-line-height;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-position: outside;
-$list-side-margin: 1.1rem;
+$list-side-margin: 2rem;
 $list-ordered-side-margin: 1.4rem;
 $list-side-margin-no-bullet: 0;
 $list-nested-margin: rem-calc(20);

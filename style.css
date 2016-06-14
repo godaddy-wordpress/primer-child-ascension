@@ -992,7 +992,7 @@ a {
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.8;
@@ -1126,10 +1126,10 @@ ul, ol, dl {
   line-height: 1.8;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: inherit; }
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 ul {
-  margin-left: 1.1rem; }
+  margin-left: 2rem; }
   ul.no-bullet {
     margin-left: 0; }
     ul.no-bullet li ul, ul.no-bullet li ol {
@@ -1145,13 +1145,13 @@ ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit; }
 ul.square {
   list-style-type: square;
-  margin-left: 1.1rem; }
+  margin-left: 2rem; }
 ul.circle {
   list-style-type: circle;
-  margin-left: 1.1rem; }
+  margin-left: 2rem; }
 ul.disc {
   list-style-type: disc;
-  margin-left: 1.1rem; }
+  margin-left: 2rem; }
 ul.no-bullet {
   list-style: none; }
 
@@ -3098,6 +3098,3 @@ body.layout-one-column-narrow #content {
 
 .font-pt-serif, .font-pt-serif h1, .font-pt-serif h2, .font-pt-serif h3, .font-pt-serif h4, .font-pt-serif h5, .font-pt-serif h6, .font-pt-serif blockquote, .font-pt-serif blockquote.aligncenter, .font-pt-serif blockquote.aligncenter cite, .font-pt-serif button, .font-pt-serif a.button, .font-pt-serif .social-menu a, .social-menu .font-pt-serif a, .font-pt-serif .social-menu a, .font-pt-serif input, .font-pt-serif select, .font-pt-serif textarea, .font-pt-serif label, .font-pt-serif .main-navigation ul li a, .font-pt-serif .widget-title, .font-pt-serif .entry-footer, .font-pt-serif .entry-meta, .font-pt-serif .event-meta, .font-pt-serif .sermon-meta, .font-pt-serif .location-meta, .font-pt-serif .person-meta, .font-pt-serif .post-format, .font-pt-serif .more-link, .font-pt-serif article.format-link, .font-pt-serif .comment-list li .comment-author, .font-pt-serif .comment-list li .comment-metadata, .font-pt-serif #respond, .font-pt-serif .site-title, .font-pt-serif .site-description, .font-pt-serif .featured-content .entry-header .entry-title, .font-pt-serif .featured-content .entry-header .read-more, .font-pt-serif .featured-content .entry-title, .font-pt-serif .featured-content .read-more {
   font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-body#tinymce {
-  margin: 12px !important; }

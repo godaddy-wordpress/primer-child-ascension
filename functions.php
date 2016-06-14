@@ -124,7 +124,7 @@ function basis_theme_setup() {
 
 	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
 
-	add_editor_style( get_stylesheet_directory_uri() . '/style.css' );
+	add_editor_style();
 
 }
 add_action( 'after_setup_theme', 'basis_theme_setup' );
