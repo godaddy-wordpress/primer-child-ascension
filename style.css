@@ -1378,7 +1378,7 @@ button::-moz-focus-inner, a.button::-moz-focus-inner, .social-menu a::-moz-focus
   border: 0;
   padding: 0; }
 
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type=number], textarea {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], textarea {
   color: #666;
   background-color: #f1f1f1;
   border: none;
@@ -1388,7 +1388,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   resize: none;
   padding: 0.75em;
   padding: 0.75rem; }
-  input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type=number]:focus, textarea:focus {
+  input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, textarea:focus {
     color: #111;
     outline: none;
     background-color: #eeeeee; }
@@ -1601,6 +1601,11 @@ a {
   margin: 0 0 3em; }
   .widget:last-child {
     margin: 0; }
+  @media only screen and (min-width:64.063em) {
+    .widget input[type="text"], .widget input[type="email"], .widget input[type="url"], .widget input[type="password"], .widget input[type="search"], .widget input[type="number"], .widget textarea, .widget select {
+      width: 100%; }
+    .widget input[type="search"].search-field {
+      width: 70%; } }
   .widget ul {
     list-style: none;
     margin: 0;
