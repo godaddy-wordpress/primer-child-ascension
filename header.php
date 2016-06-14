@@ -38,8 +38,6 @@
 
 	<?php do_action( 'basis_header_after' ); ?>
 
-		<div class="mobile-margin"></div>
-
 		<?php
 			if( ! is_404() && ! is_page_template( 'templates/page-builder-default-header.php' ) ) {
 				get_template_part( 'templates/parts/hero' );
