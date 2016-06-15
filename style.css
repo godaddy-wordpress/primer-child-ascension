@@ -1550,7 +1550,8 @@ a {
                 border: 0; }
               .main-navigation ul li.menu-item-has-children .sub-menu li a {
                 margin: 0;
-                text-align: left; }
+                text-align: left;
+                border-bottom: 0; }
                 .main-navigation ul li.menu-item-has-children .sub-menu li a:hover {
                   border: 0; }
               .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover > a:after {
@@ -1575,7 +1576,7 @@ a {
               top: 0;
               padding: 0; }
               .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu li a {
-                padding-left: 10px; }
+                padding-left: 20px; }
           .main-navigation ul li.menu-item-has-children:hover > .sub-menu {
             display: block; }
   .menu-toggle {

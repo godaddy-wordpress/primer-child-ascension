@@ -156,6 +156,7 @@ $menu-link-color: $secondary-color;
 							a {
 								margin: 0;
 								text-align: left;
+								border-bottom: 0;
 
 								&:hover {
 									border: 0;
@@ -191,7 +192,7 @@ $menu-link-color: $secondary-color;
 							top: 0;
 							padding: 0;
 							li a {
-								padding-left: 10px;
+								padding-left: 20px;
 							}
 						}
 					}
