@@ -1439,11 +1439,11 @@ a {
   top: 66px;
   right: 0;
   z-index: 999;
-  display: none; }
+  display: none;
+  border-bottom: 1px solid rgba(117, 117, 117, 0.28); }
   .main-navigation.toggled {
     display: block; }
   .main-navigation ul {
-    border-bottom: 1px solid rgba(117, 117, 117, 0.28);
     list-style: none;
     margin: 0;
     padding: 0; }
@@ -1457,16 +1457,41 @@ a {
         font-size: 0.875rem;
         font-weight: bold;
         letter-spacing: 0.64px;
-        line-height: 50px;
-        height: 50px;
+        padding: 13px 10px;
         text-align: center;
         text-transform: uppercase; }
+      .main-navigation ul li.menu-item-has-children > a:after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        left: 0.6em;
+        left: 0.6rem;
+        border: 5px solid transparent;
+        border-top-color: #c8c8c8;
+        height: 0;
+        width: 0;
+        right: 10px;
+        top: 5px; }
       .main-navigation ul li a:hover, .main-navigation ul li.current-menu-item a {
-        background: #194F6E;
-        color: #fff; }
-      .main-navigation ul li.menu-item-has-children ul li a {
-        padding-right: 100px;
-        background: #f1f1f1; }
+        background: #f2f2f2; }
+      .main-navigation ul li.menu-item-has-children .sub-menu {
+        display: none; }
+        .main-navigation ul li.menu-item-has-children .sub-menu li {
+          border-top: 1px solid rgba(255, 255, 255, 0.2); }
+          .main-navigation ul li.menu-item-has-children .sub-menu li a {
+            background: #194F6E;
+            color: #fff;
+            font-size: 0.75rem;
+            text-align: right;
+            text-transform: none;
+            padding: 10px 20px;
+            position: relative; }
+          .main-navigation ul li.menu-item-has-children .sub-menu li a:hover, .main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a {
+            background: #1e5f83; }
+        .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
+          display: none; }
+          .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu li a {
+            padding-right: 30px; }
 
 .menu-toggle {
   display: block;
@@ -1489,8 +1514,9 @@ a {
     background: none;
     top: 0;
     right: 0;
-    margin-top: 12px;
-    display: block; }
+    margin-top: 5px;
+    display: block;
+    border: none; }
     .main-navigation ul {
       border: 0; }
       .main-navigation ul li {
@@ -1499,19 +1525,59 @@ a {
         .main-navigation ul li a {
           font-size: 0.75rem;
           font-size: 0.75rem;
-          height: inherit;
           letter-spacing: 0.55px;
-          line-height: inherit;
-          margin: 0 1em;
-          margin: 0 1rem;
-          padding: 0.1em 0;
-          padding: 0.1rem 0; }
-        .main-navigation ul li a:hover, .main-navigation ul li.current-menu-item a {
+          margin: 0 0 0 2em;
+          padding: 0; }
+        .main-navigation ul li:last-child a {
+          margin: 0; }
+        .main-navigation ul li a:hover, .main-navigation ul li.current-menu-item a, .main-navigation ul li.menu-item-has-children:hover > a {
           background: none;
           color: #194F6E;
           border-bottom: 2px solid #194F6E; }
         .main-navigation ul li.menu-item-has-children {
-          display: none; }
+          position: relative; }
+          .main-navigation ul li.menu-item-has-children > a:after {
+            display: none; }
+          .main-navigation ul li.menu-item-has-children .sub-menu {
+            display: none;
+            position: absolute;
+            width: 250px;
+            padding-top: 10px; }
+            .main-navigation ul li.menu-item-has-children .sub-menu li {
+              display: block;
+              border: 0; }
+              .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover > a, .main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a {
+                border: 0; }
+              .main-navigation ul li.menu-item-has-children .sub-menu li a {
+                margin: 0;
+                text-align: right; }
+                .main-navigation ul li.menu-item-has-children .sub-menu li a:hover {
+                  border: 0; }
+              .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover > a:after {
+                border-top-color: transparent;
+                border-right-color: #fff; }
+              .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children > a:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0.6em;
+                left: 0.6rem;
+                margin-top: -6px;
+                border: 5px solid transparent;
+                border-right-color: #c8c8c8;
+                height: 0;
+                width: 0;
+                margin-right: 10px;
+                right: auto; }
+            .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
+              right: 100%;
+              top: 0;
+              padding: 0; }
+              .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu li a {
+                padding-right: 10px; }
+          .main-navigation ul li.menu-item-has-children:hover > .sub-menu {
+            display: block; }
   .menu-toggle {
     display: none; } }
 

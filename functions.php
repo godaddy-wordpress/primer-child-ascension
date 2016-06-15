@@ -159,7 +159,7 @@ function basis_get_featured_image() {
 
 function basis_replace_navigation() {
    wp_dequeue_script( 'basis-navigation' );
-	 wp_enqueue_script( 'basis-navigation-2', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
+	 wp_enqueue_script( 'basis-navigation-2', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array('jquery'), '20120206', true );
 }
 add_action( 'wp_print_scripts', 'basis_replace_navigation', 100 );
 
