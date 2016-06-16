@@ -113,22 +113,6 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		}
 	}
 
-	.social-menu {
-		margin-bottom: 2.25em;
-		margin-bottom: 2.25rem;
-		ul{
-			margin-right: 0;
-			display: inline-block;
-			li {
-				margin: 0 15px 0 0;
-				&:last-child {
-					margin: 0;
-				}
-			}
-		}
-		a { font-size: 0;	}
-	}
-
 	a.button {
 		display: block;
 		max-width: 235px;
@@ -200,6 +184,23 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		&:hover{
 			text-decoration: none;
 		}
+	}
+
+	.social-menu {
+		margin-bottom: 2.25em;
+		margin-bottom: 2.25rem;
+		text-align: center;
+		ul{
+			margin-right: 0;
+			display: inline-block;
+			li {
+				margin: 0 15px 0 0;
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+		a { font-size: 0;	}
 	}
 
 	.site-info-text,

@@ -4,7 +4,7 @@ Theme URI: http://liftux.com
 Author: Lift
 Author URI: http://liftux.com
 Description: This is a child theme for Basis.
-Version: 0.0.6
+Version: 0.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ascension
@@ -2237,7 +2237,7 @@ img[class*="wp-image-"] {
 embed, iframe, object {
   max-width: 100%; }
 
-.no-max-width, .hero.no-max-width {
+.no-max-width .site-header, .no-max-width .hero, .no-max-width .footer-widget-area {
   max-width: none; }
 
 body.layout-one-column-full #content {
@@ -2501,18 +2501,6 @@ body.layout-one-column-narrow #content {
   @media only screen and (min-width:40.063em) {
     .footer-widget-area.columns-4 .footer-widget.primary-footer-widget {
       float: right; } }
-  .footer-widget-area .social-menu {
-    margin-bottom: 2.25em;
-    margin-bottom: 2.25rem; }
-    .footer-widget-area .social-menu ul {
-      margin-right: 0;
-      display: inline-block; }
-      .footer-widget-area .social-menu ul li {
-        margin: 0 15px 0 0; }
-        .footer-widget-area .social-menu ul li:last-child {
-          margin: 0; }
-    .footer-widget-area .social-menu a {
-      font-size: 0; }
   .footer-widget-area a.button, .footer-widget-area .social-menu a, .social-menu .footer-widget-area a {
     display: block;
     max-width: 235px;
@@ -2562,6 +2550,19 @@ body.layout-one-column-narrow #content {
     font-weight: normal; }
     .site-info-wrapper a:hover {
       text-decoration: none; }
+  .site-info-wrapper .social-menu {
+    margin-bottom: 2.25em;
+    margin-bottom: 2.25rem;
+    text-align: center; }
+    .site-info-wrapper .social-menu ul {
+      margin-right: 0;
+      display: inline-block; }
+      .site-info-wrapper .social-menu ul li {
+        margin: 0 15px 0 0; }
+        .site-info-wrapper .social-menu ul li:last-child {
+          margin: 0; }
+    .site-info-wrapper .social-menu a {
+      font-size: 0; }
   .site-info-wrapper .site-info-text, .site-info-wrapper .site-info-text p {
     text-align: center;
     font-size: 12px;
@@ -3130,36 +3131,3 @@ body.layout-one-column-narrow #content {
 
 #wpstats {
   display: none; }
-
-.font-source-sans-pro, .font-source-sans-pro h1, .font-source-sans-pro h2, .font-source-sans-pro h3, .font-source-sans-pro h4, .font-source-sans-pro h5, .font-source-sans-pro h6, .font-source-sans-pro blockquote, .font-source-sans-pro blockquote.aligncenter, .font-source-sans-pro blockquote.aligncenter cite, .font-source-sans-pro button, .font-source-sans-pro a.button, .font-source-sans-pro .social-menu a, .social-menu .font-source-sans-pro a, .font-source-sans-pro .social-menu a, .font-source-sans-pro input, .font-source-sans-pro select, .font-source-sans-pro textarea, .font-source-sans-pro label, .font-source-sans-pro .main-navigation ul li a, .font-source-sans-pro .widget-title, .font-source-sans-pro .entry-footer, .font-source-sans-pro .entry-meta, .font-source-sans-pro .event-meta, .font-source-sans-pro .sermon-meta, .font-source-sans-pro .location-meta, .font-source-sans-pro .person-meta, .font-source-sans-pro .post-format, .font-source-sans-pro .more-link, .font-source-sans-pro article.format-link, .font-source-sans-pro .comment-list li .comment-author, .font-source-sans-pro .comment-list li .comment-metadata, .font-source-sans-pro #respond, .font-source-sans-pro .site-title, .font-source-sans-pro .site-description, .font-source-sans-pro .featured-content .entry-header .entry-title, .font-source-sans-pro .featured-content .entry-header .read-more, .font-source-sans-pro .featured-content .entry-title, .font-source-sans-pro .featured-content .read-more {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-roboto, .font-roboto h1, .font-roboto h2, .font-roboto h3, .font-roboto h4, .font-roboto h5, .font-roboto h6, .font-roboto blockquote, .font-roboto blockquote.aligncenter, .font-roboto blockquote.aligncenter cite, .font-roboto button, .font-roboto a.button, .font-roboto .social-menu a, .social-menu .font-roboto a, .font-roboto .social-menu a, .font-roboto input, .font-roboto select, .font-roboto textarea, .font-roboto label, .font-roboto .main-navigation ul li a, .font-roboto .widget-title, .font-roboto .entry-footer, .font-roboto .entry-meta, .font-roboto .event-meta, .font-roboto .sermon-meta, .font-roboto .location-meta, .font-roboto .person-meta, .font-roboto .post-format, .font-roboto .more-link, .font-roboto article.format-link, .font-roboto .comment-list li .comment-author, .font-roboto .comment-list li .comment-metadata, .font-roboto #respond, .font-roboto .site-title, .font-roboto .site-description, .font-roboto .featured-content .entry-header .entry-title, .font-roboto .featured-content .entry-header .read-more, .font-roboto .featured-content .entry-title, .font-roboto .featured-content .read-more {
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-lato, .font-lato h1, .font-lato h2, .font-lato h3, .font-lato h4, .font-lato h5, .font-lato h6, .font-lato blockquote, .font-lato blockquote.aligncenter, .font-lato blockquote.aligncenter cite, .font-lato button, .font-lato a.button, .font-lato .social-menu a, .social-menu .font-lato a, .font-lato .social-menu a, .font-lato input, .font-lato select, .font-lato textarea, .font-lato label, .font-lato .main-navigation ul li a, .font-lato .widget-title, .font-lato .entry-footer, .font-lato .entry-meta, .font-lato .event-meta, .font-lato .sermon-meta, .font-lato .location-meta, .font-lato .person-meta, .font-lato .post-format, .font-lato .more-link, .font-lato article.format-link, .font-lato .comment-list li .comment-author, .font-lato .comment-list li .comment-metadata, .font-lato #respond, .font-lato .site-title, .font-lato .site-description, .font-lato .featured-content .entry-header .entry-title, .font-lato .featured-content .entry-header .read-more, .font-lato .featured-content .entry-title, .font-lato .featured-content .read-more {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-montserrat, .font-montserrat h1, .font-montserrat h2, .font-montserrat h3, .font-montserrat h4, .font-montserrat h5, .font-montserrat h6, .font-montserrat blockquote, .font-montserrat blockquote.aligncenter, .font-montserrat blockquote.aligncenter cite, .font-montserrat button, .font-montserrat a.button, .font-montserrat .social-menu a, .social-menu .font-montserrat a, .font-montserrat .social-menu a, .font-montserrat input, .font-montserrat select, .font-montserrat textarea, .font-montserrat label, .font-montserrat .main-navigation ul li a, .font-montserrat .widget-title, .font-montserrat .entry-footer, .font-montserrat .entry-meta, .font-montserrat .event-meta, .font-montserrat .sermon-meta, .font-montserrat .location-meta, .font-montserrat .person-meta, .font-montserrat .post-format, .font-montserrat .more-link, .font-montserrat article.format-link, .font-montserrat .comment-list li .comment-author, .font-montserrat .comment-list li .comment-metadata, .font-montserrat #respond, .font-montserrat .site-title, .font-montserrat .site-description, .font-montserrat .featured-content .entry-header .entry-title, .font-montserrat .featured-content .entry-header .read-more, .font-montserrat .featured-content .entry-title, .font-montserrat .featured-content .read-more {
-  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-raleway, .font-raleway h1, .font-raleway h2, .font-raleway h3, .font-raleway h4, .font-raleway h5, .font-raleway h6, .font-raleway blockquote, .font-raleway blockquote.aligncenter, .font-raleway blockquote.aligncenter cite, .font-raleway button, .font-raleway a.button, .font-raleway .social-menu a, .social-menu .font-raleway a, .font-raleway .social-menu a, .font-raleway input, .font-raleway select, .font-raleway textarea, .font-raleway label, .font-raleway .main-navigation ul li a, .font-raleway .widget-title, .font-raleway .entry-footer, .font-raleway .entry-meta, .font-raleway .event-meta, .font-raleway .sermon-meta, .font-raleway .location-meta, .font-raleway .person-meta, .font-raleway .post-format, .font-raleway .more-link, .font-raleway article.format-link, .font-raleway .comment-list li .comment-author, .font-raleway .comment-list li .comment-metadata, .font-raleway #respond, .font-raleway .site-title, .font-raleway .site-description, .font-raleway .featured-content .entry-header .entry-title, .font-raleway .featured-content .entry-header .read-more, .font-raleway .featured-content .entry-title, .font-raleway .featured-content .read-more {
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-pt-sans, .font-pt-sans h1, .font-pt-sans h2, .font-pt-sans h3, .font-pt-sans h4, .font-pt-sans h5, .font-pt-sans h6, .font-pt-sans blockquote, .font-pt-sans blockquote.aligncenter, .font-pt-sans blockquote.aligncenter cite, .font-pt-sans button, .font-pt-sans a.button, .font-pt-sans .social-menu a, .social-menu .font-pt-sans a, .font-pt-sans .social-menu a, .font-pt-sans input, .font-pt-sans select, .font-pt-sans textarea, .font-pt-sans label, .font-pt-sans .main-navigation ul li a, .font-pt-sans .widget-title, .font-pt-sans .entry-footer, .font-pt-sans .entry-meta, .font-pt-sans .event-meta, .font-pt-sans .sermon-meta, .font-pt-sans .location-meta, .font-pt-sans .person-meta, .font-pt-sans .post-format, .font-pt-sans .more-link, .font-pt-sans article.format-link, .font-pt-sans .comment-list li .comment-author, .font-pt-sans .comment-list li .comment-metadata, .font-pt-sans #respond, .font-pt-sans .site-title, .font-pt-sans .site-description, .font-pt-sans .featured-content .entry-header .entry-title, .font-pt-sans .featured-content .entry-header .read-more, .font-pt-sans .featured-content .entry-title, .font-pt-sans .featured-content .read-more {
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-noto-sans, .font-noto-sans h1, .font-noto-sans h2, .font-noto-sans h3, .font-noto-sans h4, .font-noto-sans h5, .font-noto-sans h6, .font-noto-sans blockquote, .font-noto-sans blockquote.aligncenter, .font-noto-sans blockquote.aligncenter cite, .font-noto-sans button, .font-noto-sans a.button, .font-noto-sans .social-menu a, .social-menu .font-noto-sans a, .font-noto-sans .social-menu a, .font-noto-sans input, .font-noto-sans select, .font-noto-sans textarea, .font-noto-sans label, .font-noto-sans .main-navigation ul li a, .font-noto-sans .widget-title, .font-noto-sans .entry-footer, .font-noto-sans .entry-meta, .font-noto-sans .event-meta, .font-noto-sans .sermon-meta, .font-noto-sans .location-meta, .font-noto-sans .person-meta, .font-noto-sans .post-format, .font-noto-sans .more-link, .font-noto-sans article.format-link, .font-noto-sans .comment-list li .comment-author, .font-noto-sans .comment-list li .comment-metadata, .font-noto-sans #respond, .font-noto-sans .site-title, .font-noto-sans .site-description, .font-noto-sans .featured-content .entry-header .entry-title, .font-noto-sans .featured-content .entry-header .read-more, .font-noto-sans .featured-content .entry-title, .font-noto-sans .featured-content .read-more {
-  font-family: "Noto Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-muli, .font-muli h1, .font-muli h2, .font-muli h3, .font-muli h4, .font-muli h5, .font-muli h6, .font-muli blockquote, .font-muli blockquote.aligncenter, .font-muli blockquote.aligncenter cite, .font-muli button, .font-muli a.button, .font-muli .social-menu a, .social-menu .font-muli a, .font-muli .social-menu a, .font-muli input, .font-muli select, .font-muli textarea, .font-muli label, .font-muli .main-navigation ul li a, .font-muli .widget-title, .font-muli .entry-footer, .font-muli .entry-meta, .font-muli .event-meta, .font-muli .sermon-meta, .font-muli .location-meta, .font-muli .person-meta, .font-muli .post-format, .font-muli .more-link, .font-muli article.format-link, .font-muli .comment-list li .comment-author, .font-muli .comment-list li .comment-metadata, .font-muli #respond, .font-muli .site-title, .font-muli .site-description, .font-muli .featured-content .entry-header .entry-title, .font-muli .featured-content .entry-header .read-more, .font-muli .featured-content .entry-title, .font-muli .featured-content .read-more {
-  font-family: "Muli", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-oxygen, .font-oxygen h1, .font-oxygen h2, .font-oxygen h3, .font-oxygen h4, .font-oxygen h5, .font-oxygen h6, .font-oxygen blockquote, .font-oxygen blockquote.aligncenter, .font-oxygen blockquote.aligncenter cite, .font-oxygen button, .font-oxygen a.button, .font-oxygen .social-menu a, .social-menu .font-oxygen a, .font-oxygen .social-menu a, .font-oxygen input, .font-oxygen select, .font-oxygen textarea, .font-oxygen label, .font-oxygen .main-navigation ul li a, .font-oxygen .widget-title, .font-oxygen .entry-footer, .font-oxygen .entry-meta, .font-oxygen .event-meta, .font-oxygen .sermon-meta, .font-oxygen .location-meta, .font-oxygen .person-meta, .font-oxygen .post-format, .font-oxygen .more-link, .font-oxygen article.format-link, .font-oxygen .comment-list li .comment-author, .font-oxygen .comment-list li .comment-metadata, .font-oxygen #respond, .font-oxygen .site-title, .font-oxygen .site-description, .font-oxygen .featured-content .entry-header .entry-title, .font-oxygen .featured-content .entry-header .read-more, .font-oxygen .featured-content .entry-title, .font-oxygen .featured-content .read-more {
-  font-family: "Oxygen", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-source-serif-pro, .font-source-serif-pro h1, .font-source-serif-pro h2, .font-source-serif-pro h3, .font-source-serif-pro h4, .font-source-serif-pro h5, .font-source-serif-pro h6, .font-source-serif-pro blockquote, .font-source-serif-pro blockquote.aligncenter, .font-source-serif-pro blockquote.aligncenter cite, .font-source-serif-pro button, .font-source-serif-pro a.button, .font-source-serif-pro .social-menu a, .social-menu .font-source-serif-pro a, .font-source-serif-pro .social-menu a, .font-source-serif-pro input, .font-source-serif-pro select, .font-source-serif-pro textarea, .font-source-serif-pro label, .font-source-serif-pro .main-navigation ul li a, .font-source-serif-pro .widget-title, .font-source-serif-pro .entry-footer, .font-source-serif-pro .entry-meta, .font-source-serif-pro .event-meta, .font-source-serif-pro .sermon-meta, .font-source-serif-pro .location-meta, .font-source-serif-pro .person-meta, .font-source-serif-pro .post-format, .font-source-serif-pro .more-link, .font-source-serif-pro article.format-link, .font-source-serif-pro .comment-list li .comment-author, .font-source-serif-pro .comment-list li .comment-metadata, .font-source-serif-pro #respond, .font-source-serif-pro .site-title, .font-source-serif-pro .site-description, .font-source-serif-pro .featured-content .entry-header .entry-title, .font-source-serif-pro .featured-content .entry-header .read-more, .font-source-serif-pro .featured-content .entry-title, .font-source-serif-pro .featured-content .read-more {
-  font-family: "Source Serif Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
-
-.font-pt-serif, .font-pt-serif h1, .font-pt-serif h2, .font-pt-serif h3, .font-pt-serif h4, .font-pt-serif h5, .font-pt-serif h6, .font-pt-serif blockquote, .font-pt-serif blockquote.aligncenter, .font-pt-serif blockquote.aligncenter cite, .font-pt-serif button, .font-pt-serif a.button, .font-pt-serif .social-menu a, .social-menu .font-pt-serif a, .font-pt-serif .social-menu a, .font-pt-serif input, .font-pt-serif select, .font-pt-serif textarea, .font-pt-serif label, .font-pt-serif .main-navigation ul li a, .font-pt-serif .widget-title, .font-pt-serif .entry-footer, .font-pt-serif .entry-meta, .font-pt-serif .event-meta, .font-pt-serif .sermon-meta, .font-pt-serif .location-meta, .font-pt-serif .person-meta, .font-pt-serif .post-format, .font-pt-serif .more-link, .font-pt-serif article.format-link, .font-pt-serif .comment-list li .comment-author, .font-pt-serif .comment-list li .comment-metadata, .font-pt-serif #respond, .font-pt-serif .site-title, .font-pt-serif .site-description, .font-pt-serif .featured-content .entry-header .entry-title, .font-pt-serif .featured-content .entry-header .read-more, .font-pt-serif .featured-content .entry-title, .font-pt-serif .featured-content .read-more {
-  font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }

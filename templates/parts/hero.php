@@ -1,4 +1,4 @@
-<div class="<?php echo basis_full_width_control('hero'); ?>" style="background:url('<?php echo basis_get_featured_image( ); ?>') no-repeat top center; background-size: cover;">
+<div class="hero" style="background:url('<?php echo basis_get_featured_image( ); ?>') no-repeat top center; background-size: cover;">
 	<div class="hero-wrapper<?php if( is_front_page() ): ?> home<?php endif; ?>">
 		<div class="hero-inner">
 			<?php if( is_front_page() && is_active_sidebar( 'hero' ) ): ?>

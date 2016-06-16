@@ -1,94 +1,118 @@
 <?php
 
-function count_footer_columns() {
-	$sidebars = array( 'footer-1', 'footer-2', 'footer-3', 'footer-4' );
-	$menu = 'social';
-	$count = 0;
+/**
+ * Customizer additions.
+ */
+require get_stylesheet_directory() . '/inc/customizer.php';
 
-	foreach( $sidebars as $sidebar ) {
-		if( $sidebar == 'footer-4' && ( is_active_sidebar( $sidebar ) ||  has_nav_menu( $menu )) ){
-			$count++;
-		} elseif( is_active_sidebar( $sidebar ) ) {
-			$count++;
-		}
-	}
 
-	return $count;
-}
-
-function basis_add_google_fonts() {
-		if( empty(get_theme_mod('main_font'))) {
-			wp_enqueue_style( 'ascension-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600,600italic,800,300,300italic,400,400italic,700,700italic,800italic', false );
-		} else {
-			wp_enqueue_style( 'ascension-google-fonts', 'https://fonts.googleapis.com/css?family=' . str_replace( ' ', '+', get_theme_mod('main_font')) . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic', false );
-		}
-}
-add_action( 'wp_enqueue_scripts', 'basis_add_google_fonts' );
-
-function basis_add_body_class( $classes ) {
-
-	$main_font = get_theme_mod('main_font');
-	if( ! empty( $main_font ) ) {
-		$classes[] = 'font-' . strtolower( str_replace( ' ', '-', $main_font ) );
-	}
-
-	$color_scheme = get_theme_mod('color_scheme');
-	if( ! empty( $color_scheme ) && $color_scheme != 0 ) {
-		$classes[] = 'color-scheme-' . $color_scheme;
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'basis_add_body_class' );
 
 function basis_font_switcher($wp_customize) {
-	$wp_customize->add_setting('main_font', array(
-		'default'				=> 'Open Sans',
-		'sanitize_callback' => 'sanitize_text_field'
-	));
+	$fonts = basis_get_fonts();
+	$default_font = $fonts[0];
 
-	$wp_customize->add_control('main_font', array(
-		'label'	 => 'Font',
-		'section' => 'title_tagline',
-		'type'		=> 'select',
-		'choices'	=> array(
-			'Open Sans' 					=> 'Open Sans',
-			'Source Sans Pro' 		=> 'Source Sans Pro',
-			'Roboto' 							=> 'Roboto',
-			'Lato'								=> 'Lato',
-			'Montserrat' 					=> 'Montserrat',
-		 	'Raleway' 						=> 'Raleway',
-			'PT Sans' 						=> 'PT Sans',
-			'Noto Sans' 					=> 'Noto Sans',
-			'Muli' 								=> 'Muli',
-			'Oxygen'							=> 'Oxygen',
-			'Source Serif Pro'		=> 'Source Serif Pro',
-			'PT Serif'						=> 'PT Serif'
-		),
-	));
+	$wp_customize->add_setting( 'main_font', array(
+		'default'						=> 'Open Sans',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'main_font', array(
+		'label'    => __( 'Font', 'twentysixteen' ),
+		'section'  => 'title_tagline',
+		'type'     => 'select',
+		'choices'  => basis_get_font_choices()
+	) );
 }
 add_action('customize_register', 'basis_font_switcher');
 
-function basis_color_scheme($wp_customize) {
-	$wp_customize->add_setting('color_scheme', array(
-		'default'				=> 0,
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-
-	$wp_customize->add_control('color_scheme', array(
-		'label'	 => 'Color Scheme',
-		'section' => 'title_tagline',
-		'type'		=> 'select',
-		'choices'	=> array(
-			0 	=> 'Default',
-			1 	=> 'Red',
-			2 	=> 'Green',
-			3 	=> 'Orange',
-			4 	=> 'Brown',
-		),
+function basis_get_fonts() {
+	return apply_filters( 'basis_fonts', array(
+		'Open Sans',
+		'Source Sans Pro',
+		'Roboto',
+		'Lato',
+		'Montserrat',
+		'Raleway',
+		'PT Sans',
+		'Noto Sans',
+		'Muli',
+		'Oxygen',
+		'Source Serif Pro',
+		'PT Serif'
 	));
 }
-add_action('customize_register', 'basis_color_scheme');
+
+function basis_get_font() {
+	$font_option 	= get_theme_mod( 'main_font', 'default' );
+	$fonts      	= basis_get_fonts();
+
+	if ( in_array( $font_option, $fonts ) ) {
+		return $font_option;
+	}
+
+	return $fonts[ 0 ];
+}
+
+function basis_get_font_choices() {
+	$fonts            				= basis_get_fonts();
+	$font_control_options 		= array();
+
+	foreach ( $fonts as $font ) {
+		$font_control_options[ $font ] = $font;
+	}
+
+	return $font_control_options;
+}
+
+function basis_fonts_css() {
+	$fonts 						= basis_get_fonts();
+	$default_font 		= $fonts[0];
+	$main_font			 	= get_theme_mod( 'main_font',	$default_font );
+
+	$font = basis_get_font();
+	$font_url = '//fonts.googleapis.com/css?family=' . $font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic';
+	wp_enqueue_style( 'ascension-google-fonts', $font_url, false );
+
+	if ( $main_font === $default_font ) {
+		return;
+	}
+
+	$css = '
+		/* Custom Fonts */
+		body,
+		h1, h2, h3, h4, h5, h6,
+		blockquote,
+		blockquote.aligncenter,
+		blockquote.aligncenter cite,
+		button, a.button, .social-menu a, input, select, textarea,
+		label,
+		.main-navigation ul li a,
+		.widget-title,
+		.entry-footer,
+		.entry-meta,
+		.event-meta, .sermon-meta, .location-meta, .person-meta,
+		.post-format,
+		.more-link,
+		article.format-link,
+		.comment-list li .comment-author, .comment-list li .comment-metadata,
+		#respond,
+		.site-title,
+		.site-description,
+		.featured-content .entry-header .entry-title,
+		.featured-content .entry-header .read-more,
+		.featured-content .entry-title,
+		.featured-content .read-more {
+			font-family: "%1$s", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		}
+	';
+
+	wp_add_inline_style( 'basis', sprintf( $css, $main_font ) );
+}
+add_action( 'wp_enqueue_scripts', 'basis_fonts_css', 11 );
+
+
+
+
 
 function basis_full_width_customizer($wp_customize) {
 	$wp_customize->add_setting('full_width', array(
@@ -108,13 +132,18 @@ function basis_full_width_customizer($wp_customize) {
 }
 add_action('customize_register', 'basis_full_width_customizer');
 
-function basis_full_width_control( $classes ) {
-	$classes = explode( ' ', $classes );
-	if(get_theme_mod('full_width') == 1) {
+
+
+
+function basis_full_width_classes( $classes ) {
+	if( get_theme_mod('full_width') == 1 ) {
 		$classes[] = 'no-max-width';
 	}
-	return implode( ' ', $classes );
+	return $classes;
 }
+add_filter( 'body_class', 'basis_full_width_classes' );
+
+
 
 function basis_theme_setup() {
 	add_theme_support( 'custom-logo', array(
@@ -123,39 +152,12 @@ function basis_theme_setup() {
 		'flex-width' => true,
 	) );
 
-	add_theme_support( 'custom-header', array(
-		'default-image'          => get_stylesheet_directory_uri() . '/assets/images/hero.png',
-		'width'                  => 1060,
-		'height'                 => 550,
-		'flex-height'            => true,
-		'flex-width'             => false,
-		'uploads'                => true,
-		'random-default'         => false,
-		'header-text'            => true,
-		'default-text-color'     => '',
-		'wp-head-callback'       => '',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => '',
-	) );
-
 	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
 
 	add_editor_style();
 
 }
 add_action( 'after_setup_theme', 'basis_theme_setup' );
-
-function basis_get_featured_image() {
-	$post_id = get_queried_object_id();
-	if ( has_post_thumbnail( $post_id ) ) {
-		$image = get_the_post_thumbnail_url( $post_id, 'hero' );
-		if( getimagesize( $image ) ) {
-				return $image;
-		}
-	}
-
-	return header_image();
-}
 
 function basis_replace_navigation() {
    wp_dequeue_script( 'basis-navigation' );
@@ -239,11 +241,36 @@ function basis_widgets_init() {
 		'name'          => __( 'Hero', 'basis' ),
 		'id'            => 'hero',
 		'description'   => __( 'The hero appears in the hero widget area on the front page', 'basis' ),
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
+}
+
+
+
+function basis_get_featured_image() {
+	$post_id = get_queried_object_id();
+	if ( has_post_thumbnail( $post_id ) ) {
+		$image = get_the_post_thumbnail_url( $post_id, 'hero' );
+		if( getimagesize( $image ) ) {
+				return $image;
+		}
+	}
+
+	return header_image();
+}
+
+function basis_count_footer_columns() {
+	$sidebars = array( 'footer-1', 'footer-2', 'footer-3', 'footer-4' );
+	$count = 0;
+
+	foreach( $sidebars as $sidebar ) {
+		if( is_active_sidebar( $sidebar ) ) $count++;
+	}
+
+	return $count;
 }
 
 ?>
