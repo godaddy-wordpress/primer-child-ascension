@@ -15,9 +15,13 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!--[if lt IE 9]>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery.min.js"></script>
+
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/html5shiv.min.js"></script>
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/respond.min.js"></script>
+
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/nwmatcher.min.js"></script>
 
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr.js"></script>
 

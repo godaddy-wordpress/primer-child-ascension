@@ -1,5 +1,19 @@
 <?php
 
+function basis_enqueue_jquery() {
+
+	add_filter( 'script_loader_tag', function( $tag, $handle ) {
+		if ( $handle === 'jquery-core' ) {
+			$tag = "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->";
+		}
+		return $tag;
+	}, 10, 2 );
+
+	//wp_enqueue_script( 'jquery' );
+
+}
+add_action( 'wp_enqueue_scripts', 'basis_enqueue_jquery', 0 );
+
 /**
  * Customizer additions.
  */
