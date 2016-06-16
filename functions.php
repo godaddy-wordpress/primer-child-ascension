@@ -12,7 +12,7 @@ function basis_font_switcher($wp_customize) {
 	$default_font = $fonts[0];
 
 	$wp_customize->add_setting( 'main_font', array(
-		'default'						=> 'Open Sans',
+		'default'			=> 'Open Sans',
 		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
@@ -43,8 +43,8 @@ function basis_get_fonts() {
 }
 
 function basis_get_font() {
-	$font_option 	= get_theme_mod( 'main_font', 'default' );
-	$fonts      	= basis_get_fonts();
+	$font_option    = get_theme_mod( 'main_font', 'default' );
+	$fonts          = basis_get_fonts();
 
 	if ( in_array( $font_option, $fonts ) ) {
 		return $font_option;
@@ -54,8 +54,8 @@ function basis_get_font() {
 }
 
 function basis_get_font_choices() {
-	$fonts            				= basis_get_fonts();
-	$font_control_options 		= array();
+	$fonts                  = basis_get_fonts();
+	$font_control_options   = array();
 
 	foreach ( $fonts as $font ) {
 		$font_control_options[ $font ] = $font;
@@ -65,9 +65,9 @@ function basis_get_font_choices() {
 }
 
 function basis_fonts_css() {
-	$fonts 						= basis_get_fonts();
-	$default_font 		= $fonts[0];
-	$main_font			 	= get_theme_mod( 'main_font',	$default_font );
+	$fonts                  = basis_get_fonts();
+	$default_font           = $fonts[0];
+	$main_font              = get_theme_mod( 'main_font', $default_font );
 
 	$font = basis_get_font();
 	$font_url = '//fonts.googleapis.com/css?family=' . $font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic';
@@ -149,7 +149,7 @@ function basis_theme_setup() {
 	add_theme_support( 'custom-logo', array(
 		'height'      => 62,
 		'width'       => 352,
-		'flex-width' => true,
+		'flex-width'  => true,
 	) );
 
 	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
@@ -160,8 +160,8 @@ function basis_theme_setup() {
 add_action( 'after_setup_theme', 'basis_theme_setup' );
 
 function basis_replace_navigation() {
-   wp_dequeue_script( 'basis-navigation' );
-	 wp_enqueue_script( 'basis-navigation-2', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array('jquery'), '20120206', true );
+	wp_dequeue_script( 'basis-navigation' );
+	wp_enqueue_script( 'basis-navigation-2', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array('jquery'), '20120206', true );
 }
 add_action( 'wp_print_scripts', 'basis_replace_navigation', 100 );
 
@@ -171,7 +171,7 @@ function basis_add_mobile_menu(){
 add_action( 'basis_header', 'basis_add_mobile_menu', 0 );
 
 function basis_move_navigation(){
-  remove_action( 'basis_header_after', 'basis_add_primary_navigation', 20 );
+	remove_action( 'basis_header_after', 'basis_add_primary_navigation', 20 );
 	add_action( 'basis_header', 'basis_add_primary_navigation', 20 );
 }
 add_action( 'init', 'basis_move_navigation', 100 );
