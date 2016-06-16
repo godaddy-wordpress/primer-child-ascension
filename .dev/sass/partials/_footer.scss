@@ -83,34 +83,16 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 	&.columns-2 .footer-widget {
 		@extend .large-6;
 		@extend .columns;
-
-		@media #{$medium-up} {
-			&.primary-footer-widget {
-				float: right;
-			}
-		}
 	}
 
 	&.columns-3 .footer-widget {
 		@extend .large-4;
 		@extend .columns;
-
-		@media #{$medium-up} {
-			&.primary-footer-widget {
-				float: right;
-			}
-		}
 	}
 
 	&.columns-4 .footer-widget {
 		@extend .large-3;
 		@extend .columns;
-
-		@media #{$medium-up} {
-			&.primary-footer-widget {
-				float: right;
-			}
-		}
 	}
 
 	a.button {
