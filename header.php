@@ -16,6 +16,10 @@
 
 <!--[if lt IE 9]>
 
+	<style type="text/css">
+	.hero{ background-size: 100% auto !important; background-position: top center !important; }
+	</style>
+
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/respond.min.js"></script>
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/nwmatcher.min.js"></script>
