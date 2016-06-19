@@ -2407,17 +2407,19 @@ body.layout-one-column-narrow #content {
     @media only screen and (min-width:61.063em) {
       .hero h1 {
         font-size: 3.5rem; } }
-  .hero blockquote, .hero p {
+  .hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero code, .hero pre, .hero blockquote, .hero p {
+    color: #fff; }
+  .hero blockquote.large p {
     color: #fff;
     font-size: 1.09875rem;
     font-style: normal;
     font-weight: lighter;
     padding: 0; }
     @media only screen and (min-width:40.063em) {
-      .hero blockquote, .hero p {
+      .hero blockquote.large p {
         font-size: 2rem; } }
     @media only screen and (min-width:61.063em) {
-      .hero blockquote, .hero p {
+      .hero blockquote.large p {
         font-size: 2.625rem; } }
   .hero blockquote p {
     margin-bottom: 0; }

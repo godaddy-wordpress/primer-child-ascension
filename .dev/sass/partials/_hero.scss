@@ -42,8 +42,20 @@
 		}
 	}
 
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	code,
+	pre,
 	blockquote,
 	p {
+		color: #fff;
+	}
+
+	blockquote.large p {
 		color: #fff;
 		font-size: rem-calc(17.58);
 		font-style: normal;
