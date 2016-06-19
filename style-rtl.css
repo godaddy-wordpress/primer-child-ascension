@@ -1441,8 +1441,6 @@ a {
   z-index: 999;
   display: none;
   border-bottom: 1px solid rgba(117, 117, 117, 0.28); }
-  .main-navigation.toggled {
-    display: block; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -1459,21 +1457,22 @@ a {
         letter-spacing: 0.64px;
         padding: 13px 10px;
         text-align: center;
-        text-transform: uppercase; }
-      .main-navigation ul li.menu-item-has-children > a:after {
-        content: "";
-        display: inline-block;
+        text-transform: uppercase;
         position: relative;
-        left: 0.6em;
-        left: 0.6rem;
-        border: 5px solid transparent;
-        border-top-color: #c8c8c8;
-        height: 0;
-        width: 0;
-        right: 10px;
-        top: 5px; }
-      .main-navigation ul li a:hover, .main-navigation ul li.current-menu-item a {
-        background: #f2f2f2; }
+        padding-left: 55px; }
+        .main-navigation ul li a span {
+          display: none; }
+      .main-navigation ul li.menu-item-has-children > a > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 1px solid rgba(117, 117, 117, 0.28);
+        height: 100%;
+        display: block;
+        font-size: 15px;
+        padding: 13px; }
+        .main-navigation ul li.menu-item-has-children > a > span:before {
+          content: "\25bc"; }
       .main-navigation ul li.menu-item-has-children .sub-menu {
         display: none; }
         .main-navigation ul li.menu-item-has-children .sub-menu li {
@@ -1486,8 +1485,8 @@ a {
             text-transform: none;
             padding: 10px 20px;
             position: relative; }
-          .main-navigation ul li.menu-item-has-children .sub-menu li a:hover, .main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a {
-            background: #1e5f83; }
+            .main-navigation ul li.menu-item-has-children .sub-menu li a span {
+              padding: 8px; }
         .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
           display: none; }
           .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu li a {
@@ -1521,22 +1520,18 @@ a {
       border: 0; }
       .main-navigation ul li {
         border: none;
-        display: inline-block; }
+        display: inline-block;
+        margin: 0 0 0 2em; }
+        .main-navigation ul li:last-child {
+          margin: 0; }
         .main-navigation ul li a {
           font-size: 0.75rem;
           font-size: 0.75rem;
           letter-spacing: 0.55px;
-          margin: 0 0 0 2em;
           padding: 0; }
-        .main-navigation ul li:last-child a {
-          margin: 0; }
-        .main-navigation ul li a:hover, .main-navigation ul li.current-menu-item a, .main-navigation ul li.menu-item-has-children:hover > a {
-          background: none;
-          color: #194F6E;
-          border-bottom: 2px solid #194F6E; }
         .main-navigation ul li.menu-item-has-children {
           position: relative; }
-          .main-navigation ul li.menu-item-has-children > a:after {
+          .main-navigation ul li.menu-item-has-children > a > span {
             display: none; }
           .main-navigation ul li.menu-item-has-children .sub-menu {
             display: none;
@@ -1545,32 +1540,18 @@ a {
             padding-top: 10px; }
             .main-navigation ul li.menu-item-has-children .sub-menu li {
               display: block;
-              border: 0; }
-              .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover > a, .main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a {
-                border: 0; }
+              border: 0;
+              margin: 0; }
               .main-navigation ul li.menu-item-has-children .sub-menu li a {
-                margin: 0;
                 text-align: right;
                 border-bottom: 0; }
-                .main-navigation ul li.menu-item-has-children .sub-menu li a:hover {
-                  border: 0; }
-              .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children:hover > a:after {
-                border-top-color: transparent;
-                border-right-color: #fff; }
-              .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children > a:after {
-                content: "";
+              .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children > a > span {
                 display: block;
-                position: absolute;
-                top: 50%;
-                left: 0.6em;
-                left: 0.6rem;
-                margin-top: -6px;
-                border: 5px solid transparent;
-                border-right-color: #c8c8c8;
-                height: 0;
-                width: 0;
-                margin-right: 10px;
-                right: auto; }
+                padding: 12px;
+                border: none;
+                font-size: 11px; }
+                .main-navigation ul li.menu-item-has-children .sub-menu li.menu-item-has-children > a > span:before {
+                  content: "\25b6"; }
             .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
               right: 100%;
               top: 0;

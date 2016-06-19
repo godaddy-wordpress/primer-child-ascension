@@ -11,10 +11,6 @@ $menu-link-color: $secondary-color;
 	display: none;
 	border-bottom: 1px solid rgba(117,117,117,0.28);
 
-	&.toggled {
-		display: block;
-	}
-
 	ul {
 		list-style: none;
 		margin: 0;
@@ -33,26 +29,25 @@ $menu-link-color: $secondary-color;
 				padding: 13px 10px;
 				text-align: center;
 				text-transform: uppercase;
+				position: relative;
+    		padding-right: 55px;
+				span {
+					display: none;
+				}
 			}
-			&.menu-item-has-children > a:after {
-				content:"";
-				display:inline-block;
-				position:relative;;
-				right:.6em;
-				right:.6rem;
-				border:5px solid transparent;
-				border-top-color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
-				height:0;
-				width:0;
-				left: 10px;
-				top: 5px;
+			&.menu-item-has-children > a > span {
+				position: absolute;
+		    top: 0;
+		    right: 0;
+		    border-left: 1px solid rgba(117, 117, 117, 0.28);
+		    height: 100%;
+		    display: block;
+		    font-size: 15px;
+		    padding: 13px;
+				&:before {
+					content: "\25bc";
+				}
 			}
-
-			a:hover,
-			&.current-menu-item a {
-				background: darken(#fff, 5%);
-			}
-
 			&.menu-item-has-children .sub-menu {
 				display: none;
 				li {
@@ -65,11 +60,9 @@ $menu-link-color: $secondary-color;
 						text-transform: none;
 						padding: 10px 20px;
 						position: relative;
-
-					}
-					a:hover,
-					&.current-menu-item a {
-						background: lighten($secondary-color, 5%);
+						span {
+							padding: 8px;
+						}
 					}
 				}
 				.sub-menu {
@@ -115,30 +108,21 @@ $menu-link-color: $secondary-color;
 			li {
 				border: none;
 				display: inline-block;
+				margin: 0 2em 0 0;
+				&:last-child {
+					margin: 0;
+				}
 
 				a {
 					font-size: emCalc(12);
 					font-size: rem-calc(12);
 					letter-spacing: 0.55px;
-					margin: 0 2em 0 0;
 					padding: 0;
-				}
-				&:last-child a {
-					margin: 0;
-				}
-
-				a:hover,
-				&.current-menu-item a,
-				&.menu-item-has-children:hover > a
-				 {
-					background: none;
-					color: $menu-link-color;
-					border-bottom: 2px solid $menu-link-color;
 				}
 
 				&.menu-item-has-children {
 					position: relative;
-					> a:after {
+					> a > span {
 						display: none;
 					}
 					.sub-menu {
@@ -149,41 +133,18 @@ $menu-link-color: $secondary-color;
 						li {
 							display: block;
 							border: 0;
-							&.menu-item-has-children:hover > a,
-							&.current-menu-item a {
-								border: 0;
-							}
+							margin: 0;
 							a {
-								margin: 0;
 								text-align: left;
 								border-bottom: 0;
-
-								&:hover {
-									border: 0;
-								}
 							}
-							&.menu-item-has-children {
-								&:hover {
-									> a:after {
-										border-top-color: transparent;
-										border-left-color: contrast-color($menu-background-color,#000,#fff,50%);
-									}
-								}
-
-								> a:after {
-									content:"";
-									display:block;
-									position:absolute;
-									top:50%;
-									right:.6em;
-									right:.6rem;
-									margin-top: -6px;
-									border:5px solid transparent;
-									border-left-color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
-									height:0;
-									width:0;
-									margin-left:10px;
-									left: auto;
+							&.menu-item-has-children > a > span {
+								display: block;
+								padding: 12px;
+								border: none;
+								font-size: 11px;
+								&:before {
+									content: "\25b6";
 								}
 							}
 						}
