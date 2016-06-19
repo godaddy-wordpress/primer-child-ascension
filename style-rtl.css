@@ -1816,6 +1816,22 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
+.sticky .entry-title a:before {
+  font-family: 'Genericons';
+  content: '\f308';
+  color: #757575;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  position: relative;
+  top: 2px; }
+  @media only screen and (min-width:40.063em) {
+    .sticky .entry-title a:before {
+      font-size: 1.875rem;
+      top: 5px; } }
+  @media only screen and (min-width:61.063em) {
+    .sticky .entry-title a:before {
+      font-size: 2.1875rem; } }
+
 .entry-title, .archive-title {
   margin-bottom: 0.25em;
   font-size: 1.5625rem;
@@ -1999,13 +2015,17 @@ section.error-404 {
 .comment-list {
   padding: 0 1.5em;
   padding: 0 1.5rem; }
+  .comment-list .children {
+    margin-bottom: 56px; }
   .comment-list, .comment-list li {
     list-style: none;
     margin-right: 0;
     padding-right: 0; }
   .comment-list li {
-    padding-right: 32px; }
+    padding-right: 32px;
+    padding-left: 32px; }
     .comment-list li article {
+      margin-top: 56px;
       margin-bottom: 56px;
       padding-right: 1em;
       padding-right: 1rem; }
@@ -2039,11 +2059,13 @@ section.error-404 {
 
 .comment-meta .avatar {
   float: right;
-  margin-right: -32px;
-  right: -1em;
-  right: -1rem;
+  margin-left: 15px;
   position: relative;
   border-radius: 3px; }
+
+.bypostauthor {
+  border: 3px solid rgba(57, 186, 243, 0.2);
+  border-radius: 5px; }
 
 .comment-form label .required {
   color: #cc0000; }
