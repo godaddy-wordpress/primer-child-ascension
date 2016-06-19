@@ -38,8 +38,8 @@ function twentysixteen_custom_header_and_background() {
 	add_theme_support( 'custom-header', apply_filters( 'twentysixteen_custom_header_args', array(
 		'default-image'          => get_stylesheet_directory_uri() . '/assets/images/hero.png',
 		'default-text-color'     => $default_header_textcolor,
-		'width'                  => 1060,
-		'height'                 => 550,
+		'width'                  => 2120,
+		'height'                 => 1100,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'twentysixteen_header_style',
 	) ) );

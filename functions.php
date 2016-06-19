@@ -167,6 +167,7 @@ function basis_theme_setup() {
 	) );
 
 	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
+	add_image_size( 'hero-2x', 2120, 1100, array( 'center', 'center' ) );
 
 	add_editor_style();
 
@@ -266,14 +267,30 @@ function basis_widgets_init() {
 
 function basis_get_featured_image() {
 	$post_id = get_queried_object_id();
+
+	if( get_theme_mod('full_width') == 1 ) {
+		$image_size = 'hero-2x';
+	} else {
+		$image_size = 'hero';
+	}
+
 	if ( has_post_thumbnail( $post_id ) ) {
-		$image = get_the_post_thumbnail_url( $post_id, 'hero' );
+		$image = get_the_post_thumbnail_url( $post_id, $image_size );
+
 		if( getimagesize( $image ) ) {
 				return $image;
 		}
 	}
 
-	return header_image();
+	$header_image = get_header_image();
+	$image_id = basis_get_image_id( $header_image );
+
+	if( empty( $image_id ) ) {
+		return $header_image;
+	}
+
+	$image = wp_get_attachment_image_src( $image_id, $image_size, true );
+	return $image[0];
 }
 
 function basis_count_footer_columns() {
@@ -285,6 +302,12 @@ function basis_count_footer_columns() {
 	}
 
 	return $count;
+}
+
+function basis_get_image_id( $image_url ) {
+	global $wpdb;
+	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ));
+        return $attachment[0];
 }
 
 ?>
