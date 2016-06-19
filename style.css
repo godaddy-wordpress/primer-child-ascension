@@ -1657,11 +1657,8 @@ a {
       display: block;
       padding: 0.813em 0;
       padding: 0.813rem 0;
-      color: #194F6E;
       text-transform: uppercase;
       font-size: 12px; }
-      .widget li a:hover {
-        color: #06141b; }
 
 .widget-title {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -1772,11 +1769,8 @@ a {
   border: 0; }
   .widget_recent_entries li a {
     padding: 0;
-    color: #39BAF3;
     font-size: 0.875rem;
     text-transform: none; }
-    .widget_recent_entries li a:hover {
-      color: #0b86bb; }
 .widget_recent_entries .post-date {
   color: #757575;
   font-size: 0.734375rem;
@@ -2457,7 +2451,6 @@ body.layout-one-column-narrow #content {
 .site-footer {
   color: #222; }
   .site-footer a {
-    color: #194F6E;
     font-size: 0.8125rem;
     font-weight: normal;
     text-transform: none; }
@@ -2487,12 +2480,9 @@ body.layout-one-column-narrow #content {
   .footer-widget-area .footer-widget .widget_recent_comments li {
     text-transform: none; }
   .footer-widget-area .footer-widget a, .footer-widget-area .footer-widget .widget li a {
-    color: #194F6E;
     font-size: 0.8125rem;
     font-weight: normal;
     text-transform: none; }
-    .footer-widget-area .footer-widget a:hover, .footer-widget-area .footer-widget .widget li a:hover {
-      text-decoration: underline; }
   .footer-widget-area .footer-widget .widget li a {
     padding: 7px 0; }
   .footer-widget-area a.button, .footer-widget-area .social-menu a, .social-menu .footer-widget-area a {

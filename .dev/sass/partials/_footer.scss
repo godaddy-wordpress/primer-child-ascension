@@ -13,7 +13,6 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 	color: $site-footer-text-color;
 
 	a {
-		color: $secondary-color;
 		font-size: rem-calc(13);
 		font-weight: normal;
 		text-transform: none;
@@ -61,14 +60,9 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 
 		a,
 		.widget li a {
-			color: $secondary-color;
 			font-size: rem-calc(13);
 			font-weight: normal;
 			text-transform: none;
-
-			&:hover {
-				text-decoration: underline;
-			}
 		}
 		.widget li a {
 			padding: 7px 0;

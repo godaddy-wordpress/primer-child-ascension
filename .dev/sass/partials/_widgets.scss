@@ -39,13 +39,8 @@ $widget-bg: #fff !default;
 			display: block;
 			padding: .813em 0;
 			padding: .813rem 0;
-			color: $secondary-color;
 			text-transform: $widget-text-transform;
 			font-size: 12px;
-
-			&:hover {
-				color: darken($secondary-color, 20%);
-			}
 		}
 		border-bottom: 1px solid rgba(117,117,117,0.28);
 	}
@@ -216,13 +211,8 @@ $widget-bg: #fff !default;
 		border: 0;
 		a {
 			padding: 0;
-			color: $primary-color;
 			font-size: rem-calc(14);
 			text-transform: none;
-
-			&:hover {
-				color: darken($primary-color, 20%);
-			}
 		}
 	}
 	.post-date {
