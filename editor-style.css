@@ -509,7 +509,9 @@ input[type="checkbox"], input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
+  -webkit-box-sizing: content-box;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -525,8 +527,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   color: #666;
   background-color: #f1f1f1;
   border: none;
-  -webkit-transform: 200ms background linear;
-          transform: 200ms background linear;
+  transform: 200ms background linear;
   border-radius: 3px;
   resize: none;
   padding: 0.75em;
