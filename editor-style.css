@@ -359,10 +359,9 @@ blockquote {
       color: #4A4A4A; }
 
 blockquote, blockquote p {
-  line-height: 1.8;
+  line-height: 1.25;
   color: #4A4A4A;
-  font-size: 1.125rem;
-  line-height: 1.8; }
+  font-size: 1.125rem; }
 
 blockquote.aligncenter {
   font-family: "Palatino", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }

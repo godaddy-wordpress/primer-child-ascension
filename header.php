@@ -14,11 +14,11 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<?php wp_head(); ?>
+
 <!--[if lt IE 9]>
 
-	<style type="text/css">
-	.hero{ background-size: 100% auto !important; background-position: top center !important; }
-	</style>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/ie.css">
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/respond.min.js"></script>
 
@@ -31,9 +31,16 @@
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr.js"></script>
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/rem.min.js"></script>
-<![endif] -->
 
-<?php wp_head(); ?>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery.backgroundSize.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function($){
+		$('body .hero').css({backgroundSize: "cover"});
+	});
+	</script>
+
+<![endif] -->
 
 </head>
 <body <?php body_class(); ?>>
