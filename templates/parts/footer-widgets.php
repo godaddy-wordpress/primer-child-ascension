@@ -2,13 +2,13 @@
 /**
  * Displays the footer widget zones.
  *
- * @package basis
+ * @package ascension
  */
 ?>
 
 <?php if( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ): ?>
 
-<div class="footer-widget-area columns-<?php echo basis_count_footer_columns(); ?>">
+<div class="footer-widget-area columns-<?php echo primer_count_footer_columns(); ?>">
 
 	<?php if( is_active_sidebar( 'footer-1' ) ): ?>
 		<div class="footer-widget">

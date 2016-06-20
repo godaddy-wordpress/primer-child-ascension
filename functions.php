@@ -1,6 +1,20 @@
 <?php
 
-function basis_enqueue_jquery() {
+/**
+ * Customizer additions.
+ */
+require get_stylesheet_directory() . '/inc/customizer.php';
+
+/**
+ * Enqueue jQuery.
+ *
+ * Wraps jQuery in a conditional comment that will allow
+ * non-IE 9 (and lower) browsers to use the newest version
+ * of jQuery.
+ *
+ * @action  wp_enqueue_scripts
+ */
+function primer_enqueue_jquery() {
 
 	add_filter( 'script_loader_tag', function( $tag, $handle ) {
 		if ( $handle === 'jquery-core' ) {
@@ -10,17 +24,17 @@ function basis_enqueue_jquery() {
 	}, 10, 2 );
 
 }
-add_action( 'wp_enqueue_scripts', 'basis_enqueue_jquery', 0 );
+add_action( 'wp_enqueue_scripts', 'primer_enqueue_jquery', 0 );
 
 /**
- * Customizer additions.
+ * Font customization controls.
+ *
+ * Adds control for font pair selection.
+ *
+ * @action  customize_register
  */
-require get_stylesheet_directory() . '/inc/customizer.php';
-
-
-
-function basis_font_switcher($wp_customize) {
-	$fonts = basis_get_fonts();
+function primer_font_switcher($wp_customize) {
+	$fonts = primer_get_fonts();
 	$default_font = $fonts[0];
 
 	$wp_customize->add_setting( 'main_font', array(
@@ -29,16 +43,24 @@ function basis_font_switcher($wp_customize) {
 	) );
 
 	$wp_customize->add_control( 'main_font', array(
-		'label'    => __( 'Font', 'twentysixteen' ),
+		'label'    => __( 'Font', 'ascension' ),
 		'section'  => 'title_tagline',
 		'type'     => 'select',
-		'choices'  => basis_get_font_choices()
+		'choices'  => primer_get_font_choices()
 	) );
 }
-add_action('customize_register', 'basis_font_switcher');
+add_action('customize_register', 'primer_font_switcher');
 
-function basis_get_fonts() {
-	return apply_filters( 'basis_fonts', array(
+/**
+ * Lists acceptable font pairings
+ *
+ * Returns a filterable list of font families for site
+ * customization.
+ *
+ * @filter  primer_fonts
+ */
+function primer_get_fonts() {
+	return apply_filters( 'primer_fonts', array(
 		'Open Sans',
 		'Source Sans Pro',
 		'Roboto',
@@ -54,9 +76,13 @@ function basis_get_fonts() {
 	));
 }
 
-function basis_get_font() {
+/**
+ * Return primary or default font
+ *
+ */
+function primer_get_font() {
 	$font_option    = get_theme_mod( 'main_font', 'default' );
-	$fonts          = basis_get_fonts();
+	$fonts          = primer_get_fonts();
 
 	if ( in_array( $font_option, $fonts ) ) {
 		return $font_option;
@@ -65,8 +91,13 @@ function basis_get_font() {
 	return $fonts[ 0 ];
 }
 
-function basis_get_font_choices() {
-	$fonts                  = basis_get_fonts();
+/**
+ * Return font options
+ *
+ * Return the full set of font family options.
+ */
+function primer_get_font_choices() {
+	$fonts                  = primer_get_fonts();
 	$font_control_options   = array();
 
 	foreach ( $fonts as $font ) {
@@ -76,12 +107,18 @@ function basis_get_font_choices() {
 	return $font_control_options;
 }
 
-function basis_fonts_css() {
-	$fonts                  = basis_get_fonts();
+/**
+ * Return font options
+ *
+ * Return the full set of font family options.
+ */
+
+function primer_fonts_css() {
+	$fonts                  = primer_get_fonts();
 	$default_font           = $fonts[0];
 	$main_font              = get_theme_mod( 'main_font', $default_font );
 
-	$font = basis_get_font();
+	$font = primer_get_font();
 	$font_url = '//fonts.googleapis.com/css?family=' . $font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic';
 	wp_enqueue_style( 'ascension-google-fonts', $font_url, false );
 
@@ -118,15 +155,15 @@ function basis_fonts_css() {
 		}
 	';
 
-	wp_add_inline_style( 'basis', sprintf( $css, $main_font ) );
+	wp_add_inline_style( 'ascension', sprintf( $css, $main_font ) );
 }
-add_action( 'wp_enqueue_scripts', 'basis_fonts_css', 11 );
+add_action( 'wp_enqueue_scripts', 'primer_fonts_css', 11 );
 
 
 
 
 
-function basis_full_width_customizer($wp_customize) {
+function primer_full_width_customizer($wp_customize) {
 	$wp_customize->add_setting('full_width', array(
 		'default'				=> 0,
 		'sanitize_callback' => 'sanitize_text_field'
@@ -142,22 +179,22 @@ function basis_full_width_customizer($wp_customize) {
 		),
 	));
 }
-add_action('customize_register', 'basis_full_width_customizer');
+add_action('customize_register', 'primer_full_width_customizer');
 
 
 
 
-function basis_full_width_classes( $classes ) {
+function primer_full_width_classes( $classes ) {
 	if( get_theme_mod('full_width') == 1 ) {
 		$classes[] = 'no-max-width';
 	}
 	return $classes;
 }
-add_filter( 'body_class', 'basis_full_width_classes' );
+add_filter( 'body_class', 'primer_full_width_classes' );
 
 
 
-function basis_theme_setup() {
+function primer_theme_setup() {
 	add_theme_support( 'custom-logo', array(
 		'height'      => 62,
 		'width'       => 352,
@@ -170,30 +207,30 @@ function basis_theme_setup() {
 	add_editor_style();
 
 }
-add_action( 'after_setup_theme', 'basis_theme_setup' );
+add_action( 'after_setup_theme', 'primer_theme_setup' );
 
-function basis_replace_navigation() {
+function ascension_navigation() {
 	wp_dequeue_script( 'basis-navigation' );
-	wp_enqueue_script( 'basis-navigation-2', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array('jquery'), '20120206', true );
+	wp_enqueue_script( 'ascension-navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array('jquery'), '20120206', true );
 }
-add_action( 'wp_print_scripts', 'basis_replace_navigation', 100 );
+add_action( 'wp_print_scripts', 'ascension_navigation', 100 );
 
-function basis_add_mobile_menu(){
+function primer_add_mobile_menu(){
 	get_template_part( 'templates/parts/mobile-menu' );
 }
-add_action( 'basis_header', 'basis_add_mobile_menu', 0 );
+add_action( 'primer_header', 'primer_add_mobile_menu', 0 );
 
-function basis_move_navigation(){
-	remove_action( 'basis_header_after', 'basis_add_primary_navigation', 20 );
-	add_action( 'basis_header', 'basis_add_primary_navigation', 20 );
+function primer_move_navigation(){
+	remove_action( 'primer_header_after', 'primer_add_primary_navigation', 20 );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 20 );
 }
-add_action( 'init', 'basis_move_navigation', 100 );
+add_action( 'init', 'primer_move_navigation', 100 );
 
-function basis_widgets_init() {
+function primer_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'basis' ),
+		'name'          => __( 'Sidebar', 'ascension' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'basis' ),
+		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -201,9 +238,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'basis' ),
+		'name'          => __( 'Secondary Sidebar', 'ascension' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'basis' ),
+		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -211,9 +248,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'basis' ),
+		'name'          => __( 'Footer 1', 'ascension' ),
 		'id'            => 'footer-1',
-		'description'   => __( 'The footer sidebar appears in the first column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer sidebar appears in the first column of the footer widget area.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -221,9 +258,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'basis' ),
+		'name'          => __( 'Footer 2', 'ascension' ),
 		'id'            => 'footer-2',
-		'description'   => __( 'The footer sidebar appears in the second column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer sidebar appears in the second column of the footer widget area.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -231,9 +268,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 3', 'basis' ),
+		'name'          => __( 'Footer 3', 'ascension' ),
 		'id'            => 'footer-3',
-		'description'   => __( 'The footer sidebar appears in the third column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer sidebar appears in the third column of the footer widget area.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -241,9 +278,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 4', 'basis' ),
+		'name'          => __( 'Footer 4', 'ascension' ),
 		'id'            => 'footer-4',
-		'description'   => __( 'The footer sidebar appears in the fourth column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer sidebar appears in the fourth column of the footer widget area.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -251,9 +288,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Hero', 'basis' ),
+		'name'          => __( 'Hero', 'ascension' ),
 		'id'            => 'hero',
-		'description'   => __( 'The hero appears in the hero widget area on the front page', 'basis' ),
+		'description'   => __( 'The hero appears in the hero widget area on the front page', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -261,9 +298,7 @@ function basis_widgets_init() {
 	) );
 }
 
-
-
-function basis_get_featured_image() {
+function primer_get_featured_image() {
 	$post_id = get_queried_object_id();
 
 	if( get_theme_mod('full_width') == 1 ) {
@@ -281,7 +316,7 @@ function basis_get_featured_image() {
 	}
 
 	$header_image = get_header_image();
-	$image_id = basis_get_image_id( $header_image );
+	$image_id = primer_get_image_id( $header_image );
 
 	if( empty( $image_id ) ) {
 		return $header_image;
@@ -291,7 +326,7 @@ function basis_get_featured_image() {
 	return $image[0];
 }
 
-function basis_count_footer_columns() {
+function primer_count_footer_columns() {
 	$sidebars = array( 'footer-1', 'footer-2', 'footer-3', 'footer-4' );
 	$count = 0;
 
@@ -302,7 +337,7 @@ function basis_count_footer_columns() {
 	return $count;
 }
 
-function basis_get_image_id( $image_url ) {
+function primer_get_image_id( $image_url ) {
 	global $wpdb;
 	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ));
         return $attachment[0];

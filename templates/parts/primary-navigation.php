@@ -2,7 +2,7 @@
 /**
  * Displays the primary navigation.
  *
- * @package basis
+ * @package ascension
  */
 ?>
 
@@ -12,7 +12,7 @@
 		wp_nav_menu(
 			array(
 				'theme_location' => 'primary',
-				'link_after' => '<span></span>' 
+				'link_after' => '<span></span>'
 			)
 		); ?>
 	</nav><!-- #site-navigation -->

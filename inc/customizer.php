@@ -1,28 +1,28 @@
 <?php
 /**
- * Twenty Sixteen Customizer functionality
+ * Ascension Customizer functionality
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage Ascension
+ * @since Ascension 1.0
  */
 
 /**
  * Sets up the WordPress core custom header and custom background features.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
- * @see twentysixteen_header_style()
+ * @see ascension_header_style()
  */
-function twentysixteen_custom_header_and_background() {
-	$color_scheme             	= twentysixteen_get_color_scheme();
+function ascension_custom_header_and_background() {
+	$color_scheme             	= ascension_get_color_scheme();
 	$default_header_textcolor  = trim( $color_scheme[0], '#' );
 	$default_background_color 	= trim( $color_scheme[1], '#' );
 
 	/**
-	 * Filter the arguments used when adding 'custom-header' support in Twenty Sixteen.
+	 * Filter the arguments used when adding 'custom-header' support in Ascension.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since Ascension 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
@@ -35,19 +35,19 @@ function twentysixteen_custom_header_and_background() {
 	 *                                      displayed on the blog.
 	 * }
 	 */
-	add_theme_support( 'custom-header', apply_filters( 'twentysixteen_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'ascension_custom_header_args', array(
 		'default-image'          => get_stylesheet_directory_uri() . '/assets/images/hero.png',
 		'default-text-color'     => $default_header_textcolor,
 		'width'                  => 2120,
 		'height'                 => 1100,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'twentysixteen_header_style',
+		'wp-head-callback'       => 'ascension_header_style',
 	) ) );
 
 	/**
-	 * Filter the arguments used when adding 'custom-background' support in Twenty Sixteen.
+	 * Filter the arguments used when adding 'custom-background' support in Ascension.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since Ascension 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-background support arguments.
@@ -55,23 +55,23 @@ function twentysixteen_custom_header_and_background() {
 	 *     @type string $default-color Default color of the background.
 	 * }
 	 */
-	add_theme_support( 'custom-background', apply_filters( 'twentysixteen_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'ascension_custom_background_args', array(
 		'default-color' => $default_background_color,
 	) ) );
 }
-add_action( 'after_setup_theme', 'twentysixteen_custom_header_and_background' );
+add_action( 'after_setup_theme', 'ascension_custom_header_and_background' );
 
-if ( ! function_exists( 'twentysixteen_header_style' ) ) :
+if ( ! function_exists( 'ascension_header_style' ) ) :
 /**
  * Styles the header text displayed on the site.
  *
- * Create your own twentysixteen_header_style() function to override in a child theme.
+ * Create your own ascension_header_style() function to override in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
- * @see twentysixteen_custom_header_and_background().
+ * @see ascension_custom_header_and_background().
  */
-function twentysixteen_header_style() {
+function ascension_header_style() {
 	// If the header text option is untouched, let's bail.
 	if ( display_header_text() ) {
 		return;
@@ -92,17 +92,17 @@ function twentysixteen_header_style() {
 	</style>
 	<?php
 }
-endif; // twentysixteen_header_style
+endif; // ascension_header_style
 
 /**
  * Adds postMessage support for site title and description for the Customizer.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @param WP_Customize_Manager $wp_customize The Customizer object.
  */
-function twentysixteen_customize_register( $wp_customize ) {
-	$color_scheme = twentysixteen_get_color_scheme();
+function ascension_customize_register( $wp_customize ) {
+	$color_scheme = ascension_get_color_scheme();
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -111,19 +111,19 @@ function twentysixteen_customize_register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector' => '.site-title a',
 			'container_inclusive' => false,
-			'render_callback' => 'twentysixteen_customize_partial_blogname',
+			'render_callback' => 'ascension_customize_partial_blogname',
 		) );
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector' => '.site-description',
 			'container_inclusive' => false,
-			'render_callback' => 'twentysixteen_customize_partial_blogdescription',
+			'render_callback' => 'ascension_customize_partial_blogdescription',
 		) );
 	}
 
 	// Add color scheme setting and control.
 	$wp_customize->add_setting( 'color_scheme', array(
 		'default'           => 'default',
-		'sanitize_callback' => 'twentysixteen_sanitize_color_scheme',
+		'sanitize_callback' => 'ascension_sanitize_color_scheme',
 		'transport'         => 'postMessage',
 	) );
 
@@ -131,7 +131,7 @@ function twentysixteen_customize_register( $wp_customize ) {
 		'label'    => __( 'Base Color Scheme', 'twentysixteen' ),
 		'section'  => 'colors',
 		'type'     => 'select',
-		'choices'  => twentysixteen_get_color_scheme_choices(),
+		'choices'  => ascension_get_color_scheme_choices(),
 		'priority' => 1,
 	) );
 
@@ -183,36 +183,36 @@ function twentysixteen_customize_register( $wp_customize ) {
 		'section'     => 'colors',
 	) ) );
 }
-add_action( 'customize_register', 'twentysixteen_customize_register', 11 );
+add_action( 'customize_register', 'ascension_customize_register', 11 );
 
 /**
  * Render the site title for the selective refresh partial.
  *
- * @since Twenty Sixteen 1.2
- * @see twentysixteen_customize_register()
+ * @since Ascension 1.2
+ * @see ascension_customize_register()
  *
  * @return void
  */
-function twentysixteen_customize_partial_blogname() {
+function ascension_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
 /**
  * Render the site tagline for the selective refresh partial.
  *
- * @since Twenty Sixteen 1.2
- * @see twentysixteen_customize_register()
+ * @since Ascension 1.2
+ * @see ascension_customize_register()
  *
  * @return void
  */
-function twentysixteen_customize_partial_blogdescription() {
+function ascension_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
- * Registers color schemes for Twenty Sixteen.
+ * Registers color schemes for Ascension.
  *
- * Can be filtered with {@see 'twentysixteen_color_schemes'}.
+ * Can be filtered with {@see 'ascension_color_schemes'}.
  *
  * The order of colors in a colors array:
  * 1. Main Background Color.
@@ -221,17 +221,17 @@ function twentysixteen_customize_partial_blogdescription() {
  * 4. Main Text Color.
  * 5. Secondary Text Color.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @return array An associative array of color scheme options.
  */
-function twentysixteen_get_color_schemes() {
+function ascension_get_color_schemes() {
 	/**
-	 * Filter the color schemes registered for use with Twenty Sixteen.
+	 * Filter the color schemes registered for use with Ascension.
 	 *
 	 * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
 	 *
-	 * @since Twenty Sixteen 1.0
+	 * @since Ascension 1.0
 	 *
 	 * @param array $schemes {
 	 *     Associative array of color schemes data.
@@ -246,7 +246,7 @@ function twentysixteen_get_color_schemes() {
 	 *     }
 	 * }
 	 */
-	return apply_filters( 'twentysixteen_color_schemes', array(
+	return apply_filters( 'ascension_color_schemes', array(
 		'default' => array(
 			'label'  => __( 'Default', 'twentysixteen' ),
 			'colors' => array(
@@ -305,19 +305,19 @@ function twentysixteen_get_color_schemes() {
 	) );
 }
 
-if ( ! function_exists( 'twentysixteen_get_color_scheme' ) ) :
+if ( ! function_exists( 'ascension_get_color_scheme' ) ) :
 /**
- * Retrieves the current Twenty Sixteen color scheme.
+ * Retrieves the current Ascension color scheme.
  *
- * Create your own twentysixteen_get_color_scheme() function to override in a child theme.
+ * Create your own ascension_get_color_scheme() function to override in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @return array An associative array of either the current or default color scheme HEX values.
  */
-function twentysixteen_get_color_scheme() {
+function ascension_get_color_scheme() {
 	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
-	$color_schemes       = twentysixteen_get_color_schemes();
+	$color_schemes       = ascension_get_color_schemes();
 
 	if ( array_key_exists( $color_scheme_option, $color_schemes ) ) {
 		return $color_schemes[ $color_scheme_option ]['colors'];
@@ -325,21 +325,21 @@ function twentysixteen_get_color_scheme() {
 
 	return $color_schemes['default']['colors'];
 }
-endif; // twentysixteen_get_color_scheme
+endif; // ascension_get_color_scheme
 
-if ( ! function_exists( 'twentysixteen_get_color_scheme_choices' ) ) :
+if ( ! function_exists( 'ascension_get_color_scheme_choices' ) ) :
 /**
- * Retrieves an array of color scheme choices registered for Twenty Sixteen.
+ * Retrieves an array of color scheme choices registered for Ascension.
  *
- * Create your own twentysixteen_get_color_scheme_choices() function to override
+ * Create your own ascension_get_color_scheme_choices() function to override
  * in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @return array Array of color schemes.
  */
-function twentysixteen_get_color_scheme_choices() {
-	$color_schemes                = twentysixteen_get_color_schemes();
+function ascension_get_color_scheme_choices() {
+	$color_schemes                = ascension_get_color_schemes();
 	$color_scheme_control_options = array();
 
 	foreach ( $color_schemes as $color_scheme => $value ) {
@@ -348,23 +348,23 @@ function twentysixteen_get_color_scheme_choices() {
 
 	return $color_scheme_control_options;
 }
-endif; // twentysixteen_get_color_scheme_choices
+endif; // ascension_get_color_scheme_choices
 
 
-if ( ! function_exists( 'twentysixteen_sanitize_color_scheme' ) ) :
+if ( ! function_exists( 'ascension_sanitize_color_scheme' ) ) :
 /**
- * Handles sanitization for Twenty Sixteen color schemes.
+ * Handles sanitization for Ascension color schemes.
  *
- * Create your own twentysixteen_sanitize_color_scheme() function to override
+ * Create your own ascension_sanitize_color_scheme() function to override
  * in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @param string $value Color scheme name value.
  * @return string Color scheme name.
  */
-function twentysixteen_sanitize_color_scheme( $value ) {
-	$color_schemes = twentysixteen_get_color_scheme_choices();
+function ascension_sanitize_color_scheme( $value ) {
+	$color_schemes = ascension_get_color_scheme_choices();
 
 	if ( ! array_key_exists( $value, $color_schemes ) ) {
 		return 'default';
@@ -372,16 +372,16 @@ function twentysixteen_sanitize_color_scheme( $value ) {
 
 	return $value;
 }
-endif; // twentysixteen_sanitize_color_scheme
+endif; // ascension_sanitize_color_scheme
 
 /**
  * Enqueues front-end CSS for color scheme.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @see wp_add_inline_style()
  */
-function twentysixteen_color_scheme_css() {
+function ascension_color_scheme_css() {
 	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
 
 	// Don't do anything if the default color scheme is selected.
@@ -389,10 +389,10 @@ function twentysixteen_color_scheme_css() {
 		return;
 	}
 
-	$color_scheme = twentysixteen_get_color_scheme();
+	$color_scheme = ascension_get_color_scheme();
 
 	// Convert main text hex color to rgba.
-	$color_textcolor_rgb = twentysixteen_hex2rgb( $color_scheme[3] );
+	$color_textcolor_rgb = ascension_hex2rgb( $color_scheme[3] );
 
 	// If the rgba values are empty return early.
 	if ( empty( $color_textcolor_rgb ) ) {
@@ -411,44 +411,44 @@ function twentysixteen_color_scheme_css() {
 
 	);
 
-	$color_scheme_css = twentysixteen_get_color_scheme_css( $colors );
+	$color_scheme_css = ascension_get_color_scheme_css( $colors );
 
-	wp_add_inline_style( 'basis', $color_scheme_css );
+	wp_add_inline_style( 'ascension', $color_scheme_css );
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_color_scheme_css', 11 );
+add_action( 'wp_enqueue_scripts', 'ascension_color_scheme_css', 11 );
 
 /**
  * Binds the JS listener to make Customizer color_scheme control.
  *
  * Passes color scheme data as colorScheme global.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  */
-function twentysixteen_customize_control_js() {
+function ascension_customize_control_js() {
 	wp_enqueue_script( 'color-scheme-control', get_stylesheet_directory_uri() . '/assets/js/color-scheme-control.js', array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), '20160412', true );
-	wp_localize_script( 'color-scheme-control', 'colorScheme', twentysixteen_get_color_schemes() );
+	wp_localize_script( 'color-scheme-control', 'colorScheme', ascension_get_color_schemes() );
 }
-add_action( 'customize_controls_enqueue_scripts', 'twentysixteen_customize_control_js' );
+add_action( 'customize_controls_enqueue_scripts', 'ascension_customize_control_js' );
 
 /**
  * Binds JS handlers to make the Customizer preview reload changes asynchronously.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  */
-function twentysixteen_customize_preview_js() {
+function ascension_customize_preview_js() {
 	wp_enqueue_script( 'twentysixteen-customize-preview', get_stylesheet_directory_uri() . '/assets/js/customize-preview.js', array( 'customize-preview' ), '20160412', true );
 }
-add_action( 'customize_preview_init', 'twentysixteen_customize_preview_js' );
+add_action( 'customize_preview_init', 'ascension_customize_preview_js' );
 
 /**
  * Returns CSS for the color schemes.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @param array $colors Color scheme colors.
  * @return string Color scheme CSS.
  */
-function twentysixteen_get_color_scheme_css( $colors ) {
+function ascension_get_color_scheme_css( $colors ) {
 	$colors = wp_parse_args( $colors, array(
 		'header_textcolor'			=> '',
 		'background_color'      => '',
@@ -760,9 +760,9 @@ CSS;
  * The template generates the css dynamically for instant display in the
  * Customizer preview.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  */
-function twentysixteen_color_scheme_css_template() {
+function ascension_color_scheme_css_template() {
 	$colors = array(
 		'header_textcolor'			=> '{{ data.header_textcolor }}',
 		'background_color'      => '{{ data.background_color }}',
@@ -774,23 +774,23 @@ function twentysixteen_color_scheme_css_template() {
 	);
 	?>
 	<script type="text/html" id="tmpl-twentysixteen-color-scheme">
-		<?php echo twentysixteen_get_color_scheme_css( $colors ); ?>
+		<?php echo ascension_get_color_scheme_css( $colors ); ?>
 	</script>
 	<?php
 }
-add_action( 'customize_controls_print_footer_scripts', 'twentysixteen_color_scheme_css_template' );
+add_action( 'customize_controls_print_footer_scripts', 'ascension_color_scheme_css_template' );
 
 //
 
 /**
  * Enqueues front-end CSS for the page background color.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @see wp_add_inline_style()
  */
-function twentysixteen_header_textcolor_css() {
-	$color_scheme          = twentysixteen_get_color_scheme();
+function ascension_header_textcolor_css() {
+	$color_scheme          = ascension_get_color_scheme();
 	$default_color         = $color_scheme[0];
 	$header_textcolor			 = "#" . get_theme_mod( 'header_textcolor', $default_color );  // No hash before
 
@@ -806,19 +806,19 @@ function twentysixteen_header_textcolor_css() {
 		}
 	';
 
-	wp_add_inline_style( 'basis', sprintf( $css, $header_textcolor ) );
+	wp_add_inline_style( 'ascension', sprintf( $css, $header_textcolor ) );
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_header_textcolor_css', 11 );
+add_action( 'wp_enqueue_scripts', 'ascension_header_textcolor_css', 11 );
 
 /**
  * Enqueues front-end CSS for the page background color.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @see wp_add_inline_style()
  */
-function twentysixteen_tagline_text_color_css() {
-	$color_scheme          = twentysixteen_get_color_scheme();
+function ascension_tagline_text_color_css() {
+	$color_scheme          = ascension_get_color_scheme();
 	$default_color         = $color_scheme[2];
 	$tagline_text_color = get_theme_mod( 'tagline_text_color', $default_color );
 
@@ -879,19 +879,19 @@ function twentysixteen_tagline_text_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'basis', sprintf( $css, $tagline_text_color ) );
+	wp_add_inline_style( 'ascension', sprintf( $css, $tagline_text_color ) );
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_tagline_text_color_css', 11 );
+add_action( 'wp_enqueue_scripts', 'ascension_tagline_text_color_css', 11 );
 
 /**
  * Enqueues front-end CSS for the link color.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @see wp_add_inline_style()
  */
-function twentysixteen_link_color_css() {
-	$color_scheme    = twentysixteen_get_color_scheme();
+function ascension_link_color_css() {
+	$color_scheme    = ascension_get_color_scheme();
 	$default_color   = $color_scheme[3];
 	$link_color = get_theme_mod( 'link_color', $default_color );
 
@@ -975,19 +975,19 @@ function twentysixteen_link_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'basis', sprintf( $css, $link_color ) );
+	wp_add_inline_style( 'ascension', sprintf( $css, $link_color ) );
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_link_color_css', 11 );
+add_action( 'wp_enqueue_scripts', 'ascension_link_color_css', 11 );
 
 /**
  * Enqueues front-end CSS for the main text color.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @see wp_add_inline_style()
  */
-function twentysixteen_main_text_color_css() {
-	$color_scheme    = twentysixteen_get_color_scheme();
+function ascension_main_text_color_css() {
+	$color_scheme    = ascension_get_color_scheme();
 	$default_color   = $color_scheme[4];
 	$main_text_color = get_theme_mod( 'main_text_color', $default_color );
 
@@ -997,7 +997,7 @@ function twentysixteen_main_text_color_css() {
 	}
 
 	// Convert main text hex color to rgba.
-	$main_text_color_rgb = twentysixteen_hex2rgb( $main_text_color );
+	$main_text_color_rgb = ascension_hex2rgb( $main_text_color );
 
 	// If the rgba values are empty return early.
 	if ( empty( $main_text_color_rgb ) ) {
@@ -1122,19 +1122,19 @@ function twentysixteen_main_text_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'basis', sprintf( $css, $main_text_color, $border_color ) );
+	wp_add_inline_style( 'ascension', sprintf( $css, $main_text_color, $border_color ) );
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_main_text_color_css', 11 );
+add_action( 'wp_enqueue_scripts', 'ascension_main_text_color_css', 11 );
 
 /**
  * Enqueues front-end CSS for the secondary text color.
  *
- * @since Twenty Sixteen 1.0
+ * @since Ascension 1.0
  *
  * @see wp_add_inline_style()
  */
-function twentysixteen_secondary_text_color_css() {
-	$color_scheme    = twentysixteen_get_color_scheme();
+function ascension_secondary_text_color_css() {
+	$color_scheme    = ascension_get_color_scheme();
 	$default_color   = $color_scheme[5];
 	$secondary_text_color = get_theme_mod( 'secondary_text_color', $default_color );
 
@@ -1196,21 +1196,21 @@ function twentysixteen_secondary_text_color_css() {
 		}
 	';
 
-	wp_add_inline_style( 'basis', sprintf( $css, $secondary_text_color ) );
+	wp_add_inline_style( 'ascension', sprintf( $css, $secondary_text_color ) );
 }
-add_action( 'wp_enqueue_scripts', 'twentysixteen_secondary_text_color_css', 11 );
+add_action( 'wp_enqueue_scripts', 'ascension_secondary_text_color_css', 11 );
 
 
 /**
 * Converts a HEX value to RGB.
 *
-* @since Twenty Sixteen 1.0
+* @since Ascension 1.0
 *
 * @param string $color The original color, in 3- or 6-digit hexadecimal form.
 * @return array Array containing RGB (red, green, and blue) values for the given
 *               HEX code, empty array otherwise.
 */
-function twentysixteen_hex2rgb( $color ) {
+function ascension_hex2rgb( $color ) {
  $color = trim( $color, '#' );
  if ( strlen( $color ) === 3 ) {
 	 $r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
