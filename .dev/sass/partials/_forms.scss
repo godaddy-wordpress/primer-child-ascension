@@ -14,7 +14,9 @@ a.button,
 a.button:visited,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.fl-builder-content a.fl-button,
+.fl-builder-content a.fl-button:visited {
 	background: #fff;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: none; /* Corrects inability to style clickable 'input' types in iOS */
@@ -42,6 +44,10 @@ input[type="submit"] {
 		font-size: rem-calc(14);
 		letter-spacing: rem-calc(0.6);
 		padding: 12px 55px;
+	}
+
+	&:hover *{
+		color: white;
 	}
 }
 

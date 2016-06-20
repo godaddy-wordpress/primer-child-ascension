@@ -9,8 +9,6 @@ function basis_enqueue_jquery() {
 		return $tag;
 	}, 10, 2 );
 
-	//wp_enqueue_script( 'jquery' );
-
 }
 add_action( 'wp_enqueue_scripts', 'basis_enqueue_jquery', 0 );
 

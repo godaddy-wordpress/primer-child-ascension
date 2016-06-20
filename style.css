@@ -45,8 +45,6 @@ html, body {
   height: 100%; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -1323,7 +1321,7 @@ button, a.button, .social-menu a, input, select, textarea {
   /* Improves appearance and consistency in all browsers */
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
-button, a.button, .social-menu a, a.button:visited, .social-menu a:visited, input[type="button"], input[type="reset"], input[type="submit"] {
+button, a.button, .social-menu a, a.button:visited, .social-menu a:visited, input[type="button"], input[type="reset"], input[type="submit"], .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited {
   background: #fff;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -1338,15 +1336,17 @@ button, a.button, .social-menu a, a.button:visited, .social-menu a:visited, inpu
   text-transform: uppercase;
   border-radius: 0.3125rem;
   padding: 8px 32px; }
-  button:hover, a.button:hover, .social-menu a:hover, a.button:visited:hover, .social-menu a:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+  button:hover, a.button:hover, .social-menu a:hover, a.button:visited:hover, .social-menu a:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .fl-builder-content a.fl-button:hover, .fl-builder-content a.fl-button:visited:hover {
     color: #fff;
     background: #144159; }
-  button:focus button:active, a.button:focus a.button:active, a.button:focus .social-menu a:focus, .social-menu a.button:focus a:focus, a.button:focus .social-menu a:active, .social-menu a.button:focus a:active, a.button:visited:focus a.button:visited:active, a.button:visited:focus .social-menu a:visited:focus, .social-menu a.button:visited:focus a:visited:focus, a.button:visited:focus .social-menu a:visited:active, .social-menu a.button:visited:focus a:visited:active, input[type="button"]:focus input[type="button"]:active, input[type="reset"]:focus input[type="reset"]:active, input[type="submit"]:focus input[type="submit"]:active {
+  button:focus button:active, a.button:focus a.button:active, a.button:focus .social-menu a:focus, .social-menu a.button:focus a:focus, a.button:focus .social-menu a:active, .social-menu a.button:focus a:active, a.button:visited:focus a.button:visited:active, a.button:visited:focus .social-menu a:visited:focus, .social-menu a.button:visited:focus a:visited:focus, a.button:visited:focus .social-menu a:visited:active, .social-menu a.button:visited:focus a:visited:active, input[type="button"]:focus input[type="button"]:active, input[type="reset"]:focus input[type="reset"]:active, input[type="submit"]:focus input[type="submit"]:active, .fl-builder-content a.fl-button:focus .fl-builder-content a.fl-button:active, .fl-builder-content a.fl-button:visited:focus .fl-builder-content a.fl-button:visited:active {
     background: #103244; }
-  button.large, a.button.large, .social-menu a.large, a.button:visited.large, .social-menu a:visited.large, input[type="button"].large, input[type="reset"].large, input[type="submit"].large {
+  button.large, a.button.large, .social-menu a.large, a.button:visited.large, .social-menu a:visited.large, input[type="button"].large, input[type="reset"].large, input[type="submit"].large, .fl-builder-content a.fl-button.large, .fl-builder-content a.fl-button:visited.large {
     font-size: 0.875rem;
     letter-spacing: 0.0375rem;
     padding: 12px 55px; }
+  button:hover *, a.button:hover *, a.button:hover .social-menu a:hover, .social-menu a.button:hover a:hover, a.button:visited:hover *, a.button:visited:hover .social-menu a:visited:hover, .social-menu a.button:visited:hover a:visited:hover, input[type="button"]:hover *, input[type="reset"]:hover *, input[type="submit"]:hover *, .fl-builder-content a.fl-button:hover *, .fl-builder-content a.fl-button:visited:hover * {
+    color: white; }
 
 input[type="checkbox"], input[type="radio"] {
   padding: 0;
@@ -1355,9 +1355,7 @@ input[type="checkbox"], input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
-  -webkit-box-sizing: content-box;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -1373,7 +1371,8 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   color: #666;
   background-color: #f1f1f1;
   border: none;
-  transform: 200ms background linear;
+  -webkit-transform: 200ms background linear;
+          transform: 200ms background linear;
   border-radius: 3px;
   resize: none;
   padding: 0.75em;
@@ -2165,42 +2164,34 @@ img[class*="wp-image-"] {
 
 .gallery-columns-2 .gallery-item {
   max-width: 48%;
-  max-width: -webkit-calc(50% - 4px);
   max-width: calc(50% - 4px); }
 
 .gallery-columns-3 .gallery-item {
   max-width: 32%;
-  max-width: -webkit-calc(33.3% - 4px);
   max-width: calc(33.3% - 4px); }
 
 .gallery-columns-4 .gallery-item {
   max-width: 23%;
-  max-width: -webkit-calc(25% - 4px);
   max-width: calc(25% - 4px); }
 
 .gallery-columns-5 .gallery-item {
   max-width: 19%;
-  max-width: -webkit-calc(20% - 4px);
   max-width: calc(20% - 4px); }
 
 .gallery-columns-6 .gallery-item {
   max-width: 15%;
-  max-width: -webkit-calc(16.7% - 4px);
   max-width: calc(16.7% - 4px); }
 
 .gallery-columns-7 .gallery-item {
   max-width: 13%;
-  max-width: -webkit-calc(14.28% - 4px);
   max-width: calc(14.28% - 4px); }
 
 .gallery-columns-8 .gallery-item {
   max-width: 11%;
-  max-width: -webkit-calc(12.5% - 4px);
   max-width: calc(12.5% - 4px); }
 
 .gallery-columns-9 .gallery-item {
   max-width: 9%;
-  max-width: -webkit-calc(11.1% - 4px);
   max-width: calc(11.1% - 4px); }
 
 .gallery-columns-1 .gallery-item:nth-of-type(1n), .gallery-columns-2 .gallery-item:nth-of-type(2n), .gallery-columns-3 .gallery-item:nth-of-type(3n), .gallery-columns-4 .gallery-item:nth-of-type(4n), .gallery-columns-5 .gallery-item:nth-of-type(5n), .gallery-columns-6 .gallery-item:nth-of-type(6n), .gallery-columns-7 .gallery-item:nth-of-type(7n), .gallery-columns-8 .gallery-item:nth-of-type(8n), .gallery-columns-9 .gallery-item:nth-of-type(9n) {
@@ -2208,8 +2199,6 @@ img[class*="wp-image-"] {
 
 .gallery-caption {
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   margin: 0;
