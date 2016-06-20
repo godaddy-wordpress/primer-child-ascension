@@ -487,10 +487,9 @@ $align-class-breakpoints:
 		}
 		blockquote,
 		blockquote p {
-			line-height: $paragraph-line-height;
+			line-height: 1.25;
 			color: $blockquote-font-color;
 			font-size: rem-calc(18);
-			line-height: $base-line-height;
 		}
 		blockquote.aligncenter {
 			font-family: "Palatino", $header-font-family;
