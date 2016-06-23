@@ -1463,6 +1463,8 @@ a {
         padding-left: 55px; }
         .main-navigation ul li a span {
           display: none; }
+      .main-navigation ul li.current-menu-item a, .main-navigation ul li a:hover {
+        background: #efefef; }
       .main-navigation ul li.menu-item-has-children > a > span {
         position: absolute;
         top: 0;
@@ -1488,6 +1490,8 @@ a {
             position: relative; }
             .main-navigation ul li.menu-item-has-children .sub-menu li a span {
               padding: 8px; }
+          .main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a, .main-navigation ul li.menu-item-has-children .sub-menu li a:hover {
+            background: #1a5371; }
         .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu {
           display: none; }
           .main-navigation ul li.menu-item-has-children .sub-menu .sub-menu li a {
@@ -1522,9 +1526,15 @@ a {
       .main-navigation ul li {
         border: none;
         display: inline-block;
-        margin: 0 0 0 2em; }
+        margin: 0 0 0 2em;
+        padding-bottom: 2px; }
+        .main-navigation ul li.current-menu-item a, .main-navigation ul li a:hover {
+          background: none; }
         .main-navigation ul li:last-child {
           margin: 0; }
+        .main-navigation ul li.current-menu-item, .main-navigation ul li:hover {
+          padding-bottom: 0;
+          border-bottom: 2px solid #194F6E; }
         .main-navigation ul li a {
           font-size: 0.75rem;
           font-size: 0.75rem;
@@ -1542,7 +1552,8 @@ a {
             .main-navigation ul li.menu-item-has-children .sub-menu li {
               display: block;
               border: 0;
-              margin: 0; }
+              margin: 0;
+              padding: 0; }
               .main-navigation ul li.menu-item-has-children .sub-menu li a {
                 text-align: right;
                 border-bottom: 0; }
