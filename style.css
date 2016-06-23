@@ -4,13 +4,13 @@ Theme URI: http://liftux.com
 Author: Lift
 Author URI: http://liftux.com
 Description: This is a child theme for Primer.
-Version: 0.0.7
+Version: 0.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ascension
 Domain Path: /languages/
 Tags:
-Template: wp-primer-theme
+Template: primer
 
 This theme, like WordPress, is licensed under the GPL.
 
@@ -2322,14 +2322,16 @@ body.layout-one-column-narrow #content {
 
 .site-header {
   letter-spacing: -0.01em;
-  padding: 10px 0; }
+  padding: 10px 0;
+  min-height: 75px; }
   @media only screen and (min-width:40.063em) {
     .site-header {
       padding: 17px 0;
       position: inherit; } }
   @media only screen and (min-width:61.063em) {
     .site-header {
-      padding: 32px 0; } }
+      padding: 32px 0;
+      min-height: 121px; } }
 
 .featured-content .entry-header {
   background-size: cover; }

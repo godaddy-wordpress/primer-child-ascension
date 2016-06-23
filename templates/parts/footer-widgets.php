@@ -1,39 +1,55 @@
 <?php
 /**
- * Displays the footer widget zones.
+ * Displays the footer widget areas.
  *
- * @package ascension
+ * @package Primer
  */
 ?>
 
-<?php if( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ): ?>
+<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
 
-<div class="footer-widget-area columns-<?php echo primer_count_footer_columns(); ?>">
+	<div class="footer-widget-area columns-<?php echo primer_active_footer_areas_count() ?>">
 
-	<?php if( is_active_sidebar( 'footer-1' ) ): ?>
+	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+
 		<div class="footer-widget">
-			<?php dynamic_sidebar( 'footer-1' ); ?>
+
+			<?php dynamic_sidebar( 'footer-1' ) ?>
+
 		</div>
+
 	<?php endif; ?>
 
-	<?php if( is_active_sidebar( 'footer-2' ) ): ?>
+	<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+
 		<div class="footer-widget">
-			<?php dynamic_sidebar( 'footer-2' ); ?>
+
+			<?php dynamic_sidebar( 'footer-2' ) ?>
+
 		</div>
+
 	<?php endif; ?>
 
-	<?php if( is_active_sidebar( 'footer-3' ) ): ?>
+	<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+
 		<div class="footer-widget">
-			<?php dynamic_sidebar( 'footer-3' ); ?>
+
+			<?php dynamic_sidebar( 'footer-3' ) ?>
+
 		</div>
+
 	<?php endif; ?>
 
-	<?php if( is_active_sidebar( 'footer-4' ) ): ?>
+	<?php if ( is_active_sidebar( 'footer-4' ) ) : ?>
+
 		<div class="footer-widget">
-			<?php dynamic_sidebar( 'footer-4' ); ?>
+
+			<?php dynamic_sidebar( 'footer-4' ) ?>
+
 		</div>
+
 	<?php endif; ?>
 
-</div>
+	</div>
 
 <?php endif; ?>
