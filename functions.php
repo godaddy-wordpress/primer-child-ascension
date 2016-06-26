@@ -164,53 +164,33 @@ function primer_enqueue_jquery() {
 }
 add_action( 'wp_enqueue_scripts', 'primer_enqueue_jquery', 0 );
 
-
-
 /**
- * Get the ID of an image for a given URL
+ * Returns the featured image, custom header or false in this priority order.
  *
- * @note Let's do something different here...
- */
-function primer_get_image_id( $image_url ) {
-	global $wpdb;
-	return $wpdb->get_var(
-		$wpdb->prepare(
-			"SELECT ID FROM $wpdb->posts WHERE guid='%s';",
-			$image_url
-		)
-	);
-}
-
-/**
- * Get the custom header or feauterd image if available
- *
+ * @return false|string
  */
 function primer_get_custom_header() {
 	$post_id = get_queried_object_id();
 
-	if ( get_theme_mod('full_width') == 1 ) {
-		$image_size = 'hero-2x';
-	} else {
-		$image_size = 'hero';
-	}
+	$image_size = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
 
 	if ( has_post_thumbnail( $post_id ) ) {
 		$image = get_the_post_thumbnail_url( $post_id, $image_size );
 
 		if ( getimagesize( $image ) ) {
-				return $image;
+			return $image;
+		}
+	}
+
+	$custom_header = get_custom_header();
+	if ( ! empty( $custom_header->attachment_id ) ) {
+		$image = wp_get_attachment_image_url( $custom_header->attachment_id, $image_size );
+
+		if ( getimagesize( $image ) ) {
+			return $image;
 		}
 	}
 
 	$header_image = get_header_image();
-	$image_id = primer_get_image_id( $header_image );
-
-	if ( empty( $image_id ) ) {
-		return $header_image;
-	}
-
-	$image = wp_get_attachment_image_src( $image_id, $image_size, true );
-	return $image[0];
+	return $header_image;
 }
-
-?>
