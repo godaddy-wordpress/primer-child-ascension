@@ -5,10 +5,14 @@ module.exports = function(grunt) {
 
 		sass: {
 			dist: {
+				options: {
+					sourceMap: true,
+					outputStyle: 'compressed'
+				},
 				files: {
 					'style.css'        : '.dev/sass/style.scss',
 					'editor-style.css' : '.dev/sass/editor-style.scss',
-					'ie.css'          : '.dev/sass/ie.scss'
+					'ie.css'           : '.dev/sass/ie.scss'
 				}
 			}
 		},
@@ -74,6 +78,22 @@ module.exports = function(grunt) {
 			all: ['**/*.php']
 		},
 
+		devUpdate: {
+			main: {
+				options: {
+					updateType: 'force', //just report outdated packages
+					reportUpdated: false, //don't report up-to-date packages
+					semver: true, //stay within semver when updating
+					packages: {
+						devDependencies: true, //only check for devDependencies
+						dependencies: false
+					},
+					packageJson: null, //use matchdep default findup to locate package.json
+					reportOnlyPkgs: [] //use updateType action on all packages
+				}
+			}
+	    },
+
 		browserSync: {
 		    dev: {
 			bsFiles: {
@@ -109,7 +129,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-
+	grunt.loadNpmTasks('grunt-dev-update');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-browser-sync');
