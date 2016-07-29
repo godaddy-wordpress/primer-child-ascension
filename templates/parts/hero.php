@@ -1,5 +1,5 @@
-<?php if( ! empty( primer_get_custom_header() ) ): ?>
-<div class="hero" style="background:url('<?php echo primer_get_custom_header( ); ?>') no-repeat top center; background-size: cover;">
+<?php if( primer_get_custom_header() ): ?>
+<div class="hero" style="background:url('<?php echo primer_get_custom_header(); ?>') no-repeat top center; background-size: cover;">
 <?php else: ?>
 <div class="hero">
 <?php endif; ?>
@@ -11,10 +11,10 @@
 				<?php get_template_part( 'templates/parts/loop/page-title' ); ?>
 			<?php elseif( is_search() ): ?>
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( _x( 'Search Results for: %s', 'search term(s)', 'ascension' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( esc_html_x( 'Search Results for: %s', 'search term(s)', 'ascension' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 			<?php elseif( get_post_type() == 'post' ): ?>
-				<h1><?php _e( 'Blog', 'ascension' ) ?></h1>
+				<h1><?php esc_html_e( 'Blog', 'ascension' ) ?></h1>
 			<?php endif; ?>
 		</div>
 	</div>

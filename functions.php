@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Load custom template tags for this theme.
+ *
+ * @since 1.0.0
+ */
+require_once get_stylesheet_directory() . '/inc/template-tags.php';
+
 function primer_add_image_sizes() {
 	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
 	add_image_size( 'hero-2x', 2120, 1100, array( 'center', 'center' ) );
@@ -72,7 +79,18 @@ function primer_move_navigation() {
 }
 add_action( 'init', 'primer_move_navigation', 100 );
 
-function primer_widgets_init() {
+function ascension_register_sidebars() {
+
+	register_sidebar( array(
+		'name'          => __( 'Hero', 'ascension' ),
+		'id'            => 'hero',
+		'description'   => __( 'The hero appears in the hero widget area on the front page', 'ascension' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'ascension' ),
 		'id'            => 'sidebar-1',
@@ -133,16 +151,10 @@ function primer_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Hero', 'ascension' ),
-		'id'            => 'hero',
-		'description'   => __( 'The hero appears in the hero widget area on the front page', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
 }
+remove_action( 'widgets_init', 'primer_register_sidebars' );
+add_action( 'widgets_init', 'ascension_register_sidebars' );
+
 
 /**
  * Enqueue jQuery.
@@ -163,34 +175,3 @@ function primer_enqueue_jquery() {
 
 }
 add_action( 'wp_enqueue_scripts', 'primer_enqueue_jquery', 0 );
-
-/**
- * Returns the featured image, custom header or false in this priority order.
- *
- * @return false|string
- */
-function primer_get_custom_header() {
-	$post_id = get_queried_object_id();
-
-	$image_size = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
-
-	if ( has_post_thumbnail( $post_id ) ) {
-		$image = get_the_post_thumbnail_url( $post_id, $image_size );
-
-		if ( getimagesize( $image ) ) {
-			return $image;
-		}
-	}
-
-	$custom_header = get_custom_header();
-	if ( ! empty( $custom_header->attachment_id ) ) {
-		$image = wp_get_attachment_image_url( $custom_header->attachment_id, $image_size );
-
-		if ( getimagesize( $image ) ) {
-			return $image;
-		}
-	}
-
-	$header_image = get_header_image();
-	return $header_image;
-}
