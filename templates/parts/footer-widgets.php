@@ -8,7 +8,7 @@
 
 <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
 
-	<div class="footer-widget-area columns-<?php echo primer_active_footer_areas_count() ?>">
+	<div class="footer-widget-area columns-<?php echo primer_active_footer_areas_count(); ?>">
 
 	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
 

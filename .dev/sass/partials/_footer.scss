@@ -11,9 +11,10 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 
 .site-footer{
 	color: $site-footer-text-color;
+	font-size: rem-calc(15);
 
 	a {
-		font-size: rem-calc(13);
+		font-size: rem-calc(15);
 		font-weight: normal;
 		text-transform: none;
 
@@ -45,7 +46,7 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		}
 
 		.widget-title {
-			font-size: rem-calc(13);
+			font-size: rem-calc(15);
 			text-transform: uppercase;
 			margin-bottom: 10px;
 		}
@@ -60,7 +61,7 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 
 		a,
 		.widget li a {
-			font-size: rem-calc(13);
+			font-size: rem-calc(15);
 			font-weight: normal;
 			text-transform: none;
 		}
@@ -166,7 +167,7 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		margin-bottom: 2.25em;
 		margin-bottom: 2.25rem;
 		text-align: center;
-		ul{
+		ul {
 			margin-right: 0;
 			display: inline-block;
 			li {
@@ -182,8 +183,8 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 	.site-info-text,
 	.site-info-text p {
 		text-align: center;
-    font-size: 12px;
-    color: $site-footer-info-text-color;
+    	font-size: 15px;
+    	color: $site-footer-info-text-color;
 	}
 	.site-info-text p {
 		margin-bottom: rem-calc(10);

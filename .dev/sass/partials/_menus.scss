@@ -3,11 +3,11 @@ $menu-link-color: $secondary-color;
 .main-navigation {
 	clear: both;
 	position: absolute;
-  width: 100%;
-  background: #fff;
-  top: 66px;
-  left: 0;
-  z-index: 999;
+	width: 100%;
+	background: #fff;
+	top: 66px;
+	left: 0;
+	z-index: 999;
 	display: none;
 	border-bottom: 1px solid rgba(117,117,117,0.28);
 
@@ -22,15 +22,15 @@ $menu-link-color: $secondary-color;
 				color: $menu-link-color;
 				display: block;
 				font-family: $sans-font-family;
-				font-size: emCalc(14);
-				font-size: rem-calc(14);
+				font-size: emCalc(15);
+				font-size: rem-calc(15);
 				font-weight: bold;
 				letter-spacing: 0.64px;
 				padding: 13px 10px;
 				text-align: center;
 				text-transform: uppercase;
 				position: relative;
-    		padding-right: 55px;
+
 				span {
 					display: none;
 				}
@@ -41,25 +41,22 @@ $menu-link-color: $secondary-color;
 			}
 			&.menu-item-has-children > a > span {
 				position: absolute;
-		    top: 0;
-		    right: 0;
-		    border-left: 1px solid rgba(117, 117, 117, 0.28);
-		    height: 100%;
-		    display: block;
-		    font-size: 15px;
-		    padding: 13px;
+				top: 0;
+				right: 0;
+				border-left: 1px solid rgba(117, 117, 117, 0.28);
+				height: 100%;
+				display: block;
+				padding: 13px;
 				&:before {
 					content: "\25bc";
 				}
 			}
 			&.menu-item-has-children .sub-menu {
-				display: none;
 				li {
 					border-top: 1px solid rgba(255,255,255,0.20);
 					a {
 						background: $secondary-color;
 						color: #fff;
-						font-size: rem-calc(12);
 						text-align: left;
 						text-transform: none;
 						padding: 10px 20px;
@@ -83,17 +80,18 @@ $menu-link-color: $secondary-color;
 		}
 	}
 }
+
 .menu-toggle {
 	display: block;
-	float: left;
+	float: right;
 	cursor: pointer;
 	padding: 19px 10px;
 
 	div {
 		background: #979797;
-    height: 3px;
-    width: 16px;
-    margin-bottom: 3px;
+		height: 3px;
+		width: 16px;
+		margin-bottom: 3px;
 	}
 }
 
@@ -103,10 +101,10 @@ $menu-link-color: $secondary-color;
 		clear: none;
 		float: right;
 		position: relative;
-    width: auto;
-    background: none;
-    top: 0;
-    left: 0;
+		width: auto;
+		background: none;
+		top: 0;
+		left: 0;
 		margin-top: 5px;
 		display: block;
 		border: none;
@@ -135,8 +133,6 @@ $menu-link-color: $secondary-color;
 				}
 
 				a {
-					font-size: emCalc(12);
-					font-size: rem-calc(12);
 					letter-spacing: 0.55px;
 					padding: 0;
 				}
@@ -166,7 +162,6 @@ $menu-link-color: $secondary-color;
 								display: block;
 								padding: 12px;
 								border: none;
-								font-size: 11px;
 								&:before {
 									content: "\25b6";
 								}
@@ -196,11 +191,10 @@ $menu-link-color: $secondary-color;
 
 @media #{$large-up} {
 	.main-navigation {
-		margin-top: 19px;
+		margin-top: 15px;
 		ul {
 			li {
 				a {
-					font-size: 13px;
 					letter-spacing: 0.6px;
 				}
 			}

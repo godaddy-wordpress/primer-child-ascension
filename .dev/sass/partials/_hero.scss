@@ -11,7 +11,7 @@
 
 	@media #{$medium-up} {
 		.home .hero-inner {
-			padding-left: 50%;
+			padding-left: 40%;
 		}
 		.home {
 			padding: 70px 25px 140px;
@@ -55,9 +55,10 @@
 		color: #fff;
 	}
 
+	blockquote.large,
 	blockquote.large p {
 		color: #fff;
-		font-size: rem-calc(17.58);
+		font-size: rem-calc(24);
 		font-style: normal;
 		font-weight: lighter;
 		padding: 0;
@@ -79,27 +80,19 @@
 	blockquote cite,
 	blockquote cite a {
 		color: $primary-color;
-		font-size: rem-calc(7.69);
-		@media #{$medium-up} {
-			font-size: rem-calc(12);
-		}
-		@media #{$large-up} {
-			font-size: rem-calc(13);
-		}
+		font-size: rem-calc(13);
 	}
 
 	a.button.large {
 		background: $hero-button-color;
 		color: #FFFFFF;
 		border: none;
-		font-size: 0.6875rem;
-		letter-spacing: 0.083125rem;
+        font-size: 0.875rem;
+		letter-spacing: 0.1rem;
 		padding: 8px 32px;
 
 		@media #{$medium-up} {
-			font-size: 0.875rem;
-	    letter-spacing: 0.0375rem;
-	    padding: 12px 55px;
+            padding: 12px 55px;
 		}
 
 		&:hover {

@@ -7,171 +7,269 @@
  */
 require_once get_stylesheet_directory() . '/inc/template-tags.php';
 
-function primer_add_image_sizes() {
+/**
+ * Add images sizes.
+ *
+ * @action after_setup_theme
+ * @since 1.0.0
+ */
+function ascension_add_image_sizes() {
+
 	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
 	add_image_size( 'hero-2x', 2120, 1100, array( 'center', 'center' ) );
-}
-add_action( 'after_setup_theme', 'primer_add_image_sizes' );
 
-function primer_update_custom_logo_args( $args ) {
+}
+add_action( 'after_setup_theme', 'ascension_add_image_sizes' );
+
+/**
+ * Update custom logo width and height
+ *
+ * @action primer_custom_logo_args
+ * @param $args
+ * @return array
+ */
+function ascension_update_custom_logo_args( $args ) {
+
 	$args['width'] = 352;
 	$args['height'] = 62;
 
 	return $args;
-}
-add_filter( 'primer_custom_logo_args', 'primer_update_custom_logo_args' );
 
-function primer_update_custom_header_args( $args ) {
+}
+add_filter( 'primer_custom_logo_args', 'ascension_update_custom_logo_args' );
+
+/**
+ * Update custom header width and height
+ *
+ * @action primer_custom_header_args
+ * @param $args
+ * @return array
+ */
+function ascension_update_custom_header_args( $args ) {
+
 	$args['width'] = 2120;
 	$args['height'] = 1100;
 
 	return $args;
-}
-add_filter( 'primer_custom_header_args', 'primer_update_custom_header_args' );
-
-function primer_update_custom_fonts_css( $css ) {
-	$css = '/* Custom Fonts */
-		body,
-		h1, h2, h3, h4, h5, h6,
-		blockquote,
-		blockquote.aligncenter,
-		blockquote.aligncenter cite,
-		button, a.button, .social-menu a, input, select, textarea,
-		label,
-		.main-navigation ul li a,
-		.widget-title,
-		.entry-footer,
-		.entry-meta,
-		.event-meta, .sermon-meta, .location-meta, .person-meta,
-		.post-format,
-		.more-link,
-		article.format-link,
-		.comment-list li .comment-author, .comment-list li .comment-metadata,
-		#respond,
-		.site-title,
-		.site-description,
-		.featured-content .entry-header .entry-title,
-		.featured-content .entry-header .read-more,
-		.featured-content .entry-title,
-		.featured-content .read-more {
-			font-family: "%1$s", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-		}
-	';
-
-	return $css;
-}
-add_filter( 'custom_fonts_css', 'primer_update_custom_fonts_css' );
-
-function ascension_navigation() {
-	wp_dequeue_script( 'primer-navigation' );
-	wp_enqueue_script( 'ascension-navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20120206', true );
-}
-add_action( 'wp_print_scripts', 'ascension_navigation', 100 );
-
-function primer_add_mobile_menu() {
-	get_template_part( 'templates/parts/mobile-menu' );
-}
-add_action( 'primer_header', 'primer_add_mobile_menu', 0 );
-
-function primer_move_navigation() {
-	remove_action( 'primer_header_after', 'primer_add_primary_navigation', 20 );
-	add_action( 'primer_header', 'primer_add_primary_navigation', 20 );
-}
-add_action( 'init', 'primer_move_navigation', 100 );
-
-function ascension_register_sidebars() {
-
-	register_sidebar( array(
-		'name'          => __( 'Hero', 'ascension' ),
-		'id'            => 'hero',
-		'description'   => __( 'The hero appears in the hero widget area on the front page', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'ascension' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'ascension' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'ascension' ),
-		'id'            => 'footer-1',
-		'description'   => __( 'The footer sidebar appears in the first column of the footer widget area.', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'ascension' ),
-		'id'            => 'footer-2',
-		'description'   => __( 'The footer sidebar appears in the second column of the footer widget area.', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer 3', 'ascension' ),
-		'id'            => 'footer-3',
-		'description'   => __( 'The footer sidebar appears in the third column of the footer widget area.', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer 4', 'ascension' ),
-		'id'            => 'footer-4',
-		'description'   => __( 'The footer sidebar appears in the fourth column of the footer widget area.', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
 
 }
-remove_action( 'widgets_init', 'primer_register_sidebars' );
-add_action( 'widgets_init', 'ascension_register_sidebars' );
-
+add_filter( 'primer_custom_header_args', 'ascension_update_custom_header_args' );
 
 /**
- * Enqueue jQuery.
+ * Move Navigation from after header to inside header.
  *
- * Wraps jQuery in a conditional comment that will allow
- * non-IE 9 (and lower) browsers to use the newest version
- * of jQuery.
- *
- * @action  wp_enqueue_scripts
+ * @action after_setup_theme
  */
-function primer_enqueue_jquery() {
-	add_filter( 'script_loader_tag', function( $tag, $handle ) {
-		if ( 'jquery-core' === $handle ) {
-			$tag = "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->";
-		}
-		return $tag;
-	}, 10, 2 );
+function ascension_move_navigation() {
+
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 20 );
 
 }
-add_action( 'wp_enqueue_scripts', 'primer_enqueue_jquery', 0 );
+add_action( 'after_setup_theme', 'ascension_move_navigation' );
+
+/**
+ * Display the hero before the header.
+ *
+ * @action after_setup_theme
+ * @since 1.0.0
+ */
+function stout_add_site_header() {
+
+	remove_action( 'primer_header', 'primer_add_site_header', 10 );
+
+	if ( is_404() || is_page_template( 'templates/page-builder-default-header.php' ) ) {
+		return;
+	}
+
+	add_action( 'primer_after_header', 'primer_add_site_header', 10 );
+
+}
+add_action( 'template_redirect', 'stout_add_site_header' );
+
+/**
+ * Add additional sidebars
+ *
+ * @action primer_register_sidebars
+ * @since 1.0.0
+ * @param $sidebars
+ * @return array
+ */
+function ascension_add_sidebars( $sidebars ) {
+
+	$new_sidebars = array(
+		array(
+			'name'          => __( 'Footer 4', 'ascension' ),
+			'id'            => 'footer-4',
+			'description'   => __( 'The footer sidebar appears in the fourth column of the footer widget area.', 'ascension' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		),
+		array(
+			'name'          => __( 'Hero', 'ascension' ),
+			'id'            => 'hero',
+			'description'   => __( 'The hero appears in the hero widget area on the front page', 'ascension' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		),
+	);
+
+	return array_merge( $sidebars, $new_sidebars );
+
+}
+add_filter( 'primer_register_sidebars', 'ascension_add_sidebars' );
+
+/**
+ * Change Stout font types.
+ *
+ * @action primer_font_types
+ * @since 1.0.0
+ * @return array
+ */
+function ascension_font_types() {
+
+	return array(
+		array(
+			'name'    => 'primary_font',
+			'label'   => esc_html__( 'Primary Font', 'primer' ),
+			'default' => 'Open Sans',
+			'css'     => array(
+				'body,
+				p,
+				h1, h2, h3, h4, h5, h6,
+				ul, ol, dl,
+				blockquote,
+				blockquote .aligncenter, blockquote .aligncenter cite,
+				button, a.button, .social-menu a, input, select, textarea,
+				label,
+				legend,
+				.main-navigation ul li a, 
+				.widget-title,
+				.entry-footer,
+				.entry-meta,
+				.event-meta, .sermon-meta, .location-meta, .person-meta,
+				.post-format,
+				.more-link,
+				article.format-link,
+				.comment-list li .comment-author, .comment-list li .comment-metadata,
+				#respond,
+				.site-title,
+				.site-description,
+				.featured-content .entry-header .entry-title,
+				.featured-content .entry-header .read-more' => array(
+					'font-family' => '"%s", sans-serif',
+				),
+			),
+		),
+	);
+
+}
+add_action( 'primer_font_types', 'ascension_font_types' );
+
+/**
+ * Change Stout colors
+ *
+ * @action primer_colors
+ * @since 1.0.0
+ * @return array
+ */
+function ascension_colors() {
+
+	return array(
+		array(
+			'name'    => 'header_textcolor',
+			'default' => '#',
+			'css'     => array(
+				'' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'' => array(
+					'color' => 'rgba(%1$s, 0.75)',
+				),
+			),
+		),
+		array(
+			'name'    => 'background_color',
+			'default' => '#',
+		),
+		array(
+			'name'    => 'header_background_color',
+			'label'   => esc_html__( 'Header Background Color', 'primer' ),
+			'default' => '#',
+			'css'     => array(
+				'' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'tagline_text_color',
+			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
+			'default' => '#',
+			'css'     => array(
+				'' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'menu_background_color',
+			'label'   => esc_html__( 'Menu Background Color', 'primer' ),
+			'default' => '#',
+			'css'     => array(
+				'' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'link_color',
+			'label'   => esc_html__( 'Link Color', 'primer' ),
+			'default' => '#',
+			'css'     => array(
+				'' => array(
+					'color' => '%1$s',
+				),
+				'' => array(
+					'background-color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'' => array(
+					'color' => 'rgba(%1$s, 0.75)',
+				),
+				'' => array(
+					'background-color' => 'rgba(%1$s, 0.75)',
+				),
+			),
+		),
+		array(
+			'name'    => 'main_text_color',
+			'label'   => esc_html__( 'Main Text Color', 'primer' ),
+			'default' => '#',
+			'css'     => array(
+				'' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'secondary_text_color',
+			'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
+			'default' => '#',
+			'css'     => array(
+				'' => array(
+						'color' => '%1$s',
+				),
+			),
+		),
+	);
+
+}
+add_action( 'primer_colors', 'ascension_colors' );

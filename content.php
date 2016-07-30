@@ -11,7 +11,7 @@
 
 	<?php
 
-	if( ! is_single() ):
+	if ( ! is_single() ) :
 		get_template_part( 'templates/parts/loop/post', 'thumbnail' );
 	endif;
 
@@ -23,12 +23,12 @@
 
 	<?php
 
-	if( is_single() ):
+	if ( is_single() ) :
 		get_template_part( 'templates/parts/loop/post', 'content' );
-	else:
+	else :
 		get_template_part( 'templates/parts/loop/post', 'excerpt' );
 	endif;
-
+	
 	?>
 
 	<?php get_template_part( 'templates/parts/loop/post', 'footer' ); ?>

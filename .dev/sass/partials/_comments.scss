@@ -36,8 +36,8 @@
 		padding-right: 32px;
 
 		article {
-			margin-top: 56px;
-			margin-bottom: 56px;
+			margin-top: 30px;
+			margin-bottom: 30px;
 			padding-left: 1em;
 			padding-left: 1rem;
 		}
@@ -92,11 +92,14 @@
 	margin-right: 15px;
 	position: relative;
 	border-radius: 3px;
+	height: 50px;
+	width: 50px;
 }
 
 .bypostauthor {
 	border: 3px solid rgba($primary-color, 0.2);
 	border-radius: 5px;
+	margin: 30px;
 }
 
 .comment-form {
@@ -126,12 +129,9 @@
 		border-top: 1px solid #ddd;
 		border-bottom: 1px solid #ddd;
 		padding: 10px ;
-		font-size: .85em;
 	}
 
 	.comment-notes {
-		font-size: .87em;
-		margin-bottom: 2em;
 		color: #999;
 	}
 

@@ -2,10 +2,9 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 
 .site-header .site-title-wrapper{
 	float: left;
-	margin-left: 10px;
 	margin-top: 8px;
+
 	@media #{$medium-up} {
-		margin-left: 0;
 		margin-top: 0;
 	}
 }
@@ -51,8 +50,7 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 }
 
 .site-description{
-	font-size: 6.7px;
-	letter-spacing: 0.68px;
+	font-size: 9px;
 	color: lighten($body-font-color,20%);
 	font-family: $sans-font-family;
 	text-transform: uppercase;

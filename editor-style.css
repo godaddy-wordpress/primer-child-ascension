@@ -834,8 +834,8 @@ section.error-404 {
     padding-left: 32px;
     padding-right: 32px; }
     .comment-list li article {
-      margin-top: 56px;
-      margin-bottom: 56px;
+      margin-top: 30px;
+      margin-bottom: 30px;
       padding-left: 1em;
       padding-left: 1rem; }
     .comment-list li.pingback, .comment-list li.trackback {
@@ -870,11 +870,14 @@ section.error-404 {
   float: left;
   margin-right: 15px;
   position: relative;
-  border-radius: 3px; }
+  border-radius: 3px;
+  height: 50px;
+  width: 50px; }
 
 .bypostauthor {
   border: 3px solid rgba(57, 186, 243, 0.2);
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin: 30px; }
 
 .comment-form label .required {
   color: #cc0000; }
@@ -889,11 +892,8 @@ section.error-404 {
   #respond .logged-in-as {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    padding: 10px;
-    font-size: 0.85em; }
+    padding: 10px; }
   #respond .comment-notes {
-    font-size: 0.87em;
-    margin-bottom: 2em;
     color: #999; }
   #respond .form-allowed-tags {
     font-size: 0.8em;
