@@ -274,6 +274,13 @@ function ascension_colors() {
 }
 add_action( 'primer_colors', 'ascension_colors' );
 
+/**
+ * Change Lyrical color schemes
+ *
+ * @action primer_color_schemes
+ * @since 1.0.0
+ * @return array
+ */
 function ascension_color_schemes() {
 
 	return array(
