@@ -1,3 +1,11 @@
+<?php
+/**
+ * Displays the custom header.
+ *
+ * @package Ascension
+ */
+?>
+
 <?php if ( primer_get_custom_header() ) : ?>
 
 <div class="hero" style="background:url('<?php echo primer_get_custom_header(); ?>') no-repeat top center; background-size: cover;">

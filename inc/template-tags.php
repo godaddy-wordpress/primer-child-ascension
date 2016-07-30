@@ -3,6 +3,7 @@
 /**
  * Returns the featured image, custom header or false in this priority order.
  *
+ * @since 1.0.0
  * @return false|string
  */
 function primer_get_custom_header() {

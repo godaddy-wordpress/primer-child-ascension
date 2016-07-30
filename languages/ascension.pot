@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-30 21:54+0100\n"
+"POT-Creation-Date: 2016-07-30 22:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,6 +72,18 @@ msgstr ""
 msgid "Secondary Text Color"
 msgstr ""
 
+#: functions.php:281
+msgid "Schrapel"
+msgstr ""
+
+#: functions.php:294
+msgid "Wallace"
+msgstr ""
+
+#: functions.php:307
+msgid "Marley"
+msgstr ""
+
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3
 msgid "I'm a translatable string."
 msgstr ""
@@ -108,12 +120,12 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: templates/parts/site-header.php:27
+#: templates/parts/site-header.php:35
 #, php-format
 msgctxt "search term(s)"
 msgid "Search Results for: %s"
 msgstr ""
 
-#: templates/parts/site-header.php:33
+#: templates/parts/site-header.php:41
 msgid "Blog"
 msgstr ""

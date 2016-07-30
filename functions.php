@@ -273,3 +273,49 @@ function ascension_colors() {
 
 }
 add_action( 'primer_colors', 'ascension_colors' );
+
+function ascension_color_schemes() {
+
+	return array(
+		'dark' => array(
+			'label'  => esc_html__( 'Schrapel', 'ascension' ),
+			'colors' => array(
+				'header_textcolor'        => '#ffffff',
+				'background_color'        => '#333333',
+				'header_background_color' => '#333333',
+				'tagline_text_color'      => '#999999',
+				'menu_background_color'   => '#444444',
+				'link_color'              => '#589ef2',
+				'main_text_color'         => '#e5e5e5',
+				'secondary_text_color'    => '#c1c1c1',
+			),
+		),
+		'muted' => array(
+			'label'  => esc_html__( 'Wallace', 'ascension' ),
+			'colors' => array(
+				'header_textcolor'        => '#5a6175',
+				'background_color'        => '#d5d6e0',
+				'header_background_color' => '#d5d6e0',
+				'tagline_text_color'      => '#888c99',
+				'menu_background_color'   => '#5a6175',
+				'link_color'              => '#3e4c75',
+				'main_text_color'         => '#4f5875',
+				'secondary_text_color'    => '#888c99',
+			),
+		),
+		'red' => array(
+			'label'  => esc_html__( 'Marley', 'ascension' ),
+			'colors' => array(
+				'header_textcolor'        => '#402b30',
+				'background_color'        => '#f9f9f9',
+				'header_background_color' => '#f9f9f9',
+				'tagline_text_color'      => '#999999',
+				'menu_background_color'   => '#640c1f',
+				'link_color'              => '#640c1f',
+				'main_text_color'         => '#402b30',
+				'secondary_text_color'    => '#222222',
+			),
+		),
+	);
+}
+add_action( 'primer_color_schemes', 'ascension_color_schemes' );

@@ -2,7 +2,7 @@
 /**
  * Displays the footer widget areas.
  *
- * @package Primer
+ * @package Ascension
  */
 ?>
 
