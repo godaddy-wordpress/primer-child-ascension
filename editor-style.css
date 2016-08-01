@@ -142,7 +142,7 @@ a {
   line-height: inherit;
   font-weight: bold; }
   a:hover, a:focus {
-    color: #0b86bb; }
+    color: rgba(57, 186, 243, 0.8); }
   a img {
     border: none; }
 
@@ -174,14 +174,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: bold;
-  color: #222;
+  color: #212121;
   text-rendering: optimizeLegibility;
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
-    color: #6f6f6f;
+    color: #757575;
     line-height: 0; }
 
 h1 {
@@ -213,7 +213,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #757575;
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 0.5rem; }
@@ -664,7 +664,7 @@ legend {
   margin-bottom: 2rem; }
 
 .entry-footer {
-  color: #6f6f6f;
+  color: #757575;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   content: "";

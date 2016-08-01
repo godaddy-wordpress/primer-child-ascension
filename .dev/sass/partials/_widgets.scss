@@ -8,9 +8,6 @@ $widget-bg: #fff !default;
 /* Search widget */
 .widget {
 	margin: 0 0 3em;
-	&:last-child {
-		margin: 0;
-	}
 
 	@media #{$large-up} {
 		input[type="text"],

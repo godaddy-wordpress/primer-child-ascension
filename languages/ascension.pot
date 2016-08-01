@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-30 22:31+0100\n"
+"POT-Creation-Date: 2016-08-01 23:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,39 +48,27 @@ msgstr ""
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:203
-msgid "Header Background Color"
-msgstr ""
-
-#: functions.php:213
+#: functions.php:221
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:223
-msgid "Menu Background Color"
+#: functions.php:398
+msgid "Accent Color"
 msgstr ""
 
-#: functions.php:233
+#: functions.php:484
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:254
-msgid "Main Text Color"
-msgstr ""
-
-#: functions.php:264
-msgid "Secondary Text Color"
-msgstr ""
-
-#: functions.php:281
+#: functions.php:536
 msgid "Schrapel"
 msgstr ""
 
-#: functions.php:294
+#: functions.php:549
 msgid "Wallace"
 msgstr ""
 
-#: functions.php:307
+#: functions.php:562
 msgid "Marley"
 msgstr ""
 

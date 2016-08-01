@@ -65,7 +65,6 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 .site-header {
 	letter-spacing: -.01em;
 	padding: 10px 0;
-	@extend .row;
 	min-height: 75px;
 
 	@media #{$medium-up} {
@@ -79,8 +78,9 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 }
 
 .site-header-wrapper {
+	@extend .row;
 	@extend .columns;
-	@extend .large-12;
+	float: none;
 }
 
 .featured-content{

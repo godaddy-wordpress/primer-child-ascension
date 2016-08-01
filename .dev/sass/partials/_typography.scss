@@ -69,7 +69,7 @@ $code-padding: rem-calc(2) rem-calc(5) rem-calc(1) !default;
 $anchor-text-decoration: none !default;
 $anchor-text-decoration-hover: none !default;
 $anchor-font-color: $primary-color !default;
-$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
+$anchor-font-color-hover: rgba($primary-color, .8);
 
 // We use these to style the <hr> element
 $hr-border-width: 1px !default;
