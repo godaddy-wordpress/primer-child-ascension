@@ -74,18 +74,18 @@ add_action( 'after_setup_theme', 'ascension_move_navigation' );
  * @action after_setup_theme
  * @since 1.0.0
  */
-function stout_add_site_header() {
+function stout_add_hero() {
 
-	remove_action( 'primer_header', 'primer_add_site_header', 10 );
+	remove_action( 'primer_header', 'primer_add_hero', 10 );
 
 	if ( is_404() || is_page_template( 'templates/page-builder-default-header.php' ) ) {
 		return;
 	}
 
-	add_action( 'primer_after_header', 'primer_add_site_header', 10 );
+	add_action( 'primer_after_header', 'primer_add_hero', 10 );
 
 }
-add_action( 'template_redirect', 'stout_add_site_header' );
+add_action( 'template_redirect', 'stout_add_hero' );
 
 /**
  * Add additional sidebars
