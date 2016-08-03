@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-01 23:42+0100\n"
+"POT-Creation-Date: 2016-08-03 20:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,27 +48,27 @@ msgstr ""
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:221
+#: functions.php:210
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:398
+#: functions.php:392
 msgid "Accent Color"
 msgstr ""
 
-#: functions.php:484
+#: functions.php:475
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:536
+#: functions.php:527
 msgid "Schrapel"
 msgstr ""
 
-#: functions.php:549
+#: functions.php:540
 msgid "Wallace"
 msgstr ""
 
-#: functions.php:562
+#: functions.php:553
 msgid "Marley"
 msgstr ""
 
@@ -92,6 +92,16 @@ msgstr[1] ""
 msgid "yyyy-mm-dd"
 msgstr ""
 
+#: templates/parts/hero.php:35
+#, php-format
+msgctxt "search term(s)"
+msgid "Search Results for: %s"
+msgstr ""
+
+#: templates/parts/hero.php:41
+msgid "Blog"
+msgstr ""
+
 #. //codex.wordpress.org/Template_Hierarchy
 #. *
 #. * @package ascension
@@ -106,14 +116,4 @@ msgstr ""
 
 #: templates/parts/loop/post-meta.php:13
 msgid "% Comments"
-msgstr ""
-
-#: templates/parts/site-header.php:35
-#, php-format
-msgctxt "search term(s)"
-msgid "Search Results for: %s"
-msgstr ""
-
-#: templates/parts/site-header.php:41
-msgid "Blog"
 msgstr ""

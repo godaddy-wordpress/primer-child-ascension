@@ -29,6 +29,7 @@
 		transition: 200ms opacity;
 		border-radius: $global-radius;
 		color: $secondary-color;
+		background: transparent;
 
 		&:before{
 			-webkit-font-smoothing: subpixel-antialiased;

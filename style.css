@@ -3040,7 +3040,8 @@ body.layout-one-column-narrow #content {
     padding: 0;
     transition: 200ms opacity;
     border-radius: 3px;
-    color: #194F6E; }
+    color: #194F6E;
+    background: transparent; }
     .social-menu a:before {
       -webkit-font-smoothing: subpixel-antialiased;
       padding: 8px;

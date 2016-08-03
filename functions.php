@@ -204,17 +204,6 @@ function ascension_colors() {
 					'background-color' => '%1$s',
 				),
 			),
-			'rgba_css' => array(
-				'input[type="text"]:focus,
-				input[type="email"]:focus,
-				input[type="url"]:focus,
-				input[type="password"]:focus,
-				input[type="search"]:focus,
-				input[type="number"]:focus,
-				textarea:focus' => array(
-					'background-color' => 'rgba(%1$s, 0.8)',
-				),
-			),
 		),
 		array(
 			'name'    => 'tagline_text_color',
@@ -255,7 +244,10 @@ function ascension_colors() {
 				.hentry .entry-header,
 				.entry-title a,
 				.archive-title a,
+				.site-info-wrapper .social-menu a,
+				.site-info-wrapper .social-menu a:visited,
 				.social-menu a,
+				.social-menu a:visited,
 				.widget-title' => array(
 					'color' => '%1$s',
 				),
@@ -268,6 +260,7 @@ function ascension_colors() {
 				'button,
 				a.button,
 				.social-menu a,
+				.social-menu a:visited,
 				a.button:visited,
 				.social-menu a:visited,
 				input[type="button"],
@@ -275,7 +268,8 @@ function ascension_colors() {
 				input[type="submit"],
 				.fl-builder-content a.fl-button,
 				.fl-builder-content a.fl-button:visited,
-				.main-navigation ul li a' => array(
+				.main-navigation ul li a,
+				.search-form .search-field' => array(
 					'color' => '%1$s',
 					'border-color' => '%1$s',
 				),
@@ -470,10 +464,7 @@ function ascension_colors() {
 				'' => array(
 					'color' => 'rgba(%1$s, 0.8)',
 				),
-				'.search-form .search-field:focus,
-				.main-navigation ul li.current-menu-item a,
-				.main-navigation ul li a:hover,
-				.widget_calendar #calendar_wrap #wp-calendar tfoot,
+				'.widget_calendar #calendar_wrap #wp-calendar tfoot,
 				article.format-link' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
 				),
