@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-03 19:38-0500\n"
+"POT-Creation-Date: 2016-08-04 17:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,15 +61,15 @@ msgid "Link Color"
 msgstr ""
 
 #: functions.php:539
-msgid "Schrapel"
+msgid "Dark"
 msgstr ""
 
-#: functions.php:552
-msgid "Wallace"
+#: functions.php:553
+msgid "Green"
 msgstr ""
 
-#: functions.php:565
-msgid "Marley"
+#: header.php:25
+msgid "Skip to content"
 msgstr ""
 
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3
