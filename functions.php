@@ -1,6 +1,15 @@
 <?php
 
 /**
+ * Remove titles from templates.
+ *
+ * @since 1.0.0
+ */
+remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+
+/**
  * Load custom template tags for this theme.
  *
  * @since 1.0.0
@@ -147,7 +156,7 @@ function ascension_font_types() {
 				button, a.button, .social-menu a, input, select, textarea,
 				label,
 				legend,
-				.main-navigation ul li a, 
+				.main-navigation ul li a,
 				.widget-title,
 				.entry-footer,
 				.entry-meta,
