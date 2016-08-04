@@ -2260,8 +2260,9 @@ body.layout-one-column-full #primary {
   width: 100%; }
 body.error404 #primary {
   float: none; }
-body.page-template-page-builder #primary {
+body.page-template-page-builder #primary, body.page-template-page-builder-no-header #primary {
   width: 100%;
+  max-width: 100%;
   padding: 0;
   float: none; }
 

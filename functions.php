@@ -5,9 +5,12 @@
  *
  * @since 1.0.0
  */
-remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+function ascension_remove_titles(){
+	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+}
+add_action( 'wp_head', 'ascension_remove_titles' );
 
 /**
  * Load custom template tags for this theme.
@@ -83,18 +86,18 @@ add_action( 'after_setup_theme', 'ascension_move_navigation' );
  * @action after_setup_theme
  * @since 1.0.0
  */
-function stout_add_hero() {
+function ascension_add_hero() {
 
 	remove_action( 'primer_header', 'primer_add_hero', 10 );
 
-	if ( is_404() || is_page_template( 'templates/page-builder-default-header.php' ) ) {
+	if ( is_404() || is_page_template( 'templates/page-builder-no-header.php' ) ) {
 		return;
 	}
 
 	add_action( 'primer_after_header', 'primer_add_hero', 10 );
 
 }
-add_action( 'template_redirect', 'stout_add_hero' );
+add_action( 'template_redirect', 'ascension_add_hero' );
 
 /**
  * Add additional sidebars

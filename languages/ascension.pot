@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-03 20:30+0100\n"
+"POT-Creation-Date: 2016-08-03 19:38-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,48 +27,48 @@ msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:114
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:116
 msgid ""
 "The footer sidebar appears in the fourth column of the footer widget area."
 msgstr ""
 
-#: functions.php:111
+#: functions.php:123
 msgid "Hero"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:125
 msgid "The hero appears in the hero widget area on the front page"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:150
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:222
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:392
+#: functions.php:404
 msgid "Accent Color"
 msgstr ""
 
-#: functions.php:475
+#: functions.php:487
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:527
+#: functions.php:539
 msgid "Schrapel"
 msgstr ""
 
-#: functions.php:540
+#: functions.php:552
 msgid "Wallace"
 msgstr ""
 
-#: functions.php:553
+#: functions.php:565
 msgid "Marley"
 msgstr ""
 
