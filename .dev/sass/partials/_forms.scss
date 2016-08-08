@@ -89,6 +89,7 @@ textarea {
 	resize: none;
 	padding: .75em;
 	padding: .75rem;
+	-webkit-appearance: none;
 
 	&:focus {
 		color: $color-text-input-focus;
