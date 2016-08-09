@@ -4,9 +4,10 @@
  * Returns the featured image, custom header or false in this priority order.
  *
  * @since 1.0.0
+ *
  * @return false|string
  */
-function primer_get_custom_header() {
+function ascension_get_custom_header() {
 
 	$post_id = get_queried_object_id();
 

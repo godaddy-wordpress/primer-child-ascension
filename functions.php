@@ -1,18 +1,6 @@
 <?php
 
 /**
- * Remove titles from templates.
- *
- * @since 1.0.0
- */
-function ascension_remove_titles(){
-	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
-}
-add_action( 'wp_head', 'ascension_remove_titles' );
-
-/**
  * Load custom template tags for this theme.
  *
  * @since 1.0.0
@@ -20,10 +8,24 @@ add_action( 'wp_head', 'ascension_remove_titles' );
 require_once get_stylesheet_directory() . '/inc/template-tags.php';
 
 /**
+ * Remove titles from templates.
+ *
+ * @since 1.0.0
+ */
+function ascension_remove_titles() {
+
+	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+
+}
+add_action( 'wp_head', 'ascension_remove_titles' );
+
+/**
  * Add images sizes.
  *
  * @action after_setup_theme
- * @since 1.0.0
+ * @since  1.0.0
  */
 function ascension_add_image_sizes() {
 
@@ -34,21 +36,24 @@ function ascension_add_image_sizes() {
 add_action( 'after_setup_theme', 'ascension_add_image_sizes' );
 
 /**
- * Update custom logo width and height
+ * Update custom logo width and height.
  *
- * @action primer_custom_logo_args
- * @param $args
+ * @filter primer_custom_logo_args
+ * @since  1.0.0
+ *
+ * @param  array $args
+ *
  * @return array
  */
-function ascension_update_custom_logo_args( $args ) {
+function ascension_custom_logo_args( $args ) {
 
-	$args['width'] = 352;
+	$args['width']  = 352;
 	$args['height'] = 62;
 
 	return $args;
 
 }
-add_filter( 'primer_custom_logo_args', 'ascension_update_custom_logo_args' );
+add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
 
 /**
  * Update custom header width and height
@@ -71,10 +76,12 @@ add_filter( 'primer_custom_header_args', 'ascension_update_custom_header_args' )
  * Move Navigation from after header to inside header.
  *
  * @action after_setup_theme
+ * @since  1.0.0
  */
 function ascension_move_navigation() {
 
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
+
 	add_action( 'primer_header', 'primer_add_primary_navigation', 20 );
 
 }
@@ -84,67 +91,73 @@ add_action( 'after_setup_theme', 'ascension_move_navigation' );
  * Display the hero before the header.
  *
  * @action after_setup_theme
- * @since 1.0.0
+ * @since  1.0.0
  */
 function ascension_add_hero() {
 
 	remove_action( 'primer_header', 'primer_add_hero', 10 );
 
 	if ( is_404() || is_page_template( 'templates/page-builder-no-header.php' ) ) {
+
 		return;
+
 	}
 
 	add_action( 'primer_after_header', 'primer_add_hero', 10 );
 
 }
-add_action( 'template_redirect', 'ascension_add_hero' );
+add_action( 'after_setup_theme', 'ascension_add_hero' );
 
 /**
- * Add additional sidebars
+ * Register sidebar areas.
  *
- * @action primer_register_sidebars
- * @since 1.0.0
- * @param $sidebars
+ * @filter primer_sidebars
+ * @since  1.0.0
+ *
+ * @param  array $sidebars
+ *
  * @return array
  */
-function ascension_add_sidebars( $sidebars ) {
+function ascension_sidebars( $sidebars ) {
 
-	$new_sidebars = array(
-		array(
-			'name'          => __( 'Footer 4', 'ascension' ),
-			'id'            => 'footer-4',
-			'description'   => __( 'The footer sidebar appears in the fourth column of the footer widget area.', 'ascension' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		),
-		array(
-			'name'          => __( 'Hero', 'ascension' ),
-			'id'            => 'hero',
-			'description'   => __( 'The hero appears in the hero widget area on the front page', 'ascension' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		),
+	$sidebars[] = array(
+		'name'          => esc_html__( 'Footer 4', 'ascension' ),
+		'id'            => 'footer-4',
+		'description'   => esc_html__( 'This sidebar is the fourth column of the footer widget area.', 'ascension' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	);
 
-	return array_merge( $sidebars, $new_sidebars );
+	$sidebars[] = array(
+		'name'          => esc_html__( 'Hero', 'ascension' ),
+		'id'            => 'hero',
+		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'ascension' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	);
+
+	return $sidebars;
 
 }
-add_filter( 'primer_register_sidebars', 'ascension_add_sidebars' );
+add_filter( 'primer_sidebars', 'ascension_sidebars' );
 
 /**
- * Change Stout font types.
+ * Register font types.
  *
  * @action primer_font_types
- * @since 1.0.0
+ * @since  1.0.0
+ *
+ * @param  array $font_types
+ *
  * @return array
  */
-function ascension_font_types() {
+function ascension_font_types( $font_types ) {
 
-	return array(
+	$font_types = array(
 		array(
 			'name'    => 'primary_font',
 			'label'   => esc_html__( 'Primary Font', 'primer' ),
@@ -179,19 +192,24 @@ function ascension_font_types() {
 		),
 	);
 
+	return $font_types;
+
 }
-add_action( 'primer_font_types', 'ascension_font_types' );
+add_filter( 'primer_font_types', 'ascension_font_types' );
 
 /**
- * Change Stout colors
+ * Register colors.
  *
- * @action primer_colors
- * @since 1.0.0
+ * @filter primer_colors
+ * @since  1.0.0
+ *
+ * @param  array $colors
+ *
  * @return array
  */
-function ascension_colors() {
+function ascension_colors( $colors ) {
 
-	return array(
+	$colors = array(
 		array(
 			'name'    => 'header_textcolor',
 			'default' => '#194F6E',
@@ -522,47 +540,55 @@ function ascension_colors() {
 		),
 	);
 
+	return $colors;
+
 }
-add_action( 'primer_colors', 'ascension_colors' );
+add_filter( 'primer_colors', 'ascension_colors' );
 
 /**
- * Change Lyrical color schemes
+ * Register color schemes.
  *
- * @action primer_color_schemes
- * @since 1.0.0
+ * @filter primer_color_schemes
+ * @since  1.0.0
+ *
+ * @param  array $color_schemes
+ *
  * @return array
  */
-function ascension_color_schemes() {
+function ascension_color_schemes( $color_schemes ) {
 
-	return array(
+	$color_schemes = array(
 		'dark' => array(
 			'label'  => esc_html__( 'Dark', 'ascension' ),
 			'colors' => array(
-				'header_textcolor'        => '#ffffff',
-				'background_color'        => '#333333',
-				'tagline_text_color'      => '#919191',
-				'main_text_color'         => '#ffffff',
-				'secondary_text_color'    => '#ffffff',
-				'tertiary_text_color'     => '#7f7f7f',
-				'accent_color'            => '#39baf3',
-				'light_color'             => '#ffffff',
-				'link_color'              => '#39baf3',
+				'header_textcolor'     => '#ffffff',
+				'background_color'     => '#333333',
+				'tagline_text_color'   => '#919191',
+				'main_text_color'      => '#ffffff',
+				'secondary_text_color' => '#ffffff',
+				'tertiary_text_color'  => '#7f7f7f',
+				'accent_color'         => '#39baf3',
+				'light_color'          => '#ffffff',
+				'link_color'           => '#39baf3',
 			),
 		),
 		'green' => array(
 			'label'  => esc_html__( 'Green', 'ascension' ),
 			'colors' => array(
-				'header_textcolor'        => '#0b560c',
-				'background_color'        => '#f4f4f4',
-				'tagline_text_color'      => '#545454',
-				'main_text_color'         => '#212121',
-				'secondary_text_color'    => '#0b560c',
-				'tertiary_text_color'     => '#757575',
-				'accent_color'            => '#49a00b',
-				'light_color'             => '#ffffff',
-				'link_color'              => '#49a00b',
+				'header_textcolor'     => '#0b560c',
+				'background_color'     => '#f4f4f4',
+				'tagline_text_color'   => '#545454',
+				'main_text_color'      => '#212121',
+				'secondary_text_color' => '#0b560c',
+				'tertiary_text_color'  => '#757575',
+				'accent_color'         => '#49a00b',
+				'light_color'          => '#ffffff',
+				'link_color'           => '#49a00b',
 			),
 		),
 	);
+
+	return $color_schemes;
+
 }
-add_action( 'primer_color_schemes', 'ascension_color_schemes' );
+add_filter( 'primer_color_schemes', 'ascension_color_schemes' );
