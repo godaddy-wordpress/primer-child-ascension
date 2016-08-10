@@ -160,8 +160,7 @@ add_filter( 'primer_sidebars', 'ascension_sidebars' );
 function ascension_font_types( $font_types ) {
 
 	$font_types = array(
-		array(
-			'name'    => 'primary_font',
+		'primary_font' => array(
 			'label'   => esc_html__( 'Primary Font', 'primer' ),
 			'default' => 'Open Sans',
 			'css'     => array(
@@ -212,8 +211,7 @@ add_filter( 'primer_font_types', 'ascension_font_types' );
 function ascension_colors( $colors ) {
 
 	$colors = array(
-		array(
-			'name'    => 'header_textcolor',
+		'header_textcolor' => array(
 			'default' => '#194F6E',
 			'css'     => array(
 				'.site-title a, .site-title a:visited' => array(
@@ -226,8 +224,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'background_color',
+		'background_color' => array(
 			'default' => '#fff',
 			'css'     => array(
 				'body,
@@ -237,8 +234,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'tagline_text_color',
+		'tagline_text_color' => array(
 			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
 			'default' => '#545454',
 			'css'     => array(
@@ -247,8 +243,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'main_text_color',
+		'main_text_color' => array(
 			'label'   => esc_html( 'Main Text Color', 'ascension' ),
 			'default' => '#212121',
 			'css'     => array(
@@ -267,8 +262,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'secondary_text_color',
+		'secondary_text_color' => array(
 			'label'   => esc_html( 'Secondary Text Color', 'ascension' ),
 			'default' => '#194F6E',
 			'css'     => array(
@@ -345,8 +339,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'tertiary_text_color',
+		'tertiary_text_color' => array(
 			'label'   => esc_html( 'Tertiary Text Color', 'ascension' ),
 			'default' => '#757575',
 			'css'     => array(
@@ -419,8 +412,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'accent_color',
+		'accent_color' => array(
 			'label'   => esc_html__( 'Accent Color', 'primer' ),
 			'default' => '#39BAF3',
 			'css' => array(
@@ -438,8 +430,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'light_color',
+		'light_color' => array(
 			'label'   => esc_html( 'Light Color', 'ascension' ),
 			'default' => '#fff',
 			'css' => array(
@@ -502,8 +493,7 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		array(
-			'name'    => 'link_color',
+		'link_color' => array(
 			'label'   => esc_html__( 'Link Color', 'primer' ),
 			'default' => '#39BAF3',
 			'css'     => array(
