@@ -64,8 +64,10 @@ add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
  */
 function ascension_update_custom_header_args( $args ) {
 
-	$args['width'] = 2120;
-	$args['height'] = 1100;
+	$args['width']         = 2120;
+	$args['height']        = 1100;
+	$args['default-image'] = get_stylesheet_directory_uri() . '/assets/img/default.jpg';
+
 
 	return $args;
 
