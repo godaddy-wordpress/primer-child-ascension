@@ -135,7 +135,7 @@
 	font-family: $sans-font-family;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	@extend .clearfix;
+	@include clearfix;
 
 	.posted-date,
 	.posted-author,

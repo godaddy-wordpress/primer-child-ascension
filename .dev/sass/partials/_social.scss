@@ -1,5 +1,5 @@
 .social-menu {
-	@extend .cf;
+	@include clearfix;
 	font-family: 'Genericons';
 
 	ul {

@@ -213,7 +213,6 @@ $last-child-float: $opposite-direction !default;
   }
 }
 
-@include exports("grid") {
   @if $include-html-grid-classes {
     .row {
       @include grid-row;
@@ -272,4 +271,3 @@ $last-child-float: $opposite-direction !default;
       @include grid-html-classes($size:xxlarge);
     }
   }
-}
