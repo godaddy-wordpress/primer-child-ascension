@@ -1,20 +1,23 @@
-/*
-Theme Name: Ascension
-Theme URI: http://godaddy.com
-Author: Lift
-Author URI: http://godaddy.com
-Description: Ascension is a child theme of Primer with a business-oriented design.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: ascension
-Domain Path: /languages/
-Tags:
-Template: primer
-
-This theme, like WordPress, is licensed under the GPL.
-
-*/
+@charset "UTF-8";
+/**
+ * Theme Name: Ascension
+ * Theme URI: https://wordpress.org/themes/ascension
+ * Author: GoDaddy
+ * Author URI: https://www.godaddy.com/
+ * Description: Ascension is a modern child theme for Primer.
+ * Version: 1.0.0
+ * License: GPL-2.0
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: ascension
+ * Domain Path: /languages
+ * Template: primer
+ * Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
+ *
+ * This theme, like WordPress, is licensed under the GPL.
+ * Use it to make something cool, have fun, and share what you've learned with others.
+ *
+ * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+ */
 /*--------------------------------------------------------------
 Variables
 --------------------------------------------------------------*/
@@ -3243,6 +3246,10 @@ body.layout-one-column-narrow #content {
 
 .hero {
   background: #194F6E;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   margin-bottom: 40px;
   max-width: 1060px; }
   .hero .hero-wrapper {

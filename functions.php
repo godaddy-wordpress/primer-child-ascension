@@ -1,44 +1,62 @@
 <?php
 
 /**
- * Remove titles from templates.
+ * Move some elements around.
  *
- * @since 1.0.0
- */
-function ascension_remove_titles() {
-
-	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
-
-}
-add_action( 'wp_head', 'ascension_remove_titles' );
-
-/**
- * Add images sizes.
- *
- * @action primer_image_sizes
+ * @action template_redirect
  * @since  1.0.0
  */
-function ascension_adjust_image_sizes( $args ) {
+function ascension_move_elements() {
 
-	$args['primer-featured']['width'] = 1060;
-	$args['primer-featured']['height'] = 550;
+	// Hero image
+	remove_action( 'primer_header', 'primer_add_hero' );
+	add_action( 'primer_after_header', 'primer_add_hero' );
 
-	$args['primer-featured-2x']['width'] = 2120;
-	$args['primer-featured-2x']['height'] = 1100;
+	// Primary navigation
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
+	add_action( 'primer_header', 'primer_add_primary_navigation' );
 
-	$args['primer-hero']['width'] = 1060;
-	$args['primer-hero']['height'] = 550;
-
-	$args['primer-hero-2x']['width'] = 2120;
-	$args['primer-hero-2x']['height'] = 1100;
+	// Page titles (will be displayed in hero-content instead)
+	remove_action( 'primer_after_header', 'primer_add_page_title' );
 
 }
-add_action( 'primer_image_sizes', 'ascension_adjust_image_sizes' );
+add_action( 'template_redirect', 'ascension_move_elements' );
 
 /**
- * Update custom logo width and height.
+ * Add custom hero content.
+ *
+ * @action primer_hero
+ * @since  1.0.0
+ */
+function ascension_add_hero_content() {
+
+	get_template_part( 'templates/parts/hero-content' );
+
+}
+add_action( 'primer_hero', 'ascension_add_hero_content' );
+
+/**
+ * Set images sizes.
+ *
+ * @filter primer_image_sizes
+ * @since  1.0.0
+ *
+ * @param  array $sizes
+ *
+ * @return array
+ */
+function ascension_image_sizes( $sizes ) {
+
+	$sizes['primer-hero']['width']  = 2400;
+	$sizes['primer-hero']['height'] = 1200;
+
+	return $sizes;
+
+}
+add_filter( 'primer_image_sizes', 'ascension_image_sizes' );
+
+/**
+ * Set custom logo args.
  *
  * @filter primer_custom_logo_args
  * @since  1.0.0
@@ -49,8 +67,8 @@ add_action( 'primer_image_sizes', 'ascension_adjust_image_sizes' );
  */
 function ascension_custom_logo_args( $args ) {
 
-	$args['width']  = 352;
-	$args['height'] = 62;
+	$args['width']  = 325;
+	$args['height'] = 70;
 
 	return $args;
 
@@ -58,58 +76,40 @@ function ascension_custom_logo_args( $args ) {
 add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
 
 /**
- * Update custom header width and height
+ * Set custom header args.
  *
  * @action primer_custom_header_args
- * @param $args
+ * @since  1.0.0
+ *
+ * @param  array $args
+ *
  * @return array
  */
-function ascension_update_custom_header_args( $args ) {
+function ascension_custom_header_args( $args ) {
 
-	$args['width']         = 2120;
-	$args['height']        = 1100;
-	$args['default-image'] = get_stylesheet_directory_uri() . '/assets/img/default.jpg';
+	$args['width']  = 2400;
+	$args['height'] = 1200;
 
 	return $args;
 
 }
-add_filter( 'primer_custom_header_args', 'ascension_update_custom_header_args' );
+add_filter( 'primer_custom_header_args', 'ascension_custom_header_args' );
 
 /**
- * Move Navigation from after header to inside header.
+ * Set the default hero image description.
  *
- * @action after_setup_theme
- * @since  1.0.0
+ * @param  array $defaults
+ *
+ * @return array
  */
-function ascension_move_navigation() {
+function ascension_default_hero_images( $defaults ) {
 
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
+	$defaults['default']['description'] = esc_html__( 'Professional Woman', 'ascension' );
 
-	add_action( 'primer_header', 'primer_add_primary_navigation', 20 );
+	return $defaults;
 
 }
-add_action( 'after_setup_theme', 'ascension_move_navigation' );
-
-/**
- * Display the hero before the header.
- *
- * @action after_setup_theme
- * @since  1.0.0
- */
-function ascension_add_hero() {
-
-	remove_action( 'primer_header', 'primer_add_hero', 10 );
-
-	if ( is_404() || is_page_template( 'templates/page-builder-no-header.php' ) ) {
-
-		return;
-
-	}
-
-	add_action( 'primer_after_header', 'primer_add_hero', 10 );
-
-}
-add_action( 'after_setup_theme', 'ascension_add_hero' );
+add_filter( 'primer_default_hero_images', 'ascension_default_hero_images' );
 
 /**
  * Register sidebar areas.
@@ -212,8 +212,7 @@ function ascension_colors( $colors ) {
 
 	$colors = array(
 		'header_textcolor' => array(
-			'label'   => esc_html__( 'Header Text Color', 'ascension' ),
-			'default' => '#194F6E',
+			'default' => '#194f6e',
 			'css'     => array(
 				'.site-title a, .site-title a:visited' => array(
 					'color' => '%1$s',
@@ -226,8 +225,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'background_color' => array(
-			'label'   => esc_html__( 'Background Color', 'ascension' ),
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'body,
 				.gallery-caption,
@@ -237,7 +235,6 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'tagline_text_color' => array(
-			'label'   => esc_html__( 'Tagline Text Color', 'ascension' ),
 			'default' => '#545454',
 			'css'     => array(
 				'.site-description' => array(
@@ -246,7 +243,6 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'main_text_color' => array(
-			'label'   => esc_html__( 'Main Text Color', 'ascension' ),
 			'default' => '#212121',
 			'css'     => array(
 				'body,
@@ -265,8 +261,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'secondary_text_color' => array(
-			'label'   => esc_html__( 'Secondary Text Color', 'ascension' ),
-			'default' => '#194F6E',
+			'default' => '#194f6e',
 			'css'     => array(
 				'h3,
 				.hentry .entry-header,
@@ -298,7 +293,7 @@ function ascension_colors( $colors ) {
 				.fl-builder-content a.fl-button:visited,
 				.main-navigation ul li a,
 				.search-form .search-field' => array(
-					'color' => '%1$s',
+					'color'        => '%1$s',
 					'border-color' => '%1$s',
 				),
 				'.hero,
@@ -415,8 +410,8 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'accent_color' => array(
-			'label'   => esc_html__( 'Accent Color', 'ascension' ),
-			'default' => '#39BAF3',
+			'label'   => esc_html__( 'Accent Color', 'primer' ),
+			'default' => '#39baf3',
 			'css' => array(
 				'.hero a.button.large,
 				.hero .social-menu a.large,
@@ -433,8 +428,8 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'light_color' => array(
-			'label'   => esc_html__( 'Light Color', 'ascension' ),
-			'default' => '#fff',
+			'label'   => esc_html( 'Light Color', 'ascension' ),
+			'default' => '#ffffff',
 			'css' => array(
 				'.main-navigation ul li.menu-item-has-children .sub-menu li a,
 				.gallery-caption,
@@ -496,8 +491,8 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'link_color' => array(
-			'label'   => esc_html__( 'Link Color', 'ascension' ),
-			'default' => '#39BAF3',
+			'label'   => esc_html__( 'Link Color', 'primer' ),
+			'default' => '#39baf3',
 			'css'     => array(
 				'a,
 				.featured-content .read-more,
@@ -553,7 +548,7 @@ function ascension_color_schemes( $color_schemes ) {
 
 	$color_schemes = array(
 		'dark' => array(
-			'label'  => esc_html__( 'Dark', 'ascension' ),
+			'label'  => esc_html__( 'Dark', 'primer' ),
 			'colors' => array(
 				'header_textcolor'     => '#ffffff',
 				'background_color'     => '#333333',

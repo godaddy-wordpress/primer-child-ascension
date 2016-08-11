@@ -1,36 +1,32 @@
 {
-  "name": "Ascension",
+  "name": "ascension",
+  "title": "Ascension",
+  "description": "",
   "version": "1.0.0",
-  "description": "A child theme for WordPress and Primer.",
-  "main": "index.php",
+  "license": "GPL-2.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/godaddy/ascension-theme.git"
+    "url": "git://github.com/godaddy/wp-ascension-theme.git"
   },
   "author": "GoDaddy",
-  "license": "GPLv2",
   "bugs": {
-    "url": "https://github.com/godaddy/ascension-theme/issues"
+    "url": "https://github.com/godaddy/wp-ascension-theme/issues"
   },
-  "homepage": "https://github.com/godaddy/ascension-theme",
+  "homepage": "https://github.com/godaddy/wp-ascension-theme/issues",
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.4",
-    "grunt-browser-sync": "~2.2.0",
     "grunt-cssjanus": "~0.3.2",
-    "grunt-contrib-cssmin": "~0.14.0",
-    "grunt-contrib-jshint": "~1.0.0",
-    "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-dev-update": "~2.0.0",
     "grunt-pot": "~0.2.1",
     "grunt-po2mo": "~0.1.2",
-    "grunt-sass": "1.2.0",
+    "grunt-sass": "^1.2.0",
     "grunt-text-replace": "~0.4.0",
     "load-grunt-tasks": "~3.5.0",
-    "matchdep": "~1.0.1",
+    "matchdep": "~1.0.1"
   }
 }

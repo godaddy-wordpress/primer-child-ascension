@@ -1,6 +1,6 @@
 /* global module, require */
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
 
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				cascade: false
 			},
 			dist: {
-				src: [ '*.css', 'assets/css/**/*.css' ]
+				src: [ '*.css', '!ie.css' ]
 			}
 		},
 
@@ -39,60 +39,9 @@ module.exports = function(grunt) {
 					{
 						src: 'editor-style.css',
 						dest: 'editor-style-rtl.css'
-					}/*,
-					{
-						expand: true,
-						cwd: 'assets/css/admin',
-						src: [ '*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css' ],
-						dest: 'assets/css/admin',
-						ext: '-rtl.css'
-					}*/
+					}
 				]
 			}
-		},
-
-		cssmin: {
-			options: {
-				shorthandCompacting: false,
-				roundingPrecision: 5,
-				processImport: false
-			},
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'assets/css',
-					src: [ '*.css', '!*.min.css' ],
-					dest: 'assets/css',
-					ext: '.min.css'
-				}/*,
-				{
-					expand: true,
-					cwd: 'assets/css/admin',
-					src: [ '*.css', '!*.min.css' ],
-					dest: 'assets/css/admin',
-					ext: '.min.css'
-				}*/]
-			}
-		},
-
-		devUpdate: {
-			main: {
-				options: {
-					updateType: 'force', //just report outdated packages
-					reportUpdated: false, //don't report up-to-date packages
-					semver: true, //stay within semver when updating
-					packages: {
-						devDependencies: true, //only check for devDependencies
-						dependencies: false
-					},
-					packageJson: null, //use matchdep default findup to locate package.json
-					reportOnlyPkgs: [] //use updateType action on all packages
-				}
-			}
-		},
-
-		jshint: {
-			all: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ]
 		},
 
 		po2mo: {
@@ -103,11 +52,15 @@ module.exports = function(grunt) {
 		},
 
 		pot: {
+			files:{
+				expand: true,
+				src: [ '**/*.php', '!node_modules/**' ]
+			},
 			options:{
-				omit_header: false,
 				text_domain: pkg.name,
-				encoding: 'UTF-8',
+				msgmerge: true,
 				dest: 'languages/',
+				encoding: 'UTF-8',
 				keywords: [
 					'__',
 					'_e',
@@ -127,12 +80,7 @@ module.exports = function(grunt) {
 					'esc_html__',
 					'esc_html_e',
 					'esc_html_x:1,2c'
-				],
-				msgmerge: true
-			},
-			files:{
-				src: [ '**/*.php' ],
-				expand: true
+				]
 			}
 		},
 
@@ -146,7 +94,7 @@ module.exports = function(grunt) {
 						to: pkg.title
 					},
 					{
-						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
 						to: new Date().getFullYear()
 					},
 					{
@@ -167,65 +115,28 @@ module.exports = function(grunt) {
 				sourceMap: false
 			},
 			dist: {
-				options: {
-					require: 'susy'
-				},
 				files: [
 					{
 						'style.css': '.dev/sass/style.scss',
-						'editor-style.css': '.dev/sass/editor-style.scss'
-					}/*,
-					{
-						expand: true,
-						cwd: '.dev/sass/admin',
-						src: ['*.scss'],
-						dest: 'assets/css/admin',
-						ext: '.css'
-					}*/
+						'editor-style.css': '.dev/sass/editor-style.scss',
+						'ie.css': '.dev/sass/ie.scss'
+					}
 				]
 			}
 		},
-/*
-		uglify: {
-			options: {
-				ASCIIOnly: true
-			},
-			dist: {
-				expand: true,
-				cwd: 'assets/js',
-				src: ['*.js', '!*.min.js'],
-				dest: 'assets/js',
-				ext: '.min.js'
-			},
-			admin: {
-				expand: true,
-				cwd: 'assets/js/admin',
-				src: ['*.js', '!*.min.js'],
-				dest: 'assets/js/admin',
-				ext: '.min.js'
-			}
-		},
-*/
+
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
 				tasks: [ 'sass','autoprefixer','cssjanus' ]
-			},
-			scripts: {
-				files: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ],
-				tasks: [ 'jshint'/*, 'uglify'*/ ],
-				options: {
-					interrupt: true
-				}
 			}
 		}
 
 	});
 
-	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
+	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint'/*, 'uglify'*/ ] );
-	grunt.registerTask( 'lint', [ 'jshint' ] );
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
 	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };
