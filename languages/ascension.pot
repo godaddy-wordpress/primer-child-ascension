@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 13:11-0500\n"
+"POT-Creation-Date: 2016-08-11 13:29-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,8 +59,4 @@ msgstr ""
 
 #: functions.php:565
 msgid "Green"
-msgstr ""
-
-#: header.php:25
-msgid "Skip to content"
 msgstr ""
