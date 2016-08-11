@@ -1,13 +1,6 @@
 <?php
 
 /**
- * Load custom template tags for this theme.
- *
- * @since 1.0.0
- */
-require_once get_stylesheet_directory() . '/inc/template-tags.php';
-
-/**
  * Remove titles from templates.
  *
  * @since 1.0.0
@@ -24,16 +17,25 @@ add_action( 'wp_head', 'ascension_remove_titles' );
 /**
  * Add images sizes.
  *
- * @action after_setup_theme
+ * @action primer_image_sizes
  * @since  1.0.0
  */
-function ascension_add_image_sizes() {
+function ascension_adjust_image_sizes( $args ) {
 
-	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
-	add_image_size( 'hero-2x', 2120, 1100, array( 'center', 'center' ) );
+	$args['primer-featured']['width'] = 1060;
+	$args['primer-featured']['height'] = 550;
+
+	$args['primer-featured-2x']['width'] = 2120;
+	$args['primer-featured-2x']['height'] = 1100;
+
+	$args['primer-hero']['width'] = 1060;
+	$args['primer-hero']['height'] = 550;
+
+	$args['primer-hero-2x']['width'] = 2120;
+	$args['primer-hero-2x']['height'] = 1100;
 
 }
-add_action( 'after_setup_theme', 'ascension_add_image_sizes' );
+add_action( 'primer_image_sizes', 'ascension_adjust_image_sizes' );
 
 /**
  * Update custom logo width and height.
@@ -67,7 +69,6 @@ function ascension_update_custom_header_args( $args ) {
 	$args['width']         = 2120;
 	$args['height']        = 1100;
 	$args['default-image'] = get_stylesheet_directory_uri() . '/assets/img/default.jpg';
-
 
 	return $args;
 
@@ -161,7 +162,7 @@ function ascension_font_types( $font_types ) {
 
 	$font_types = array(
 		'primary_font' => array(
-			'label'   => esc_html__( 'Primary Font', 'primer' ),
+			'label'   => esc_html__( 'Primary Font', 'ascension' ),
 			'default' => 'Open Sans',
 			'css'     => array(
 				'body,
@@ -177,7 +178,6 @@ function ascension_font_types( $font_types ) {
 				.widget-title,
 				.entry-footer,
 				.entry-meta,
-				.event-meta, .sermon-meta, .location-meta, .person-meta,
 				.post-format,
 				.more-link,
 				article.format-link,
@@ -212,6 +212,7 @@ function ascension_colors( $colors ) {
 
 	$colors = array(
 		'header_textcolor' => array(
+			'label'   => esc_html__( 'Header Text Color', 'ascension' ),
 			'default' => '#194F6E',
 			'css'     => array(
 				'.site-title a, .site-title a:visited' => array(
@@ -225,6 +226,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'background_color' => array(
+			'label'   => esc_html__( 'Background Color', 'ascension' ),
 			'default' => '#fff',
 			'css'     => array(
 				'body,
@@ -235,7 +237,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'tagline_text_color' => array(
-			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
+			'label'   => esc_html__( 'Tagline Text Color', 'ascension' ),
 			'default' => '#545454',
 			'css'     => array(
 				'.site-description' => array(
@@ -244,7 +246,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'main_text_color' => array(
-			'label'   => esc_html( 'Main Text Color', 'ascension' ),
+			'label'   => esc_html__( 'Main Text Color', 'ascension' ),
 			'default' => '#212121',
 			'css'     => array(
 				'body,
@@ -263,7 +265,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'secondary_text_color' => array(
-			'label'   => esc_html( 'Secondary Text Color', 'ascension' ),
+			'label'   => esc_html__( 'Secondary Text Color', 'ascension' ),
 			'default' => '#194F6E',
 			'css'     => array(
 				'h3,
@@ -340,7 +342,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'tertiary_text_color' => array(
-			'label'   => esc_html( 'Tertiary Text Color', 'ascension' ),
+			'label'   => esc_html__( 'Tertiary Text Color', 'ascension' ),
 			'default' => '#757575',
 			'css'     => array(
 				'h1 small,
@@ -413,7 +415,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'accent_color' => array(
-			'label'   => esc_html__( 'Accent Color', 'primer' ),
+			'label'   => esc_html__( 'Accent Color', 'ascension' ),
 			'default' => '#39BAF3',
 			'css' => array(
 				'.hero a.button.large,
@@ -431,7 +433,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'light_color' => array(
-			'label'   => esc_html( 'Light Color', 'ascension' ),
+			'label'   => esc_html__( 'Light Color', 'ascension' ),
 			'default' => '#fff',
 			'css' => array(
 				'.main-navigation ul li.menu-item-has-children .sub-menu li a,
@@ -494,7 +496,7 @@ function ascension_colors( $colors ) {
 			),
 		),
 		'link_color' => array(
-			'label'   => esc_html__( 'Link Color', 'primer' ),
+			'label'   => esc_html__( 'Link Color', 'ascension' ),
 			'default' => '#39BAF3',
 			'css'     => array(
 				'a,
