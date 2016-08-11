@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-04 17:41+0100\n"
+"POT-Creation-Date: 2016-08-10 18:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,44 +27,67 @@ msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:126
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:116
-msgid ""
-"The footer sidebar appears in the fourth column of the footer widget area."
+#: functions.php:128
+msgid "This sidebar is the fourth column of the footer widget area."
 msgstr ""
 
-#: functions.php:123
+#: functions.php:136
 msgid "Hero"
 msgstr ""
 
-#: functions.php:125
-msgid "The hero appears in the hero widget area on the front page"
+#: functions.php:138
+msgid "Hero widgets appear over the header image on the front page."
 msgstr ""
 
-#: functions.php:150
+#: functions.php:164
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:215
+msgid "Header Text Color"
+msgstr ""
+
+#: functions.php:229
+msgid "Background Color"
+msgstr ""
+
+#: functions.php:240
 msgid "Tagline Text Color"
 msgstr ""
 
-#: functions.php:404
+#: functions.php:249
+msgid "Main Text Color"
+msgstr ""
+
+#: functions.php:268
+msgid "Secondary Text Color"
+msgstr ""
+
+#: functions.php:345
+msgid "Tertiary Text Color"
+msgstr ""
+
+#: functions.php:418
 msgid "Accent Color"
 msgstr ""
 
-#: functions.php:487
+#: functions.php:436
+msgid "Light Color"
+msgstr ""
+
+#: functions.php:499
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:539
+#: functions.php:556
 msgid "Dark"
 msgstr ""
 
-#: functions.php:553
+#: functions.php:570
 msgid "Green"
 msgstr ""
 
