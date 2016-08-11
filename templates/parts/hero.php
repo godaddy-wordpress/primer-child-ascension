@@ -6,9 +6,9 @@
  */
 ?>
 
-<?php if ( ascension_get_custom_header() ) : ?>
+<?php if ( primer_get_header_image() ) : ?>
 
-<div class="hero" style="background:url('<?php echo ascension_get_custom_header(); ?>') no-repeat top center; background-size: cover;">
+<div class="hero" style="background:url('<?php echo primer_get_header_image(); ?>') no-repeat top center; background-size: cover;">
 
 <?php else : ?>
 
