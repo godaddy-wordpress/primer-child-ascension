@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package ascension
+ * @package Ascension
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -28,7 +28,7 @@
 	else :
 		get_template_part( 'templates/parts/loop/post', 'excerpt' );
 	endif;
-	
+
 	?>
 
 	<?php get_template_part( 'templates/parts/loop/post', 'footer' ); ?>

@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package ascension
+ * @package Ascension
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

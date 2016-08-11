@@ -2,7 +2,7 @@
 /**
  * Displays the footer site info.
  *
- * @package ascension
+ * @package Ascension
  */
 ?>
 
