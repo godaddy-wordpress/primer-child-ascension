@@ -19,10 +19,10 @@ This theme, like WordPress, is licensed under the GPL.
 Variables
 --------------------------------------------------------------*/
 .text-left {
-  text-align: left !important; }
+  text-align: right !important; }
 
 .text-right {
-  text-align: right !important; }
+  text-align: left !important; }
 
 .text-center {
   text-align: center !important; }
@@ -32,9 +32,9 @@ Variables
 
 @media only screen and (max-width: 40em) {
   .small-only-text-left {
-    text-align: left !important; }
-  .small-only-text-right {
     text-align: right !important; }
+  .small-only-text-right {
+    text-align: left !important; }
   .small-only-text-center {
     text-align: center !important; }
   .small-only-text-justify {
@@ -42,9 +42,9 @@ Variables
 
 @media only screen {
   .small-text-left {
-    text-align: left !important; }
-  .small-text-right {
     text-align: right !important; }
+  .small-text-right {
+    text-align: left !important; }
   .small-text-center {
     text-align: center !important; }
   .small-text-justify {
@@ -52,9 +52,9 @@ Variables
 
 @media only screen and (min-width: 40.063em) and (max-width: 61em) {
   .medium-only-text-left {
-    text-align: left !important; }
-  .medium-only-text-right {
     text-align: right !important; }
+  .medium-only-text-right {
+    text-align: left !important; }
   .medium-only-text-center {
     text-align: center !important; }
   .medium-only-text-justify {
@@ -62,9 +62,9 @@ Variables
 
 @media only screen and (min-width: 40.063em) {
   .medium-text-left {
-    text-align: left !important; }
-  .medium-text-right {
     text-align: right !important; }
+  .medium-text-right {
+    text-align: left !important; }
   .medium-text-center {
     text-align: center !important; }
   .medium-text-justify {
@@ -72,9 +72,9 @@ Variables
 
 @media only screen and (min-width: 61.063em) and (max-width: 90em) {
   .large-only-text-left {
-    text-align: left !important; }
-  .large-only-text-right {
     text-align: right !important; }
+  .large-only-text-right {
+    text-align: left !important; }
   .large-only-text-center {
     text-align: center !important; }
   .large-only-text-justify {
@@ -82,9 +82,9 @@ Variables
 
 @media only screen and (min-width: 61.063em) {
   .large-text-left {
-    text-align: left !important; }
-  .large-text-right {
     text-align: right !important; }
+  .large-text-right {
+    text-align: left !important; }
   .large-text-center {
     text-align: center !important; }
   .large-text-justify {
@@ -92,9 +92,9 @@ Variables
 
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   .xlarge-only-text-left {
-    text-align: left !important; }
-  .xlarge-only-text-right {
     text-align: right !important; }
+  .xlarge-only-text-right {
+    text-align: left !important; }
   .xlarge-only-text-center {
     text-align: center !important; }
   .xlarge-only-text-justify {
@@ -102,9 +102,9 @@ Variables
 
 @media only screen and (min-width: 90.063em) {
   .xlarge-text-left {
-    text-align: left !important; }
-  .xlarge-text-right {
     text-align: right !important; }
+  .xlarge-text-right {
+    text-align: left !important; }
   .xlarge-text-center {
     text-align: center !important; }
   .xlarge-text-justify {
@@ -112,9 +112,9 @@ Variables
 
 @media only screen and (min-width: 120.063em) and (max-width: 99999999em) {
   .xxlarge-only-text-left {
-    text-align: left !important; }
-  .xxlarge-only-text-right {
     text-align: right !important; }
+  .xxlarge-only-text-right {
+    text-align: left !important; }
   .xxlarge-only-text-center {
     text-align: center !important; }
   .xxlarge-only-text-justify {
@@ -122,9 +122,9 @@ Variables
 
 @media only screen and (min-width: 120.063em) {
   .xxlarge-text-left {
-    text-align: left !important; }
-  .xxlarge-text-right {
     text-align: right !important; }
+  .xxlarge-text-right {
+    text-align: left !important; }
   .xxlarge-text-center {
     text-align: center !important; }
   .xxlarge-text-justify {
@@ -310,19 +310,19 @@ dl {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 ul {
-  margin-left: 2rem; }
+  margin-right: 2rem; }
   ul.no-bullet {
-    margin-left: 0; }
+    margin-right: 0; }
     ul.no-bullet li ul,
     ul.no-bullet li ol {
-      margin-left: 1.25rem;
+      margin-right: 1.25rem;
       margin-bottom: 0;
       list-style: none; }
 
 /* Unordered Lists */
 ul li ul,
 ul li ol {
-  margin-left: 1.25rem;
+  margin-right: 1.25rem;
   margin-bottom: 0; }
 
 ul.square li ul, ul.circle li ul, ul.disc li ul {
@@ -330,25 +330,25 @@ ul.square li ul, ul.circle li ul, ul.disc li ul {
 
 ul.square {
   list-style-type: square;
-  margin-left: 2rem; }
+  margin-right: 2rem; }
 
 ul.circle {
   list-style-type: circle;
-  margin-left: 2rem; }
+  margin-right: 2rem; }
 
 ul.disc {
   list-style-type: disc;
-  margin-left: 2rem; }
+  margin-right: 2rem; }
 
 ul.no-bullet {
   list-style: none; }
 
 /* Ordered Lists */
 ol {
-  margin-left: 1.4rem; }
+  margin-right: 1.4rem; }
   ol li ul,
   ol li ol {
-    margin-left: 1.25rem;
+    margin-right: 1.25rem;
     margin-bottom: 0; }
 
 /* Definition Lists */
@@ -418,9 +418,9 @@ blockquote.aligncenter {
   blockquote.alignright {
     width: 60%; }
   blockquote.alignleft {
-    text-align: left; }
+    text-align: right; }
   blockquote.alignright {
-    text-align: right; } }
+    text-align: left; } }
 
 @media only screen and (min-width: 61.063em) {
   blockquote,
@@ -778,13 +778,13 @@ legend {
 .search-form .search-field {
   width: 70%;
   background: #fff;
-  -webkit-border-radius: 5px 0 0 5px;
-  border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #194F6E;
-  border-right: 0;
+  border-left: 0;
   padding: 0 10px;
   line-height: 31px;
   height: 33px;
@@ -793,23 +793,23 @@ legend {
     background: #f1f1f1; }
 
 .search-form .search-submit {
-  float: right;
+  float: left;
   width: 30%;
-  -webkit-border-radius: 0 5px 5px 0;
-  border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
   padding: 0;
   line-height: 31px;
   height: 33px; }
 
 .alignleft {
   display: inline;
-  float: left;
-  margin-right: 1.5em; }
+  float: right;
+  margin-left: 1.5em; }
 
 .alignright {
   display: inline;
-  float: right;
-  margin-left: 1.5em; }
+  float: left;
+  margin-right: 1.5em; }
 
 .aligncenter {
   display: block;
@@ -896,7 +896,7 @@ legend {
     .entry-footer a:hover, .entry-footer a:focus, .entry-footer a:active {
       color: #0b85bb; }
   .entry-footer .entry-footer-right {
-    float: right; }
+    float: left; }
   .entry-footer .cat-links,
   .entry-footer .tags-links,
   .entry-footer .comments-link {
@@ -919,7 +919,7 @@ legend {
   .entry-meta .posted-date,
   .entry-meta .posted-author,
   .entry-meta .comments-number {
-    margin-right: 20px; }
+    margin-left: 20px; }
   .entry-meta i {
     vertical-align: middle;
     line-height: .8; }
@@ -927,8 +927,8 @@ legend {
     border-bottom-width: 0; }
 
 .entry-media-meta .button {
-  margin-right: 1em;
-  margin-right: 1rem; }
+  margin-left: 1em;
+  margin-left: 1rem; }
   @media only screen and (max-width: 40em) {
     .entry-media-meta .button {
       margin-bottom: 10px; } }
@@ -952,8 +952,8 @@ legend {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     white-space: nowrap;
-    margin-right: .5em;
-    margin-right: .5rem;
+    margin-left: .5em;
+    margin-left: .5rem;
     line-height: 2; }
 
 .post-format {
@@ -993,8 +993,8 @@ article.format-link {
   .entry-media.video > * {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
@@ -1008,8 +1008,8 @@ section > h2 {
   font-weight: lighter;
   color: #757575;
   display: table;
-  margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-left: auto; }
   @media only screen and (min-width: 40.063em) {
     section > h2 {
       font-size: 24px;
@@ -1072,20 +1072,20 @@ section.error-404 {
   .comment-list,
   .comment-list li {
     list-style: none;
-    margin-left: 0;
-    padding-left: 0; }
+    margin-right: 0;
+    padding-right: 0; }
   .comment-list li {
-    padding-left: 32px;
-    padding-right: 32px; }
+    padding-right: 32px;
+    padding-left: 32px; }
     .comment-list li article {
       margin-top: 30px;
       margin-bottom: 30px;
-      padding-left: 1em;
-      padding-left: 1rem; }
+      padding-right: 1em;
+      padding-right: 1rem; }
     .comment-list li.pingback, .comment-list li.trackback {
       border: 2px solid #ddd;
-      border-left: 0;
       border-right: 0;
+      border-left: 0;
       padding: 1em 0;
       padding: 1rem 0;
       margin-bottom: 1.4em;
@@ -1113,8 +1113,8 @@ section.error-404 {
     margin-top: 1em; }
 
 .comment-meta .avatar {
-  float: left;
-  margin-right: 15px;
+  float: right;
+  margin-left: 15px;
   position: relative;
   -webkit-border-radius: 3px;
   border-radius: 3px;
