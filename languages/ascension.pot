@@ -1,20 +1,20 @@
-# Ascension
-# Copyright (C) 2016
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the ascension package.
-# GoDaddy Operating Company, LLC.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ascension 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 13:29-0500\n"
+"POT-Creation-Date: 2016-08-12 12:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: functions.php:107
@@ -25,38 +25,38 @@ msgstr ""
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:128
 msgid "This sidebar is the fourth column of the footer widget area."
 msgstr ""
 
-#: functions.php:137
+#: functions.php:136
 msgid "Hero"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:137
 msgid "Hero widgets appear over the header image on the front page."
 msgstr ""
 
-#: functions.php:165
+#: functions.php:163
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:340
+#: functions.php:338
 msgid "Tertiary Text Color"
 msgstr ""
 
-#: functions.php:413
+#: functions.php:411
 msgid "Accent Color"
 msgstr ""
 
-#: functions.php:494
+#: functions.php:492
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:551
+#: functions.php:549
 msgid "Dark"
 msgstr ""
 
-#: functions.php:565
+#: functions.php:563
 msgid "Green"
 msgstr ""
