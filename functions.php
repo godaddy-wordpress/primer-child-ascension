@@ -10,7 +10,7 @@ function ascension_move_elements() {
 
 	// Hero image
 	remove_action( 'primer_header', 'primer_add_hero' );
-	add_action( 'primer_after_header', 'primer_add_hero' );
+	add_action( 'primer_hero', 'primer_add_hero' );
 
 	// Primary navigation
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
@@ -123,9 +123,8 @@ add_filter( 'primer_default_hero_images', 'ascension_default_hero_images' );
  */
 function ascension_sidebars( $sidebars ) {
 
-	$sidebars[] = array(
+	$sidebars['footer-4'] = array(
 		'name'          => esc_html__( 'Footer 4', 'ascension' ),
-		'id'            => 'footer-4',
 		'description'   => esc_html__( 'This sidebar is the fourth column of the footer widget area.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -133,9 +132,8 @@ function ascension_sidebars( $sidebars ) {
 		'after_title'   => '</h4>',
 	);
 
-	$sidebars[] = array(
+	$sidebars['hero'] = array(
 		'name'          => esc_html__( 'Hero', 'ascension' ),
-		'id'            => 'hero',
 		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'ascension' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
