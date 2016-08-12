@@ -3255,7 +3255,8 @@ body.layout-one-column-narrow #content {
   .hero .hero-wrapper {
     padding: 8% 25px;
     text-align: left;
-    color: #fff; }
+    color: #fff;
+    margin-left: 0; }
   @media only screen and (min-width: 40.063em) {
     .hero .home .hero-inner {
       padding-right: 40%; }
