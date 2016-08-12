@@ -2554,6 +2554,9 @@ a {
 .widget_text .widget-title, .widget_search .widget-title {
   margin-bottom: 1rem; }
 
+#content .widget ul li {
+  border: none; }
+
 .no-results .page-header,
 .not-found .page-header {
   margin-bottom: 1em; }

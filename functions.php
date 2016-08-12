@@ -152,13 +152,11 @@ add_filter( 'primer_sidebars', 'ascension_sidebars' );
  * @action primer_font_types
  * @since  1.0.0
  *
- * @param  array $font_types
- *
  * @return array
  */
-function ascension_font_types( $font_types ) {
+function ascension_font_types() {
 
-	$font_types = array(
+	return array(
 		'primary_font' => array(
 			'label'   => esc_html__( 'Primary Font', 'ascension' ),
 			'default' => 'Open Sans',
@@ -191,8 +189,6 @@ function ascension_font_types( $font_types ) {
 		),
 	);
 
-	return $font_types;
-
 }
 add_filter( 'primer_font_types', 'ascension_font_types' );
 
@@ -202,13 +198,11 @@ add_filter( 'primer_font_types', 'ascension_font_types' );
  * @filter primer_colors
  * @since  1.0.0
  *
- * @param  array $colors
- *
  * @return array
  */
-function ascension_colors( $colors ) {
+function ascension_colors() {
 
-	$colors = array(
+	return array(
 		'header_textcolor' => array(
 			'default' => '#194f6e',
 			'css'     => array(
@@ -527,8 +521,6 @@ function ascension_colors( $colors ) {
 		),
 	);
 
-	return $colors;
-
 }
 add_filter( 'primer_colors', 'ascension_colors' );
 
@@ -538,13 +530,11 @@ add_filter( 'primer_colors', 'ascension_colors' );
  * @filter primer_color_schemes
  * @since  1.0.0
  *
- * @param  array $color_schemes
- *
  * @return array
  */
-function ascension_color_schemes( $color_schemes ) {
+function ascension_color_schemes() {
 
-	$color_schemes = array(
+	return array(
 		'dark' => array(
 			'label'  => esc_html__( 'Dark', 'primer' ),
 			'colors' => array(
@@ -574,8 +564,6 @@ function ascension_color_schemes( $color_schemes ) {
 			),
 		),
 	);
-
-	return $color_schemes;
 
 }
 add_filter( 'primer_color_schemes', 'ascension_color_schemes' );
