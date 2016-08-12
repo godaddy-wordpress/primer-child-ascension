@@ -10,7 +10,7 @@ function ascension_move_elements() {
 
 	// Hero image
 	remove_action( 'primer_header', 'primer_add_hero' );
-	add_action( 'primer_hero', 'primer_add_hero' );
+	add_action( 'primer_after_header', 'primer_add_hero' );
 
 	// Primary navigation
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
