@@ -4,6 +4,7 @@
 	background-position: center top;
 	background-repeat: no-repeat;
 	margin-bottom: 40px;
+
 	@extend .row;
 
 	.hero-inner {
@@ -16,7 +17,9 @@
 		text-align: right;
 		color: #fff;
 		margin-right: 0;
+
 		@extend .large-12;
+
 		@extend .columns;
 
 		@media #{$medium-up} {
