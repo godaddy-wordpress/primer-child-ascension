@@ -1,32 +1,34 @@
 {
-  "name": "ascension",
-  "title": "Ascension",
-  "description": "",
+  "name": "activation",
+  "title": "Activation",
+  "description": "Activation is a modern WordPress theme based on _s.",
   "version": "1.0.0",
+  "author": "GoDaddy",
   "license": "GPL-2.0",
+  "repository": "godaddy/wp-activation-theme",
+  "homepage": "https://wordpress.org/themes/activation/",
+  "bugs": {
+    "url": "https://github.com/godaddy/wp-activation-theme/issues"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/godaddy/wp-ascension-theme.git"
-  },
-  "author": "GoDaddy",
-  "bugs": {
-    "url": "https://github.com/godaddy/wp-ascension-theme/issues"
-  },
-  "homepage": "https://github.com/godaddy/wp-ascension-theme/issues",
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
     "grunt-autoprefixer": "~3.0.4",
-    "grunt-cssjanus": "~0.3.2",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
+    "grunt-cssjanus": "~0.3.2",
     "grunt-dev-update": "~2.0.0",
-    "grunt-pot": "~0.2.1",
     "grunt-po2mo": "~0.1.2",
-    "grunt-sass": "^1.2.0",
+    "grunt-pot": "~0.2.1",
+    "grunt-sass": "1.2.0",
     "grunt-text-replace": "~0.4.0",
     "load-grunt-tasks": "~3.5.0",
-    "matchdep": "~1.0.1"
+    "matchdep": "~1.0.1",
+    "susy": "~2.2.12"
   }
 }
