@@ -26,7 +26,7 @@ function ascension_move_elements() {
 	}
 
 }
-add_action( 'after_setup_theme', 'ascension_move_elements' );
+add_action( 'template_redirect', 'ascension_move_elements' );
 
 /**
  * Set hero element style attribute.
