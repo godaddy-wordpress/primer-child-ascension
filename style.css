@@ -3247,24 +3247,6 @@ body.layout-one-column-narrow #content {
     .featured-content .entry-header .read-more:hover {
       background-color: #0ea7eb; }
 
-.page-title-container {
-  clear: both;
-  padding-top: 30px; }
-  .page-title-container .page-header {
-    background-color: #194F6E;
-    padding: 5% 50px; }
-    .page-title-container .page-header:before, .page-title-container .page-header:after {
-      content: " ";
-      display: table; }
-    .page-title-container .page-header:after {
-      clear: both; }
-    .page-title-container .page-header h1 {
-      color: white;
-      padding: 0;
-      margin: 0;
-      font-weight: 300;
-      text-align: right; }
-
 .hero {
   background: #194F6E;
   -webkit-background-size: cover;
@@ -3272,8 +3254,9 @@ body.layout-one-column-narrow #content {
   background-position: center top;
   background-repeat: no-repeat;
   margin-bottom: 40px; }
+  .hero .hero-inner {
+    padding: 7% 50px; }
   .hero aside {
-    padding: 8% 20px;
     text-align: right;
     color: #fff;
     margin-right: 0; }
@@ -3283,6 +3266,12 @@ body.layout-one-column-narrow #content {
         padding-left: 50px; }
         .home .hero aside {
           padding-left: 40%; } }
+  .hero .page-header h1 {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    text-align: right; }
   .hero .widget-title {
     color: #fff;
     font-size: 1.75rem;

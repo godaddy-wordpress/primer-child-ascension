@@ -16,12 +16,46 @@ function ascension_move_elements() {
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	add_action( 'primer_header', 'primer_add_primary_navigation' );
 
-
+	// Page titles (moved to hero)
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
-	add_action( 'primer_header', 'primer_add_page_title', 99999 );
 
 }
 add_action( 'after_setup_theme', 'ascension_move_elements' );
+
+/**
+ * Set hero element style attribute.
+ *
+ * @filter primer_hero_style_attr
+ * @since  1.0.0
+ *
+ * @return string
+ */
+function ascension_hero_style_attr() {
+
+	return sprintf(
+		'background: url(%s) no-repeat top center; background-size: cover;',
+		primer_get_hero_image()
+	);
+
+}
+add_filter( 'primer_hero_style_attr', 'ascension_hero_style_attr' );
+
+/**
+ * Add hero content.
+ *
+ * @action primer_hero
+ * @since  1.0.0
+ */
+function ascension_add_hero_content() {
+
+	if ( ! is_front_page() ) {
+
+		get_template_part( 'templates/parts/page-title' );
+
+	}
+
+}
+add_action( 'primer_hero', 'ascension_add_hero_content' );
 
 /**
  * Set images sizes.
