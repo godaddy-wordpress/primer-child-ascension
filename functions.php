@@ -29,42 +29,19 @@ function ascension_move_elements() {
 add_action( 'template_redirect', 'ascension_move_elements' );
 
 /**
- * Set hero element style attribute.
+ * Set hero image target element.
  *
- * @filter primer_hero_style_attr
+ * @filter primer_hero_image_selector
  * @since  1.0.0
  *
  * @return string
  */
-function ascension_hero_style_attr() {
+function ascension_hero_image_selector() {
 
-	return sprintf(
-		'background: url(%s) no-repeat top center; background-size: cover;',
-		primer_get_hero_image()
-	);
+	return '.hero';
 
 }
-add_filter( 'primer_hero_style_attr', 'ascension_hero_style_attr' );
-
-/**
- * Set images sizes.
- *
- * @filter primer_image_sizes
- * @since  1.0.0
- *
- * @param  array $sizes
- *
- * @return array
- */
-function ascension_image_sizes( $sizes ) {
-
-	$sizes['primer-hero']['width']  = 2400;
-	$sizes['primer-hero']['height'] = 1200;
-
-	return $sizes;
-
-}
-add_filter( 'primer_image_sizes', 'ascension_image_sizes' );
+add_filter( 'primer_hero_image_selector', 'ascension_hero_image_selector' );
 
 /**
  * Set custom logo args.
@@ -87,27 +64,10 @@ function ascension_custom_logo_args( $args ) {
 add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
 
 /**
- * Set custom header args.
- *
- * @action primer_custom_header_args
- * @since  1.0.0
- *
- * @param  array $args
- *
- * @return array
- */
-function ascension_custom_header_args( $args ) {
-
-	$args['width']  = 2400;
-	$args['height'] = 1200;
-
-	return $args;
-
-}
-add_filter( 'primer_custom_header_args', 'ascension_custom_header_args' );
-
-/**
  * Set the default hero image description.
+ *
+ * @filter primer_default_hero_images
+ * @since  1.0.0
  *
  * @param  array $defaults
  *
