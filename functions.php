@@ -16,24 +16,12 @@ function ascension_move_elements() {
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	add_action( 'primer_header', 'primer_add_primary_navigation' );
 
-	// Page titles (will be displayed in hero-content instead)
+
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+	add_action( 'primer_header', 'primer_add_page_title', 99999 );
 
 }
-add_action( 'template_redirect', 'ascension_move_elements' );
-
-/**
- * Add custom hero content.
- *
- * @action primer_hero
- * @since  1.0.0
- */
-function ascension_add_hero_content() {
-
-	get_template_part( 'templates/parts/hero-content' );
-
-}
-add_action( 'primer_hero', 'ascension_add_hero_content' );
+add_action( 'after_setup_theme', 'ascension_move_elements' );
 
 /**
  * Set images sizes.
@@ -130,15 +118,6 @@ function ascension_sidebars( $sidebars ) {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
-	);
-
-	$sidebars['hero'] = array(
-		'name'          => esc_html__( 'Hero', 'ascension' ),
-		'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'ascension' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
 	);
 
 	return $sidebars;

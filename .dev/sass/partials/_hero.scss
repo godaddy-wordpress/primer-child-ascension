@@ -4,39 +4,27 @@
 	background-position: center top;
 	background-repeat: no-repeat;
 	margin-bottom: 40px;
-	max-width: 1060px;
-
 	@extend .row;
 
-	.hero-wrapper {
-		padding: 8% 25px;
+	aside {
+		padding: 8% 20px;
 		text-align: right;
 		color: #fff;
 		margin-right: 0;
-	}
-
-	@media #{$medium-up} {
-
-		.home .hero-inner {
-			padding-left: 40%;
-		}
-
-		.home {
-			padding: 70px 25px 140px;
-		}
-	}
-
-	.hero-wrapper {
-		@extend .row;
-	}
-
-	.hero-inner {
 		@extend .large-12;
-
 		@extend .columns;
+
+		@media #{$medium-up} {
+			padding-right: 50px;
+			padding-left: 50px;
+
+			.home & {
+				padding-left: 40%;
+			}
+		}
 	}
 
-	h1 {
+	.widget-title {
 		color: #fff;
 		font-size: rem-calc(28);
 		font-weight: lighter;
@@ -97,7 +85,7 @@
 		font-size: rem-calc(13);
 	}
 
-	a.button.large {
+	a.button {
 		background: $hero-button-color;
 		color: #FFFFFF;
 		border: none;
