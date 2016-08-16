@@ -223,3 +223,7 @@ $widget-bg: #fff !default;
 .widget_text .widget-title, .widget_search .widget-title {
 	 margin-bottom: 1rem;
 }
+
+#content .widget ul li {
+	border: none;
+}

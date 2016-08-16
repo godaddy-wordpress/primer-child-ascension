@@ -1,42 +1,57 @@
 .hero {
 	background: $secondary-color;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
 	margin-bottom: 40px;
-	max-width: 1060px;
+
 	@extend .row;
-	.hero-wrapper {
-		padding: 8% 25px;
-		text-align: right;
-		color: #fff;
-	}
-
-	@media #{$medium-up} {
-		.home .hero-inner {
-			padding-left: 40%;
-		}
-		.home {
-			padding: 70px 25px 140px;
-		}
-	}
-
-	.hero-wrapper {
-		@extend .row;
-	}
 
 	.hero-inner {
-		@extend .large-12;
-		@extend .columns;
+		width: 100%;
+		display: inline-block;
+		padding: 7% 50px;
 	}
 
-	h1 {
+	aside {
+		text-align: right;
+		color: #fff;
+		margin-right: 0;
+
+		@extend .large-12;
+
+		@extend .columns;
+
+		@media #{$medium-up} {
+			padding-right: 50px;
+			padding-left: 50px;
+
+			.home & {
+				padding-left: 40%;
+			}
+		}
+	}
+
+	.page-header h1 {
+		color: #fff;
+		padding: 0;
+		margin: 0;
+		font-weight: 300;
+		text-align: right;
+	}
+
+	.widget-title {
 		color: #fff;
 		font-size: rem-calc(28);
 		font-weight: lighter;
 		letter-spacing: -1.2px;
 		margin: 0;
 		text-align: right;
+
 		@media #{$medium-up} {
 			font-size: rem-calc(40);
 		}
+
 		@media #{$large-up} {
 			font-size: rem-calc(56);
 		}
@@ -62,9 +77,11 @@
 		font-style: normal;
 		font-weight: lighter;
 		padding: 0;
+
 		@media #{$medium-up} {
 			font-size: rem-calc(32);
 		}
+
 		@media #{$large-up} {
 			font-size: rem-calc(42);
 		}
@@ -72,6 +89,7 @@
 
 	blockquote p {
 		margin-bottom: 0;
+
 		@media #{$medium-up} {
 			margin-bottom: 1.25rem;
 		}
@@ -83,16 +101,16 @@
 		font-size: rem-calc(13);
 	}
 
-	a.button.large {
+	a.button {
 		background: $hero-button-color;
 		color: #FFFFFF;
 		border: none;
-        font-size: 0.875rem;
+		font-size: 0.875rem;
 		letter-spacing: 0.1rem;
 		padding: 8px 32px;
 
 		@media #{$medium-up} {
-            padding: 12px 55px;
+			padding: 12px 55px;
 		}
 
 		&:hover {

@@ -1,153 +1,126 @@
 <?php
 
 /**
- * Remove titles from templates.
+ * Move some elements around.
  *
- * @since 1.0.0
+ * @action template_redirect
+ * @since  1.0.0
  */
-function ascension_remove_titles(){
-	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
-}
-add_action( 'wp_head', 'ascension_remove_titles' );
+function ascension_move_elements() {
 
-/**
- * Load custom template tags for this theme.
- *
- * @since 1.0.0
- */
-require_once get_stylesheet_directory() . '/inc/template-tags.php';
+	// Hero image
+	remove_action( 'primer_header', 'primer_add_hero' );
+	add_action( 'primer_after_header', 'primer_add_hero' );
 
-/**
- * Add images sizes.
- *
- * @action after_setup_theme
- * @since 1.0.0
- */
-function ascension_add_image_sizes() {
+	// Primary navigation
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
+	add_action( 'primer_header', 'primer_add_primary_navigation' );
 
-	add_image_size( 'hero', 1060, 550, array( 'center', 'center' ) );
-	add_image_size( 'hero-2x', 2120, 1100, array( 'center', 'center' ) );
+	// Page titles
+	remove_action( 'primer_after_header', 'primer_add_page_title' );
 
-}
-add_action( 'after_setup_theme', 'ascension_add_image_sizes' );
+	if ( ! is_front_page() ) {
 
-/**
- * Update custom logo width and height
- *
- * @action primer_custom_logo_args
- * @param $args
- * @return array
- */
-function ascension_update_custom_logo_args( $args ) {
+		add_action( 'primer_hero', 'primer_add_page_title' );
 
-	$args['width'] = 352;
-	$args['height'] = 62;
-
-	return $args;
-
-}
-add_filter( 'primer_custom_logo_args', 'ascension_update_custom_logo_args' );
-
-/**
- * Update custom header width and height
- *
- * @action primer_custom_header_args
- * @param $args
- * @return array
- */
-function ascension_update_custom_header_args( $args ) {
-
-	$args['width'] = 2120;
-	$args['height'] = 1100;
-
-	return $args;
-
-}
-add_filter( 'primer_custom_header_args', 'ascension_update_custom_header_args' );
-
-/**
- * Move Navigation from after header to inside header.
- *
- * @action after_setup_theme
- */
-function ascension_move_navigation() {
-
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
-	add_action( 'primer_header', 'primer_add_primary_navigation', 20 );
-
-}
-add_action( 'after_setup_theme', 'ascension_move_navigation' );
-
-/**
- * Display the hero before the header.
- *
- * @action after_setup_theme
- * @since 1.0.0
- */
-function ascension_add_hero() {
-
-	remove_action( 'primer_header', 'primer_add_hero', 10 );
-
-	if ( is_404() || is_page_template( 'templates/page-builder-no-header.php' ) ) {
-		return;
 	}
 
-	add_action( 'primer_after_header', 'primer_add_hero', 10 );
-
 }
-add_action( 'template_redirect', 'ascension_add_hero' );
+add_action( 'template_redirect', 'ascension_move_elements' );
 
 /**
- * Add additional sidebars
+ * Set hero image target element.
  *
- * @action primer_register_sidebars
- * @since 1.0.0
- * @param $sidebars
+ * @filter primer_hero_image_selector
+ * @since  1.0.0
+ *
+ * @return string
+ */
+function ascension_hero_image_selector() {
+
+	return '.hero';
+
+}
+add_filter( 'primer_hero_image_selector', 'ascension_hero_image_selector' );
+
+/**
+ * Set custom logo args.
+ *
+ * @filter primer_custom_logo_args
+ * @since  1.0.0
+ *
+ * @param  array $args
+ *
  * @return array
  */
-function ascension_add_sidebars( $sidebars ) {
+function ascension_custom_logo_args( $args ) {
 
-	$new_sidebars = array(
-		array(
-			'name'          => __( 'Footer 4', 'ascension' ),
-			'id'            => 'footer-4',
-			'description'   => __( 'The footer sidebar appears in the fourth column of the footer widget area.', 'ascension' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		),
-		array(
-			'name'          => __( 'Hero', 'ascension' ),
-			'id'            => 'hero',
-			'description'   => __( 'The hero appears in the hero widget area on the front page', 'ascension' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		),
-	);
+	$args['width']  = 325;
+	$args['height'] = 70;
 
-	return array_merge( $sidebars, $new_sidebars );
+	return $args;
 
 }
-add_filter( 'primer_register_sidebars', 'ascension_add_sidebars' );
+add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
 
 /**
- * Change Stout font types.
+ * Set the default hero image description.
+ *
+ * @filter primer_default_hero_images
+ * @since  1.0.0
+ *
+ * @param  array $defaults
+ *
+ * @return array
+ */
+function ascension_default_hero_images( $defaults ) {
+
+	$defaults['default']['description'] = esc_html__( 'Professional Woman', 'ascension' );
+
+	return $defaults;
+
+}
+add_filter( 'primer_default_hero_images', 'ascension_default_hero_images' );
+
+/**
+ * Register sidebar areas.
+ *
+ * @filter primer_sidebars
+ * @since  1.0.0
+ *
+ * @param  array $sidebars
+ *
+ * @return array
+ */
+function ascension_sidebars( $sidebars ) {
+
+	$sidebars['footer-4'] = array(
+		'name'          => esc_html__( 'Footer 4', 'ascension' ),
+		'description'   => esc_html__( 'This sidebar is the fourth column of the footer widget area.', 'ascension' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	);
+
+	return $sidebars;
+
+}
+add_filter( 'primer_sidebars', 'ascension_sidebars' );
+
+/**
+ * Register font types.
  *
  * @action primer_font_types
- * @since 1.0.0
+ * @since  1.0.0
+ *
  * @return array
  */
 function ascension_font_types() {
 
 	return array(
-		array(
-			'name'    => 'primary_font',
-			'label'   => esc_html__( 'Primary Font', 'primer' ),
+		'primary_font' => array(
+			'label'   => esc_html__( 'Primary Font', 'ascension' ),
 			'default' => 'Open Sans',
 			'css'     => array(
 				'body,
@@ -163,7 +136,6 @@ function ascension_font_types() {
 				.widget-title,
 				.entry-footer,
 				.entry-meta,
-				.event-meta, .sermon-meta, .location-meta, .person-meta,
 				.post-format,
 				.more-link,
 				article.format-link,
@@ -180,21 +152,21 @@ function ascension_font_types() {
 	);
 
 }
-add_action( 'primer_font_types', 'ascension_font_types' );
+add_filter( 'primer_font_types', 'ascension_font_types' );
 
 /**
- * Change Stout colors
+ * Register colors.
  *
- * @action primer_colors
- * @since 1.0.0
+ * @filter primer_colors
+ * @since  1.0.0
+ *
  * @return array
  */
 function ascension_colors() {
 
 	return array(
-		array(
-			'name'    => 'header_textcolor',
-			'default' => '#194F6E',
+		'header_textcolor' => array(
+			'default' => '#194f6e',
 			'css'     => array(
 				'.site-title a, .site-title a:visited' => array(
 					'color' => '%1$s',
@@ -206,9 +178,8 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'background_color',
-			'default' => '#fff',
+		'background_color' => array(
+			'default' => '#ffffff',
 			'css'     => array(
 				'body,
 				.gallery-caption,
@@ -217,9 +188,7 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'tagline_text_color',
-			'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
+		'tagline_text_color' => array(
 			'default' => '#545454',
 			'css'     => array(
 				'.site-description' => array(
@@ -227,9 +196,7 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'main_text_color',
-			'label'   => esc_html( 'Main Text Color', 'ascension' ),
+		'main_text_color' => array(
 			'default' => '#212121',
 			'css'     => array(
 				'body,
@@ -247,10 +214,8 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'secondary_text_color',
-			'label'   => esc_html( 'Secondary Text Color', 'ascension' ),
-			'default' => '#194F6E',
+		'secondary_text_color' => array(
+			'default' => '#194f6e',
 			'css'     => array(
 				'h3,
 				.hentry .entry-header,
@@ -282,7 +247,7 @@ function ascension_colors() {
 				.fl-builder-content a.fl-button:visited,
 				.main-navigation ul li a,
 				.search-form .search-field' => array(
-					'color' => '%1$s',
+					'color'        => '%1$s',
 					'border-color' => '%1$s',
 				),
 				'.hero,
@@ -325,9 +290,8 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'tertiary_text_color',
-			'label'   => esc_html( 'Tertiary Text Color', 'ascension' ),
+		'tertiary_text_color' => array(
+			'label'   => esc_html__( 'Tertiary Text Color', 'ascension' ),
 			'default' => '#757575',
 			'css'     => array(
 				'h1 small,
@@ -399,10 +363,9 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'accent_color',
+		'accent_color' => array(
 			'label'   => esc_html__( 'Accent Color', 'primer' ),
-			'default' => '#39BAF3',
+			'default' => '#39baf3',
 			'css' => array(
 				'.hero a.button.large,
 				.hero .social-menu a.large,
@@ -418,10 +381,9 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'light_color',
+		'light_color' => array(
 			'label'   => esc_html( 'Light Color', 'ascension' ),
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css' => array(
 				'.main-navigation ul li.menu-item-has-children .sub-menu li a,
 				.gallery-caption,
@@ -482,10 +444,9 @@ function ascension_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'link_color',
+		'link_color' => array(
 			'label'   => esc_html__( 'Link Color', 'primer' ),
-			'default' => '#39BAF3',
+			'default' => '#39baf3',
 			'css'     => array(
 				'a,
 				.featured-content .read-more,
@@ -523,46 +484,48 @@ function ascension_colors() {
 	);
 
 }
-add_action( 'primer_colors', 'ascension_colors' );
+add_filter( 'primer_colors', 'ascension_colors' );
 
 /**
- * Change Lyrical color schemes
+ * Register color schemes.
  *
- * @action primer_color_schemes
- * @since 1.0.0
+ * @filter primer_color_schemes
+ * @since  1.0.0
+ *
  * @return array
  */
 function ascension_color_schemes() {
 
 	return array(
 		'dark' => array(
-			'label'  => esc_html__( 'Dark', 'ascension' ),
+			'label'  => esc_html__( 'Dark', 'primer' ),
 			'colors' => array(
-				'header_textcolor'        => '#ffffff',
-				'background_color'        => '#333333',
-				'tagline_text_color'      => '#919191',
-				'main_text_color'         => '#ffffff',
-				'secondary_text_color'    => '#ffffff',
-				'tertiary_text_color'     => '#7f7f7f',
-				'accent_color'            => '#39baf3',
-				'light_color'             => '#ffffff',
-				'link_color'              => '#39baf3',
+				'header_textcolor'     => '#ffffff',
+				'background_color'     => '#333333',
+				'tagline_text_color'   => '#919191',
+				'main_text_color'      => '#ffffff',
+				'secondary_text_color' => '#ffffff',
+				'tertiary_text_color'  => '#7f7f7f',
+				'accent_color'         => '#39baf3',
+				'light_color'          => '#ffffff',
+				'link_color'           => '#39baf3',
 			),
 		),
 		'green' => array(
 			'label'  => esc_html__( 'Green', 'ascension' ),
 			'colors' => array(
-				'header_textcolor'        => '#0b560c',
-				'background_color'        => '#f4f4f4',
-				'tagline_text_color'      => '#545454',
-				'main_text_color'         => '#212121',
-				'secondary_text_color'    => '#0b560c',
-				'tertiary_text_color'     => '#757575',
-				'accent_color'            => '#49a00b',
-				'light_color'             => '#ffffff',
-				'link_color'              => '#49a00b',
+				'header_textcolor'     => '#0b560c',
+				'background_color'     => '#f4f4f4',
+				'tagline_text_color'   => '#545454',
+				'main_text_color'      => '#212121',
+				'secondary_text_color' => '#0b560c',
+				'tertiary_text_color'  => '#757575',
+				'accent_color'         => '#49a00b',
+				'light_color'          => '#ffffff',
+				'link_color'           => '#49a00b',
 			),
 		),
 	);
+
 }
-add_action( 'primer_color_schemes', 'ascension_color_schemes' );
+add_filter( 'primer_color_schemes', 'ascension_color_schemes' );
