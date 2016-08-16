@@ -4,6 +4,14 @@ module.exports = function(grunt) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
 
+	var local_url = 'http://wp.dev';
+
+	if ( grunt.file.exists( '.dev/local-url' ) ) {
+
+		local_url = grunt.file.read( '.dev/local-url' ).trim();
+
+	}
+
 	grunt.initConfig({
 
 		pkg: pkg,
@@ -36,7 +44,7 @@ module.exports = function(grunt) {
 					]
 				},
 				options: {
-					proxy: 'http://vagrant.local', // enter your local WP URL here
+					proxy: local_url // this is read from the file .dev/local-url
 				}
 			}
 		},
