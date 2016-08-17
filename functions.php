@@ -8,16 +8,12 @@
  */
 function ascension_move_elements() {
 
-	// Hero image
-	remove_action( 'primer_header', 'primer_add_hero' );
-	add_action( 'primer_after_header', 'primer_add_hero' );
-
-	// Primary navigation
+	remove_action( 'primer_header',       'primer_add_hero' );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	add_action( 'primer_header', 'primer_add_primary_navigation' );
-
-	// Page titles
 	remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	add_action( 'primer_after_header', 'primer_add_hero' );
+	add_action( 'primer_header',       'primer_add_primary_navigation' );
 
 	if ( ! is_front_page() ) {
 
@@ -75,7 +71,7 @@ add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
  */
 function ascension_default_hero_images( $defaults ) {
 
-	$defaults['default']['description'] = esc_html__( 'Professional Woman', 'ascension' );
+	$defaults['default']['description'] = esc_html__( 'Professional woman reading a tablet', 'ascension' );
 
 	return $defaults;
 
@@ -83,7 +79,7 @@ function ascension_default_hero_images( $defaults ) {
 add_filter( 'primer_default_hero_images', 'ascension_default_hero_images' );
 
 /**
- * Register sidebar areas.
+ * Set sidebars.
  *
  * @filter primer_sidebars
  * @since  1.0.0
@@ -109,14 +105,16 @@ function ascension_sidebars( $sidebars ) {
 add_filter( 'primer_sidebars', 'ascension_sidebars' );
 
 /**
- * Register font types.
+ * Set font types.
  *
- * @action primer_font_types
+ * @filter primer_font_types
  * @since  1.0.0
+ *
+ * @param  array $font_types
  *
  * @return array
  */
-function ascension_font_types() {
+function ascension_font_types( $font_types ) {
 
 	return array(
 		'primary_font' => array(
@@ -155,14 +153,16 @@ function ascension_font_types() {
 add_filter( 'primer_font_types', 'ascension_font_types' );
 
 /**
- * Register colors.
+ * Set colors.
  *
  * @filter primer_colors
  * @since  1.0.0
  *
+ * @param  array $colors
+ *
  * @return array
  */
-function ascension_colors() {
+function ascension_colors( $colors ) {
 
 	return array(
 		'header_textcolor' => array(
@@ -487,14 +487,16 @@ function ascension_colors() {
 add_filter( 'primer_colors', 'ascension_colors' );
 
 /**
- * Register color schemes.
+ * Set color schemes.
  *
  * @filter primer_color_schemes
  * @since  1.0.0
  *
+ * @param  array $color_schemes
+ *
  * @return array
  */
-function ascension_color_schemes() {
+function ascension_color_schemes( $color_schemes ) {
 
 	return array(
 		'dark' => array(
