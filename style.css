@@ -2171,6 +2171,8 @@ a {
   z-index: 999;
   display: none;
   border-bottom: 1px solid rgba(117, 117, 117, 0.28); }
+  .main-navigation.open {
+    display: block; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
