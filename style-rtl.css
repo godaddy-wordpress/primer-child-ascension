@@ -3298,7 +3298,8 @@ body.layout-one-column-narrow #content {
   .hero aside {
     text-align: left;
     color: #fff;
-    margin-left: 0; }
+    margin-left: 0;
+    background: none; }
     @media only screen and (min-width: 40.063em) {
       .hero aside {
         padding-left: 50px;
