@@ -530,7 +530,7 @@ input[type="submit"],
   font-size: 0.6875rem;
   color: #194F6E;
   border: 1px solid #194F6E;
-  letter-spacing: 0.08313rem;
+  letter-spacing: 0.083125rem;
   text-transform: uppercase;
   -webkit-border-radius: 0.3125rem;
   border-radius: 0.3125rem;
@@ -884,7 +884,7 @@ legend {
   .entry-footer .tags-links,
   .entry-footer .comments-link {
     display: block;
-    font-size: 0.73438rem;
+    font-size: 0.734375rem;
     text-transform: uppercase;
     letter-spacing: 1px; }
   .entry-footer .comments-link a {
@@ -893,7 +893,7 @@ legend {
 .entry-meta {
   color: #757575;
   line-height: 1.8;
-  font-size: 0.73438rem;
+  font-size: 0.734375rem;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;

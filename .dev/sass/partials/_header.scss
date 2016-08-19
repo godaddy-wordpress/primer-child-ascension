@@ -2,11 +2,7 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 
 .site-header .site-title-wrapper {
 	float: left;
-	margin-top: 8px;
-
-	@media #{$medium-up} {
-		margin-top: 0;
-	}
+	margin: 18px 20px;
 }
 
 .site-title {
@@ -64,7 +60,7 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 
 .site-header {
 	letter-spacing: -.01em;
-	padding: 10px 0;
+	padding: 0;
 	min-height: 75px;
 
 	@media #{$medium-up} {
@@ -80,10 +76,16 @@ $entry-title-bg: rgba(0, 0, 0, 0.6) !default;
 
 .site-header-wrapper {
 	@extend .row;
-
 	@extend .columns;
 
 	float: none;
+
+	@media #{$small-only}{
+		padding-left: 0;
+		margin-left: 0;
+		padding-right: 0;
+		margin-right: 0;
+	}
 }
 
 .featured-content {
