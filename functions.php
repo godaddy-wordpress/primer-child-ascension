@@ -183,7 +183,7 @@ function ascension_colors() {
 			'css'     => array(
 				'body,
 				.gallery-caption,
-				.featured-content .entry-header .entry-header-column' => array(
+				.featured-content .entry-header .entry-header-column,.main-navigation a,.main-navigation.open,.main-navigation .expand:hover,.main-navigation ul ul' => array(
 					'background-color' => '%1$s',
 				),
 			),
@@ -202,6 +202,7 @@ function ascension_colors() {
 				'body,
 				.site-footer,
 				.footer-widget-area .footer-widget .widget,
+				.main-navigation a,
 				h1,
 				h2,
 				h3,
@@ -230,8 +231,8 @@ function ascension_colors() {
 				),
 				'.search-form .search-field,
 				.bypostauthor,
-				.main-navigation ul li.current-menu-item,
-                .main-navigation ul li:hover,' => array(
+				.main-navigation ul li.current-menu-item a,
+                .main-navigation ul li a:hover,' => array(
 					'border-color' => '%1$s',
 				),
 				'button,
@@ -245,7 +246,6 @@ function ascension_colors() {
 				input[type="submit"],
 				.fl-builder-content a.fl-button,
 				.fl-builder-content a.fl-button:visited,
-				.main-navigation ul li a,
 				.search-form .search-field' => array(
 					'color'        => '%1$s',
 					'border-color' => '%1$s',
@@ -278,15 +278,8 @@ function ascension_colors() {
 				.fl-builder-content a.fl-button:focus .fl-builder-content a.fl-button:active,
 				.fl-builder-content a.fl-button:visited:focus .fl-builder-content a.fl-button:visited:active,
 				.social-menu a:hover,
-				section.error-404 .search-submit:hover,
-				.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
+				section.error-404 .search-submit:hover' => array(
 					'background-color' => '%1$s',
-				),
-			),
-			'rgba_css' => array(
-				'.main-navigation ul li.menu-item-has-children .sub-menu li.current-menu-item a,
-				.main-navigation ul li.menu-item-has-children .sub-menu li a:hover' => array(
-					'background-color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
@@ -351,8 +344,6 @@ function ascension_colors() {
 				fieldset,
 				.main-navigation,
 				.main-navigation ul li,
-				.main-navigation ul li.menu-item-has-children > a > span,
-				.main-navigation ul li.menu-item-has-children .sub-menu li,
 				.widget li,
 				section > h2,
 				.comment-list li.pingback,
@@ -385,8 +376,7 @@ function ascension_colors() {
 			'label'   => esc_html( 'Light Color', 'ascension' ),
 			'default' => '#ffffff',
 			'css' => array(
-				'.main-navigation ul li.menu-item-has-children .sub-menu li a,
-				.gallery-caption,
+				'.gallery-caption,
 				.featured-content .entry-header,
 				.featured-content .entry-header .entry-title,
 				.featured-content .entry-header .entry-title a,
