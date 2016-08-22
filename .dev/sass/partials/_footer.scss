@@ -13,6 +13,10 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 	color: $site-footer-text-color;
 	font-size: rem-calc(15);
 
+	.widget {
+		color: $site-footer-text-color;
+	}
+
 	a {
 		font-size: rem-calc(15);
 		font-weight: normal;
@@ -36,7 +40,6 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 
 	.footer-widget {
 		.widget{
-			color: $site-footer-text-color;
 			margin-bottom: 2.25em;
 			margin-bottom: 2.25rem;
 
