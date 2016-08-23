@@ -2168,9 +2168,9 @@ a {
 
 .main-navigation {
   display: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
-  margin-top: 20px; }
+  margin-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
   @media only screen and (min-width: 40.063em) {
     .main-navigation {
       float: left;
@@ -2201,7 +2201,6 @@ a {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     text-indent: 0; }
     .main-navigation .expand:hover {
-      background-color: #194F6E;
       color: white; }
     .main-navigation .expand:before {
       content: "+"; }
@@ -2271,13 +2270,13 @@ a {
         padding-right: 1em;
         padding-left: 1em;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
-    .main-navigation a:hover, .main-navigation a:visited:hover {
-      border-bottom-color: #194F6E; }
+    @media only screen and (min-width: 40.063em) {
+      .main-navigation a:hover {
+        border-bottom-color: #194F6E; } }
   .main-navigation li li a {
     margin-right: 0;
     margin-left: 0; }
     .main-navigation li li a:hover, .main-navigation li li a:visited:hover {
-      background-color: #194F6E;
       color: white; }
   .main-navigation .sub-menu .menu-item-has-children > a::after {
     position: absolute;

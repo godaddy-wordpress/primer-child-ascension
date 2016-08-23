@@ -172,7 +172,7 @@ function ascension_colors( $colors ) {
 
 	unset(
 		$colors['content_background_color'],
-		$colors['menu_background_color']
+		$colors['footer_widget_content_background_color']
 	);
 
 	$overrides = array(
@@ -188,11 +188,13 @@ function ascension_colors( $colors ) {
 		'menu_text_color' => array(
 			'default' => '#194f6e',
 			'css'     => array(
-				'.main-navigation ul li.current-menu-item, .main-navigation ul li:hover' => array(
+				'.main-navigation ul li a:hover,
+				.main-navigation ul li.current-page-item a,
+				.main-navigation ul li.current-menu-item a,
+				.main-navigation ul li.current_page_ancestor a,
+				.main-navigation ul li.current_page_parent a,
+				.main-navigation ul li.current-menu-ancestor a' => array(
 					'border-color' => '%1$s',
-				),
-				'.main-navigation ul ul, .main-navigation .sub-menu' => array(
-					'background-color' => '%1$s',
 				),
 			),
 		),
@@ -210,17 +212,20 @@ function ascension_colors( $colors ) {
 		 */
 		'background_color' => array(
 			'default' => '#ffffff',
-			'css'     => array(
-				'.main-navigation ul li.menu-item-has-children .sub-menu li a' => array(
-					'color' => '%1$s',
-				),
-			),
 		),
 		'hero_background_color' => array(
 			'default' => '#194f6e',
 		),
+		'menu_background_color' => array(
+			'default' => '#ffffff',
+			'css'     => array(
+				'.site-header' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
 		'footer_widget_background_color' => array(
-			'default' => '#f9f9fa',
+			'default' => '#f5f5f5',
 		),
 		'footer_background_color' => array(
 			'default' => '#ffffff',
@@ -247,69 +252,104 @@ function ascension_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'header_textcolor'   => '#b84247',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#b84247',
+				'header_textcolor'               => '#b84247',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#b84247',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'header_textcolor'   => '#a0917d',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#a0917d',
+				'header_textcolor'               => '#a0917d',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#a0917d',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'header_textcolor'   => '#d2b160',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#d2b160',
+				'header_textcolor'               => '#d2b160',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#d2b160',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'dark' => array(
 			'colors' => array(
 				'hero_background_color' => '#333333',
+				'menu_background_color' => '#222222',
 			),
 		),
 		'iguana' => array(
 			'colors' => array(
-				'header_textcolor'   => '#58ac70',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#58ac70',
+				'header_textcolor'               => '#58ac70',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#58ac70',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'muted' => array(
 			'colors' => array(
-				'header_textcolor'   => '#5a6175',
-				'tagline_text_color' => '#5a6175',
+				'background_color'               => '#ffffff',
+				'hero_background_color'          => '#4f5875',
+				'footer_widget_background_color' => '#d5d6e0',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'plum' => array(
 			'colors' => array(
-				'header_textcolor'   => '#54496d',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#54496d',
+				'header_textcolor'               => '#54496d',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#54496d',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'rose' => array(
 			'colors' => array(
-				'header_textcolor'   => '#dc8582',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#dc8582',
+				'header_textcolor'               => '#dc8582',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#dc8582',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'header_textcolor'   => '#e38f47',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#e38f47',
+				'header_textcolor'               => '#e38f47',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#e38f47',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'header_textcolor'   => '#41cfaf',
-				'tagline_text_color' => '#686868',
-				'menu_text_color'    => '#41cfaf',
+				'header_textcolor'               => '#41cfaf',
+				'tagline_text_color'             => '#686868',
+				'menu_text_color'                => '#41cfaf',
+				'background_color'               => '#ffffff',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+				'footer_background_color'        => '#ffffff',
 			),
 		),
 	);
