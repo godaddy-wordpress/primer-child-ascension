@@ -274,6 +274,14 @@ function ascension_color_schemes( $color_schemes ) {
 				'footer_widget_background_color' => '#f5f5f5',
 			),
 		),
+		'cool' => array(
+			'colors' => array(
+				'header_textcolor'               => '#78c3fb',
+				'menu_text_color'                => '#78c3fb',
+				'menu_background_color'          => '#ffffff',
+				'footer_widget_background_color' => '#f5f5f5',
+			),
+		),
 		'iguana' => array(
 			'colors' => array(
 				'header_textcolor'               => '#62bf7c',
