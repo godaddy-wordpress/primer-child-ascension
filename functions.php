@@ -60,25 +60,6 @@ function ascension_custom_logo_args( $args ) {
 add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
 
 /**
- * Set the default hero image description.
- *
- * @filter primer_default_hero_images
- * @since  1.0.0
- *
- * @param  array $defaults
- *
- * @return array
- */
-function ascension_default_hero_images( $defaults ) {
-
-	$defaults['default']['description'] = esc_html__( 'Professional woman reading a tablet', 'ascension' );
-
-	return $defaults;
-
-}
-add_filter( 'primer_default_hero_images', 'ascension_default_hero_images' );
-
-/**
  * Set sidebars.
  *
  * @filter primer_sidebars

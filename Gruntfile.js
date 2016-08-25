@@ -44,71 +44,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		po2mo: {
-			files: {
-				src: 'languages/*.po',
-				expand: true
-			}
-		},
-
-		pot: {
-			files:{
-				expand: true,
-				src: [ '**/*.php', '!node_modules/**' ]
-			},
-			options:{
-				text_domain: pkg.name,
-				msgmerge: true,
-				dest: 'languages/',
-				encoding: 'UTF-8',
-				keywords: [
-					'__',
-					'_e',
-					'__ngettext:1,2',
-					'_n:1,2',
-					'__ngettext_noop:1,2',
-					'_n_noop:1,2',
-					'_c',
-					'_nc:4c,1,2',
-					'_x:1,2c',
-					'_nx:4c,1,2',
-					'_nx_noop:4c,1,2',
-					'_ex:1,2c',
-					'esc_attr__',
-					'esc_attr_e',
-					'esc_attr_x:1,2c',
-					'esc_html__',
-					'esc_html_e',
-					'esc_html_x:1,2c'
-				]
-			}
-		},
-
-		replace: {
-			pot: {
-				src: 'languages/*.po*',
-				overwrite: true,
-				replacements: [
-					{
-						from: 'SOME DESCRIPTIVE TITLE.',
-						to: pkg.title
-					},
-					{
-						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
-						to: new Date().getFullYear()
-					},
-					{
-						from: 'FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.',
-						to: 'GoDaddy Operating Company, LLC.'
-					},
-					{
-						from: 'charset=CHARSET',
-						to: 'charset=UTF-8'
-					}
-				]
-			}
-		},
-
 		sass: {
 			options: {
 				precision: 5,
@@ -118,8 +53,7 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						'style.css': '.dev/sass/style.scss',
-						'editor-style.css': '.dev/sass/editor-style.scss',
-						'ie.css': '.dev/sass/ie.scss'
+						'editor-style.css': '.dev/sass/editor-style.scss'
 					}
 				]
 			}
@@ -137,6 +71,5 @@ module.exports = function( grunt ) {
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
-	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };
