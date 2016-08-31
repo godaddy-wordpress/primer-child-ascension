@@ -15,7 +15,7 @@ function ascension_move_elements() {
 	add_action( 'primer_after_header', 'primer_add_hero' );
 	add_action( 'primer_header',       'primer_add_primary_navigation' );
 
-	if ( ! is_front_page() ) {
+	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
 		add_action( 'primer_hero', 'primer_add_page_title' );
 

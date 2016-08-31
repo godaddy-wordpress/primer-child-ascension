@@ -23,6 +23,10 @@
 
 		@extend .columns;
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		@media #{$medium-up} {
 			padding-right: 50px;
 			padding-left: 50px;
