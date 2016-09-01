@@ -302,13 +302,11 @@ function ascension_color_schemes( $color_schemes ) {
 				'footer_widget_heading_text_color' => '#ffffff',
 				'footer_widget_text_color'         => '#ffffff',
 				// Backgrounds
-				'background_color'                       => '#222222',
-				'content_background_color'               => '#333333',
-				'hero_background_color'                  => '#282828',
-				'menu_background_color'                  => '#333333',
-				'footer_widget_content_background_color' => '#333333',
-				'footer_widget_background_color'         => '#282828',
-				'footer_background_color'                => '#222222',
+				'background_color'               => '#222222',
+				'hero_background_color'          => '#282828',
+				'menu_background_color'          => '#333333',
+				'footer_widget_background_color' => '#282828',
+				'footer_background_color'        => '#222222',
 			),
 		),
 		'iguana' => array(
