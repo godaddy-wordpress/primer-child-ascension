@@ -2258,8 +2258,7 @@ a {
     padding: .4em 0;
     margin-left: 1em;
     margin-right: 1em;
-    color: #194F6E;
-    border-bottom: transparent 2px solid; }
+    color: #194F6E; }
     @media only screen and (max-width: 40em) {
       .main-navigation a {
         padding-top: 1.2em;
@@ -2269,9 +2268,6 @@ a {
         padding-left: 1em;
         padding-right: 1em;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1); } }
-    @media only screen and (min-width: 40.063em) {
-      .main-navigation a:hover {
-        border-bottom-color: #194F6E; } }
   .main-navigation li li a {
     margin-left: 0;
     margin-right: 0; }

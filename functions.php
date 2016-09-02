@@ -171,16 +171,6 @@ function ascension_colors( $colors ) {
 		),
 		'menu_text_color' => array(
 			'default' => '#194f6e',
-			'css'     => array(
-				'.main-navigation ul li a:hover,
-				.main-navigation ul li.current-page-item a,
-				.main-navigation ul li.current-menu-item a,
-				.main-navigation ul li.current_page_ancestor a,
-				.main-navigation ul li.current_page_parent a,
-				.main-navigation ul li.current-menu-ancestor a' => array(
-					'border-color' => '%1$s',
-				),
-			),
 		),
 		'heading_text_color' => array(
 			'default' => '#353535',

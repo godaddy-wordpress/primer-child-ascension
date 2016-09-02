@@ -143,7 +143,6 @@
 		margin-left: 1em;
 		margin-right: 1em;
 		color: $secondary-color;
-		border-bottom: transparent 2px solid;
 
 		@media #{$small-only} {
 			padding-top: 1.2em;
@@ -153,13 +152,6 @@
 			padding-left: 1em;
 			padding-right: 1em;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		}
-
-		@media #{$medium-up} {
-
-			&:hover {
-				border-bottom-color: $secondary-color;
-			}
 		}
 	}
 
@@ -171,15 +163,6 @@
 		&:visited:hover {
 			color: white;
 		}
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current_page_parent > a,
-	.current-menu-ancestor > a {
-		//background-color: $color__background-menu-hover;
-
 	}
 
 	.sub-menu .menu-item-has-children > a::after {
