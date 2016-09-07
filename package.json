@@ -3,19 +3,16 @@
   "title": "Ascension",
   "description": "Ascension is a Primer child theme with a business-oriented design.",
   "version": "0.9.0",
-  "license": "GPL-2.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/godaddy/wp-ascension-theme.git"
-  },
   "author": "GoDaddy",
+  "license": "GPL-2.0",
+  "repository": "godaddy/wp-ascension-theme",
+  "homepage": "https://github.com/godaddy/wp-ascension-theme",
   "bugs": {
     "url": "https://github.com/godaddy/wp-ascension-theme/issues"
   },
-  "homepage": "https://github.com/godaddy/wp-ascension-theme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.4",
