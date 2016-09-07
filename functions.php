@@ -1,6 +1,15 @@
 <?php
 
 /**
+ * Child theme version.
+ *
+ * @since 1.0.0
+ *
+ * @var string
+ */
+define( 'PRIMER_CHILD_VERSION', '0.9.0' );
+
+/**
  * Move some elements around.
  *
  * @action template_redirect
