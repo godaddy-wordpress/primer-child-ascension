@@ -2694,6 +2694,16 @@ body.no-max-width .main-navigation {
   .entry-meta .posted-author,
   .entry-meta .comments-number {
     margin-left: 20px; }
+    .entry-meta .posted-date:last-child,
+    .entry-meta .posted-author:last-child,
+    .entry-meta .comments-number:last-child {
+      margin-left: 0; }
+    @media only screen and (max-width: 40em) {
+      .entry-meta .posted-date,
+      .entry-meta .posted-author,
+      .entry-meta .comments-number {
+        display: block;
+        margin-left: 0; } }
   .entry-meta i {
     vertical-align: middle;
     line-height: .8; }

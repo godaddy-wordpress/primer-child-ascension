@@ -903,6 +903,16 @@ legend {
   .entry-meta .posted-author,
   .entry-meta .comments-number {
     margin-right: 20px; }
+    .entry-meta .posted-date:last-child,
+    .entry-meta .posted-author:last-child,
+    .entry-meta .comments-number:last-child {
+      margin-right: 0; }
+    @media only screen and (max-width: 40em) {
+      .entry-meta .posted-date,
+      .entry-meta .posted-author,
+      .entry-meta .comments-number {
+        display: block;
+        margin-right: 0; } }
   .entry-meta i {
     vertical-align: middle;
     line-height: .8; }
