@@ -3161,6 +3161,10 @@ body.page-template-page-builder-no-header #primary {
 body.layout-one-column-narrow #content {
   max-width: 50em; }
 
+@media only screen and (min-width: 40.063em) {
+  body.layout-one-column-narrow #content {
+    max-width: 50em; } }
+
 .site-header .site-title-wrapper {
   float: left;
   margin: 18px 20px; }
