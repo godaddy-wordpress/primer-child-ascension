@@ -7,16 +7,3 @@ a {
 		color: $color-link-hover;
 	}
 }
-
-.wp-pointer-buttons a.close,
-.wp-pointer-buttons a.close:visited {
-	color: #0073aa;
-	line-height: 1.5;
-	font-weight: 400;
-
-	&:hover,
-	&:active,
-	&:focus {
-		color: #00a0d2;
-	}
-}
