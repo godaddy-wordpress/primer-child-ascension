@@ -2160,6 +2160,17 @@ a {
   a:hover, a:focus, a:active {
     color: #0b85bb; }
 
+.wp-pointer-buttons a.close,
+.wp-pointer-buttons a.close:visited {
+  color: #0073aa;
+  line-height: 1.5;
+  font-weight: 400; }
+  .wp-pointer-buttons a.close:hover, .wp-pointer-buttons a.close:active, .wp-pointer-buttons a.close:focus,
+  .wp-pointer-buttons a.close:visited:hover,
+  .wp-pointer-buttons a.close:visited:active,
+  .wp-pointer-buttons a.close:visited:focus {
+    color: #00a0d2; }
+
 @media only screen and (max-width: 40em) {
   .main-navigation-container {
     clear: both;
