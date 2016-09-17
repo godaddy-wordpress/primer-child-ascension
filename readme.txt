@@ -48,7 +48,7 @@ Ascension is a Primer child theme with a business-oriented design.
 
 **Contributing:**
 
-You can fork and contribute to Activation by visiting [our public repo on GitHub](https://github.com/godaddy/wp-Activation-theme).
+You can fork and contribute to Activation by visiting [our public repo on GitHub](https://github.com/godaddy/wp-ascension-theme).
 
 == Installation ==
 
