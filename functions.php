@@ -259,34 +259,38 @@ function ascension_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['blush']['base'],
-				'menu_text_color'  => $color_schemes['blush']['base'],
-				'link_color'       => $color_schemes['blush']['base'],
-				'button_color'     => $color_schemes['blush']['base'],
+				'header_textcolor'      => $color_schemes['blush']['base'],
+				'menu_text_color'       => $color_schemes['blush']['base'],
+				'link_color'            => $color_schemes['blush']['base'],
+				'button_color'          => $color_schemes['blush']['base'],
+				'hero_background_color' => $color_schemes['blush']['base'],
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['bronze']['base'],
-				'menu_text_color'  => $color_schemes['bronze']['base'],
-				'link_color'       => $color_schemes['bronze']['base'],
-				'button_color'     => $color_schemes['bronze']['base'],
+				'header_textcolor'      => $color_schemes['bronze']['base'],
+				'menu_text_color'       => $color_schemes['bronze']['base'],
+				'link_color'            => $color_schemes['bronze']['base'],
+				'button_color'          => $color_schemes['bronze']['base'],
+				'hero_background_color' => $color_schemes['bronze']['base'],
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['canary']['base'],
-				'menu_text_color'  => $color_schemes['canary']['base'],
-				'link_color'       => $color_schemes['canary']['base'],
-				'button_color'     => $color_schemes['canary']['base'],
+				'header_textcolor'      => $color_schemes['canary']['base'],
+				'menu_text_color'       => $color_schemes['canary']['base'],
+				'link_color'            => $color_schemes['canary']['base'],
+				'button_color'          => $color_schemes['canary']['base'],
+				'hero_background_color' => $color_schemes['canary']['base'],
 			),
 		),
 		'cool' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['cool']['base'],
-				'menu_text_color'  => $color_schemes['cool']['base'],
-				'link_color'       => $color_schemes['cool']['base'],
-				'button_color'     => $color_schemes['cool']['base'],
+				'header_textcolor'      => $color_schemes['cool']['base'],
+				'menu_text_color'       => $color_schemes['cool']['base'],
+				'link_color'            => $color_schemes['cool']['base'],
+				'button_color'          => $color_schemes['cool']['base'],
+				'hero_background_color' => $color_schemes['cool']['base'],
 			),
 		),
 		'dark' => array(
@@ -310,10 +314,11 @@ function ascension_color_schemes( $color_schemes ) {
 		),
 		'iguana' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['iguana']['base'],
-				'menu_text_color'  => $color_schemes['iguana']['base'],
-				'link_color'       => $color_schemes['iguana']['base'],
-				'button_color'     => $color_schemes['iguana']['base'],
+				'header_textcolor'      => $color_schemes['iguana']['base'],
+				'menu_text_color'       => $color_schemes['iguana']['base'],
+				'link_color'            => $color_schemes['iguana']['base'],
+				'button_color'          => $color_schemes['iguana']['base'],
+				'hero_background_color' => $color_schemes['iguana']['base'],
 			),
 		),
 		'muted' => array(
@@ -340,34 +345,38 @@ function ascension_color_schemes( $color_schemes ) {
 		),
 		'plum' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['plum']['base'],
-				'menu_text_color'  => $color_schemes['plum']['base'],
-				'link_color'       => $color_schemes['plum']['base'],
-				'button_color'     => $color_schemes['plum']['base'],
+				'header_textcolor'      => $color_schemes['plum']['base'],
+				'menu_text_color'       => $color_schemes['plum']['base'],
+				'link_color'            => $color_schemes['plum']['base'],
+				'button_color'          => $color_schemes['plum']['base'],
+				'hero_background_color' => $color_schemes['plum']['base'],
 			),
 		),
 		'rose' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['rose']['base'],
-				'menu_text_color'  => $color_schemes['rose']['base'],
-				'link_color'       => $color_schemes['rose']['base'],
-				'button_color'     => $color_schemes['rose']['base'],
+				'header_textcolor'      => $color_schemes['rose']['base'],
+				'menu_text_color'       => $color_schemes['rose']['base'],
+				'link_color'            => $color_schemes['rose']['base'],
+				'button_color'          => $color_schemes['rose']['base'],
+				'hero_background_color' => $color_schemes['rose']['base'],
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['tangerine']['base'],
-				'menu_text_color'  => $color_schemes['tangerine']['base'],
-				'link_color'       => $color_schemes['tangerine']['base'],
-				'button_color'     => $color_schemes['tangerine']['base'],
+				'header_textcolor'      => $color_schemes['tangerine']['base'],
+				'menu_text_color'       => $color_schemes['tangerine']['base'],
+				'link_color'            => $color_schemes['tangerine']['base'],
+				'button_color'          => $color_schemes['tangerine']['base'],
+				'hero_background_color' => $color_schemes['tangerine']['base'],
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'header_textcolor' => $color_schemes['turquoise']['base'],
-				'menu_text_color'  => $color_schemes['turquoise']['base'],
-				'link_color'       => $color_schemes['turquoise']['base'],
-				'button_color'     => $color_schemes['turquoise']['base'],
+				'header_textcolor'      => $color_schemes['turquoise']['base'],
+				'menu_text_color'       => $color_schemes['turquoise']['base'],
+				'link_color'            => $color_schemes['turquoise']['base'],
+				'button_color'          => $color_schemes['turquoise']['base'],
+				'hero_background_color' => $color_schemes['turquoise']['base'],
 			),
 		),
 	);
