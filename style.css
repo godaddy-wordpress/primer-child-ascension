@@ -67,7 +67,8 @@ body {
   font-style: normal;
   line-height: 1.8;
   cursor: default;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 a:hover {
   cursor: pointer; }
@@ -165,7 +166,8 @@ body {
   font-style: normal;
   line-height: 1.8;
   cursor: default;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word; }
 
 a:hover {
   cursor: pointer; }
@@ -2336,8 +2338,7 @@ body.no-max-width .main-navigation {
  */
 .navigation .nav-links {
   margin-bottom: 1em;
-  margin-bottom: 1rem;
-  padding: 0; }
+  margin-bottom: 1rem; }
 
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
