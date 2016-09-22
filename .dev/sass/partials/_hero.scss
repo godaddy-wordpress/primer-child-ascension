@@ -107,8 +107,6 @@
 	}
 
 	a.button {
-		background: $hero-button-color;
-		color: #FFFFFF;
 		border: none;
 		font-size: 0.875rem;
 		letter-spacing: 0.1rem;
@@ -116,10 +114,6 @@
 
 		@media #{$medium-up} {
 			padding: 12px 55px;
-		}
-
-		&:hover {
-			background: lighten($hero-button-color, 5%);
 		}
 	}
 }

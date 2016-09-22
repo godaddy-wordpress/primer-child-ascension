@@ -3390,8 +3390,6 @@ body.layout-one-column-narrow #content {
     color: #39BAF3;
     font-size: 0.8125rem; }
   .hero a.button, .hero .social-menu a, .social-menu .hero a {
-    background: #F99A00;
-    color: #FFFFFF;
     border: none;
     font-size: 0.875rem;
     letter-spacing: 0.1rem;
@@ -3399,8 +3397,6 @@ body.layout-one-column-narrow #content {
     @media only screen and (min-width: 40.063em) {
       .hero a.button, .hero .social-menu a, .social-menu .hero a {
         padding: 12px 55px; } }
-    .hero a.button:hover, .hero .social-menu a:hover, .social-menu .hero a:hover {
-      background: #ffa514; }
 
 .site-footer {
   color: #222;
