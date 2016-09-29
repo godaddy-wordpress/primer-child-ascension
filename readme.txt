@@ -7,11 +7,11 @@ Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Ascension is a Primer child theme with a business-oriented design.
+Ascension is a GoDaddy Primer child theme with a business-oriented design.
 
 == Description ==
 
-Ascension is a Primer child theme with a business-oriented design.
+Ascension is a GoDaddy Primer child theme with a business-oriented design.
 
 **Languages Supported:**
 
@@ -48,7 +48,7 @@ Ascension is a Primer child theme with a business-oriented design.
 
 **Contributing:**
 
-You can fork and contribute to Activation by visiting [our public repo on GitHub](https://github.com/godaddy/wp-Activation-theme).
+You can fork and contribute to Activation by visiting [our public repo on GitHub](https://github.com/godaddy/wp-ascension-theme).
 
 == Installation ==
 
