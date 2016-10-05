@@ -712,7 +712,6 @@ input[type="search"],
 input[type="number"],
 textarea {
   color: #666;
-  background-color: #f1f1f1;
   border: none;
   -webkit-transform: 200ms background linear;
   -ms-transform: 200ms background linear;
