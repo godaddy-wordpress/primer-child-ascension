@@ -98,14 +98,18 @@ textarea {
 	}
 }
 
-.footer-widget input[type="text"],
-.footer-widget input[type="email"],
-.footer-widget input[type="url"],
-.footer-widget input[type="password"],
-.footer-widget input[type="search"],
-.footer-widget input[type="number"],
-.footer-widget textarea {
-	background-color: #ffffff;
+.footer-widget {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	textarea {
+		background-color: #ffffff;
+	}
+
 }
 
 label{
