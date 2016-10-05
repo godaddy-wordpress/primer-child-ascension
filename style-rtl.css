@@ -2085,6 +2085,7 @@ input[type="search"],
 input[type="number"],
 textarea {
   color: #666;
+  background-color: #f1f1f1;
   border: none;
   -webkit-transform: 200ms background linear;
   -ms-transform: 200ms background linear;
@@ -2105,6 +2106,15 @@ textarea {
     color: #111;
     outline: none;
     background-color: #eeeeee; }
+
+.footer-widget input[type="text"],
+.footer-widget input[type="email"],
+.footer-widget input[type="url"],
+.footer-widget input[type="password"],
+.footer-widget input[type="search"],
+.footer-widget input[type="number"],
+.footer-widget textarea {
+  background-color: #ffffff; }
 
 label {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

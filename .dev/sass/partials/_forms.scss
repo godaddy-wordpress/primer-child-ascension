@@ -82,6 +82,7 @@ input[type="search"],
 input[type="number"],
 textarea {
 	color: $color-text-input;
+	background-color: $color-text-input-background;
 	border: none;
 	transform: 200ms background linear;
 	border-radius: 3px;
@@ -95,6 +96,16 @@ textarea {
 		outline: none;
 		background-color: darken($color-text-input-background,1%);
 	}
+}
+
+.footer-widget input[type="text"],
+.footer-widget input[type="email"],
+.footer-widget input[type="url"],
+.footer-widget input[type="password"],
+.footer-widget input[type="search"],
+.footer-widget input[type="number"],
+.footer-widget textarea {
+	background-color: #ffffff;
 }
 
 label{
