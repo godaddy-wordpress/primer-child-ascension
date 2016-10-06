@@ -255,7 +255,6 @@ pre {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1.25rem; }
@@ -269,7 +268,6 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
@@ -454,7 +452,6 @@ blockquote.aligncenter {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -532,7 +529,6 @@ input[type="submit"],
   border: 1px solid #194F6E;
   letter-spacing: 0.08313rem;
   text-transform: uppercase;
-  -webkit-border-radius: 0.3125rem;
   border-radius: 0.3125rem;
   padding: 8px 32px; }
   button:hover,
@@ -714,10 +710,7 @@ textarea {
   color: #666;
   background-color: #f1f1f1;
   border: none;
-  -webkit-transform: 200ms background linear;
-  -ms-transform: 200ms background linear;
   transform: 200ms background linear;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   resize: none;
   padding: .75em;
@@ -761,10 +754,7 @@ legend {
 .search-form .search-field {
   width: 70%;
   background: #fff;
-  -webkit-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #194F6E;
   border-right: 0;
@@ -778,7 +768,6 @@ legend {
 .search-form .search-submit {
   float: right;
   width: 30%;
-  -webkit-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
   padding: 0;
   line-height: 31px;
@@ -959,7 +948,6 @@ legend {
 .more-link {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #39BAF3;
   padding: .5em 1em;
@@ -1097,7 +1085,6 @@ section.error-404 {
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
-    -webkit-border-radius: 4px;
     border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
@@ -1109,14 +1096,12 @@ section.error-404 {
   float: left;
   margin-right: 15px;
   position: relative;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   height: 50px;
   width: 50px; }
 
 .bypostauthor {
   border: 3px solid rgba(57, 186, 243, 0.2);
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   margin: 30px; }
 

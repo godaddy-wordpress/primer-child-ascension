@@ -3189,6 +3189,9 @@ body.layout-one-column-narrow #content {
 .site-header .site-title-wrapper {
   float: right;
   margin: 18px 20px; }
+  @media only screen and (max-width: 40em) {
+    .site-header .site-title-wrapper {
+      max-width: 77%; } }
 
 .site-title {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
