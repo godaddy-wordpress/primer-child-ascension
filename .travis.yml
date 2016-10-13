@@ -1,0 +1,29 @@
+sudo: false
+
+language:
+  - php
+  - node_js
+
+before_script:
+  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+
+script:
+  - echo "Deploy only"
+
+before_deploy:
+  - export RELEASE_FOLDER=ascension
+  - php /tmp/wp-cli.phar package install runcommand/dist-archive
+  - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
+  - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
+  - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
+
+deploy:
+  provider: releases
+  api_key:
+    secure: RCpOMkX8FCBms+i/Bfbg5ELktq7vSErCgAexZMP7X7YSvGnUuBdNnlT8wrjZDZJ9roDHFuqwjoAJWBL6A2j1QomGhNBPsFvfrsvxKrLsArSsx2GctkzSXqre9+vX7garY3v93HCXOYJkPEOY9fpTvkDPwFj3qEaSxnDOVSzepSoVhmlndJ1Vm2Hzr8G1fJdC+cBtgxpikUXRXJ6AW/Spr2V3dvUaWcayar2hwiKXwfOWCm8npqPTgvlCQuUR3ggRL68ZC/+f4mJteIJXYKyarRb77fosnYptpBFy8mYeyi4WchX4Zyhh1Bg4nRe3eIye1oZKcCZPcjsccBMPG505Ox3e43E67TvMIXVStCsS5+EziuUmaAtUoXY1zAHooZd+5mEouGHKId3o0yjHuZaFYH1ubpcnvMNluiOyWCsr+ZzQOgpyV6NJV5T/rwtncjl52IpgjdwLgeq1HQkcv+eKMJmUK9nehUFtCVAyH5AmqWhIYmYuaH1SIFMxgCWshm7KClr7drKQ0EgKkTklzGGT/lFc36TYP3c103FZd9JF4Px6gcEXyA5yXC4Kpb7RFhWg4JMijia1viiCrX/qUXBpTI0NtkqGqHcVUjoqkYVXdCPa6Mu14L+N6A6RnXrRhzDaplgiFkMyj4dkATKuyiEF1X58jEkBw5ZZG+Q6ACPbo10=
+  file: ascension.zip
+  on:
+    tags: true
+    repo: godaddy/wp-ascension-theme
+  skip_cleanup: true
+  overwrite: true
