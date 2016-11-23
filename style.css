@@ -4112,7 +4112,8 @@ ul.site-header-cart.menu ul.product_list_widget li {
   box-shadow: none; }
 
 ul.site-header-cart.menu ul.product_list_widget li.mini_cart_item a {
-  line-height: 20px; }
+  line-height: 20px;
+  padding-bottom: .25em; }
 
 ul.site-header-cart.menu ul.product_list_widget li.mini_cart_item a.remove {
   line-height: 2px;
