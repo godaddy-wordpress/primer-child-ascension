@@ -4158,6 +4158,9 @@ ul.site-header-cart.menu .widget_shopping_cart .buttons a {
 .site-header-cart-container .buttons a {
   margin-bottom: 5px; }
 
+body.woocommerce .quantity input.input-text.qty {
+  padding: .45em; }
+
 @media only screen and (max-width: 61.063em) {
   .menu-item-object-cart {
     display: none; } }
