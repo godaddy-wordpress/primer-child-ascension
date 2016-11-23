@@ -4111,9 +4111,6 @@ ul.site-header-cart.menu ul.product_list_widget li {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-ul.site-header-cart.menu ul.product_list_widget li.mini_cart_item {
-  margin: 8px 0; }
-
 ul.site-header-cart.menu ul.product_list_widget li.mini_cart_item a {
   line-height: 20px; }
 
