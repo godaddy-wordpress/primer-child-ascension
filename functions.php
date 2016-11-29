@@ -18,11 +18,9 @@ define( 'PRIMER_CHILD_VERSION', '1.0.1' );
 function ascension_move_elements() {
 
 	remove_action( 'primer_header',       'primer_add_hero',               7 );
-	remove_action( 'primer_after_header', 'primer_generate_cart_submenu',  11 );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
 	remove_action( 'primer_after_header', 'primer_add_page_title',         12 );
 
-	add_action( 'primer_after_header', 'primer_generate_cart_submenu',  5 );
 	add_action( 'primer_after_header', 'primer_add_hero',               7 );
 	add_action( 'primer_header',       'primer_add_primary_navigation', 11 );
 
@@ -212,6 +210,11 @@ function ascension_colors( $colors ) {
 		),
 		'button_color' => array(
 			'default'  => '#00bfff',
+			'css'     => array(
+				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+					'background-color' => '%1$s',
+				)
+			),
 		),
 		'button_text_color' => array(
 			'default'  => '#ffffff',

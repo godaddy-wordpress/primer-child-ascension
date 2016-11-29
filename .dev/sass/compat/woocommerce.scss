@@ -1,125 +1,114 @@
-/**
- * Custom Shopping Cart Menu Item
- */
-.main-navigation .menu-item-object-cart {
-    float: right;
-    min-width: 275px;
-    text-align: right;
-    border-bottom: none;
-}
-
-.main-navigation .menu-item-object-cart a {
-    padding-left: 0;
-    float: right;
-    cursor: pointer;
-}
-
-.main-navigation .menu-item-object-cart a i {
-    font-size: 20px;
-}
-
 .main-navigation .menu-item-object-cart:hover a {
-    background: transparent;
-}
-
-.main-navigation .menu-item-object-cart .cart-preview-total {
-    float: left;
-    margin-right: 1rem;
-    font-weight: bold;
-}
-
-.main-navigation .menu-item-object-cart .cart-preview-count {
-    float: left;
-    font-weight: 200;
+	background: transparent;
 }
 
 ul.site-header-cart.menu {
-    width: 100%;
-    max-width: 275px;
-    padding: 0;
-    list-style: none;
-    float: right;
-    display: none;
-    position: relative;
-    z-index: 10001;
-		background-color: $body-bg;
+	width: 100%;
+	max-width: 275px;
+	padding: 0;
+	list-style: none;
+	float: right;
+	display: none;
+	position: relative;
+	z-index: 10001;
+	background-color: $body-bg;
 }
 
-ul.site-header-cart.menu li {
-    border: none, 1px solid grey, 1px solid grey, 1px solid grey;
-    -webkit-box-shadow: 0 0 10px 0 grey;
-    box-shadow: 0 0 10px 0 grey;
+.site-footer-inner .woocommerce-cart-menu-item,
+.site-info-wrapper .woocommerce-cart-menu-item {
+	display: none;
 }
 
-ul.site-header-cart.menu ul.product_list_widget li {
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+.widget_shopping_cart {
+
+	float: left;
+	padding: 0 1rem;
+	margin-bottom: .5em;
+
+	.quantity {
+		font-style: italic;
+	}
+
+	ul.product_list_widget {
+		position: relative !important;
+		left: 0;
+	}
+
+	p.buttons,
+	.total,
+	.product_list_widget {
+		float: left;
+		width: 100%;
+	}
+
+	p.buttons {
+		margin-bottom: 0;
+	}
+
 }
 
-ul.site-header-cart.menu ul.product_list_widget li.mini_cart_item a {
-    line-height: 20px;
-    padding-bottom: .25em;
+.woocommerce.widget_shopping_cart .cart_list li.mini_cart_item {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	padding-bottom: 5px;
+	border-bottom: none;
+
+	a:nth-child(2) {
+		padding: .5em 0em;
+		margin: 0;
+		width: 100%;
+	}
 }
 
-ul.site-header-cart.menu ul.product_list_widget li.mini_cart_item a.remove {
-    line-height: 2px;
-		margin-top: 8px;
+.woocommerce-cart-menu-item {
+
+	.product_list_widget {
+		border: none;
+		box-shadow: none;
+	}
+
+	.widget_shopping_cart {
+
+		.total {
+			margin: 10px 0;
+			padding-top: 10px;
+		}
+
+		p.buttons a {
+			text-align: center;
+			width: 100%;
+
+			&:first-child {
+				margin-bottom: 5px;
+			}
+
+		}
+
+	}
+
+	.cart-preview-count {
+		margin-left: 8px;
+	}
+
+	.cart_list li a.remove {
+		position: relative;
+		float: left;
+		padding: 0;
+		margin-top: 10px;
+		text-indent: 0;
+
+		&:hover {
+			background: red;
+		}
+	}
+
 }
 
-ul.site-header-cart.menu .widget_shopping_cart {
-    margin-bottom: 0;
-    padding: 10px 0 2px 0;
-}
+@media #{$medium-up} {
 
-ul.site-header-cart.menu .widget_shopping_cart .product_list_widget {
-    padding: 0 .5em;
-    max-height: 220px;
-    overflow-y: auto;
-}
+	li#woocommerce-cart-menu-item .sub-menu {
+		margin-left: -6em;
+	}
 
-ul.site-header-cart.menu .widget_shopping_cart .product_list_widget img.attachment-shop_thumbnail {
-    width: 55px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
-
-ul.site-header-cart.menu .widget_shopping_cart .total {
-    padding: 10px;
-    margin: .5em 0;
-}
-
-ul.site-header-cart.menu .widget_shopping_cart .buttons {
-    padding: 0 .5em;
-    margin: 0;
-}
-
-ul.site-header-cart.menu .widget_shopping_cart .buttons a {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-.site-header-cart-container {
-    width: 100%;
-    display: block;
-    max-width: 1100px;
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    left: 0;
-}
-
-.site-header-cart-container .buttons a {
-    margin-bottom: 5px;
-}
-
-body.woocommerce .quantity input.input-text.qty {
-	padding: .45em;
-}
-
-@media only screen and (max-width: 61.063em) {
-    .menu-item-object-cart {
-        display: none;
-    }
 }
