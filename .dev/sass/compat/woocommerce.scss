@@ -32,6 +32,8 @@ ul.site-header-cart.menu {
 	ul.product_list_widget {
 		position: relative !important;
 		left: 0;
+		max-height: 250px;
+		overflow-y: auto;
 	}
 
 	p.buttons,

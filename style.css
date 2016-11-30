@@ -4087,7 +4087,9 @@ ul.site-header-cart.menu {
     font-style: italic; }
   .widget_shopping_cart ul.product_list_widget {
     position: relative !important;
-    left: 0; }
+    left: 0;
+    max-height: 250px;
+    overflow-y: auto; }
   .widget_shopping_cart p.buttons,
   .widget_shopping_cart .total,
   .widget_shopping_cart .product_list_widget {
