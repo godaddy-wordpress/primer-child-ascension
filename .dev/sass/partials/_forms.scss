@@ -107,7 +107,7 @@ textarea {
 	input[type="search"],
 	input[type="number"],
 	textarea {
-		background-color: #ffffff;
+		background-color: darken($color-text-input-background,2%);
 	}
 
 }
