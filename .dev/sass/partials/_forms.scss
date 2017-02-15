@@ -89,7 +89,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
 	color: $color-text-input;
 	background-color: $color-text-input-background;
 	border: none;
@@ -116,7 +117,7 @@ textarea {
 .select2-container-active .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices {
-	border-color: #ccc;
+	border: none;
 }
 
 label {

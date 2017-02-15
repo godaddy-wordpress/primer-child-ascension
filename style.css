@@ -2100,7 +2100,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
   color: #666;
   background-color: #f1f1f1;
   border: none;
@@ -2127,7 +2128,8 @@ textarea {
   input[type="datetime"]:focus,
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
-  textarea:focus {
+  textarea:focus,
+  .select2-container .select2-choice:focus {
     color: #111;
     outline: none;
     background-color: #eeeeee; }
@@ -2141,7 +2143,7 @@ textarea {
 .select2-container-active .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choice,
 .select2-dropdown-open.select2-drop-above .select2-choices {
-  border-color: #ccc; }
+  border: none; }
 
 label {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
