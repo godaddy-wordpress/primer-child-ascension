@@ -16,7 +16,7 @@
     "grunt-contrib-watch": "~1.0.0",
     "grunt-cssjanus": "~0.3.2",
     "grunt-dev-update": "~2.0.0",
-    "grunt-sass": "^1.2.0",
+    "grunt-sass": "^2.0.0",
     "grunt-text-replace": "^0.4.0",
     "load-grunt-tasks": "~3.5.0",
     "matchdep": "~1.0.1"

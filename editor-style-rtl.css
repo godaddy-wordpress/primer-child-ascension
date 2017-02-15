@@ -710,6 +710,15 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
 textarea {
   color: #666;
   background-color: #f1f1f1;
@@ -720,8 +729,7 @@ textarea {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   resize: none;
-  padding: .75em;
-  padding: .75rem;
+  padding: 0.75em;
   -webkit-appearance: none; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -729,10 +737,30 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="range"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="time"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="color"]:focus,
   textarea:focus {
     color: #111;
     outline: none;
     background-color: #eeeeee; }
+
+.select2-container .select2-choice {
+  padding: 0.35rem 0.75rem; }
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-container .select2-choice,
+.select2-container-active .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #ccc; }
 
 label {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
