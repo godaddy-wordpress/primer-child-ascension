@@ -2378,6 +2378,38 @@ body.no-max-width .main-navigation {
   margin-bottom: 1em;
   margin-bottom: 1rem; }
 
+.navigation.pagination {
+  clear: both;
+  margin: 0 0 1.5em; }
+  .navigation.pagination .nav-links {
+    text-align: center; }
+    .navigation.pagination .nav-links .page-numbers {
+      display: inline-block;
+      border: none;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      line-height: 1;
+      margin: 0 0.25em;
+      padding: 0.5em 0.75em;
+      white-space: nowrap; }
+      .navigation.pagination .nav-links .page-numbers.dots {
+        background: none; }
+      .navigation.pagination .nav-links .page-numbers.current {
+        color: #fff;
+        background-color: #194F6E; }
+  .navigation.pagination .paging-nav-text {
+    display: none; }
+  @media only screen and (max-width: 40em) {
+    .navigation.pagination .paging-nav-text {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #fff; }
+    .navigation.pagination .nav-links {
+      float: left; }
+      .navigation.pagination .nav-links .page-numbers:not(.prev):not(.next) {
+        display: none; } }
+
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
