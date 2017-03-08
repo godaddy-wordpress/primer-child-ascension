@@ -2396,7 +2396,8 @@ body.no-max-width .main-navigation {
         background: none; }
       .navigation.pagination .nav-links .page-numbers.current {
         color: #fff;
-        background-color: #194F6E; }
+        background-color: #194F6E;
+        font-weight: bold; }
   .navigation.pagination .paging-nav-text {
     display: none; }
   @media only screen and (max-width: 40em) {

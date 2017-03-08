@@ -269,6 +269,7 @@ body.no-max-width .main-navigation {
 			&.current {
 				color: $body-bg;
 				background-color: $color-background-button;
+				font-weight: bold;
 			}
 		}
 	}
