@@ -211,7 +211,8 @@ function ascension_colors( $colors ) {
 		'button_color' => array(
 			'default'  => '#00bfff',
 			'css'     => array(
-				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a,
+				.woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover' => array(
 					'background-color' => '%1$s',
 				),
 			),

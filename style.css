@@ -4208,6 +4208,53 @@ body.layout-one-column-narrow #content {
     .primer-wc-cart-menu:hover a {
       background: transparent; }
 
+.woocommerce-page div.product .woocommerce-product-gallery figure.woocommerce-product-gallery__wrapper {
+  margin: 0; }
+
+.woocommerce-page div.product .summary {
+  margin-top: 0; }
+
+.woocommerce-page div.product .commentlist {
+  padding-left: 0; }
+
+.woocommerce-page.woocommerce div.product form.cart {
+  margin: 1em 0; }
+
+.woocommerce-page ul.products li.product.primer-2-column-product {
+  width: 48.05%; }
+
+.woocommerce-page .primer-woocommerce .cart .qty {
+  padding: 0.45em; }
+
+.woocommerce-page table.variations tr:hover td {
+  background-color: transparent; }
+
+.woocommerce-page #reviews #comments ol.commentlist li img.avatar {
+  width: 60px; }
+
+.woocommerce-page #reviews #comments ol.commentlist li .comment-text {
+  margin: 0 0 0 80px; }
+
+.woocommerce-page form.woocommerce-cart-form table.cart td.actions #coupon_code {
+  width: 50%;
+  margin-right: 0; }
+
+.woocommerce-page table.cart td.product-thumbnail,
+.woocommerce-page table.cart td.product-remove {
+  text-align: center; }
+  @media only screen and (min-width: 61.063em) and (max-width: 90em) {
+    .woocommerce-page table.cart td.product-thumbnail .remove,
+    .woocommerce-page table.cart td.product-remove .remove {
+      margin: 0 auto; } }
+
+.woocommerce-page table.cart img {
+  width: 100%;
+  max-width: 75px;
+  margin-bottom: 0; }
+
+.woocommerce-page table.cart td.actions .input-text {
+  padding: 6px !important; }
+
 body.primer-woocommerce-l10n.woocommerce ul.products li.product .button, body.primer-woocommerce-l10n.woocommerce ul.products li.product .social-menu a, .social-menu body.primer-woocommerce-l10n.woocommerce ul.products li.product a,
 .woocommerce a.added_to_cart {
   max-width: 100%;
@@ -4244,16 +4291,6 @@ body.single-product .quantity .input-text {
 
 body.woocommerce-cart .primer-wc-cart-sub-menu {
   display: none; }
-
-.woocommerce table.cart img,
-.woocommerce-page table.cart img {
-  width: 100%;
-  max-width: 100px;
-  margin-bottom: 0; }
-
-.woocommerce table.cart td.actions .input-text,
-.woocommerce-page table.cart td.actions .input-text {
-  padding: 6px !important; }
 
 .woocommerce ul.products li.product a.add_to_cart_button {
   width: 100%;
