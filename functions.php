@@ -381,3 +381,22 @@ function ascension_color_schemes( $color_schemes ) {
 
 }
 add_filter( 'primer_color_schemes', 'ascension_color_schemes' );
+
+/**
+ * Disable video headers
+ *
+ * @filter primer_custom_header_args
+ * @since  NEXT
+ *
+ * @param  array $header_args
+ *
+ * @return array
+ */
+function ascension_disable_video_headers( $header_args ) {
+
+	$header_args['video'] = false;
+
+	return $header_args;
+
+}
+add_filter( 'primer_custom_header_args', 'ascension_disable_video_headers' );
