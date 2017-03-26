@@ -17,12 +17,14 @@ define( 'PRIMER_CHILD_VERSION', '1.1.0' );
  */
 function ascension_move_elements() {
 
-	remove_action( 'primer_header',       'primer_add_hero',               7 );
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
-	remove_action( 'primer_after_header', 'primer_add_page_title',         12 );
+	remove_action( 'primer_header',                'primer_add_hero',               7 );
+	remove_action( 'primer_after_header',          'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_after_header',          'primer_add_page_title',         12 );
+	remove_action( 'primer_before_header_wrapper', 'primer_video_header',           5 );
 
 	add_action( 'primer_after_header', 'primer_add_hero',               7 );
 	add_action( 'primer_header',       'primer_add_primary_navigation', 11 );
+	add_action( 'primer_pre_hero',     'primer_video_header',           5 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
@@ -381,22 +383,3 @@ function ascension_color_schemes( $color_schemes ) {
 
 }
 add_filter( 'primer_color_schemes', 'ascension_color_schemes' );
-
-/**
- * Disable video headers
- *
- * @filter primer_custom_header_args
- * @since  NEXT
- *
- * @param  array $header_args
- *
- * @return array
- */
-function ascension_disable_video_headers( $header_args ) {
-
-	$header_args['video'] = false;
-
-	return $header_args;
-
-}
-add_filter( 'primer_custom_header_args', 'ascension_disable_video_headers' );
