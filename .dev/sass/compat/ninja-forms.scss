@@ -1,0 +1,9 @@
+.nf-response-msg p,
+.widget-area .nf-response-msg p {
+	font-weight: bold;
+
+	&:first-child {
+		font-style: italic;
+		font-weight: normal;
+	}
+}
