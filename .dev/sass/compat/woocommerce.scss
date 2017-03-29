@@ -290,10 +290,7 @@ body.woocommerce-cart {
 .woocommerce ul.products li.product a.add_to_cart_button {
 	width: 100%;
 	text-align: center;
-
-	&.product_type_variable {
-		white-space: normal;
-	}
+	white-space: normal;
 }
 
 @media #{$small-only} {
