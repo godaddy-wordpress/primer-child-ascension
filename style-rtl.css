@@ -1869,7 +1869,11 @@ input[type="submit"],
   .social-menu a:focus a:active,
   a.button:visited:focus
   a.button:active,
+  .social-menu a:visited:focus
+  a.button:active,
   a.button:visited:focus .social-menu a:active,
+  .social-menu
+  a.button:visited:focus a:active,
   .social-menu a:visited:focus a:active,
   input[type="button"]:focus
   a.button:active,
@@ -1910,7 +1914,11 @@ input[type="submit"],
   .social-menu a:focus a:visited:active,
   a.button:visited:focus
   a.button:visited:active,
+  .social-menu a:visited:focus
+  a.button:visited:active,
   a.button:visited:focus .social-menu a:visited:active,
+  .social-menu
+  a.button:visited:focus a:visited:active,
   .social-menu a:visited:focus a:visited:active,
   input[type="button"]:focus
   a.button:visited:active,
@@ -2490,6 +2498,15 @@ body.no-max-width .main-navigation {
   text-transform: none;
   font-size: 20px;
   color: #194F6E; }
+
+.footer-widget input[type="text"],
+.footer-widget input[type="email"],
+.footer-widget input[type="url"],
+.footer-widget input[type="password"],
+.footer-widget input[type="search"],
+.footer-widget input[type="number"],
+.footer-widget textarea {
+  background-color: #ececec; }
 
 /* Author Widget */
 .widget_author .widget-title {

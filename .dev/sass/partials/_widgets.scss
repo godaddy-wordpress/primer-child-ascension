@@ -54,6 +54,20 @@ $widget-bg: #fff !default;
 	color: #194F6E;
 }
 
+.footer-widget {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	textarea {
+		background-color: darken($color-text-input-background,2%);
+	}
+
+}
+
 /* Author Widget */
 .widget_author {
 
