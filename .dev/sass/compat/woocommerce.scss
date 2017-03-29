@@ -155,9 +155,40 @@
 	}
 }
 
-body.post-type-archive,
-body.single-product {
-	/* On Sale Badge */
+.woocommerce-page {
+
+	div.product {
+
+		.woocommerce-product-gallery {
+
+			figure.woocommerce-product-gallery__wrapper {
+				margin: 0;
+			}
+
+		}
+
+		.summary {
+			margin-top: 0;
+		}
+
+		.commentlist {
+			padding-left: 0;
+		}
+
+	}
+
+	&.woocommerce div.product form.cart {
+		margin: 1em 0;
+	}
+
+	ul.products li.product.primer-2-column-product {
+		width: 48.05%;
+	}
+
+	.primer-woocommerce .cart .qty {
+		padding: 0.45em;
+	}
+
 	span.onsale,
 	ul.products li.product .onsale {
 		padding: 2px 8px;
@@ -167,6 +198,75 @@ body.single-product {
 		min-width: auto;
 		line-height: inherit;
 	}
+
+	table.variations tr:hover td {
+		background-color: transparent;
+	}
+
+	#reviews #comments ol.commentlist li {
+
+		img.avatar {
+			width: 60px;
+		}
+
+		.comment-text {
+			margin: 0 0 0 80px;
+		}
+
+	}
+
+	form.woocommerce-cart-form {
+
+		table.cart td.actions #coupon_code {
+			width: 50%;
+			margin-right: 0;
+
+		}
+
+	}
+
+	table.cart {
+
+		td.product-thumbnail,
+		td.product-remove {
+			text-align: center;
+
+			@media #{$large-only} {
+				.remove {
+					margin: 0 auto;
+				}
+			}
+		}
+
+		img {
+			width: 100%;
+			max-width: 75px;
+			margin-bottom: 0;
+		}
+
+		td.actions .input-text {
+			padding: 6px !important;
+		}
+
+	}
+
+}
+
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+.woocommerce a.added_to_cart {
+	max-width: 100%;
+	white-space: normal;
+	text-align: center;
+	display: block;
+
+	@media #{$large-up} {
+		font-size: 0.75rem;
+	}
+
+}
+
+.woocommerce a.added_to_cart {
+	text-align: left;
 }
 
 body.single-product {
@@ -187,24 +287,10 @@ body.woocommerce-cart {
 	}
 }
 
-.woocommerce,
-.woocommerce-page {
-	table.cart {
-		img {
-			width: 100%;
-			max-width: 100px;
-			margin-bottom: 0;
-		}
-
-		td.actions .input-text {
-			padding: 6px !important;
-		}
-	}
-}
-
 .woocommerce ul.products li.product a.add_to_cart_button {
 	width: 100%;
 	text-align: center;
+	white-space: normal;
 }
 
 @media #{$small-only} {
