@@ -1,9 +1,15 @@
+@import "video-header";
+
 .hero {
 	background: $secondary-color;
 	background-size: cover;
 	background-position: center top;
 	background-repeat: no-repeat;
 	margin-bottom: 40px;
+
+	#wp-custom-header img {
+		display: none;
+	}
 
 	@extend .row;
 

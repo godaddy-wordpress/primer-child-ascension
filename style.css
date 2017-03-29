@@ -3359,6 +3359,21 @@ body.layout-one-column-narrow #content {
     .featured-content .entry-header .read-more:hover {
       background-color: #0ea7eb; }
 
+.site-header.video-header + .hero {
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  color: #000; }
+  .site-header.video-header + .hero #wp-custom-header {
+    position: absolute;
+    top: -55vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+    .site-header.video-header + .hero #wp-custom-header #wp-custom-header-video-button {
+      display: none; }
+
 .hero {
   background: #194F6E;
   -webkit-background-size: cover;
@@ -3366,6 +3381,8 @@ body.layout-one-column-narrow #content {
   background-position: center top;
   background-repeat: no-repeat;
   margin-bottom: 40px; }
+  .hero #wp-custom-header img {
+    display: none; }
   .hero .hero-inner {
     width: 100%;
     display: inline-block;
