@@ -4293,6 +4293,8 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 .woocommerce ul.products li.product a.add_to_cart_button {
   width: 100%;
   text-align: center; }
+  .woocommerce ul.products li.product a.add_to_cart_button.product_type_variable {
+    white-space: normal; }
 
 @media only screen and (max-width: 40em) {
   .primer-wc-cart-menu .primer-wc-cart-sub-menu .widget_shopping_cart {
