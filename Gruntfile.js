@@ -60,6 +60,10 @@ module.exports = function( grunt ) {
 		},
 
 		watch: {
+			images: {
+				files: 'assets/images/**/*.{gif,jpeg,jpg,png,svg}',
+				tasks: [ 'imagemin' ]
+			},
 			css: {
 				files: '.dev/sass/**/*.scss',
 				tasks: [ 'sass','autoprefixer','cssjanus' ]
@@ -136,13 +140,47 @@ module.exports = function( grunt ) {
 					'readme.md': 'readme.txt'
 				}
 			}
-		}
+		},
+
+		devUpdate: {
+			packages: {
+				options: {
+					packageJson: null,
+					packages: {
+						devDependencies: true,
+						dependencies: false
+					},
+					reportOnlyPkgs: [],
+					reportUpdated: false,
+					semver: true,
+					updateType: 'force'
+				}
+			}
+		},
+
+		imagemin: {
+			options: {
+				optimizationLevel: 3
+			},
+			assets: {
+				expand: true,
+				cwd: 'assets/images/',
+				src: [ '**/*.{gif,jpeg,jpg,png,svg}' ],
+				dest: 'assets/images/'
+			},
+			screenshot: {
+				files: {
+					'screenshot.png': 'screenshot.png'
+				}
+			}
+		},
 
 	});
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'imagemin' ] );
+	grunt.registerTask( 'check',   [ 'devUpdate' ] );
 	grunt.registerTask( 'readme',  [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'version', [ 'replace' ] );
 
