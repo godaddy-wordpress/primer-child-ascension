@@ -31,12 +31,12 @@ input[type="submit"],
 	padding: 8px 32px;
 
 	&:hover {
-		color: contrast-color($color-background-button,#000,#fff,50%);
+		color: contrast-color($color-background-button, #000, #fff, 50%);
 		background: darken($color-background-button, 5%);
 	}
 
 	&:focus
-	&:active{
+	&:active {
 		background: darken($color-background-button, 10%);
 	}
 
@@ -46,7 +46,7 @@ input[type="submit"],
 		padding: 12px 55px;
 	}
 
-	&:hover *{
+	&:hover * {
 		color: white;
 	}
 }
@@ -59,8 +59,8 @@ input[type="radio"] {
 input[type="search"] {
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
 	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-	-moz-box-sizing:    content-box;
-	box-sizing:         content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
@@ -80,25 +80,47 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 input[type="number"],
-textarea {
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+.select2-container .select2-choice {
 	color: $color-text-input;
 	background-color: $color-text-input-background;
 	border: none;
 	transform: 200ms background linear;
 	border-radius: 3px;
 	resize: none;
-	padding: .75em;
-	padding: .75rem;
+	padding: 0.75em;
 	-webkit-appearance: none;
 
 	&:focus {
 		color: $color-text-input-focus;
 		outline: none;
-		background-color: darken($color-text-input-background,1%);
+		background-color: darken($color-text-input-background, 1%);
 	}
 }
 
-label{
+.select2-container .select2-choice {
+	padding: 0.35rem 0.75rem;
+}
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-container .select2-choice,
+.select2-container-active .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+	border: none;
+}
+
+label {
 	font-family: $header-font-family;
 	font-weight: bold;
 }
@@ -124,16 +146,15 @@ legend {
 	padding: 0 15px;
 }
 
-
 .search-form {
 	.search-field {
 		width: 70%;
-    background: #fff;
-    border-radius: 5px 0 0 5px;
-    box-sizing: border-box;
-    border: 1px solid $secondary-color;
-    border-right: 0;
-    padding: 0 10px;
+		background: #fff;
+		border-radius: 5px 0 0 5px;
+		box-sizing: border-box;
+		border: 1px solid $secondary-color;
+		border-right: 0;
+		padding: 0 10px;
 		line-height: 31px;
 		height: 33px;
 		font-size: rem-calc(13);

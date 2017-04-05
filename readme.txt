@@ -1,8 +1,8 @@
 === Activation ===
-Contributors:      godaddy, fjarrett, jonathanbardo
+Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.6
+Tested up to:      4.7.3
 Stable tag:        1.0.1
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -89,6 +89,16 @@ TODO
 
 == Changelog ==
 
-= 1.0.0 - TBD =
+= 1.1.0 =
+
+* New: Added styles to accommodate video header styles. @props [evanherman](https://github.com/EvanHerman)
+* New: Added pagination styles. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Adjusted various WooCommerce styles, including i10n fixes, on sale badge tweaks and more. @props [evanherman](https://github.com/EvanHerman)
+
+= 1.0.1 =
+
+* Tweak: Bumped version for Primer compatibility. @props [fjarret](https://github.com/fjarrett)
+
+= 1.0.0 =
 
 * Initial release.

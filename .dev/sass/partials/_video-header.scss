@@ -1,0 +1,20 @@
+.site-header.video-header +.hero {
+	overflow: hidden;
+	position: relative;
+	background-color: #000;
+	color: #000;
+
+	#wp-custom-header {
+		position: absolute;
+		top: -55vh;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+
+		#wp-custom-header-video-button {
+			display: none;
+		}
+	}
+
+}

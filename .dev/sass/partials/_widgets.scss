@@ -227,3 +227,11 @@ $widget-bg: #fff !default;
 #content .widget ul li {
 	border: none;
 }
+
+.hero .widget.widget_text p {
+	font-size: 2.625rem;
+	font-weight: lighter;
+	font-style: normal;
+	padding: 0;
+	line-height: 1.25;
+}
