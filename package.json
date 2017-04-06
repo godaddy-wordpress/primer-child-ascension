@@ -2,7 +2,7 @@
   "name": "ascension",
   "title": "Ascension",
   "description": "Ascension is a Primer child theme with a business-oriented design.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "GoDaddy",
   "license": "GPL-2.0",
   "repository": "godaddy/wp-ascension-theme",
@@ -52,7 +52,7 @@
     "zh_TW": "繁體中文"
   },
   "scripts": {
-    "version": "grunt version && grunt && git add -A .",
+    "version": "grunt version && git add -A .",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
@@ -67,9 +67,5 @@
     "grunt-wp-readme-to-markdown": "^2.0.1",
     "load-grunt-tasks": "~3.5.0",
     "matchdep": "~1.0.1"
-  },
-  "scripts": {
-    "version": "grunt version && git add -A .",
-    "postversion": "git push && git push --tags"
   }
 }
