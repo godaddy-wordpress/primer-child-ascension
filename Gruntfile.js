@@ -179,7 +179,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'imagemin' ] );
+	grunt.registerTask( 'default', [ 'version', 'sass', 'autoprefixer', 'cssjanus', 'imagemin' ] );
 	grunt.registerTask( 'check',   [ 'devUpdate' ] );
 	grunt.registerTask( 'readme',  [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'version', [ 'replace' ] );
