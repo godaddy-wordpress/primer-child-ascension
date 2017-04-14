@@ -52,7 +52,7 @@
     "zh_TW": "繁體中文"
   },
   "scripts": {
-    "version": "grunt && git add -A .",
+    "version": "grunt version && git add -A .",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
