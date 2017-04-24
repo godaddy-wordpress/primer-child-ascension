@@ -52,14 +52,6 @@ Stock photography, Unsplash
 License: Creative Commons Zero
 Source: https://pixabay.com/photo-801872/
 
-== Frequently Asked Questions ==
-
-TODO
-
-== Developer Tools ==
-
-TODO
-
 == Changelog ==
 
 = 1.1.0 =
