@@ -50,11 +50,18 @@ Source: https://github.com/godaddy/wp-primer-theme
 
 Ascension bundles the following third-party resources:
 
-Stock photography, Unsplash
+Stock photography, Pixabay
 License: Creative Commons Zero
 Source: https://pixabay.com/photo-801872/
 
 ## Changelog ##
+
+### 1.1.1 ###
+
+* Tweak: Improve theme readme.
+* Tweak: Update theme screenshot.
+
+Props [@fjarrett](https://github.com/fjarrett)
 
 ### 1.1.0 ###
 
