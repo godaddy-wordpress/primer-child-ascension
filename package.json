@@ -51,21 +51,24 @@
     "zh_CN": "简体中文",
     "zh_TW": "繁體中文"
   },
-  "scripts": {
-    "version": "grunt version && git add -A .",
-    "postversion": "git push && git push --tags"
-  },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~3.0.4",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-cssjanus": "~0.3.2",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-cssjanus": "^0.4.0",
     "grunt-dev-update": "^2.2.0",
     "grunt-sass": "^2.0.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-wp-readme-to-markdown": "^2.0.1",
-    "load-grunt-tasks": "~3.5.0",
-    "matchdep": "~1.0.1"
+    "load-grunt-tasks": "^3.5.0",
+    "matchdep": "^1.0.1"
+  },
+  "scripts": {
+    "version": "grunt version && git add -A .",
+    "postversion": "git push && git push --tags"
   }
 }
