@@ -2,9 +2,11 @@
 
 module.exports = function( grunt ) {
 
+	'use strict';
+
 	var pkg = grunt.file.readJSON( 'package.json' );
 
-	grunt.initConfig({
+	grunt.initConfig( {
 
 		pkg: pkg,
 
@@ -21,9 +23,36 @@ module.exports = function( grunt ) {
 				],
 				cascade: false
 			},
-			dist: {
-				src: [ '*.css' ]
+			editor: {
+				src: [ 'editor-style.css' ]
+			},
+			main: {
+				src: [ 'style.css' ]
 			}
+		},
+
+		clean: {
+			options: {
+				force: true
+			},
+			build: [ 'build/' ]
+		},
+
+		copy: {
+			build: {
+				expand: true,
+				cwd: '.',
+				src: [
+					'*.css',
+					'*.php',
+					'*.txt',
+					'screenshot.png',
+					'assets/**',
+					'inc/**',
+					'templates/**'
+				],
+				dest: 'build/'
+			},
 		},
 
 		cssjanus: {
@@ -44,18 +73,108 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		devUpdate: {
+			packages: {
+				options: {
+					updateType: 'force'
+				}
+			}
+		},
+
+		imagemin: {
+			options: {
+				optimizationLevel: 3
+			},
+			assets: {
+				expand: true,
+				cwd: 'assets/images/',
+				src: [ '**/*.{gif,jpeg,jpg,png,svg}' ],
+				dest: 'assets/images/'
+			},
+			screenshot: {
+				files: {
+					'screenshot.png': 'screenshot.png'
+				}
+			}
+		},
+
+		jshint: {
+			gruntfile: [ 'Gruntfile.js' ]
+		},
+
+		replace: {
+			charset: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /^@charset "UTF-8";\n/,
+						to: ''
+					}
+				],
+				src: [ 'style*.css' ]
+			},
+			php: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /Version:(\s*?)[a-zA-Z0-9\.\-\+]+$/m,
+						to: 'Version:$1' + pkg.version
+					},
+					{
+						from: /@since(.*?)NEXT/mg,
+						to: '@since$1' + pkg.version
+					},
+					{
+						from: /@NEXT/g,
+						to: '<%= pkg.version %>'
+					},
+					{
+						from: /VERSION(\s*?)=(\s*?['"])[a-zA-Z0-9\.\-\+]+/mg,
+						to: 'VERSION$1=$2' + pkg.version
+					},
+					{
+						from: /'PRIMER_CHILD_VERSION', '[a-zA-Z0-9\.\-\+]+'/mg,
+						to: '\'PRIMER_CHILD_VERSION\', \'' + pkg.version + '\''
+					}
+				],
+				src: [ '*.php', 'inc/**/*.php', 'templates/**/*.php' ]
+			},
+			readme: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /Stable tag:(\s*)[\w.+-]+/,
+						to: 'Stable tag:$1<%= pkg.version %>'
+					}
+				],
+				src: [ 'readme.txt' ]
+			},
+			sass: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /Version:(\s*)[\w.+-]+/,
+						to: 'Version:$1<%= pkg.version %>'
+					}
+				],
+				src: [ '.dev/sass/**/*.scss' ]
+			}
+		},
+
 		sass: {
 			options: {
 				precision: 5,
 				sourceMap: false
 			},
-			dist: {
-				files: [
-					{
-						'style.css': '.dev/sass/style.scss',
-						'editor-style.css': '.dev/sass/editor-style.scss'
-					}
-				]
+			editor: {
+				files: {
+					'editor-style.css': '.dev/sass/editor-style.scss'
+				}
+			},
+			main: {
+				files: {
+					'style.css': '.dev/sass/style.scss'
+				}
 			}
 		},
 
@@ -64,52 +183,9 @@ module.exports = function( grunt ) {
 				files: 'assets/images/**/*.{gif,jpeg,jpg,png,svg}',
 				tasks: [ 'imagemin' ]
 			},
-			css: {
+			sass: {
 				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass','autoprefixer','cssjanus' ]
-			}
-		},
-
-		replace: {
-			version_php: {
-				src: [
-					'**/*.php',
-					'.dev/**/*.scss',
-					'**/*.css',
-				],
-				overwrite: true,
-				replacements: [ {
-					from: /Version:(\s*?)[a-zA-Z0-9\.\-\+]+$/m,
-					to: 'Version:$1' + pkg.version
-				}, {
-					from: /@version(\s*?)[a-zA-Z0-9\.\-\+]+$/m,
-					to: '@version$1' + pkg.version
-				}, {
-					from: /@since(.*?)NEXT/mg,
-					to: '@since$1' + pkg.version
-				}, {
-					from: /VERSION(\s*?)=(\s*?['"])[a-zA-Z0-9\.\-\+]+/mg,
-					to: 'VERSION$1=$2' + pkg.version
-				}, {
-					from: /'PRIMER_CHILD_VERSION', '[a-zA-Z0-9\.\-\+]+'/mg,
-					to: '\'PRIMER_CHILD_VERSION\', \'' + pkg.version + '\''
-				}]
-			},
-			version_readme: {
-				src: 'readme.*',
-				overwrite: true,
-				replacements: [ {
-					from: /^(\*\*|)Stable tag:(\*\*|)(\s*?)[a-zA-Z0-9.-]+(\s*?)$/mi,
-					to: '$1Stable tag:$2$3<%= pkg.version %>$4'
-				} ]
-			},
-			pot:{
-				src: 'languages/' + pkg.name + '.pot',
-				overwrite: true,
-				replacements: [ {
-					from: 'charset=CHARSET',
-					to: 'charset=UTF-8'
-				} ]
+				tasks: [ 'sass', 'autoprefixer', 'cssjanus' ]
 			}
 		},
 
@@ -141,48 +217,16 @@ module.exports = function( grunt ) {
 					'readme.md': 'readme.txt'
 				}
 			}
-		},
+		}
 
-		devUpdate: {
-			packages: {
-				options: {
-					packageJson: null,
-					packages: {
-						devDependencies: true,
-						dependencies: false
-					},
-					reportOnlyPkgs: [],
-					reportUpdated: false,
-					semver: true,
-					updateType: 'force'
-				}
-			}
-		},
-
-		imagemin: {
-			options: {
-				optimizationLevel: 3
-			},
-			assets: {
-				expand: true,
-				cwd: 'assets/images/',
-				src: [ '**/*.{gif,jpeg,jpg,png,svg}' ],
-				dest: 'assets/images/'
-			},
-			screenshot: {
-				files: {
-					'screenshot.png': 'screenshot.png'
-				}
-			}
-		},
-
-	});
+	} );
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'version', 'sass', 'autoprefixer', 'cssjanus', 'imagemin' ] );
+	grunt.registerTask( 'default', [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'jshint', 'imagemin' ] );
+	grunt.registerTask( 'build',   [ 'default', 'clean', 'copy' ] );
 	grunt.registerTask( 'check',   [ 'devUpdate' ] );
 	grunt.registerTask( 'readme',  [ 'wp_readme_to_markdown' ] );
-	grunt.registerTask( 'version', [ 'replace' ] );
+	grunt.registerTask( 'version', [ 'replace', 'readme', 'build' ] );
 
 };
