@@ -4402,7 +4402,6 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 .entry-content ul.alignleft,
 .entry-content ol.alignleft,
 .wp-block-cover-text.alignleft {
-  max-width: 40%;
   margin: 0 0 1.5em 1.5em; }
 
 .wp-block-image.alignright,
@@ -4413,8 +4412,60 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 .entry-content ul.alignright,
 .entry-content ol.alignright,
 .wp-block-cover-text.alignright {
-  max-width: 40%;
   margin: 0 1.5em 1.5em 0; }
+
+.wp-block-image.alignleft, .wp-block-image.alignright,
+.wp-block-gallery.alignleft,
+.wp-block-gallery.alignright,
+.wp-block-video.alignleft,
+.wp-block-video.alignright,
+.wp-block-quote.alignleft,
+.wp-block-quote.alignright,
+.wp-block-text-columns.alignleft,
+.wp-block-text-columns.alignright,
+.entry-content ul.alignleft,
+.entry-content ul.alignright,
+.entry-content ol.alignleft,
+.entry-content ol.alignright,
+.wp-block-cover-text.alignleft,
+.wp-block-cover-text.alignright {
+  max-width: 40%; }
+  @media only screen and (min-width: 40.063em) and (max-width: 61em) {
+    .wp-block-image.alignleft, .wp-block-image.alignright,
+    .wp-block-gallery.alignleft,
+    .wp-block-gallery.alignright,
+    .wp-block-video.alignleft,
+    .wp-block-video.alignright,
+    .wp-block-quote.alignleft,
+    .wp-block-quote.alignright,
+    .wp-block-text-columns.alignleft,
+    .wp-block-text-columns.alignright,
+    .entry-content ul.alignleft,
+    .entry-content ul.alignright,
+    .entry-content ol.alignleft,
+    .entry-content ol.alignright,
+    .wp-block-cover-text.alignleft,
+    .wp-block-cover-text.alignright {
+      margin-bottom: 0.5em; } }
+  @media only screen and (max-width: 40em) {
+    .wp-block-image.alignleft, .wp-block-image.alignright,
+    .wp-block-gallery.alignleft,
+    .wp-block-gallery.alignright,
+    .wp-block-video.alignleft,
+    .wp-block-video.alignright,
+    .wp-block-quote.alignleft,
+    .wp-block-quote.alignright,
+    .wp-block-text-columns.alignleft,
+    .wp-block-text-columns.alignright,
+    .entry-content ul.alignleft,
+    .entry-content ul.alignright,
+    .entry-content ol.alignleft,
+    .entry-content ol.alignright,
+    .wp-block-cover-text.alignleft,
+    .wp-block-cover-text.alignright {
+      max-width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
 
 body.customize-support h1,
 body.customize-support h2,

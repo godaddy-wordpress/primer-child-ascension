@@ -47,13 +47,24 @@
 .entry-content ol,
 .wp-block-cover-text {
 	&.alignleft {
-		max-width: 40%;
 		margin: 0 1.5em 1.5em 0;
 	}
 
 	&.alignright {
-		max-width: 40%;
 		margin: 0 0 1.5em 1.5em;
+	}
+
+	&.alignleft,
+	&.alignright {
+		max-width: 40%;
+		@media #{$medium-only} {
+			margin-bottom: 0.5em;
+		}
+		@media #{$small-only} {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 }
 
