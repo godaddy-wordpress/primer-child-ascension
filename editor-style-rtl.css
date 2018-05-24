@@ -1159,6 +1159,21 @@ section.error-404 {
 .comment-form input[type="number"] {
   width: 100%; }
 
+.comment-form-cookies-consent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px; }
+  .comment-form-cookies-consent #wp-comment-cookies-consent {
+    display: inline;
+    width: auto;
+    margin: 0 0 0 10px; }
+    @media only screen and (max-width: 40em) {
+      .comment-form-cookies-consent #wp-comment-cookies-consent {
+        margin-top: 2px; } }
+
 #respond {
   margin-top: 10px;
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
