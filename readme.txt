@@ -54,6 +54,10 @@ Source: https://pixabay.com/photo-801872/
 
 == Changelog ==
 
+= 1.1.2 =
+
+* New: Added styles for WordPress 4.9.6 privacy policy footer link & cookie comment checkbox.
+
 = 1.1.1 =
 
 * Tweak: Improve theme readme.
