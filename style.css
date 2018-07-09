@@ -3701,6 +3701,9 @@ body.layout-one-column-narrow #content {
     font-weight: normal; }
     .site-info-wrapper a:hover {
       text-decoration: none; }
+  .site-info-wrapper #menu-footer-menu {
+    margin-left: 0;
+    list-style: none; }
   .site-info-wrapper .social-menu {
     text-align: center; }
     .site-info-wrapper .social-menu ul {
@@ -3716,7 +3719,7 @@ body.layout-one-column-narrow #content {
       margin-top: 2rem; }
   .site-info-wrapper .privacy-policy-link {
     display: inline-block;
-    margin: 2rem auto; }
+    margin: 0 auto; }
   .site-info-wrapper .site-info-text,
   .site-info-wrapper .site-info-text p,
   .site-info-wrapper .privacy-policy-link {
