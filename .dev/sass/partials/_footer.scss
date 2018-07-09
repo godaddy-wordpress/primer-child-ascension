@@ -165,6 +165,11 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 		}
 	}
 
+	#menu-footer-menu {
+		margin-left: 0;
+		list-style: none;
+	}
+
 	.social-menu {
 		text-align: center;
 		ul {
@@ -186,7 +191,7 @@ $site-footer-info-anchor-color-hover: $body-secondary-color;
 
 	.privacy-policy-link {
 		display: inline-block;
-		margin: 2rem auto;
+		margin: 0 auto;
 	}
 
 	.site-info-text,
