@@ -61,29 +61,3 @@ body.customize-support {
 		}
 	}
 }
-
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-text.alignfull,
-.wp-block-image.alignfull,
-.wp-block-gallery.alignfull,
-.wp-block-text-columns.alignfull {
-	margin-left: -1.25rem;
-	width: calc( 100% + 2.5em );
-
-	@media #{$small-up} {
-		figcaption {
-			padding: 0 1em;
-		}
-	}
-
-	@media #{$medium-up} {
-		figcaption {
-			padding: 0 2.375em;
-		}
-	}
-
-	figcaption {
-		padding: 0 3.375em;
-	}
-}

@@ -4552,36 +4552,3 @@ body.customize-support .wp-block-gallery {
   margin-left: 0; }
   body.customize-support .wp-block-gallery.is-cropped .blocks-gallery-item img {
     height: auto; }
-
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-text.alignfull,
-.wp-block-image.alignfull,
-.wp-block-gallery.alignfull,
-.wp-block-text-columns.alignfull {
-  margin-right: -1.25rem;
-  width: -webkit-calc( 100% + 2.5em);
-  width: calc( 100% + 2.5em); }
-  @media only screen {
-    .wp-block-cover-image.alignfull figcaption,
-    .wp-block-image.alignfull figcaption,
-    .wp-block-cover-text.alignfull figcaption,
-    .wp-block-image.alignfull figcaption,
-    .wp-block-gallery.alignfull figcaption,
-    .wp-block-text-columns.alignfull figcaption {
-      padding: 0 1em; } }
-  @media only screen and (min-width: 40.063em) {
-    .wp-block-cover-image.alignfull figcaption,
-    .wp-block-image.alignfull figcaption,
-    .wp-block-cover-text.alignfull figcaption,
-    .wp-block-image.alignfull figcaption,
-    .wp-block-gallery.alignfull figcaption,
-    .wp-block-text-columns.alignfull figcaption {
-      padding: 0 2.375em; } }
-  .wp-block-cover-image.alignfull figcaption,
-  .wp-block-image.alignfull figcaption,
-  .wp-block-cover-text.alignfull figcaption,
-  .wp-block-image.alignfull figcaption,
-  .wp-block-gallery.alignfull figcaption,
-  .wp-block-text-columns.alignfull figcaption {
-    padding: 0 3.375em; }
