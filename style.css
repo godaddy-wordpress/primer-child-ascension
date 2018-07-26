@@ -4478,17 +4478,17 @@ body.woocommerce-cart .primer-wc-cart-sub-menu {
 .wp-block-cover-image {
   margin-bottom: 1.5rem; }
 
-.alignfull {
+[class^="wp-block-"].alignfull {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw; }
-  .alignfull img {
+  [class^="wp-block-"].alignfull img {
     width: 100%; }
 
-.alignwide {
+[class^="wp-block-"].alignwide {
   margin-left: 0;
   margin-right: 0;
   width: 100%; }
