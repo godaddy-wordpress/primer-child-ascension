@@ -56,6 +56,12 @@ Source: https://pixabay.com/photo-801872/
 
 ## Changelog ##
 
+### 1.1.4 ###
+
+* New: Introduce styles for Gutenberg.
+
+Props [@evanherman](https://github.com/EvanHerman)
+
 ### 1.1.3 ###
 
 * Tweak: Adjust footer menu margin and list styles.
