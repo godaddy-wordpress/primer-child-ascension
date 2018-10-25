@@ -449,7 +449,7 @@ select {
   width: 100%;
   float: right; }
 
-[class*="column"] + [class*="column"]:last-child {
+[class*="column"] + [class*="column"]:last-child:not(.wp-block-columns) {
   float: left; }
 
 [class*="column"] + [class*="column"].end {
