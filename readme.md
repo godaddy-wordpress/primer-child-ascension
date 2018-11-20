@@ -16,6 +16,39 @@ Ascension is a GoDaddy Primer child theme with a business-oriented design.
 
 Ascension is a GoDaddy Primer child theme with a business-oriented design.
 
+**Languages Supported:**
+
+* English
+* Dansk
+* Deutsch
+* Ελληνικά
+* Español
+* Español de México
+* Suomi
+* Français
+* हिन्दी
+* Bahasa Indonesia
+* Italiano
+* 日本語
+* 한국어
+* मराठी
+* Bahasa Melayu
+* Norsk bokmål
+* Nederlands
+* Polski
+* Português do Brasil
+* Português
+* Русский
+* Svenska
+* ไทย
+* Tagalog
+* Türkçe
+* Українська
+* Tiếng Việt
+* 简体中文
+* 香港中文版
+* 繁體中文
+
 **Contributing:**
 
 You can fork and contribute to Ascension by visiting [our public repo on GitHub](https://github.com/godaddy/wp-ascension-theme).
