@@ -7,7 +7,7 @@
  *
  * @var string
  */
-define( 'PRIMER_CHILD_VERSION', '1.1.4' );
+define( 'PRIMER_CHILD_VERSION', '1.1.5' );
 
 /**
  * Move some elements around.
