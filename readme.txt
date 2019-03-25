@@ -87,6 +87,12 @@ Source: https://pixabay.com/photo-801872/
 
 == Changelog ==
 
+= 1.1.5 =
+
+* Tweak: Adjust readme and bump tested up to version in preparation for submission to WordPress.org.
+
+Props [@evanherman](https://github.com/EvanHerman)
+
 = 1.1.4 =
 
 * New: Introduce styles for Gutenberg.
