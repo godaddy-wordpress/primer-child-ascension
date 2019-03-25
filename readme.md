@@ -1,8 +1,8 @@
 # Ascension #
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [eherman24](https://profiles.wordpress.org/eherman24)  
-**Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
+**Tags:**              [blog](https://wordpress.org/themes/tags/blog/), [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
-**Tested up to:**      4.9  
+**Tested up to:**      5.0  
 **Requires PHP:**      5.6.0  
 **Stable tag:**        1.1.4  
 **License:**           GPL-2.0  
@@ -78,9 +78,8 @@ GNU General Public License for more details.
 
 Ascension is a child theme of Primer:
 
-Primer, Copyright 2017 GoDaddy Operating Company, LLC.
-License: GPL-2.0
-Source: https://github.com/godaddy/wp-primer-theme
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
+Primer is distributed under the terms of the GNU GPL
 
 Ascension bundles the following third-party resources:
 

@@ -1,8 +1,8 @@
 === Ascension ===
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
-Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
+Tags:              blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.9
+Tested up to:      5.0
 Requires PHP:      5.6.0
 Stable tag:        1.1.4
 License:           GPL-2.0
@@ -76,9 +76,8 @@ GNU General Public License for more details.
 
 Ascension is a child theme of Primer:
 
-Primer, Copyright 2017 GoDaddy Operating Company, LLC.
-License: GPL-2.0
-Source: https://github.com/godaddy/wp-primer-theme
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
+Primer is distributed under the terms of the GNU GPL
 
 Ascension bundles the following third-party resources:
 
