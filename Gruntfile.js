@@ -73,14 +73,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		devUpdate: {
-			packages: {
-				options: {
-					updateType: 'force'
-				}
-			}
-		},
-
 		imagemin: {
 			options: {
 				optimizationLevel: 3
@@ -225,7 +217,6 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'default', [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'jshint', 'imagemin' ] );
 	grunt.registerTask( 'build',   [ 'default', 'clean', 'copy' ] );
-	grunt.registerTask( 'check',   [ 'devUpdate' ] );
 	grunt.registerTask( 'readme',  [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'version', [ 'replace', 'readme', 'build' ] );
 
