@@ -3,3 +3,4 @@ svn-username
 .sass-cache/
 build/
 node_modules/
+vendor/
