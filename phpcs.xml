@@ -2,17 +2,17 @@
 <ruleset name="primer-child-ascension">
 	<description>Rules for primer-child-ascension</description>
 
-    <arg name="extensions" value="php" />
-    <arg name="basepath" value="./" />
-    <file>./</file>
+	<arg name="extensions" value="php" />
+	<arg name="basepath" value="./" />
+	<file>./</file>
 
-    <exclude-pattern>*/build/*</exclude-pattern>
-    <exclude-pattern>*/dist/*</exclude-pattern>
-    <exclude-pattern>*/vendor/*</exclude-pattern>
-    <exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/build/*</exclude-pattern>
+	<exclude-pattern>*/dist/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/wordpress*/*</exclude-pattern>
-    <exclude-pattern>*/\.*</exclude-pattern>
-    <exclude-pattern>*/.dev/*</exclude-pattern>
+	<exclude-pattern>*/\.*</exclude-pattern>
+	<exclude-pattern>*/.dev/*</exclude-pattern>
 
 	<arg name="colors"/>
 	<arg value="sp"/>
@@ -29,6 +29,22 @@
 		-->
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+
+	<!-- Include the WordPress standard. -->
+	<rule ref="WordPress">
+		<!--
+		We may want a middle ground though. The best way to do this is add the
+		entire ruleset, then rule by rule, remove ones that don't suit a project.
+		We can do this by running `phpcs` with the '-s' flag, which allows us to
+		see the names of the sniffs reporting errors.
+		Once we know the sniff names, we can opt to exclude sniffs which don't
+		suit our project like so.
+		-->
+		<exclude name="Squiz.Commenting.FileComment.SpacingAfterComment"/>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound"/>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound"/>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound"/>
 	</rule>
 
 	<!-- Let's also check that everything is properly documented. -->
