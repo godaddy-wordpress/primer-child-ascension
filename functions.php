@@ -1,9 +1,9 @@
 <?php
-
 /**
  * Child theme version.
  *
- * @since 1.0.0
+ * @since   1.0.0
+ * @package Primer
  *
  * @var string
  */
@@ -17,14 +17,14 @@ define( 'PRIMER_CHILD_VERSION', '1.1.4' );
  */
 function ascension_move_elements() {
 
-	remove_action( 'primer_header',                'primer_add_hero',               7 );
-	remove_action( 'primer_after_header',          'primer_add_primary_navigation', 11 );
-	remove_action( 'primer_after_header',          'primer_add_page_title',         12 );
-	remove_action( 'primer_before_header_wrapper', 'primer_video_header',           5 );
+	remove_action( 'primer_header', 'primer_add_hero', 7 );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
+	remove_action( 'primer_before_header_wrapper', 'primer_video_header', 5 );
 
-	add_action( 'primer_after_header', 'primer_add_hero',               7 );
-	add_action( 'primer_header',       'primer_add_primary_navigation', 11 );
-	add_action( 'primer_pre_hero',     'primer_video_header',           5 );
+	add_action( 'primer_after_header', 'primer_add_hero', 7 );
+	add_action( 'primer_header', 'primer_add_primary_navigation', 11 );
+	add_action( 'primer_pre_hero', 'primer_video_header', 5 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
@@ -56,7 +56,7 @@ add_filter( 'primer_hero_image_selector', 'ascension_hero_image_selector' );
  * @filter primer_custom_logo_args
  * @since  1.0.0
  *
- * @param  array $args
+ * @param  array $args Arguments array.
  *
  * @return array
  */
@@ -76,7 +76,7 @@ add_filter( 'primer_custom_logo_args', 'ascension_custom_logo_args' );
  * @filter primer_sidebars
  * @since  1.0.0
  *
- * @param  array $sidebars
+ * @param  array $sidebars Registered sidebars.
  *
  * @return array
  */
@@ -102,7 +102,7 @@ add_filter( 'primer_sidebars', 'ascension_sidebars' );
  * @filter primer_fonts
  * @since  1.0.0
  *
- * @param  array $fonts
+ * @param  array $fonts Fonts array.
  *
  * @return array
  */
@@ -121,7 +121,7 @@ add_filter( 'primer_fonts', 'ascension_fonts' );
  * @filter primer_font_types
  * @since  1.0.0
  *
- * @param  array $font_types
+ * @param  array $font_types Font types array.
  *
  * @return array
  */
@@ -134,13 +134,13 @@ function ascension_font_types( $font_types ) {
 		'navigation_font' => array(
 			'default' => 'Open Sans',
 		),
-		'heading_font' => array(
+		'heading_font'    => array(
 			'default' => 'Open Sans',
 		),
-		'primary_font' => array(
+		'primary_font'    => array(
 			'default' => 'Open Sans',
 		),
-		'secondary_font' => array(
+		'secondary_font'  => array(
 			'default' => 'Open Sans',
 		),
 	);
@@ -156,7 +156,7 @@ add_filter( 'primer_font_types', 'ascension_font_types' );
  * @filter primer_colors
  * @since  1.0.0
  *
- * @param  array $colors
+ * @param  array $colors Colors array.
  *
  * @return array
  */
@@ -171,61 +171,61 @@ function ascension_colors( $colors ) {
 		/**
 		 * Text colors
 		 */
-		'header_textcolor' => array(
-			'default'  => '#194f6e',
-		),
-		'tagline_text_color' => array(
-			'default'  => '#686868',
-		),
-		'hero_text_color' => array(
-			'default' => '#ffffff',
-		),
-		'menu_text_color' => array(
+		'header_textcolor'                 => array(
 			'default' => '#194f6e',
 		),
-		'heading_text_color' => array(
+		'tagline_text_color'               => array(
+			'default' => '#686868',
+		),
+		'hero_text_color'                  => array(
+			'default' => '#ffffff',
+		),
+		'menu_text_color'                  => array(
+			'default' => '#194f6e',
+		),
+		'heading_text_color'               => array(
 			'default' => '#353535',
 		),
-		'primary_text_color' => array(
+		'primary_text_color'               => array(
 			'default' => '#252525',
 		),
-		'secondary_text_color' => array(
+		'secondary_text_color'             => array(
 			'default' => '#686868',
 		),
 		'footer_widget_heading_text_color' => array(
 			'default' => '#353535',
 		),
-		'footer_widget_text_color' => array(
+		'footer_widget_text_color'         => array(
 			'default' => '#252525',
 		),
-		'footer_menu_text_color' => array(
+		'footer_menu_text_color'           => array(
 			'default' => '#686868',
 		),
-		'footer_text_color' => array(
+		'footer_text_color'                => array(
 			'default' => '#686868',
 		),
 		/**
 		 * Link / Button colors
 		 */
-		'link_color' => array(
-			'default'  => '#00bfff',
+		'link_color'                       => array(
+			'default' => '#00bfff',
 		),
-		'button_color' => array(
-			'default'  => '#00bfff',
+		'button_color'                     => array(
+			'default' => '#00bfff',
 		),
-		'button_text_color' => array(
-			'default'  => '#ffffff',
+		'button_text_color'                => array(
+			'default' => '#ffffff',
 		),
 		/**
 		 * Background colors
 		 */
-		'background_color' => array(
+		'background_color'                 => array(
 			'default' => '#ffffff',
 		),
-		'hero_background_color' => array(
+		'hero_background_color'            => array(
 			'default' => '#252525',
 		),
-		'menu_background_color' => array(
+		'menu_background_color'            => array(
 			'default' => '#ffffff',
 			'css'     => array(
 				'.site-header' => array(
@@ -233,10 +233,10 @@ function ascension_colors( $colors ) {
 				),
 			),
 		),
-		'footer_widget_background_color' => array(
+		'footer_widget_background_color'   => array(
 			'default' => '#f5f5f5',
 		),
-		'footer_background_color' => array(
+		'footer_background_color'          => array(
 			'default' => '#ffffff',
 		),
 	);
@@ -252,14 +252,14 @@ add_filter( 'primer_colors', 'ascension_colors' );
  * @filter primer_color_schemes
  * @since  1.0.0
  *
- * @param  array $color_schemes
+ * @param  array $color_schemes Color scheme array.
  *
  * @return array
  */
 function ascension_color_schemes( $color_schemes ) {
 
 	$overrides = array(
-		'blush' => array(
+		'blush'     => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['blush']['base'],
 				'menu_text_color'  => $color_schemes['blush']['base'],
@@ -267,7 +267,7 @@ function ascension_color_schemes( $color_schemes ) {
 				'button_color'     => $color_schemes['blush']['base'],
 			),
 		),
-		'bronze' => array(
+		'bronze'    => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['bronze']['base'],
 				'menu_text_color'  => $color_schemes['bronze']['base'],
@@ -275,7 +275,7 @@ function ascension_color_schemes( $color_schemes ) {
 				'button_color'     => $color_schemes['bronze']['base'],
 			),
 		),
-		'canary' => array(
+		'canary'    => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['canary']['base'],
 				'menu_text_color'  => $color_schemes['canary']['base'],
@@ -283,7 +283,7 @@ function ascension_color_schemes( $color_schemes ) {
 				'button_color'     => $color_schemes['canary']['base'],
 			),
 		),
-		'cool' => array(
+		'cool'      => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['cool']['base'],
 				'menu_text_color'  => $color_schemes['cool']['base'],
@@ -291,9 +291,9 @@ function ascension_color_schemes( $color_schemes ) {
 				'button_color'     => $color_schemes['cool']['base'],
 			),
 		),
-		'dark' => array(
+		'dark'      => array(
 			'colors' => array(
-				// Text
+				// Text.
 				'header_textcolor'                 => '#ffffff',
 				'tagline_text_color'               => '#999999',
 				'menu_text_color'                  => '#ffffff',
@@ -302,15 +302,15 @@ function ascension_color_schemes( $color_schemes ) {
 				'secondary_text_color'             => '#c1c1c1',
 				'footer_widget_heading_text_color' => '#ffffff',
 				'footer_widget_text_color'         => '#ffffff',
-				// Backgrounds
-				'background_color'               => '#222222',
-				'hero_background_color'          => '#282828',
-				'menu_background_color'          => '#333333',
-				'footer_widget_background_color' => '#282828',
-				'footer_background_color'        => '#222222',
+				// Backgrounds.
+				'background_color'                 => '#222222',
+				'hero_background_color'            => '#282828',
+				'menu_background_color'            => '#333333',
+				'footer_widget_background_color'   => '#282828',
+				'footer_background_color'          => '#222222',
 			),
 		),
-		'iguana' => array(
+		'iguana'    => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['iguana']['base'],
 				'menu_text_color'  => $color_schemes['iguana']['base'],
@@ -318,21 +318,21 @@ function ascension_color_schemes( $color_schemes ) {
 				'button_color'     => $color_schemes['iguana']['base'],
 			),
 		),
-		'muted' => array(
+		'muted'     => array(
 			'colors' => array(
-				// Text
-				'header_textcolor'       => '#ffffff',
-				'tagline_text_color'     => '#ffffff',
-				'menu_text_color'        => '#ffffff',
-				'heading_text_color'     => '#4f5875',
-				'primary_text_color'     => '#4f5875',
-				'secondary_text_color'   => '#888c99',
-				'footer_menu_text_color' => $color_schemes['muted']['base'],
-				'footer_text_color'      => '#4f5875',
-				// Links & Buttons
-				'link_color'   => $color_schemes['muted']['base'],
-				'button_color' => $color_schemes['muted']['base'],
-				// Backgrounds
+				// Text.
+				'header_textcolor'               => '#ffffff',
+				'tagline_text_color'             => '#ffffff',
+				'menu_text_color'                => '#ffffff',
+				'heading_text_color'             => '#4f5875',
+				'primary_text_color'             => '#4f5875',
+				'secondary_text_color'           => '#888c99',
+				'footer_menu_text_color'         => $color_schemes['muted']['base'],
+				'footer_text_color'              => '#4f5875',
+				// Links & Buttons.
+				'link_color'                     => $color_schemes['muted']['base'],
+				'button_color'                   => $color_schemes['muted']['base'],
+				// Backgrounds.
 				'background_color'               => '#ffffff',
 				'hero_background_color'          => '#4f5875',
 				'menu_background_color'          => '#5a6175',
@@ -340,7 +340,7 @@ function ascension_color_schemes( $color_schemes ) {
 				'footer_background_color'        => '#ffffff',
 			),
 		),
-		'plum' => array(
+		'plum'      => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['plum']['base'],
 				'menu_text_color'  => $color_schemes['plum']['base'],
@@ -348,7 +348,7 @@ function ascension_color_schemes( $color_schemes ) {
 				'button_color'     => $color_schemes['plum']['base'],
 			),
 		),
-		'rose' => array(
+		'rose'      => array(
 			'colors' => array(
 				'header_textcolor' => $color_schemes['rose']['base'],
 				'menu_text_color'  => $color_schemes['rose']['base'],
