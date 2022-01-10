@@ -10,6 +10,15 @@
   "bugs": {
     "url": "https://github.com/godaddy-wordpress/primer-child-ascension/issues"
   },
+  "browserslist": [
+    "Android >= 2.1",
+    "Chrome >= 21",
+    "Edge >= 12",
+    "Explorer >= 7",
+    "Firefox >= 17",
+    "Opera >= 12.1",
+    "Safari >= 6."
+  ],
   "engines": {
     "php": ">= 5.2",
     "wordpress": ">= 4.4"
@@ -21,19 +30,21 @@
     "[![WordPress <%= pkg.engines.wordpress %>](https://img.shields.io/badge/wordpress-<% print(encodeURI(pkg.engines.wordpress)) %>-blue.svg)](https://wordpress.org/download/release-archive/)"
   ],
   "devDependencies": {
-    "grunt": "^1.1.0",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-contrib-clean": "^1.1.0",
+    "@lodder/grunt-postcss": "^3.1.1",
+    "autoprefixer": "^10.4.2",
+    "grunt": "^1.4.1",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^4.0.0",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-cssjanus": "^0.4.0",
+    "grunt-contrib-jshint": "^3.1.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-cssjanus": "^0.5.0",
     "grunt-sass": "^3.1.0",
     "grunt-text-replace": "^0.4.0",
-    "grunt-wp-readme-to-markdown": "^2.0.1",
-    "load-grunt-tasks": "^3.5.2",
-    "matchdep": "^2.0.0"
+    "grunt-wp-readme-to-markdown": "^2.1.0",
+    "load-grunt-tasks": "^5.1.0",
+    "matchdep": "^2.0.0",
+    "node-sass": "^7.0.1"
   },
   "scripts": {
     "version": "grunt version && git add -A .",

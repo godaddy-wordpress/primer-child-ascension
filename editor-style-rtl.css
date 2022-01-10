@@ -256,7 +256,7 @@ pre {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 2px;
-  border-radius: 2px;
+          border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1.25rem; }
 
@@ -270,7 +270,7 @@ code {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 2px;
-  border-radius: 2px;
+          border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
 table {
@@ -455,7 +455,7 @@ blockquote.aligncenter {
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important; }
   a,
   a:visited {
@@ -533,7 +533,7 @@ input[type="submit"],
   letter-spacing: 0.08313rem;
   text-transform: uppercase;
   -webkit-border-radius: 0.3125rem;
-  border-radius: 0.3125rem;
+          border-radius: 0.3125rem;
   padding: 8px 32px; }
   button:hover,
   a.button:hover,
@@ -725,10 +725,10 @@ textarea,
   background-color: #f1f1f1;
   border: none;
   -webkit-transform: 200ms background linear;
-  -ms-transform: 200ms background linear;
-  transform: 200ms background linear;
+      -ms-transform: 200ms background linear;
+          transform: 200ms background linear;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
+          border-radius: 3px;
   resize: none;
   padding: 0.75em;
   -webkit-appearance: none; }
@@ -792,10 +792,10 @@ legend {
   width: 70%;
   background: #fff;
   -webkit-border-radius: 0 5px 5px 0;
-  border-radius: 0 5px 5px 0;
+          border-radius: 0 5px 5px 0;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #194F6E;
   border-left: 0;
   padding: 0 10px;
@@ -809,7 +809,7 @@ legend {
   float: left;
   width: 30%;
   -webkit-border-radius: 5px 0 0 5px;
-  border-radius: 5px 0 0 5px;
+          border-radius: 5px 0 0 5px;
   padding: 0;
   line-height: 31px;
   height: 33px; }
@@ -990,7 +990,7 @@ legend {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
+          border-radius: 3px;
   border: 1px solid #39BAF3;
   padding: .5em 1em;
   padding: .5rem 1rem; }
@@ -1128,7 +1128,7 @@ section.error-404 {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
     -webkit-border-radius: 4px;
-    border-radius: 4px;
+            border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
     padding: 10px 15px;
@@ -1140,14 +1140,14 @@ section.error-404 {
   margin-left: 15px;
   position: relative;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
+          border-radius: 3px;
   height: 50px;
   width: 50px; }
 
 .bypostauthor {
   border: 3px solid rgba(57, 186, 243, 0.2);
   -webkit-border-radius: 5px;
-  border-radius: 5px;
+          border-radius: 5px;
   margin: 30px; }
 
 .comment-form label .required {
