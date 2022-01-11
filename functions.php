@@ -35,23 +35,6 @@ function ascension_move_elements() {
 }
 add_action( 'template_redirect', 'ascension_move_elements' );
 
-if ( ! function_exists( 'wp_body_open' ) ) {
-
-	/**
-	 * Fire the wp_body_open action.
-	 *
-	 * See {@see 'wp_body_open'}.
-	 *
-	 * @since 5.2.0
-	 */
-	function wp_body_open() {
-
-		do_action( 'wp_body_open' );
-
-	}
-
-}
-
 /**
  * Set hero image target element.
  *
