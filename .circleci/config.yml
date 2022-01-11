@@ -89,18 +89,6 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
       - run:
-          name: Swap node versions
-          command: |
-            set +e
-            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            nvm install v12
-            nvm alias default 12
-            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
-            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
-      - run:
           name: Update npm
           command: sudo npm install -g npm@latest
       - run:
@@ -111,18 +99,6 @@ jobs:
       - run:
           name: Install rsync
           command: sudo apt install rsync
-      - run:
-          name: Install Grunt.js
-          command: sudo npm install -g grunt-cli
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install node packages
-          command: npm install
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - node_modules
       - run:
           name: Install WPCLI
           command: |
