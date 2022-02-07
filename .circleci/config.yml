@@ -116,12 +116,15 @@ jobs:
           command: bash .dev/install-wp-tests.sh wordpress_test root '' 127.0.0.1 latest
       - run:
           name: Remove unsplash.com from the list of unaccetable sources in theme check
-          command: sed -i -e "s/unsplash.com/removed-url/g" /tmp/wordpress/wp-content/plugins/theme-check/checks/class-non-gpl-check.php
+          command: sed -i '34d' /tmp/wordpress/wp-content/plugins/theme-check/checks/class-non-gpl-check.php
       - run:
-          name: Remove the text-domain check file.
+          name: Remove wp_body check from theme check.
+          command: sed -i '34d' /tmp/wordpress/wp-content/plugins/theme-check/checks/class-basic-check.php
+      - run:
+          name: Remove the text-domain check file from theme check.
           command: rm -rf /tmp/wordpress/wp-content/plugins/theme-check/checks/class-textdomain-check.php
       - run:
-          name: Remove the copyright check file.
+          name: Remove the copyright check file from theme check.
           command: rm -rf /tmp/wordpress/wp-content/plugins/theme-check/checks/class-copyright-notice-check.php
       - run:
           name: Run theme check
