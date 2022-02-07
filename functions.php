@@ -378,3 +378,18 @@ function ascension_color_schemes( $color_schemes ) {
 
 }
 add_filter( 'primer_color_schemes', 'ascension_color_schemes' );
+
+if ( ! function_exists( 'wp_body_open' ) ) {
+
+	/**
+	 * Fire the wp_body_open action.
+	 *
+	 * @since NEXT
+	 */
+	function wp_body_open() {
+
+		do_action( 'wp_body_open' );
+
+	}
+
+}
