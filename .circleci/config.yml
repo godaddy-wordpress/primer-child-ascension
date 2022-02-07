@@ -1,10 +1,10 @@
-workflows:
+Ascensionworkflows:
   version: 2.1
   main:
     jobs:
       # Support PHP Versions
       # http://php.net/supported-versions.php
-      - php56-phpcs: # EOL December 31, 2018, latest PHP version supported by Mins
+      - php56-phpcs: # EOL December 31, 2018, latest PHP version supported by Ascension
           filters:
             tags:
               only: /^(?!canary).*$/
@@ -158,7 +158,7 @@ jobs:
           name: Install rsync
           command: sudo apt install rsync
       - run:
-          name: Build the Mins Theme
+          name: Build the Ascension Theme
           command: |
             mkdir -p ascension
             mkdir -p /tmp/artifacts
