@@ -1,7 +1,5 @@
 /* global module, require */
 
-var sass = require( 'node-sass' );
-
 module.exports = function( grunt ) {
 
 	'use strict';
@@ -14,16 +12,13 @@ module.exports = function( grunt ) {
 
 		postcss: {
 			options: {
-				map: false,
+				map: false, // inline sourcemaps
 				processors: [
-					require('autoprefixer'),
+					require( 'autoprefixer' ), // add vendor prefixes
 				]
 			},
-			editor: {
-				src: 'editor-style.css'
-			},
-			main: {
-				src: 'style.css'
+			dist: {
+				src: [ 'editor-style.css', 'style.css' ],
 			}
 		},
 
@@ -151,7 +146,7 @@ module.exports = function( grunt ) {
 
 		sass: {
 			options: {
-				implementation: sass,
+				implementation: require( 'node-sass' ),
 				precision: 5,
 				sourceMap: false
 			},
@@ -210,7 +205,6 @@ module.exports = function( grunt ) {
 
 	} );
 
-	grunt.loadNpmTasks('@lodder/grunt-postcss');
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default', [ 'sass', 'replace:charset', 'postcss', 'cssjanus', 'jshint', 'imagemin' ] );
