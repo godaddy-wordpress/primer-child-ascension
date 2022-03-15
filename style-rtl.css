@@ -5,6 +5,8 @@
  * Author URI: https://www.godaddy.com/
  * Description: Ascension is a Primer child theme with a business-oriented design.
  * Version: 1.1.4
+ * Tested up to: 5.9
+ * Requires PHP: 5.6.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: ascension
@@ -1705,7 +1707,7 @@ pre {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 2px;
-  border-radius: 2px;
+          border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1.25rem; }
 
@@ -1719,7 +1721,7 @@ code {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 2px;
-  border-radius: 2px;
+          border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
 table {
@@ -1904,7 +1906,7 @@ blockquote.aligncenter {
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important; }
   a,
   a:visited {
@@ -1985,7 +1987,7 @@ input[type="submit"],
   letter-spacing: 0.08313rem;
   text-transform: uppercase;
   -webkit-border-radius: 0.3125rem;
-  border-radius: 0.3125rem;
+          border-radius: 0.3125rem;
   padding: 8px 32px; }
   button:hover,
   a.button:hover,
@@ -2206,10 +2208,10 @@ textarea,
   background-color: #f1f1f1;
   border: none;
   -webkit-transform: 200ms background linear;
-  -ms-transform: 200ms background linear;
-  transform: 200ms background linear;
+      -ms-transform: 200ms background linear;
+          transform: 200ms background linear;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
+          border-radius: 3px;
   resize: none;
   padding: 0.75em;
   -webkit-appearance: none; }
@@ -2273,10 +2275,10 @@ legend {
   width: 70%;
   background: #fff;
   -webkit-border-radius: 0 5px 5px 0;
-  border-radius: 0 5px 5px 0;
+          border-radius: 0 5px 5px 0;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #194F6E;
   border-left: 0;
   padding: 0 10px;
@@ -2290,7 +2292,7 @@ legend {
   float: left;
   width: 30%;
   -webkit-border-radius: 5px 0 0 5px;
-  border-radius: 5px 0 0 5px;
+          border-radius: 5px 0 0 5px;
   padding: 0;
   line-height: 31px;
   height: 33px; }
@@ -2376,7 +2378,7 @@ a {
           position: absolute;
           right: -999em;
           -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+                  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
           .main-navigation ul ul ul {
             right: -999em;
             top: 0; }
@@ -2424,8 +2426,8 @@ a {
     border-top: 7px solid transparent;
     border-right: 7px solid white;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     display: none; }
     @media only screen and (min-width: 40.063em) {
       .main-navigation .sub-menu .menu-item-has-children > a::after {
@@ -2451,25 +2453,25 @@ body.no-max-width .main-navigation {
     background-color: #21759b;
     margin: 0.43rem 0 0.43rem .86rem;
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
     -webkit-transition: .15s ease-in-out;
     transition: .15s ease-in-out;
     -webkit-transform-origin: right center;
-    -ms-transform-origin: right center;
-    transform-origin: right center;
+        -ms-transform-origin: right center;
+            transform-origin: right center;
     height: 0.32rem; }
   .menu-toggle.open div:nth-child(1) {
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
   .menu-toggle.open div:nth-child(2) {
     width: 0%;
     opacity: 0; }
   .menu-toggle.open div:nth-child(3) {
     -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
 
 /**
  * Post navigation
@@ -2487,7 +2489,7 @@ body.no-max-width .main-navigation {
       display: inline-block;
       border: none;
       -webkit-border-radius: 3px;
-      border-radius: 3px;
+              border-radius: 3px;
       line-height: 1;
       margin: 0 0.25em;
       padding: 0.5em 0.75em;
@@ -2534,9 +2536,9 @@ body.no-max-width .main-navigation {
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
     background-color: blue;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+            border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: #21759b;
     display: block;
@@ -2624,8 +2626,8 @@ body.no-max-width .main-navigation {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   position: relative;
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   font-weight: bold;
   margin-bottom: 5px;
   text-transform: none;
@@ -2640,7 +2642,7 @@ body.no-max-width .main-navigation {
 .widget_author .avatar {
   width: 80px;
   -webkit-border-radius: 4px;
-  border-radius: 4px;
+          border-radius: 4px;
   float: right;
   margin-left: 1em;
   margin-left: 1rem;
@@ -2680,7 +2682,7 @@ body.no-max-width .main-navigation {
     border-collapse: collapse;
     font-size: .9em;
     -webkit-border-radius: 0 0 2px 2px;
-    border-radius: 0 0 2px 2px;
+            border-radius: 0 0 2px 2px;
     overflow: hidden;
     margin-bottom: 0; }
     .widget_calendar #calendar_wrap #wp-calendar td, .widget_calendar #calendar_wrap #wp-calendar th {
@@ -2695,7 +2697,7 @@ body.no-max-width .main-navigation {
       font-weight: bold;
       background-color: #fff;
       -webkit-border-radius: 2px 2px 0 0;
-      border-radius: 2px 2px 0 0; }
+              border-radius: 2px 2px 0 0; }
     .widget_calendar #calendar_wrap #wp-calendar thead th {
       padding: .25em 0;
       background-color: white; }
@@ -2713,7 +2715,7 @@ body.no-max-width .main-navigation {
         color: #222;
         background: white;
         -webkit-border-radius: 2px;
-        border-radius: 2px;
+                border-radius: 2px;
         margin: 0 3px;
         display: block;
         font-weight: bold;
@@ -2936,7 +2938,7 @@ body.no-max-width .main-navigation {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
+          border-radius: 3px;
   border: 1px solid #39BAF3;
   padding: .5em 1em;
   padding: .5rem 1rem; }
@@ -3074,7 +3076,7 @@ section.error-404 {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
     -webkit-border-radius: 4px;
-    border-radius: 4px;
+            border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
     padding: 10px 15px;
@@ -3086,14 +3088,14 @@ section.error-404 {
   margin-left: 15px;
   position: relative;
   -webkit-border-radius: 3px;
-  border-radius: 3px;
+          border-radius: 3px;
   height: 50px;
   width: 50px; }
 
 .bypostauthor {
   border: 3px solid rgba(57, 186, 243, 0.2);
   -webkit-border-radius: 5px;
-  border-radius: 5px;
+          border-radius: 5px;
   margin: 30px; }
 
 .comment-form label .required {
@@ -3156,8 +3158,8 @@ img[class*="wp-image-"] {
   margin-bottom: 1rem;
   max-width: 100%;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
     margin: 0 auto; }
@@ -3453,7 +3455,7 @@ body.layout-one-column-narrow #content {
 
 .featured-content .entry-header {
   -webkit-background-size: cover;
-  background-size: cover; }
+          background-size: cover; }
   .featured-content .entry-header,
   .featured-content .entry-header .entry-title,
   .featured-content .entry-header .entry-title a {
@@ -3525,7 +3527,7 @@ body.layout-one-column-narrow #content {
 .hero {
   background: #194F6E;
   -webkit-background-size: cover;
-  background-size: cover;
+          background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   margin-bottom: 40px; }
@@ -3731,7 +3733,7 @@ body.layout-one-column-narrow #content {
 
 .featured-content {
   -webkit-background-size: cover;
-  background-size: cover; }
+          background-size: cover; }
   .featured-content,
   .featured-content .entry-title a {
     color: white; }
@@ -4226,7 +4228,7 @@ body.layout-one-column-narrow #content {
     -webkit-transition: 200ms opacity;
     transition: 200ms opacity;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+            border-radius: 3px;
     color: #194F6E;
     background: transparent; }
     .social-menu a:before {
@@ -4280,7 +4282,7 @@ body.layout-one-column-narrow #content {
     float: left;
     width: 100%;
     -webkit-box-shadow: none;
-    box-shadow: none; }
+            box-shadow: none; }
     .primer-wc-cart-menu .primer-wc-cart-sub-menu li,
     .primer-wc-cart-menu .primer-wc-cart-sub-menu .widget_shopping_cart {
       width: 100%;
@@ -4289,7 +4291,7 @@ body.layout-one-column-narrow #content {
       float: left;
       width: 250px;
       -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
       .primer-wc-cart-menu .primer-wc-cart-sub-menu .widget_shopping_cart .quantity {
         display: block;
         float: right;
@@ -4339,7 +4341,7 @@ body.layout-one-column-narrow #content {
     .primer-wc-cart-menu .primer-wc-cart-sub-menu .primer-wc-cart-sub-menu-item .product_list_widget {
       border: none;
       -webkit-box-shadow: none;
-      box-shadow: none;
+              box-shadow: none;
       display: inline-block;
       right: 0 !important;
       background: inherit; }
@@ -4373,7 +4375,7 @@ body.layout-one-column-narrow #content {
       text-indent: 0 !important;
       border: none;
       -webkit-box-shadow: none;
-      box-shadow: none; }
+              box-shadow: none; }
       .primer-wc-cart-menu .primer-wc-cart-sub-menu .primer-wc-cart-sub-menu-item .cart_list li a.remove:hover {
         background: red !important; }
   .primer-wc-cart-menu:hover {
@@ -4403,7 +4405,7 @@ body.layout-one-column-narrow #content {
 .woocommerce-page ul.products li.product .onsale {
   padding: 2px 8px;
   -webkit-border-radius: 0;
-  border-radius: 0;
+          border-radius: 0;
   margin: 0;
   min-height: auto;
   min-width: auto;
